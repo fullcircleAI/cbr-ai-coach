@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Mascot } from './Mascot';
+import * as questionData from '../question_data';
 import './PracticeTest.css';
 
 interface Question {
@@ -34,38 +35,98 @@ export const PracticeTest: React.FC = () => {
   const [testComplete, setTestComplete] = useState(false);
 
   useEffect(() => {
-    // Simulate loading questions based on testId
-    const mockQuestions: Question[] = [
-      {
-        id: 'q1',
-        text: 'What does this traffic light signal mean?',
-        options: [
-          { id: 'a1', text: 'Stop' },
-          { id: 'a2', text: 'Prepare to stop' },
-          { id: 'a3', text: 'Go' },
-          { id: 'a4', text: 'Caution' }
-        ],
-        correctAnswerId: 'a1',
-        explanation: 'A red traffic light means you must stop completely.',
-        subject: 'Traffic Lights'
-      },
-      {
-        id: 'q2',
-        text: 'Who has right of way at this intersection?',
-        options: [
-          { id: 'b1', text: 'Vehicle from the right' },
-          { id: 'b2', text: 'Vehicle from the left' },
-          { id: 'b3', text: 'Vehicle going straight' },
-          { id: 'b4', text: 'Vehicle turning left' }
-        ],
-        correctAnswerId: 'b1',
-        explanation: 'In the Netherlands, vehicles from the right generally have right of way.',
-        subject: 'Priority Rules'
+    // Load real questions based on testId
+    const loadQuestions = () => {
+      let questions: Question[] = [];
+      
+      switch (testId) {
+        case 'traffic-lights-signals':
+          questions = questionData.trafficLightsSignalsQuestions;
+          break;
+        case 'priority-rules':
+          questions = questionData.priorityRulesQuestions;
+          break;
+        case 'roundabout-rules':
+          questions = questionData.roundaboutRulesQuestions;
+          break;
+        case 'speed-limits':
+          questions = questionData.speedLimitQuestions;
+          break;
+        case 'parking-rules':
+          questions = questionData.parkingRulesQuestions;
+          break;
+        case 'hazard-perception':
+          questions = questionData.hazardPerceptionQuestions;
+          break;
+        case 'motorway-rules':
+          questions = questionData.motorwayRulesQuestions;
+          break;
+        case 'weather-conditions':
+          questions = questionData.weatherConditionsQuestions;
+          break;
+        case 'mandatory-signs':
+          questions = questionData.mandatorySignQuestions;
+          break;
+        case 'warning-signs':
+          questions = questionData.warningSignsQuestions;
+          break;
+        case 'prohibitory-signs':
+          questions = questionData.prohibitorySignsQuestions;
+          break;
+        case 'road-information':
+          questions = questionData.roadInformationQuestions;
+          break;
+        case 'sign-identification':
+          questions = questionData.signIdentificationQuestions;
+          break;
+        case 'road-markings':
+          questions = questionData.roadMarkingsQuestions;
+          break;
+        case 'alcohol-drugs':
+          questions = questionData.alcoholDrugsQuestions;
+          break;
+        case 'fatigue-rest':
+          questions = questionData.fatigueRestQuestions;
+          break;
+        case 'vehicle-documentation':
+          questions = questionData.vehicleDocumentationQuestions;
+          break;
+        case 'emergency-procedures':
+          questions = questionData.emergencyProceduresQuestions;
+          break;
+        case 'bicycle-interactions':
+          questions = questionData.bicycleInteractionsQuestions;
+          break;
+        case 'tram-interactions':
+          questions = questionData.tramInteractionsQuestions;
+          break;
+        case 'pedestrian-crossings':
+          questions = questionData.pedestrianCrossingsQuestions;
+          break;
+        case 'construction-zones':
+          questions = questionData.constructionZonesQuestions;
+          break;
+        case 'environmental-zones':
+          questions = questionData.environmentalZonesQuestions;
+          break;
+        case 'technology-safety':
+          questions = questionData.technologySafetyQuestions;
+          break;
+        case 'vehicle-categories':
+          questions = questionData.vehicleCategoriesQuestions;
+          break;
+        case 'insight-practice':
+          questions = questionData.insightPracticeQuestions;
+          break;
+        default:
+          questions = questionData.trafficLightsSignalsQuestions;
       }
-    ];
+      
+      setQuestions(questions);
+      setStartTime(Date.now());
+    };
 
-    setQuestions(mockQuestions);
-    setStartTime(Date.now());
+    loadQuestions();
   }, [testId]);
 
   const handleAnswerSelect = (answerId: string) => {
@@ -92,14 +153,32 @@ export const PracticeTest: React.FC = () => {
 
   const getTestTitle = () => {
     const testTitles: { [key: string]: string } = {
-      'traffic-lights': 'Traffic Lights Practice',
+      'traffic-lights-signals': 'Traffic Lights & Signals Practice',
       'priority-rules': 'Priority Rules Practice',
-      'roundabouts': 'Roundabouts Practice',
+      'roundabout-rules': 'Roundabout Rules Practice',
       'speed-limits': 'Speed Limits Practice',
-      'parking': 'Parking Rules Practice',
+      'parking-rules': 'Parking Rules Practice',
       'hazard-perception': 'Hazard Perception Practice',
-      'motorway': 'Motorway Rules Practice',
-      'weather': 'Weather Conditions Practice'
+      'motorway-rules': 'Motorway Rules Practice',
+      'weather-conditions': 'Weather Conditions Practice',
+      'mandatory-signs': 'Mandatory Signs Practice',
+      'warning-signs': 'Warning Signs Practice',
+      'prohibitory-signs': 'Prohibitory Signs Practice',
+      'road-information': 'Road Information Practice',
+      'sign-identification': 'Sign Identification Practice',
+      'road-markings': 'Road Markings Practice',
+      'alcohol-drugs': 'Alcohol & Drugs Practice',
+      'fatigue-rest': 'Fatigue & Rest Practice',
+      'vehicle-documentation': 'Vehicle Documentation Practice',
+      'emergency-procedures': 'Emergency Procedures Practice',
+      'bicycle-interactions': 'Bicycle Interactions Practice',
+      'tram-interactions': 'Tram Interactions Practice',
+      'pedestrian-crossings': 'Pedestrian Crossings Practice',
+      'construction-zones': 'Construction Zones Practice',
+      'environmental-zones': 'Environmental Zones Practice',
+      'technology-safety': 'Technology & Safety Practice',
+      'vehicle-categories': 'Vehicle Categories Practice',
+      'insight-practice': 'Insight Practice'
     };
     return testTitles[testId || ''] || 'Practice Test';
   };
@@ -236,7 +315,10 @@ export const PracticeTest: React.FC = () => {
           
           {currentQ.imageUrl && (
             <div className="question-image">
-              <img src={currentQ.imageUrl} alt={currentQ.imageHint || 'Question image'} />
+              <img 
+                src={currentQ.imageUrl} 
+                alt={currentQ.imageHint || 'Question image'} 
+              />
             </div>
           )}
 
