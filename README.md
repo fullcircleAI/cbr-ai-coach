@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# AI Learning Coach for CBR
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An intelligent AI-powered learning companion for Dutch driving theory test preparation.
 
-## Available Scripts
+## 🧠 AI Features
 
-In the project directory, you can run:
+### 1. AI Mistake Analysis
+- Identifies specific mistake patterns
+- Explains why you're struggling with topics
+- Provides targeted solutions for improvement
 
-### `npm start`
+### 2. AI Study Recommendations  
+- Personalized study plans based on your learning style
+- Priority-based topic recommendations
+- Optimized learning methods for maximum efficiency
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 3. AI Learning Progress
+- Tracks your learning journey with detailed analytics
+- Shows learning velocity and improvement rates
+- Provides AI-powered insights and achievements
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🚀 Key Benefits
 
-### `npm test`
+- **Personalized Learning**: AI adapts to your learning style
+- **Mistake Analysis**: Understand exactly why you're struggling
+- **Smart Recommendations**: Get AI-powered study plans
+- **Progress Tracking**: See your learning journey with insights
+- **No Guarantees**: Focus on learning, not exam promises
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎯 Target Users
 
-### `npm run build`
+- Dutch driving theory test candidates
+- Learners who want personalized study guidance
+- Users seeking AI-powered learning insights
+- Anyone preparing for CBR theory exam
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Technology Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React 18 with TypeScript
+- React Router for navigation
+- CSS Variables for consistent styling
+- Responsive design for all devices
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📱 Features
 
-### `npm run eject`
+- **AI Coach Dashboard**: Overview of your learning progress
+- **Mistake Analysis**: Detailed breakdown of your struggles
+- **Study Recommendations**: Personalized learning plans
+- **Progress Tracking**: Comprehensive learning analytics
+- **Responsive Design**: Works on desktop, tablet, and mobile
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🚀 Getting Started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Install dependencies
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Start development server
+npm start
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Build for production
+npm run build
+```
 
-## Learn More
+## 📄 License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is for educational and demonstration purposes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🤝 Contributing
+
+This is a demonstration project for AI Learning Coach capabilities.

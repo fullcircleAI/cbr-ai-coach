@@ -1,0 +1,235 @@
+/* AI Coach Progress Styles */
+
+.progress-container {
+  padding: 0.5rem 0.3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  flex-shrink: 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.header-text h1 {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.header-text p {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.overall-progress-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow);
+}
+
+.overall-progress-card h2 {
+  margin: 0 0 var(--spacing-lg) 0;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.overall-progress-bar {
+  margin-bottom: var(--spacing-md);
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.progress-description {
+  text-align: center;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-top: var(--spacing-md);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.metric-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--primary-color);
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.metric-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.metric-trend {
+  font-size: 1.2rem;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.metric-target {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.metric-progress {
+  margin-top: var(--spacing-sm);
+}
+
+.insights-section {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: var(--spacing-xl);
+}
+
+.insights-section h2 {
+  margin: 0 0 var(--spacing-lg) 0;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.insight-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow);
+  border-left: 4px solid;
+}
+
+.insight-card.achievement {
+  border-left-color: #10b981;
+}
+
+.insight-card.improvement {
+  border-left-color: #3b82f6;
+}
+
+.insight-card.recommendation {
+  border-left-color: #f59e0b;
+}
+
+.insight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.insight-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.insight-type {
+  font-size: 1.2rem;
+}
+
+.insight-description {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.5;
+}
+
+.insight-impact {
+  padding: var(--spacing-sm);
+  background: rgba(26, 62, 122, 0.05);
+  border-radius: var(--border-radius);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.progress-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .progress-header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .progress-actions {
+    flex-direction: column;
+  }
+}

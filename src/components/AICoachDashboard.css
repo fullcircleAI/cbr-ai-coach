@@ -1,0 +1,125 @@
+/* AI Coach Dashboard Styles */
+
+.dashboard-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 0.5rem;
+}
+
+.progress-overview {
+  margin-bottom: var(--spacing-lg);
+}
+
+.progress-stat {
+  margin-bottom: var(--spacing-lg);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.progress-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm);
+  background: rgba(26, 62, 122, 0.05);
+  border-radius: var(--border-radius);
+}
+
+.detail-label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.detail-value {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.ai-insight {
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  border-left: 4px solid;
+}
+
+.ai-insight.high {
+  background: rgba(239, 68, 68, 0.1);
+  border-left-color: #ef4444;
+}
+
+.ai-insight.medium {
+  background: rgba(245, 158, 11, 0.1);
+  border-left-color: #f59e0b;
+}
+
+.ai-insight.low {
+  background: rgba(16, 185, 129, 0.1);
+  border-left-color: #10b981;
+}
+
+.ai-insight h4 {
+  margin: 0 0 var(--spacing-xs) 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ai-insight p {
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.welcome-text h1 {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.welcome-text p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .progress-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .welcome-text h1 {
+    font-size: 1.5rem;
+  }
+}
