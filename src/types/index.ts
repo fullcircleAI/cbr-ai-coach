@@ -74,3 +74,9 @@ export interface AIInsight {
   message: string;
   priority: 'high' | 'medium' | 'low';
 }
+
+export type Language = 'en' | 'nl' | 'ar';
+
+export interface LanguageStrings {
+  [key: string]: string;
+}

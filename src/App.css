@@ -2,7 +2,7 @@
 
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #F5F7FA 0%, #E8ECF1 100%);
   font-family: 'Nunito', system-ui, -apple-system, sans-serif;
 }
 
@@ -16,7 +16,7 @@
   --error-color: #ef4444;
   --text-primary: #1f2937;
   --text-secondary: #6b7280;
-  --background-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --background-gradient: linear-gradient(135deg, #F5F7FA 0%, #E8ECF1 100%);
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
