@@ -39,10 +39,9 @@
 .nav-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0;
-  padding: 12px;
-  font-size: 1.2rem;
+  gap: 12px;
+  padding: 10px 18px;
+  font-size: 1.1rem;
   border-radius: 10px;
   color: #333;
   background: none;
@@ -53,7 +52,7 @@
   overflow: hidden;
   cursor: pointer;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .nav-btn .nav-icon {
@@ -78,10 +77,9 @@
 
 .nav-label {
   flex: 1;
-  text-align: left;
-  display: block;
-  opacity: 1;
-  transition: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
 }
 
 .sidebar-user {
@@ -195,6 +193,7 @@
     min-width: 60px;
     text-align: center;
     border-radius: 0;
+    gap: 0;
   }
 
   .nav-btn:hover {
@@ -204,6 +203,7 @@
 
   .nav-icon {
     font-size: 1.2rem;
+    margin-bottom: 4px;
   }
   
   .nav-label {
@@ -323,6 +323,7 @@
     font-size: 1.1rem;
     text-align: left;
     border-radius: 10px;
+    gap: 0;
   }
 
   .nav-btn:hover {
@@ -331,12 +332,12 @@
   }
 
   .nav-icon {
-    font-size: 1.2rem;
-    margin-right: 12px;
+    display: none;
   }
 
   .nav-label {
     font-size: 1.1rem;
+    font-weight: 500;
   }
 
   .sidebar-user {
