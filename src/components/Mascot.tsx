@@ -1,4 +1,5 @@
 import React from 'react';
+import './Mascot.css';
 
 // Define allowed moods
 export type MascotMood = 'neutral' | 'happy' | 'sad' | 'excited' | 'thinking';
@@ -12,11 +13,11 @@ const mascotImages: Record<MascotMood, string> = {
 };
 
 export function Mascot({ size = 120, mood = 'neutral' }: { size?: number; mood?: MascotMood }) {
-  // Pick animation class based on mood
-  let animationClass = 'mascot-img mascot-wave';
-  if (mood === 'excited' || mood === 'happy') animationClass = 'mascot-img mascot-bounce';
+  // Pick animation class based on mood - default to bounce for visibility
+  let animationClass = 'mascot-img mascot-bounce';
   if (mood === 'sad') animationClass = 'mascot-img mascot-sad';
   if (mood === 'thinking') animationClass = 'mascot-img mascot-thinking';
+  if (mood === 'neutral') animationClass = 'mascot-img mascot-wave';
 
   return (
     <div className="mascot-spotlight" style={{ width: size + 32, height: size + 32 }}>

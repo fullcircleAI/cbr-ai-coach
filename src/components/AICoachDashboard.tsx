@@ -83,7 +83,7 @@ export const AICoachDashboard: React.FC = () => {
           <div className="dashboard-header">
             <div className="dashboard-welcome">
               <div className="welcome-mascot">
-                <Mascot size={80} />
+                <Mascot size={80} mood="excited" />
               </div>
             </div>
           </div>
