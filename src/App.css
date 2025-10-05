@@ -160,12 +160,14 @@
   justify-content: center;
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
+  text-align: center;
 }
 
 .welcome-mascot {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 /* AI Coach Cards */

@@ -85,10 +85,6 @@ export const AICoachDashboard: React.FC = () => {
               <div className="welcome-mascot">
                 <Mascot size={80} />
               </div>
-              <div className="welcome-text">
-                <h1>AI Learning Coach</h1>
-                <p>Your personalized driving theory learning companion</p>
-              </div>
             </div>
           </div>
 
