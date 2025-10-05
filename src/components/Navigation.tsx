@@ -10,10 +10,10 @@ export const Navigation: React.FC = () => {
   const navItems = [
     {
       id: 'dashboard',
-      label: 'Study Plan',
-      icon: '📚',
+      label: 'Dashboard',
+      icon: '📊',
       path: '/',
-      description: 'Your personalized study plan'
+      description: 'Your learning dashboard'
     },
     {
       id: 'progress',

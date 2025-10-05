@@ -6,6 +6,152 @@
   padding: 0 0.5rem;
 }
 
+/* Dashboard Summary Styles */
+.dashboard-summary {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(26, 62, 122, 0.1);
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.summary-stat {
+  text-align: center;
+}
+
+.summary-stat .stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+.summary-stat .stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.summary-stat .progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.summary-stat .progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+/* AI Insights Summary */
+.ai-insights-summary {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(26, 62, 122, 0.1);
+}
+
+.ai-insights-summary h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.insight-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 62, 122, 0.15);
+}
+
+.insight-card.high {
+  border-left: 4px solid #ef4444;
+  background: #fef2f2;
+}
+
+.insight-card.medium {
+  border-left: 4px solid #f59e0b;
+  background: #fffbeb;
+}
+
+.insight-card.low {
+  border-left: 4px solid #10b981;
+  background: #f0fdf4;
+}
+
+.insight-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.insight-content h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+}
+
+.insight-content p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .summary-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-summary,
+  .ai-insights-summary {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-stat .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .insight-card {
+    padding: 0.75rem;
+  }
+}
+
 .progress-overview {
   margin-bottom: var(--spacing-lg);
 }

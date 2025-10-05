@@ -89,53 +89,49 @@ export const AICoachDashboard: React.FC = () => {
           </div>
 
           <div className="dashboard-content">
-            {/* Learning Progress Overview */}
-            <div className="ai-coach-card">
-              <h3>📊 Your Learning Progress</h3>
-              <div className="progress-overview">
-                <div className="progress-stat">
+            {/* Summarized Learning Progress */}
+            <div className="dashboard-summary">
+              <div className="summary-stats">
+                <div className="summary-stat">
                   <div className="stat-number">{userProgress.averageScore}%</div>
                   <div className="stat-label">Average Score</div>
                   <div className="progress-bar-bg">
-                    <div className={`progress-bar-fill ${getScoreColor(userProgress.averageScore)}`} 
-                         style={{ width: `${userProgress.averageScore}%` }}></div>
-                  </div>
-                  <div className="progress-labels">
-                    <span>0%</span>
-                    <span>100%</span>
+                    <div className="progress-bar-fill" 
+                         style={{ 
+                           width: `${userProgress.averageScore}%`,
+                           backgroundColor: getScoreColor(userProgress.averageScore)
+                         }}></div>
                   </div>
                 </div>
-                <div className="progress-details">
-                  <div className="detail-item">
-                    <span className="detail-label">Questions Answered:</span>
-                    <span className="detail-value">{userProgress.totalQuestions}</span>
-                  </div>
-                  <div className="detail-item">
-                    <span className="detail-label">Correct Answers:</span>
-                    <span className="detail-value">{userProgress.correctAnswers}</span>
-                  </div>
-                  <div className="detail-item">
-                    <span className="detail-label">Study Time:</span>
-                    <span className="detail-value">{formatTime(userProgress.studyTime)}</span>
-                  </div>
+                <div className="summary-stat">
+                  <div className="stat-number">{userProgress.totalQuestions}</div>
+                  <div className="stat-label">Questions</div>
+                </div>
+                <div className="summary-stat">
+                  <div className="stat-number">{formatTime(userProgress.studyTime)}</div>
+                  <div className="stat-label">Study Time</div>
                 </div>
               </div>
             </div>
 
-            {/* AI Insights */}
-            <div className="ai-coach-card">
-              <h3>🧠 AI Learning Insights</h3>
-              {aiInsights.map((insight, index) => (
-                <div key={index} className={`ai-insight ${insight.priority}`}>
-                  <h4>
-                    {insight.type === 'mistake' && '⚠️ '}
-                    {insight.type === 'strength' && '✅ '}
-                    {insight.type === 'recommendation' && '💡 '}
-                    {insight.type.charAt(0).toUpperCase() + insight.type.slice(1)} Analysis
-                  </h4>
-                  <p>{insight.message}</p>
-                </div>
-              ))}
+            {/* AI Insights Summary */}
+            <div className="ai-insights-summary">
+              <h3>🤖 AI Insights</h3>
+              <div className="insights-grid">
+                {aiInsights.slice(0, 3).map((insight, index) => (
+                  <div key={index} className={`insight-card ${insight.priority}`}>
+                    <div className="insight-icon">
+                      {insight.type === 'mistake' && '⚠️'}
+                      {insight.type === 'strength' && '✅'}
+                      {insight.type === 'recommendation' && '💡'}
+                    </div>
+                    <div className="insight-content">
+                      <h4>{insight.type.charAt(0).toUpperCase() + insight.type.slice(1)}</h4>
+                      <p>{insight.message}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
           </div>
