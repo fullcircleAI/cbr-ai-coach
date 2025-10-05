@@ -83,6 +83,7 @@ export const Navigation: React.FC = () => {
               title={item.label}
             >
               <div className="nav-icon">{item.icon}</div>
+              <span className="nav-label">{item.label}</span>
             </button>
           ))}
         </div>
