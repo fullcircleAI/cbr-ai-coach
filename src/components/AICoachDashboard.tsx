@@ -47,7 +47,7 @@ export const AICoachDashboard: React.FC = () => {
     const mockInsights: AIInsight[] = [
       {
         type: 'mistake',
-        message: "Traffic Lights",
+        message: "Confusing red and amber signals",
         priority: 'high'
       },
       {
