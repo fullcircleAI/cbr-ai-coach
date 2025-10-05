@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
-import { Mascot } from './Mascot';
 import './AICoachAnalysis.css';
 
 interface MistakePattern {
@@ -27,44 +26,43 @@ export const AICoachAnalysis: React.FC = () => {
   const [aiAnalysis, setAiAnalysis] = useState<AIAnalysis | null>(null);
 
   useEffect(() => {
-    // Simulate loading mistake analysis data
+    // Simulate loading mistake analysis data - simplified
     const mockMistakes: MistakePattern[] = [
       {
         topic: 'Traffic Lights',
-        mistake: 'Confusing red and amber signals',
+        mistake: 'Red and amber signals',
         frequency: 4,
         lastOccurrence: '2 hours ago',
-        explanation: 'You\'re mixing up the sequence of traffic light changes. Red means stop, amber means prepare to stop.',
-        solution: 'Practice with visual examples of traffic light sequences. Remember: Red → Amber → Green → Amber → Red'
+        explanation: 'Mixing up light sequence',
+        solution: 'Practice visual examples'
       },
       {
         topic: 'Priority Rules',
-        mistake: 'Giving way to the right incorrectly',
+        mistake: 'Giving way rules',
         frequency: 3,
         lastOccurrence: '1 day ago',
-        explanation: 'You\'re not recognizing when you have right of way vs when you should give way.',
-        solution: 'Study the priority triangle rule: if you see a triangle pointing down, you must give way to traffic from the right'
+        explanation: 'Wrong right of way',
+        solution: 'Study triangle signs'
       },
       {
         topic: 'Roundabouts',
-        mistake: 'Wrong lane selection',
+        mistake: 'Wrong lane choice',
         frequency: 2,
         lastOccurrence: '3 days ago',
-        explanation: 'You\'re choosing the wrong lane for your intended exit direction.',
-        solution: 'Left lane for left/straight, right lane for right/straight. Practice with roundabout diagrams'
+        explanation: 'Incorrect exit lane',
+        solution: 'Left for left/straight'
       }
     ];
 
     const mockAnalysis: AIAnalysis = {
       totalMistakes: 9,
-      mostCommonMistake: 'Traffic light signal confusion',
-      learningPattern: 'You learn 40% faster with visual examples',
+      mostCommonMistake: 'Traffic lights',
+      learningPattern: 'Learn 40% faster with visuals',
       improvementRate: 15,
       recommendations: [
-        'Focus on Traffic Lights - your biggest weakness',
-        'Use visual learning methods for better retention',
-        'Practice roundabouts with diagrams',
-        'Review priority rules with real examples'
+        'Focus on Traffic Lights',
+        'Use visual learning',
+        'Practice roundabouts'
       ]
     };
 
@@ -79,12 +77,8 @@ export const AICoachAnalysis: React.FC = () => {
         <div className="analysis-container">
           <div className="analysis-header">
             <div className="header-content">
-              <div className="header-mascot">
-                <Mascot size={60} />
-              </div>
               <div className="header-text">
-                <h1>🔍 AI Mistake Analysis</h1>
-                <p>Discover exactly why you're struggling and how to improve</p>
+                <h1>🔍 Mistake Analysis</h1>
               </div>
             </div>
             <button 

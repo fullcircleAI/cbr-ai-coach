@@ -26,7 +26,7 @@ export const AICoachProgress: React.FC = () => {
   const [overallProgress, setOverallProgress] = useState(0);
 
   useEffect(() => {
-    // Simulate loading progress data
+    // Simulate loading progress data - only 3 key stats
     const mockMetrics: ProgressMetric[] = [
       {
         name: 'Average Score',
@@ -39,7 +39,7 @@ export const AICoachProgress: React.FC = () => {
       {
         name: 'Study Time',
         value: 8.5,
-        target: 12,
+        target: 24,
         unit: 'hours',
         trend: 'up',
         color: '#3b82f6'
@@ -51,35 +51,27 @@ export const AICoachProgress: React.FC = () => {
         unit: 'topics',
         trend: 'up',
         color: '#8b5cf6'
-      },
-      {
-        name: 'Learning Velocity',
-        value: 40,
-        target: 50,
-        unit: '% faster',
-        trend: 'up',
-        color: '#f59e0b'
       }
     ];
 
     const mockInsights: LearningInsight[] = [
       {
         type: 'achievement',
-        title: '🎉 Speed Limits Mastered!',
-        description: 'You\'ve achieved 90% accuracy in Speed Limits - excellent progress!',
-        impact: 'This shows you learn well with visual content'
+        title: 'Speed Limits',
+        description: '90% accuracy',
+        impact: 'Keep practicing'
       },
       {
         type: 'improvement',
-        title: '📈 40% Learning Speed Increase',
-        description: 'Your learning velocity has improved significantly this week',
-        impact: 'You\'re now learning 3x faster than when you started'
+        title: 'Learning Speed',
+        description: '40% faster',
+        impact: 'Great progress'
       },
       {
         type: 'recommendation',
-        title: '🎯 Focus on Traffic Lights',
-        description: 'Traffic Lights is your biggest opportunity for improvement',
-        impact: 'Mastering this could boost your overall score by 15%'
+        title: 'Traffic Lights',
+        description: 'Focus here',
+        impact: '+15% score boost'
       }
     ];
 
