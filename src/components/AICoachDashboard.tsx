@@ -75,6 +75,13 @@ export const AICoachDashboard: React.FC = () => {
     return `${wholeHours}h ${minutes}m`;
   };
 
+  const getTimeRemaining = () => {
+    const targetHours = 24; // 24-hour target
+    const remaining = Math.max(0, targetHours - userProgress.studyTime);
+    const percentage = Math.min(100, (userProgress.studyTime / targetHours) * 100);
+    return { remaining, percentage };
+  };
+
   return (
     <div className="main-layout">
       <Navigation />
@@ -110,6 +117,17 @@ export const AICoachDashboard: React.FC = () => {
                 <div className="summary-stat">
                   <div className="stat-number">{formatTime(userProgress.studyTime)}</div>
                   <div className="stat-label">Study Time</div>
+                </div>
+                <div className="summary-stat">
+                  <div className="stat-number">{formatTime(getTimeRemaining().remaining)}</div>
+                  <div className="stat-label">Time Remaining</div>
+                  <div className="progress-bar-bg">
+                    <div className="progress-bar-fill" 
+                         style={{ 
+                           width: `${getTimeRemaining().percentage}%`,
+                           backgroundColor: getTimeRemaining().percentage >= 100 ? '#10b981' : '#f59e0b'
+                         }}></div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -17,7 +17,7 @@
 
 .summary-stats {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 1.5rem;
   align-items: center;
 }
@@ -125,6 +125,13 @@
 }
 
 /* Mobile Responsive */
+@media (max-width: 1024px) {
+  .summary-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .summary-stats {
     grid-template-columns: 1fr;
