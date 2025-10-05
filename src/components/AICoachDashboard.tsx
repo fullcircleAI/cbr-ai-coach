@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import './AICoachDashboard.css';
 
@@ -19,7 +18,6 @@ interface AIInsight {
 }
 
 export const AICoachDashboard: React.FC = () => {
-  const navigate = useNavigate();
   const [userProgress, setUserProgress] = useState<UserProgress>({
     averageScore: 0,
     totalQuestions: 0,
@@ -140,41 +138,6 @@ export const AICoachDashboard: React.FC = () => {
               ))}
             </div>
 
-            {/* Action Cards */}
-            <div className="ai-coach-cards">
-              <div className="ai-coach-card">
-                <h3>🔍 Mistake Analysis</h3>
-                <p>Discover exactly why you're struggling with specific topics and get personalized feedback.</p>
-                <button 
-                  className="action-button"
-                  onClick={() => navigate('/analysis')}
-                >
-                  Analyze My Mistakes
-                </button>
-              </div>
-
-              <div className="ai-coach-card">
-                <h3>📚 Study Recommendations</h3>
-                <p>Get AI-powered study recommendations tailored to your learning needs and progress.</p>
-                <button 
-                  className="action-button secondary"
-                  onClick={() => navigate('/recommendations')}
-                >
-                  Get Study Plan
-                </button>
-              </div>
-
-              <div className="ai-coach-card">
-                <h3>📈 Learning Progress</h3>
-                <p>Track your learning journey with detailed progress analytics and insights.</p>
-                <button 
-                  className="action-button"
-                  onClick={() => navigate('/progress')}
-                >
-                  View Progress
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </main>
