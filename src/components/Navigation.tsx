@@ -80,9 +80,9 @@ export const Navigation: React.FC = () => {
               key={item.id}
               className={`nav-btn ${isActive(item.path) ? 'active' : ''}`}
               onClick={() => handleNavClick(item.path)}
+              title={item.label}
             >
               <div className="nav-icon">{item.icon}</div>
-              <span className="nav-label">{item.label}</span>
             </button>
           ))}
         </div>

@@ -111,10 +111,6 @@ export const AICoachDashboard: React.FC = () => {
                   </div>
                 </div>
                 <div className="summary-stat">
-                  <div className="stat-number">{userProgress.totalQuestions}</div>
-                  <div className="stat-label">Questions</div>
-                </div>
-                <div className="summary-stat">
                   <div className="stat-number">{formatTime(userProgress.studyTime)}</div>
                   <div className="stat-label">Study Time</div>
                 </div>
