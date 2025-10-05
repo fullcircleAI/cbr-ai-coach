@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navigation } from './Navigation';
+import { Mascot } from './Mascot';
 import './AICoachDashboard.css';
 
 interface UserProgress {
@@ -81,9 +82,12 @@ export const AICoachDashboard: React.FC = () => {
         <div className="dashboard">
           <div className="dashboard-header">
             <div className="dashboard-welcome">
+              <div className="welcome-mascot">
+                <Mascot size={80} />
+              </div>
               <div className="welcome-text">
-                <h1>Study Plan</h1>
-                <p>Track your learning progress and get personalized recommendations</p>
+                <h1>AI Learning Coach</h1>
+                <p>Your personalized driving theory learning companion</p>
               </div>
             </div>
           </div>
