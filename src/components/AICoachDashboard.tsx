@@ -47,17 +47,17 @@ export const AICoachDashboard: React.FC = () => {
     const mockInsights: AIInsight[] = [
       {
         type: 'mistake',
-        message: "You're confusing red and amber signals 4 times in Traffic Lights",
+        message: "Traffic Lights",
         priority: 'high'
       },
       {
         type: 'recommendation',
-        message: "Focus on Traffic Lights for 2 hours - you're 60% ready",
+        message: "Traffic Lights",
         priority: 'high'
       },
       {
         type: 'strength',
-        message: "You've mastered Speed Limits - great progress!",
+        message: "Speed Limits",
         priority: 'medium'
       }
     ];
