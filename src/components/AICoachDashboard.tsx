@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Navigation } from './Navigation';
 import { Mascot } from './Mascot';
-import { SidePanel } from './SidePanel';
 import './AICoachDashboard.css';
 
 interface UserProgress {
@@ -79,7 +79,7 @@ export const AICoachDashboard: React.FC = () => {
 
   return (
     <div className="main-layout">
-      <SidePanel />
+      <Navigation />
       <main className="main-content">
         <div className="dashboard">
           <div className="dashboard-header">

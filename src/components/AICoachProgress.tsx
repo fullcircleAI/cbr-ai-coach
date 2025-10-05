@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Navigation } from './Navigation';
 import { Mascot } from './Mascot';
 import './AICoachProgress.css';
 
@@ -108,6 +109,7 @@ export const AICoachProgress: React.FC = () => {
 
   return (
     <div className="main-layout">
+      <Navigation />
       <main className="main-content">
         <div className="progress-container">
           <div className="progress-header">

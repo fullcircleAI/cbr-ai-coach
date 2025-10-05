@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Navigation } from './Navigation';
 import { Mascot } from './Mascot';
 import './AICoachAnalysis.css';
 
@@ -73,6 +74,7 @@ export const AICoachAnalysis: React.FC = () => {
 
   return (
     <div className="main-layout">
+      <Navigation />
       <main className="main-content">
         <div className="analysis-container">
           <div className="analysis-header">

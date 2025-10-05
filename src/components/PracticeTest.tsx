@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Navigation } from './Navigation';
 import { Mascot } from './Mascot';
 import * as questionData from '../question_data';
 import './PracticeTest.css';
@@ -276,95 +277,100 @@ export const PracticeTest: React.FC = () => {
   const progress = ((currentQuestion + 1) / questions.length) * 100;
 
   return (
-    <div className="practice-test-container">
-      <div className="test-header">
-        <div className="header-content">
-          <div className="header-mascot">
-            <Mascot size={60} />
-          </div>
-          <div className="header-text">
-            <h1>{getTestTitle()}</h1>
-            <p>Question {currentQuestion + 1} of {questions.length}</p>
-          </div>
-        </div>
-        <button 
-          className="back-button"
-          onClick={() => navigate('/')}
-        >
-          ← Back to Dashboard
-        </button>
-      </div>
-
-      <div className="test-progress">
-        <div className="progress-bar-bg">
-          <div 
-            className="progress-bar-fill"
-            style={{ width: `${progress}%` }}
-          ></div>
-        </div>
-        <div className="progress-text">
-          {currentQuestion + 1} / {questions.length}
-        </div>
-      </div>
-
-      <div className="question-container">
-        <div className="question-card">
-          <div className="question-text">
-            {currentQ.text}
-          </div>
-          
-          {currentQ.imageUrl && (
-            <div className="question-image">
-              <img 
-                src={currentQ.imageUrl} 
-                alt={currentQ.imageHint || 'Question image'} 
-              />
-            </div>
-          )}
-
-          <div className="answer-options">
-            {currentQ.options.map((option) => (
-              <button
-                key={option.id}
-                className={`answer-option ${selectedAnswer === option.id ? 'selected' : ''}`}
-                onClick={() => handleAnswerSelect(option.id)}
-              >
-                {option.text}
-              </button>
-            ))}
-          </div>
-
-          {showResult && (
-            <div className="answer-explanation">
-              <div className={`explanation-header ${selectedAnswer === currentQ.correctAnswerId ? 'correct' : 'incorrect'}`}>
-                {selectedAnswer === currentQ.correctAnswerId ? '✅ Correct!' : '❌ Incorrect'}
+    <div className="main-layout">
+      <Navigation />
+      <main className="main-content">
+        <div className="practice-test-container">
+          <div className="test-header">
+            <div className="header-content">
+              <div className="header-mascot">
+                <Mascot size={60} />
               </div>
-              <div className="explanation-text">
-                {currentQ.explanation}
+              <div className="header-text">
+                <h1>{getTestTitle()}</h1>
+                <p>Question {currentQuestion + 1} of {questions.length}</p>
               </div>
             </div>
-          )}
+            <button 
+              className="back-button"
+              onClick={() => navigate('/')}
+            >
+              ← Back to Dashboard
+            </button>
+          </div>
 
-          <div className="question-actions">
-            {!showResult ? (
-              <button 
-                className="action-button"
-                onClick={handleShowResult}
-                disabled={!selectedAnswer}
-              >
-                Check Answer
-              </button>
-            ) : (
-              <button 
-                className="action-button"
-                onClick={handleNextQuestion}
-              >
-                {currentQuestion < questions.length - 1 ? 'Next Question' : 'Finish Test'}
-              </button>
-            )}
+          <div className="test-progress">
+            <div className="progress-bar-bg">
+              <div 
+                className="progress-bar-fill"
+                style={{ width: `${progress}%` }}
+              ></div>
+            </div>
+            <div className="progress-text">
+              {currentQuestion + 1} / {questions.length}
+            </div>
+          </div>
+
+          <div className="question-container">
+            <div className="question-card">
+              <div className="question-text">
+                {currentQ.text}
+              </div>
+              
+              {currentQ.imageUrl && (
+                <div className="question-image">
+                  <img 
+                    src={currentQ.imageUrl} 
+                    alt={currentQ.imageHint || 'Question image'} 
+                  />
+                </div>
+              )}
+
+              <div className="answer-options">
+                {currentQ.options.map((option) => (
+                  <button
+                    key={option.id}
+                    className={`answer-option ${selectedAnswer === option.id ? 'selected' : ''}`}
+                    onClick={() => handleAnswerSelect(option.id)}
+                  >
+                    {option.text}
+                  </button>
+                ))}
+              </div>
+
+              {showResult && (
+                <div className="answer-explanation">
+                  <div className={`explanation-header ${selectedAnswer === currentQ.correctAnswerId ? 'correct' : 'incorrect'}`}>
+                    {selectedAnswer === currentQ.correctAnswerId ? '✅ Correct!' : '❌ Incorrect'}
+                  </div>
+                  <div className="explanation-text">
+                    {currentQ.explanation}
+                  </div>
+                </div>
+              )}
+
+              <div className="question-actions">
+                {!showResult ? (
+                  <button 
+                    className="action-button"
+                    onClick={handleShowResult}
+                    disabled={!selectedAnswer}
+                  >
+                    Check Answer
+                  </button>
+                ) : (
+                  <button 
+                    className="action-button"
+                    onClick={handleNextQuestion}
+                  >
+                    {currentQuestion < questions.length - 1 ? 'Next Question' : 'Finish Test'}
+                  </button>
+                )}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };
