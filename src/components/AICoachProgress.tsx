@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
-import { Mascot } from './Mascot';
 import './AICoachProgress.css';
 
 interface ProgressMetric {
@@ -114,12 +113,8 @@ export const AICoachProgress: React.FC = () => {
         <div className="progress-container">
           <div className="progress-header">
             <div className="header-content">
-              <div className="header-mascot">
-                <Mascot size={60} />
-              </div>
               <div className="header-text">
                 <h1>📈 Learning Progress</h1>
-                <p>Track your learning journey with AI-powered insights</p>
               </div>
             </div>
             <button 
