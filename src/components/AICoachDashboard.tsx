@@ -173,8 +173,8 @@ export const AICoachDashboard: React.FC = () => {
                     <div className="insight-content">
                       <h4>{insight.type.charAt(0).toUpperCase() + insight.type.slice(1)}</h4>
                       <p>{insight.message}</p>
-                      {/* Only show Start button for the first insight (recommended test) */}
-                      {index === 0 && (
+                      {/* Only show Start button for recommendation insights */}
+                      {insight.type === 'recommendation' && (
                         <button 
                           className="start-practice-btn"
                           onClick={() => navigateToRecommendedTest(insight)}
