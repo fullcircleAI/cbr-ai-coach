@@ -58,8 +58,10 @@
 .ai-insights-summary {
   background: white;
   border-radius: 12px;
-  padding: 1rem;
+  padding: 0.75rem;
   box-shadow: 0 4px 12px rgba(26, 62, 122, 0.1);
+  max-height: 200px;
+  overflow: hidden;
 }
 
 .ai-insights-summary h3 {
@@ -71,16 +73,16 @@
 
 .insights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem;
 }
 
 .insight-card {
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
-  padding: 0.75rem;
-  border-radius: 8px;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  border-radius: 6px;
   border: 1px solid #e5e7eb;
   transition: all 0.3s ease;
 }
@@ -111,30 +113,30 @@
 }
 
 .insight-content h4 {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin: 0 0 0.2rem 0;
+  margin: 0 0 0.15rem 0;
 }
 
 .insight-content p {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--text-secondary);
-  margin: 0 0 0.75rem 0;
-  line-height: 1.3;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
 }
 
 /* Start Practice Button */
 .start-practice-btn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
+  gap: 0.4rem;
+  padding: 0.4rem 0.6rem;
   background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%);
   color: white;
   border: none;
-  border-radius: 6px;
-  font-size: 0.7rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -149,7 +151,7 @@
 }
 
 .start-practice-btn .btn-icon {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .start-practice-btn .btn-text {
@@ -158,11 +160,11 @@
 }
 
 .start-practice-btn .btn-time {
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   opacity: 0.9;
   background: rgba(255, 255, 255, 0.2);
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
+  padding: 0.15rem 0.3rem;
+  border-radius: 2px;
 }
 
 /* Mobile Responsive */
