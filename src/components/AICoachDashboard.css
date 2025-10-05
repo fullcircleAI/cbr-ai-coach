@@ -120,8 +120,49 @@
 .insight-content p {
   font-size: 0.7rem;
   color: var(--text-secondary);
-  margin: 0;
+  margin: 0 0 0.75rem 0;
   line-height: 1.3;
+}
+
+/* Start Practice Button */
+.start-practice-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.start-practice-btn:hover {
+  background: linear-gradient(135deg, #002868 0%, #1A3E7A 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 62, 122, 0.3);
+}
+
+.start-practice-btn .btn-icon {
+  font-size: 0.8rem;
+}
+
+.start-practice-btn .btn-text {
+  flex: 1;
+  text-align: center;
+}
+
+.start-practice-btn .btn-time {
+  font-size: 0.6rem;
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
 }
 
 /* Mobile Responsive */

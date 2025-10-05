@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import { Mascot } from './Mascot';
 import './AICoachDashboard.css';
@@ -19,6 +20,8 @@ interface AIInsight {
 }
 
 export const AICoachDashboard: React.FC = () => {
+  const navigate = useNavigate();
+  
   const [userProgress, setUserProgress] = useState<UserProgress>({
     averageScore: 0,
     totalQuestions: 0,
@@ -82,6 +85,34 @@ export const AICoachDashboard: React.FC = () => {
     return { remaining, percentage };
   };
 
+  const navigateToRecommendedTest = (insight: AIInsight) => {
+    // Map insight types to specific practice tests
+    let testId = '';
+    switch (insight.type) {
+      case 'mistake':
+        if (insight.message.includes('Traffic Lights')) {
+          testId = 'traffic-lights-signals';
+        } else if (insight.message.includes('Priority Rules')) {
+          testId = 'priority-rules';
+        } else if (insight.message.includes('Roundabouts')) {
+          testId = 'roundabouts';
+        } else {
+          testId = 'traffic-lights-signals'; // Default
+        }
+        break;
+      case 'strength':
+        testId = 'speed-limits'; // Continue with strengths
+        break;
+      case 'recommendation':
+        testId = 'alcohol-drugs'; // General recommendation
+        break;
+      default:
+        testId = 'traffic-lights-signals';
+    }
+    
+    navigate(`/practice/${testId}`);
+  };
+
   return (
     <div className="main-layout">
       <Navigation />
@@ -142,6 +173,14 @@ export const AICoachDashboard: React.FC = () => {
                     <div className="insight-content">
                       <h4>{insight.type.charAt(0).toUpperCase() + insight.type.slice(1)}</h4>
                       <p>{insight.message}</p>
+                      <button 
+                        className="start-practice-btn"
+                        onClick={() => navigateToRecommendedTest(insight)}
+                      >
+                        <span className="btn-icon">▶️</span>
+                        <span className="btn-text">Start Practice</span>
+                        <span className="btn-time">15 min</span>
+                      </button>
                     </div>
                   </div>
                 ))}
