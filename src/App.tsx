@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AICoachDashboard } from './components/AICoachDashboard';
 import { AICoachAnalysis } from './components/AICoachAnalysis';
 import { AICoachRecommendations } from './components/AICoachRecommendations';
-import { AICoachProgress } from './components/AICoachProgress';
 import { TestsPage } from './components/TestsPage';
 import { Settings } from './components/Settings';
 import { PracticeTest } from './components/PracticeTest';
@@ -17,7 +16,6 @@ function App() {
           <Route path="/" element={<AICoachDashboard />} />
           <Route path="/analysis" element={<AICoachAnalysis />} />
           <Route path="/recommendations" element={<AICoachRecommendations />} />
-          <Route path="/progress" element={<AICoachProgress />} />
           <Route path="/tests" element={<TestsPage />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/practice/:testId" element={<PracticeTest />} />
