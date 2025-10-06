@@ -17,6 +17,9 @@ interface AIInsight {
   type: 'mistake' | 'strength' | 'recommendation';
   message: string;
   priority: 'high' | 'medium' | 'low';
+  frequency?: number;
+  lastOccurrence?: string;
+  explanation?: string;
 }
 
 export const AICoachDashboard: React.FC = () => {
@@ -44,23 +47,37 @@ export const AICoachDashboard: React.FC = () => {
       strongAreas: ['Speed Limits', 'Parking Rules']
     };
 
-    const mockInsights: AIInsight[] = [
-      {
-        type: 'mistake',
-        message: "Confusing red and amber signals",
-        priority: 'high'
-      },
-      {
-        type: 'recommendation',
-        message: "Traffic Lights",
-        priority: 'high'
-      },
-      {
-        type: 'strength',
-        message: "Speed Limits",
-        priority: 'medium'
-      }
-    ];
+        const mockInsights: AIInsight[] = [
+          {
+            type: 'mistake',
+            message: "Red and amber signals",
+            priority: 'high',
+            frequency: 4,
+            lastOccurrence: '2 hours ago',
+            explanation: 'Mixing up light sequence'
+          },
+          {
+            type: 'mistake',
+            message: "Giving way rules",
+            priority: 'high',
+            frequency: 3,
+            lastOccurrence: '1 day ago',
+            explanation: 'Wrong right of way'
+          },
+          {
+            type: 'strength',
+            message: "Speed Limits",
+            priority: 'medium',
+            frequency: 0,
+            explanation: '90% accuracy'
+          },
+          {
+            type: 'recommendation',
+            message: "Traffic Lights",
+            priority: 'high',
+            explanation: 'Focus here for +15% score boost'
+          }
+        ];
 
     setUserProgress(mockData);
     setAiInsights(mockInsights);
@@ -166,36 +183,41 @@ export const AICoachDashboard: React.FC = () => {
               </div>
             </div>
 
-            {/* AI Insights Summary */}
-            <div className="ai-insights-summary">
-              <h3>🤖 AI Insights</h3>
-              <div className="insights-grid">
-                {aiInsights.slice(0, 3).map((insight, index) => (
-                  <div key={index} className={`insight-card ${insight.priority}`}>
-                    <div className="insight-icon">
-                      {insight.type === 'mistake' && '⚠️'}
-                      {insight.type === 'strength' && '✅'}
-                      {insight.type === 'recommendation' && '💡'}
-                    </div>
-                    <div className="insight-content">
-                      <h4>{insight.type.charAt(0).toUpperCase() + insight.type.slice(1)}</h4>
-                      <p>{insight.message}</p>
-                      {/* Only show Start button for recommendation insights */}
-                      {insight.type === 'recommendation' && (
-                        <button 
-                          className="start-practice-btn"
-                          onClick={() => navigateToRecommendedTest(insight)}
-                        >
-                          <span className="btn-icon">▶️</span>
-                          <span className="btn-text">Start Practice</span>
-                          <span className="btn-time">15 min</span>
-                        </button>
-                      )}
-                    </div>
+                {/* AI Insights Summary */}
+                <div className="ai-insights-summary">
+                  <h3>🤖 AI Learning Analysis</h3>
+                  <div className="insights-grid">
+                    {aiInsights.map((insight, index) => (
+                      <div key={index} className={`insight-card ${insight.priority}`}>
+                        <div className="insight-icon">
+                          {insight.type === 'mistake' && '⚠️'}
+                          {insight.type === 'strength' && '✅'}
+                          {insight.type === 'recommendation' && '💡'}
+                        </div>
+                        <div className="insight-content">
+                          <h4>{insight.message}</h4>
+                          {insight.explanation && (
+                            <p className="insight-explanation">{insight.explanation}</p>
+                          )}
+                          {insight.frequency && insight.frequency > 0 && (
+                            <p className="insight-frequency">{insight.frequency} times • {insight.lastOccurrence}</p>
+                          )}
+                          {/* Show Start button for recommendation insights */}
+                          {insight.type === 'recommendation' && (
+                            <button 
+                              className="start-practice-btn"
+                              onClick={() => navigateToRecommendedTest(insight)}
+                            >
+                              <span className="btn-icon">▶️</span>
+                              <span className="btn-text">Start Practice</span>
+                              <span className="btn-time">15 min</span>
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
+                </div>
 
           </div>
         </div>

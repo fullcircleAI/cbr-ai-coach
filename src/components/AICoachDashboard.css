@@ -124,6 +124,19 @@
   line-height: 1.2;
 }
 
+.insight-explanation {
+  font-size: 0.6rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 0.25rem 0;
+}
+
+.insight-frequency {
+  font-size: 0.55rem;
+  color: var(--text-light);
+  margin: 0.25rem 0 0 0;
+}
+
 /* Start Practice Button */
 .start-practice-btn {
   display: flex;

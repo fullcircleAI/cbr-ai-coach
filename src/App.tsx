@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AICoachDashboard } from './components/AICoachDashboard';
-import { AICoachAnalysis } from './components/AICoachAnalysis';
 import { AICoachRecommendations } from './components/AICoachRecommendations';
 import { TestsPage } from './components/TestsPage';
 import { Settings } from './components/Settings';
@@ -14,7 +13,6 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<AICoachDashboard />} />
-          <Route path="/analysis" element={<AICoachAnalysis />} />
           <Route path="/recommendations" element={<AICoachRecommendations />} />
           <Route path="/tests" element={<TestsPage />} />
           <Route path="/settings" element={<Settings />} />
