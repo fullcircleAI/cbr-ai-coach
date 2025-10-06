@@ -135,90 +135,86 @@ export const AICoachDashboard: React.FC = () => {
       <Navigation />
       <main className="main-content">
         <div className="dashboard">
-          <div className="dashboard-header">
-            <div className="dashboard-welcome">
-              <div className="welcome-mascot">
-                <Mascot size={80} mood="excited" />
+          {/* Summarized Learning Progress */}
+          <div className="dashboard-summary">
+            <div className="summary-stats">
+              <div className="summary-stat">
+                <div className="stat-number">{userProgress.averageScore}%</div>
+                <div className="stat-label">Average Score</div>
+                <div className="progress-bar-bg">
+                  <div className="progress-bar-fill" 
+                       style={{ 
+                         width: `${userProgress.averageScore}%`,
+                         backgroundColor: getScoreColor(userProgress.averageScore)
+                       }}></div>
+                </div>
+              </div>
+              <div className="summary-stat">
+                <div className="stat-number">{formatTime(userProgress.studyTime)}</div>
+                <div className="stat-label">Study Time</div>
+                <div className="progress-bar-bg">
+                  <div className="progress-bar-fill" 
+                       style={{ 
+                         width: `${Math.min((userProgress.studyTime / 24) * 100, 100)}%`,
+                         backgroundColor: userProgress.studyTime >= 24 ? '#10b981' : '#f59e0b'
+                       }}></div>
+                </div>
+              </div>
+              <div className="summary-stat">
+                <div className="stat-number">{formatTime(getTimeRemaining().remaining)}</div>
+                <div className="stat-label">Time Remaining</div>
+                <div className="progress-bar-bg">
+                  <div className="progress-bar-fill" 
+                       style={{ 
+                         width: `${getTimeRemaining().percentage}%`,
+                         backgroundColor: getTimeRemaining().percentage >= 100 ? '#10b981' : '#f59e0b'
+                       }}></div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="dashboard-content">
-            {/* Summarized Learning Progress */}
-            <div className="dashboard-summary">
-              <div className="summary-stats">
-                <div className="summary-stat">
-                  <div className="stat-number">{userProgress.averageScore}%</div>
-                  <div className="stat-label">Average Score</div>
-                  <div className="progress-bar-bg">
-                    <div className="progress-bar-fill" 
-                         style={{ 
-                           width: `${userProgress.averageScore}%`,
-                           backgroundColor: getScoreColor(userProgress.averageScore)
-                         }}></div>
+          {/* AI Insights Summary */}
+          <div className="ai-insights-summary">
+            <h3>🤖 AI Learning Analysis</h3>
+            <div className="insights-grid">
+              {aiInsights.map((insight, index) => (
+                <div key={index} className={`insight-card ${insight.priority}`}>
+                  <div className="insight-icon">
+                    {insight.type === 'mistake' && '⚠️'}
+                    {insight.type === 'strength' && '✅'}
+                    {insight.type === 'recommendation' && '💡'}
+                  </div>
+                  <div className="insight-content">
+                    <h4>{insight.message}</h4>
+                    {insight.explanation && (
+                      <p className="insight-explanation">{insight.explanation}</p>
+                    )}
+                    {insight.frequency && insight.frequency > 0 && (
+                      <p className="insight-frequency">{insight.frequency} times • {insight.lastOccurrence}</p>
+                    )}
+                    {/* Show Start button for recommendation insights */}
+                    {insight.type === 'recommendation' && (
+                      <button 
+                        className="start-practice-btn"
+                        onClick={() => navigateToRecommendedTest(insight)}
+                      >
+                        <span className="btn-icon">▶️</span>
+                        <span className="btn-text">Start Practice</span>
+                        <span className="btn-time">15 min</span>
+                      </button>
+                    )}
                   </div>
                 </div>
-                <div className="summary-stat">
-                  <div className="stat-number">{formatTime(userProgress.studyTime)}</div>
-                  <div className="stat-label">Study Time</div>
-                  <div className="progress-bar-bg">
-                    <div className="progress-bar-fill" 
-                         style={{ 
-                           width: `${Math.min((userProgress.studyTime / 24) * 100, 100)}%`,
-                           backgroundColor: userProgress.studyTime >= 24 ? '#10b981' : '#f59e0b'
-                         }}></div>
-                  </div>
-                </div>
-                <div className="summary-stat">
-                  <div className="stat-number">{formatTime(getTimeRemaining().remaining)}</div>
-                  <div className="stat-label">Time Remaining</div>
-                  <div className="progress-bar-bg">
-                    <div className="progress-bar-fill" 
-                         style={{ 
-                           width: `${getTimeRemaining().percentage}%`,
-                           backgroundColor: getTimeRemaining().percentage >= 100 ? '#10b981' : '#f59e0b'
-                         }}></div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
+          </div>
 
-                {/* AI Insights Summary */}
-                <div className="ai-insights-summary">
-                  <h3>🤖 AI Learning Analysis</h3>
-                  <div className="insights-grid">
-                    {aiInsights.map((insight, index) => (
-                      <div key={index} className={`insight-card ${insight.priority}`}>
-                        <div className="insight-icon">
-                          {insight.type === 'mistake' && '⚠️'}
-                          {insight.type === 'strength' && '✅'}
-                          {insight.type === 'recommendation' && '💡'}
-                        </div>
-                        <div className="insight-content">
-                          <h4>{insight.message}</h4>
-                          {insight.explanation && (
-                            <p className="insight-explanation">{insight.explanation}</p>
-                          )}
-                          {insight.frequency && insight.frequency > 0 && (
-                            <p className="insight-frequency">{insight.frequency} times • {insight.lastOccurrence}</p>
-                          )}
-                          {/* Show Start button for recommendation insights */}
-                          {insight.type === 'recommendation' && (
-                            <button 
-                              className="start-practice-btn"
-                              onClick={() => navigateToRecommendedTest(insight)}
-                            >
-                              <span className="btn-icon">▶️</span>
-                              <span className="btn-text">Start Practice</span>
-                              <span className="btn-time">15 min</span>
-                            </button>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
+          {/* Mascot at the bottom */}
+          <div className="dashboard-footer">
+            <div className="welcome-mascot">
+              <Mascot size={80} mood="excited" />
+            </div>
           </div>
         </div>
       </main>

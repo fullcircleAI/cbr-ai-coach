@@ -1,9 +1,11 @@
 /* AI Coach Dashboard Styles */
 
-.dashboard-content {
-  flex: 1;
-  overflow-y: auto;
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   padding: 0 0.5rem;
+  overflow-y: auto;
 }
 
 /* Dashboard Summary Styles */
@@ -228,6 +230,40 @@
   .ai-insights-summary {
     padding: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+}
+
+/* Dashboard Footer Styles */
+.dashboard-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.welcome-mascot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Mobile optimizations for scrollable dashboard */
+@media (max-width: 768px) {
+  .dashboard {
+    min-height: calc(100vh - 80px);
+    padding: 0.25rem;
+  }
+  
+  .dashboard-footer {
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+  }
+  
+  .ai-insights-summary {
+    margin-bottom: 1rem;
   }
 }
 
