@@ -205,9 +205,9 @@ export const AICoachRecommendations: React.FC = () => {
           <div className="recommendations-actions">
             <button 
               className="action-button"
-              onClick={() => navigate('/analysis')}
+              onClick={() => navigate('/')}
             >
-              View Mistake Analysis
+              View Dashboard
             </button>
             <button 
               className="action-button secondary"
