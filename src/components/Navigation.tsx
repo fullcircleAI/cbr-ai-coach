@@ -11,21 +11,21 @@ export const Navigation: React.FC = () => {
     {
       id: 'dashboard',
       label: 'Dashboard',
-      icon: '📊',
+      icon: '',
       path: '/',
       description: 'Your learning dashboard'
     },
     {
       id: 'tests',
       label: 'Tests',
-      icon: '🧪',
+      icon: '',
       path: '/tests',
       description: 'Practice tests and mock exams'
     },
     {
       id: 'settings',
       label: 'Settings',
-      icon: '⚙️',
+      icon: '',
       path: '/settings',
       description: 'App settings and preferences'
     }

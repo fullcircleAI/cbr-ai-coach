@@ -341,7 +341,7 @@ export const PracticeTest: React.FC = () => {
               {showResult && (
                 <div className="answer-explanation">
                   <div className={`explanation-header ${selectedAnswer === currentQ.correctAnswerId ? 'correct' : 'incorrect'}`}>
-                    {selectedAnswer === currentQ.correctAnswerId ? '✅ Correct!' : '❌ Incorrect'}
+                    {selectedAnswer === currentQ.correctAnswerId ? 'Correct!' : 'Incorrect'}
                   </div>
                   <div className="explanation-text">
                     {currentQ.explanation}
