@@ -167,15 +167,10 @@ export const AICoachDashboard: React.FC = () => {
 
           {/* AI Insights Summary */}
           <div className="ai-insights-summary">
-            <h3>🤖 AI Learning Analysis</h3>
+            <h3>AI Learning Analysis</h3>
             <div className="insights-grid">
               {aiInsights.map((insight, index) => (
-                <div key={index} className={`insight-card ${insight.priority}`}>
-                  <div className="insight-icon">
-                    {insight.type === 'mistake' && '⚠️'}
-                    {insight.type === 'strength' && '✅'}
-                    {insight.type === 'recommendation' && '💡'}
-                  </div>
+                <div key={index} className={`insight-card ${insight.type}`}>
                   <div className="insight-content">
                     <h4>{insight.message}</h4>
                     {insight.explanation && (
@@ -190,7 +185,6 @@ export const AICoachDashboard: React.FC = () => {
                         className="start-practice-btn"
                         onClick={() => navigateToRecommendedTest(insight)}
                       >
-                        <span className="btn-icon">▶️</span>
                         <span className="btn-text">Start Practice</span>
                         <span className="btn-time">15 min</span>
                       </button>

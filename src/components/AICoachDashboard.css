@@ -81,35 +81,30 @@
   display: flex;
   align-items: flex-start;
   gap: 0.4rem;
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
   transition: all 0.3s ease;
 }
 
 .insight-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(26, 62, 122, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.insight-card.high {
-  border-left: 4px solid #ef4444;
-  background: #fef2f2;
+.insight-card.mistake {
+  background: #fee2e2;
+  border-left: 4px solid #dc2626;
 }
 
-.insight-card.medium {
+.insight-card.strength {
+  background: #fef3c7;
   border-left: 4px solid #f59e0b;
-  background: #fffbeb;
 }
 
-.insight-card.low {
-  border-left: 4px solid #10b981;
-  background: #f0fdf4;
-}
-
-.insight-icon {
-  font-size: 1.2rem;
-  flex-shrink: 0;
+.insight-card.recommendation {
+  background: #dcfce7;
+  border-left: 4px solid #16a34a;
 }
 
 .insight-content h4 {
@@ -164,9 +159,6 @@
   box-shadow: 0 4px 12px rgba(26, 62, 122, 0.3);
 }
 
-.start-practice-btn .btn-icon {
-  font-size: 0.7rem;
-}
 
 .start-practice-btn .btn-text {
   flex: 1;
