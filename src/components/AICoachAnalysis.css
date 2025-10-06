@@ -2,7 +2,7 @@
 
 .analysis-container {
   padding: 0.5rem 0.3rem;
-  height: 100%;
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: 0.5rem;
   flex-shrink: 0;
 }
 
@@ -23,8 +23,8 @@
 }
 
 .header-text h1 {
-  margin: 0 0 var(--spacing-sm) 0;
-  font-size: 1.8rem;
+  margin: 0;
+  font-size: 1.2rem;
   font-weight: 700;
   color: white;
 }
@@ -52,41 +52,42 @@
 
 .analysis-summary {
   background: white;
-  border-radius: var(--border-radius);
-  padding: var(--spacing-lg);
-  margin-bottom: var(--spacing-xl);
-  box-shadow: var(--shadow);
+  border-radius: 12px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 12px rgba(26, 62, 122, 0.1);
+  flex-shrink: 0;
 }
 
 .analysis-summary h2 {
-  margin: 0 0 var(--spacing-lg) 0;
+  margin: 0 0 0.5rem 0;
   color: var(--primary-color);
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .summary-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .summary-card {
   text-align: center;
-  padding: var(--spacing-md);
+  padding: 0.5rem;
   background: rgba(26, 62, 122, 0.05);
-  border-radius: var(--border-radius);
+  border-radius: 8px;
 }
 
 .summary-number {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--primary-color);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 0.25rem;
 }
 
 .summary-label {
-  font-size: 0.9rem;
+  font-size: 0.6rem;
   color: var(--text-secondary);
   font-weight: 500;
 }
@@ -94,22 +95,22 @@
 .mistake-patterns {
   flex: 1;
   overflow-y: auto;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: 0.5rem;
 }
 
 .mistake-patterns h2 {
-  margin: 0 0 var(--spacing-lg) 0;
+  margin: 0 0 0.5rem 0;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .mistake-card {
   background: white;
-  border-radius: var(--border-radius);
-  padding: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
-  box-shadow: var(--shadow);
-  border-left: 4px solid var(--error-color);
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(26, 62, 122, 0.1);
+  border-left: 3px solid #ef4444;
 }
 
 .mistake-header {
@@ -230,5 +231,31 @@
   
   .analysis-actions {
     flex-direction: column;
+  }
+  
+  .analysis-container {
+    height: calc(100vh - 60px);
+    padding: 0.25rem;
+  }
+  
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  
+  .summary-card {
+    padding: 0.4rem;
+  }
+  
+  .summary-number {
+    font-size: 1rem;
+  }
+  
+  .summary-label {
+    font-size: 0.5rem;
+  }
+  
+  .mistake-card {
+    padding: 0.4rem;
   }
 }

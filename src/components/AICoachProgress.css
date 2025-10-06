@@ -2,7 +2,7 @@
 
 .progress-container {
   padding: 0.5rem 0.3rem;
-  height: 100%;
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: 0.5rem;
   flex-shrink: 0;
 }
 
@@ -23,8 +23,8 @@
 }
 
 .header-text h1 {
-  margin: 0 0 var(--spacing-sm) 0;
-  font-size: 1.8rem;
+  margin: 0;
+  font-size: 1.2rem;
   font-weight: 700;
   color: white;
 }
@@ -52,16 +52,17 @@
 
 .overall-progress-card {
   background: white;
-  border-radius: var(--border-radius);
-  padding: var(--spacing-lg);
-  margin-bottom: var(--spacing-xl);
-  box-shadow: var(--shadow);
+  border-radius: 12px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 12px rgba(26, 62, 122, 0.1);
+  flex-shrink: 0;
 }
 
 .overall-progress-card h2 {
-  margin: 0 0 var(--spacing-lg) 0;
+  margin: 0 0 0.5rem 0;
   color: var(--primary-color);
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .overall-progress-bar {
@@ -85,47 +86,49 @@
 
 .metrics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-xl);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
 }
 
 .metric-card {
   background: white;
-  border-radius: var(--border-radius);
-  padding: var(--spacing-lg);
-  box-shadow: var(--shadow);
-  border-left: 4px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(26, 62, 122, 0.1);
+  border-left: 3px solid var(--primary-color);
+  text-align: center;
 }
 
 .metric-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 0.25rem;
 }
 
 .metric-name {
-  font-size: 1.1rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--primary-color);
 }
 
 .metric-trend {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .metric-value {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--primary-color);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 0.25rem;
 }
 
 .metric-target {
-  font-size: 0.9rem;
+  font-size: 0.6rem;
   color: var(--text-secondary);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 0.25rem;
 }
 
 .metric-progress {
@@ -135,27 +138,27 @@
 .insights-section {
   flex: 1;
   overflow-y: auto;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: 0.5rem;
 }
 
 .insights-section h2 {
-  margin: 0 0 var(--spacing-lg) 0;
+  margin: 0 0 0.5rem 0;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .insights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-lg);
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
 }
 
 .insight-card {
   background: white;
-  border-radius: var(--border-radius);
-  padding: var(--spacing-lg);
-  box-shadow: var(--shadow);
-  border-left: 4px solid;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(26, 62, 122, 0.1);
+  border-left: 3px solid;
 }
 
 .insight-card.achievement {
@@ -231,5 +234,35 @@
   
   .progress-actions {
     flex-direction: column;
+  }
+  
+  .progress-container {
+    height: calc(100vh - 60px);
+    padding: 0.25rem;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  
+  .metric-card {
+    padding: 0.4rem;
+  }
+  
+  .metric-name {
+    font-size: 0.6rem;
+  }
+  
+  .metric-value {
+    font-size: 1rem;
+  }
+  
+  .metric-target {
+    font-size: 0.5rem;
+  }
+  
+  .insight-card {
+    padding: 0.4rem;
   }
 }
