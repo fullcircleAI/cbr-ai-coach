@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
-import { Mascot } from './Mascot';
 import './AICoachDashboard.css';
 
 interface UserProgress {
@@ -55,14 +54,6 @@ export const AICoachDashboard: React.FC = () => {
             frequency: 4,
             lastOccurrence: '2 hours ago',
             explanation: 'Mixing up light sequence'
-          },
-          {
-            type: 'mistake',
-            message: "Giving way rules",
-            priority: 'high',
-            frequency: 3,
-            lastOccurrence: '1 day ago',
-            explanation: 'Wrong right of way'
           },
           {
             type: 'strength',
@@ -210,12 +201,6 @@ export const AICoachDashboard: React.FC = () => {
             </div>
           </div>
 
-          {/* Mascot at the bottom */}
-          <div className="dashboard-footer">
-            <div className="welcome-mascot">
-              <Mascot size={80} mood="excited" />
-            </div>
-          </div>
         </div>
       </main>
     </div>
