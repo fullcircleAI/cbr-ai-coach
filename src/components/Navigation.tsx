@@ -16,18 +16,11 @@ export const Navigation: React.FC = () => {
       description: 'Your learning dashboard'
     },
     {
-      id: 'progress',
-      label: 'Progress',
-      icon: '📈',
-      path: '/progress',
-      description: 'Track your learning progress'
-    },
-    {
       id: 'tests',
       label: 'Tests',
       icon: '🧪',
       path: '/tests',
-      description: 'Practice tests and quizzes'
+      description: 'Practice tests and mock exams'
     },
     {
       id: 'analysis',

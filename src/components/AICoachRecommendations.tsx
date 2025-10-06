@@ -211,9 +211,9 @@ export const AICoachRecommendations: React.FC = () => {
             </button>
             <button 
               className="action-button secondary"
-              onClick={() => navigate('/progress')}
+              onClick={() => navigate('/')}
             >
-              Track Progress
+              View Dashboard
             </button>
           </div>
         </div>

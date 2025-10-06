@@ -167,9 +167,9 @@ export const AICoachAnalysis: React.FC = () => {
             </button>
             <button 
               className="action-button secondary"
-              onClick={() => navigate('/progress')}
+              onClick={() => navigate('/')}
             >
-              View Progress
+              View Dashboard
             </button>
           </div>
         </div>
