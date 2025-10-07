@@ -21,8 +21,9 @@
 /* Mobile and tablet - account for footer */
 @media (max-width: 1024px) {
   .dashboard {
-    height: calc(100vh - 80px - 1rem);
-    max-height: calc(100vh - 80px - 1rem);
+    height: calc(100vh - 100px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
   }
 }
 
@@ -119,8 +120,9 @@
 /* Mobile - allow scrolling if needed */
 @media (max-width: 1024px) {
   .ai-insights-summary {
-    overflow-y: auto;
-    min-height: 0;
+    overflow-y: visible;
+    min-height: auto;
+    flex: none;
   }
 }
 
