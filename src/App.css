@@ -121,6 +121,14 @@
   overflow: hidden;
 }
 
+/* Web only - ensure no scrolling */
+@media (min-width: 1025px) {
+  .main-content {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
 /* Mobile Layout */
 @media (max-width: 768px) {
   .main-content {
