@@ -48,6 +48,12 @@ export const AICoachDashboard: React.FC = () => {
 
         const mockInsights: AIInsight[] = [
           {
+            type: 'recommendation',
+            message: "Traffic Lights",
+            priority: 'red',
+            explanation: 'Focus here for +15% score boost'
+          },
+          {
             type: 'mistake',
             message: "Red and amber signals",
             priority: 'amber',
@@ -61,12 +67,6 @@ export const AICoachDashboard: React.FC = () => {
             priority: 'green',
             frequency: 0,
             explanation: '90% accuracy'
-          },
-          {
-            type: 'recommendation',
-            message: "Traffic Lights",
-            priority: 'red',
-            explanation: 'Focus here for +15% score boost'
           }
         ];
 
