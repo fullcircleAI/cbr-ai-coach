@@ -35,6 +35,35 @@
   font-weight: 700;
   color: var(--primary-blue);
   margin-bottom: 0.2rem;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+}
+
+/* Digital Clock Style for Time Stats */
+.summary-stat:nth-child(2) .stat-number,
+.summary-stat:nth-child(3) .stat-number {
+  background: #000;
+  color: #00ff00;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  border: 2px solid #333;
+  box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.3);
+  text-shadow: 0 0 5px #00ff00;
+  font-family: 'Courier New', monospace;
+  font-weight: 900;
+  letter-spacing: 2px;
+  animation: digitalGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes digitalGlow {
+  0% {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.3), 0 0 5px rgba(0, 255, 0, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 8px #00ff00, 0 0 15px #00ff00;
+    box-shadow: inset 0 0 15px rgba(0, 255, 0, 0.4), 0 0 8px rgba(0, 255, 0, 0.3);
+  }
 }
 
 .summary-stat .stat-label {
