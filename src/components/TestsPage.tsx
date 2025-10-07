@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
-import { Mascot } from './Mascot';
 import './TestsPage.css';
 
 interface PracticeTest {
@@ -20,137 +19,155 @@ export const TestsPage: React.FC = () => {
 
   const practiceTests: PracticeTest[] = [
     {
-      id: 'traffic-lights-signals',
-      name: 'Traffic Lights & Signals',
-      description: 'Traffic light signals and sequences',
+      id: 'traffic-rules-signs',
+      name: 'Traffic Rules & Signs',
+      description: 'Master Dutch traffic rules, signs, and regulations',
       questionCount: 25,
       difficulty: 'medium',
-      category: 'Signals',
+      category: 'Rules',
       icon: '🚦'
     },
     {
       id: 'priority-rules',
-      name: 'Priority Rules',
-      description: 'Right of way and priority situations',
-      questionCount: 30,
-      difficulty: 'hard',
+      name: 'Priority & Right of Way',
+      description: 'Understand priority rules and right of way situations',
+      questionCount: 20,
+      difficulty: 'medium',
       category: 'Rules',
-      icon: '🛑'
+      icon: '🚩'
+    },
+    {
+      id: 'hazard-perception',
+      name: 'Hazard Perception',
+      description: 'Learn to recognize and respond to dangerous situations',
+      questionCount: 15,
+      difficulty: 'hard',
+      category: 'Safety',
+      icon: '👁️'
+    },
+    {
+      id: 'speed-safety',
+      name: 'Speed & Safety',
+      description: 'Speed limits, safety rules, and vehicle regulations',
+      questionCount: 20,
+      difficulty: 'easy',
+      category: 'Safety',
+      icon: '🛡️'
+    },
+    {
+      id: 'bicycle-interactions',
+      name: 'Bicycle Interactions',
+      description: 'Learn to safely interact with cyclists on the road',
+      questionCount: 15,
+      difficulty: 'medium',
+      category: 'Interactions',
+      icon: '🚴'
     },
     {
       id: 'roundabout-rules',
       name: 'Roundabout Rules',
-      description: 'Roundabout entry, exit, and lane selection',
-      questionCount: 20,
-      difficulty: 'hard',
-      category: 'Maneuvers',
+      description: 'Master roundabout navigation and priority rules',
+      questionCount: 18,
+      difficulty: 'medium',
+      category: 'Rules',
       icon: '🔄'
     },
     {
-      id: 'speed-limits',
-      name: 'Speed Limits',
-      description: 'Speed limits and restrictions',
+      id: 'tram-interactions',
+      name: 'Tram Interactions',
+      description: 'Understand how to safely interact with trams',
+      questionCount: 12,
+      difficulty: 'easy',
+      category: 'Interactions',
+      icon: '🚊'
+    },
+    {
+      id: 'pedestrian-crossings',
+      name: 'Pedestrian Crossings',
+      description: 'Learn pedestrian crossing rules and safety',
       questionCount: 15,
       difficulty: 'easy',
+      category: 'Interactions',
+      icon: '🚶'
+    },
+    {
+      id: 'construction-zones',
+      name: 'Construction Zones',
+      description: 'Navigate construction zones safely',
+      questionCount: 10,
+      difficulty: 'easy',
+      category: 'Zones',
+      icon: '🚧'
+    },
+    {
+      id: 'weather-conditions',
+      name: 'Weather Conditions',
+      description: 'Drive safely in various weather conditions',
+      questionCount: 12,
+      difficulty: 'easy',
+      category: 'Safety',
+      icon: '🌧️'
+    },
+    {
+      id: 'road-signs',
+      name: 'Road Signs',
+      description: 'Advanced road signs and identification',
+      questionCount: 25,
+      difficulty: 'medium',
+      category: 'Signs',
+      icon: '🛑'
+    },
+    {
+      id: 'motorway-rules',
+      name: 'Motorway Rules',
+      description: 'Specific rules for motorway driving',
+      questionCount: 18,
+      difficulty: 'medium',
       category: 'Rules',
-      icon: '⚡'
+      icon: '🛣️'
+    },
+    {
+      id: 'vehicle-knowledge',
+      name: 'Vehicle Knowledge',
+      description: 'Vehicle categories and documentation',
+      questionCount: 15,
+      difficulty: 'easy',
+      category: 'Vehicles',
+      icon: '🚗'
     },
     {
       id: 'parking-rules',
       name: 'Parking Rules',
       description: 'Parking regulations and restrictions',
-      questionCount: 22,
+      questionCount: 20,
       difficulty: 'medium',
       category: 'Rules',
       icon: '🅿️'
     },
     {
-      id: 'hazard-perception',
-      name: 'Hazard Perception',
-      description: 'Identifying and responding to hazards',
-      questionCount: 18,
-      difficulty: 'hard',
-      category: 'Safety',
-      icon: '⚠️'
-    },
-    {
-      id: 'motorway-rules',
-      name: 'Motorway Rules',
-      description: 'Highway and motorway regulations',
-      questionCount: 16,
-      difficulty: 'medium',
-      category: 'Rules',
-      icon: '🛣️'
-    },
-    {
-      id: 'weather-conditions',
-      name: 'Weather Conditions',
-      description: 'Driving in different weather conditions',
-      questionCount: 12,
-      difficulty: 'medium',
-      category: 'Safety',
-      icon: '🌧️'
-    },
-    {
-      id: 'mandatory-signs',
-      name: 'Mandatory Signs',
-      description: 'Mandatory traffic signs and their meanings',
-      questionCount: 20,
-      difficulty: 'medium',
-      category: 'Signs',
-      icon: '📋'
-    },
-    {
-      id: 'warning-signs',
-      name: 'Warning Signs',
-      description: 'Warning signs and hazard indicators',
-      questionCount: 18,
-      difficulty: 'medium',
-      category: 'Signs',
-      icon: '⚠️'
-    },
-    {
-      id: 'prohibitory-signs',
-      name: 'Prohibitory Signs',
-      description: 'Prohibitory signs and restrictions',
-      questionCount: 22,
-      difficulty: 'medium',
-      category: 'Signs',
-      icon: '🚫'
-    },
-    {
-      id: 'road-information',
-      name: 'Road Information',
-      description: 'Road information signs and markings',
-      questionCount: 15,
+      id: 'environmental',
+      name: 'Environmental Zones',
+      description: 'Environmental zones and restrictions',
+      questionCount: 10,
       difficulty: 'easy',
-      category: 'Information',
-      icon: 'ℹ️'
+      category: 'Zones',
+      icon: '🌱'
     },
     {
-      id: 'sign-identification',
-      name: 'Sign Identification',
-      description: 'Identifying and understanding traffic signs',
-      questionCount: 25,
-      difficulty: 'medium',
-      category: 'Signs',
-      icon: '🔍'
-    },
-    {
-      id: 'road-markings',
-      name: 'Road Markings',
-      description: 'Road markings and their meanings',
-      questionCount: 16,
-      difficulty: 'medium',
-      category: 'Markings',
-      icon: '🛣️'
+      id: 'technology-safety',
+      name: 'Technology & Safety',
+      description: 'Modern vehicle technology and safety features',
+      questionCount: 12,
+      difficulty: 'easy',
+      category: 'Technology',
+      icon: '🔧'
     },
     {
       id: 'alcohol-drugs',
       name: 'Alcohol & Drugs',
       description: 'Alcohol and drug regulations for drivers',
-      questionCount: 12,
-      difficulty: 'easy',
+      questionCount: 15,
+      difficulty: 'medium',
       category: 'Safety',
       icon: '🍺'
     },
@@ -164,98 +181,35 @@ export const TestsPage: React.FC = () => {
       icon: '😴'
     },
     {
-      id: 'vehicle-documentation',
-      name: 'Vehicle Documentation',
-      description: 'Required vehicle documents and inspections',
-      questionCount: 14,
-      difficulty: 'medium',
-      category: 'Documentation',
-      icon: '📄'
-    },
-    {
       id: 'emergency-procedures',
       name: 'Emergency Procedures',
-      description: 'Emergency situations and procedures',
-      questionCount: 16,
-      difficulty: 'hard',
+      description: 'Emergency procedures and protocols',
+      questionCount: 12,
+      difficulty: 'medium',
       category: 'Safety',
       icon: '🚨'
     },
     {
-      id: 'bicycle-interactions',
-      name: 'Bicycle Interactions',
-      description: 'Interacting with cyclists on the road',
-      questionCount: 18,
-      difficulty: 'medium',
-      category: 'Interactions',
-      icon: '🚴'
-    },
-    {
-      id: 'tram-interactions',
-      name: 'Tram Interactions',
-      description: 'Interacting with trams and public transport',
-      questionCount: 14,
-      difficulty: 'hard',
-      category: 'Interactions',
-      icon: '🚊'
-    },
-    {
-      id: 'pedestrian-crossings',
-      name: 'Pedestrian Crossings',
-      description: 'Pedestrian crossings and safety',
-      questionCount: 16,
-      difficulty: 'medium',
-      category: 'Safety',
-      icon: '🚶'
-    },
-    {
-      id: 'construction-zones',
-      name: 'Construction Zones',
-      description: 'Driving through construction areas',
-      questionCount: 12,
-      difficulty: 'medium',
-      category: 'Zones',
-      icon: '🚧'
-    },
-    {
-      id: 'environmental-zones',
-      name: 'Environmental Zones',
-      description: 'Environmental zones and restrictions',
-      questionCount: 10,
-      difficulty: 'easy',
-      category: 'Zones',
-      icon: '🌱'
-    },
-    {
-      id: 'technology-safety',
-      name: 'Technology & Safety',
-      description: 'Vehicle technology and safety systems',
-      questionCount: 14,
-      difficulty: 'medium',
-      category: 'Technology',
-      icon: '🔧'
-    },
-    {
-      id: 'vehicle-categories',
-      name: 'Vehicle Categories',
-      description: 'Different vehicle categories and classifications',
-      questionCount: 12,
-      difficulty: 'easy',
-      category: 'Vehicles',
-      icon: '🚗'
-    },
-    {
       id: 'insight-practice',
       name: 'Insight Practice',
-      description: 'Advanced driving insight and judgment',
+      description: 'Practice understanding traffic scenarios',
       questionCount: 20,
       difficulty: 'hard',
       category: 'Advanced',
       icon: '🧠'
+    },
+    {
+      id: 'traffic-lights-signals',
+      name: 'Traffic Lights & Signals',
+      description: 'Traffic light signals and sequences',
+      questionCount: 25,
+      difficulty: 'medium',
+      category: 'Signals',
+      icon: '🚦'
     }
   ];
 
-  const categories = ['all', 'Signals', 'Rules', 'Safety', 'Signs', 'Information', 'Markings', 'Documentation', 'Interactions', 'Zones', 'Technology', 'Vehicles', 'Advanced', 'Maneuvers'];
+  const categories = ['all', 'Rules', 'Safety', 'Interactions', 'Zones', 'Signs', 'Vehicles', 'Technology', 'Advanced', 'Signals'];
 
   const filteredTests = selectedCategory === 'all' 
     ? practiceTests 
@@ -277,13 +231,10 @@ export const TestsPage: React.FC = () => {
   return (
     <div className="main-layout">
       <Navigation />
-      <main className="main-content">
+      <main className="main-content tests-page">
         <div className="tests-page">
           <div className="tests-header">
             <div className="header-content">
-              <div className="header-mascot">
-                <Mascot size={60} />
-              </div>
               <div className="header-text">
                 <h1>🧪 Practice Tests</h1>
                 <p>Choose a practice test to improve your driving theory knowledge</p>

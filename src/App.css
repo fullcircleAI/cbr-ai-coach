@@ -140,6 +140,13 @@
     height: calc(100vh - 100px); /* Account for mobile footer */
     overflow: hidden;
   }
+  
+  /* Make Tests and Settings pages scrollable */
+  .main-content.tests-page,
+  .main-content.settings-page {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 }
 
 /* Tablet Layout */
