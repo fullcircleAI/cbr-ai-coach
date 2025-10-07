@@ -15,7 +15,7 @@ interface UserProgress {
 interface AIInsight {
   type: 'mistake' | 'strength' | 'recommendation';
   message: string;
-  priority: 'high' | 'medium' | 'low';
+  priority: 'amber' | 'green' | 'red';
   frequency?: number;
   lastOccurrence?: string;
   explanation?: string;
@@ -50,7 +50,7 @@ export const AICoachDashboard: React.FC = () => {
           {
             type: 'mistake',
             message: "Red and amber signals",
-            priority: 'high',
+            priority: 'amber',
             frequency: 4,
             lastOccurrence: '2 hours ago',
             explanation: 'Mixing up light sequence'
@@ -58,14 +58,14 @@ export const AICoachDashboard: React.FC = () => {
           {
             type: 'strength',
             message: "Speed Limits",
-            priority: 'medium',
+            priority: 'green',
             frequency: 0,
             explanation: '90% accuracy'
           },
           {
             type: 'recommendation',
             message: "Traffic Lights",
-            priority: 'high',
+            priority: 'red',
             explanation: 'Focus here for +15% score boost'
           }
         ];
@@ -170,7 +170,7 @@ export const AICoachDashboard: React.FC = () => {
             <h3>AI Learning Analysis</h3>
             <div className="insights-grid">
               {aiInsights.map((insight, index) => (
-                <div key={index} className={`insight-card ${insight.type}`}>
+                <div key={index} className={`insight-card ${insight.priority}`}>
                   <div className="insight-content">
                     <h4>{insight.message}</h4>
                     {insight.explanation && (

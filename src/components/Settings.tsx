@@ -75,7 +75,7 @@ export const Settings: React.FC = () => {
       
       <div className="settings-container">
         <div className="settings-header">
-          <h1>Settings</h1>
+          <h1>⚙️ Settings</h1>
           <p>Manage your AI Learning Coach preferences</p>
         </div>
 
@@ -286,7 +286,7 @@ export const Settings: React.FC = () => {
                     </button>
                     {sendSuccess && (
                       <div className="success-message">
-                        Message sent successfully! We'll get back to you soon.
+                        ✅ Message sent successfully! We'll get back to you soon.
                       </div>
                     )}
                   </div>

@@ -285,7 +285,7 @@ export const TestsPage: React.FC = () => {
                 <Mascot size={60} />
               </div>
               <div className="header-text">
-                <h1>Practice Tests</h1>
+                <h1>🧪 Practice Tests</h1>
                 <p>Choose a practice test to improve your driving theory knowledge</p>
               </div>
             </div>
