@@ -101,7 +101,6 @@ export const Navigation: React.FC = () => {
             title={item.label}
           >
             <div className="footer-icon">{item.icon}</div>
-            <div className="footer-label">{item.label}</div>
           </button>
         ))}
       </div>
