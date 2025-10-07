@@ -93,18 +93,21 @@
 }
 
 .insight-card.amber {
-  border-left: 4px solid #f59e0b;
-  background: #fffbeb;
+  border-left: 6px solid #f59e0b;
+  background: #fef3c7;
+  border: 2px solid #f59e0b;
 }
 
 .insight-card.green {
-  border-left: 4px solid #10b981;
-  background: #f0fdf4;
+  border-left: 6px solid #10b981;
+  background: #dcfce7;
+  border: 2px solid #10b981;
 }
 
 .insight-card.red {
-  border-left: 4px solid #ef4444;
-  background: #fef2f2;
+  border-left: 6px solid #ef4444;
+  background: #fee2e2;
+  border: 2px solid #ef4444;
 }
 
 .insight-icon {
