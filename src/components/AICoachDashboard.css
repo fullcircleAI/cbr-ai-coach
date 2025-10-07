@@ -13,10 +13,9 @@
 /* Mobile first - make it work on mobile */
 @media (max-width: 768px) {
   .dashboard {
-    height: calc(100vh - 120px) !important;
-    max-height: calc(100vh - 120px) !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
+    height: calc(100vh - 100px) !important;
+    max-height: calc(100vh - 100px) !important;
+    overflow: hidden !important;
   }
 }
 

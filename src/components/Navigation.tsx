@@ -11,21 +11,21 @@ export const Navigation: React.FC = () => {
     {
       id: 'dashboard',
       label: 'Dashboard',
-      icon: '●',
+      icon: '📊',
       path: '/',
       description: 'Your learning dashboard'
     },
     {
       id: 'tests',
       label: 'Tests',
-      icon: '■',
+      icon: '🧪',
       path: '/tests',
       description: 'Practice tests and mock exams'
     },
     {
       id: 'settings',
       label: 'Settings',
-      icon: '▲',
+      icon: '⚙️',
       path: '/settings',
       description: 'App settings and preferences'
     }
@@ -90,6 +90,21 @@ export const Navigation: React.FC = () => {
       >
         ☰
       </button>
+
+      {/* Mobile Footer Navigation */}
+      <div className="footer-nav">
+        {navItems.map((item) => (
+          <button
+            key={item.id}
+            className={`footer-btn ${isActive(item.path) ? 'active' : ''}`}
+            onClick={() => handleNavClick(item.path)}
+            title={item.label}
+          >
+            <div className="footer-icon">{item.icon}</div>
+            <div className="footer-label">{item.label}</div>
+          </button>
+        ))}
+      </div>
     </>
   );
 };
