@@ -201,15 +201,13 @@
   }
 
   .nav-icon {
-    font-size: 1.2rem;
-    margin-bottom: 4px;
+    font-size: 1.2rem !important;
+    margin-bottom: 4px !important;
+    display: block !important;
   }
   
   .nav-label {
-    display: block !important;
-    font-size: 0.7rem !important;
-    font-weight: 500 !important;
-    color: #333 !important;
+    display: none !important;
   }
 
   .sidebar-user {
