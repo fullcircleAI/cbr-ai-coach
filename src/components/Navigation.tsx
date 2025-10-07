@@ -11,21 +11,18 @@ export const Navigation: React.FC = () => {
     {
       id: 'dashboard',
       label: 'Dashboard',
-      icon: '📊',
       path: '/',
       description: 'Your learning dashboard'
     },
     {
       id: 'tests',
       label: 'Tests',
-      icon: '🧪',
       path: '/tests',
       description: 'Practice tests and mock exams'
     },
     {
       id: 'settings',
       label: 'Settings',
-      icon: '⚙️',
       path: '/settings',
       description: 'App settings and preferences'
     }
@@ -68,7 +65,6 @@ export const Navigation: React.FC = () => {
               onClick={() => handleNavClick(item.path)}
               title={item.label}
             >
-              <div className="nav-icon">{item.icon}</div>
               <span className="nav-label">{item.label}</span>
             </button>
           ))}
