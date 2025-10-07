@@ -117,8 +117,8 @@
   margin-left: 240px;
   padding: 2rem;
   background: var(--background-gradient);
-  min-height: 100vh;
-  overflow-y: auto;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Mobile Layout */
@@ -126,7 +126,8 @@
   .main-content {
     margin-left: 0;
     padding: 1rem;
-    padding-bottom: 100px; /* Space for mobile footer */
+    height: calc(100vh - 80px); /* Account for mobile footer */
+    overflow: hidden;
   }
 }
 
@@ -135,7 +136,8 @@
   .main-content {
     margin-left: 0;
     padding: 1.5rem;
-    padding-bottom: 100px; /* Space for tablet footer */
+    height: calc(100vh - 80px); /* Account for tablet footer */
+    overflow: hidden;
   }
 }
 
