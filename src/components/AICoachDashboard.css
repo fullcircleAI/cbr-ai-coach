@@ -10,6 +10,16 @@
   box-sizing: border-box;
 }
 
+/* Mobile first - make it work on mobile */
+@media (max-width: 768px) {
+  .dashboard {
+    height: calc(100vh - 100px) !important;
+    max-height: calc(100vh - 100px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+}
+
 /* Web only - proper height calculation */
 @media (min-width: 1025px) {
   .dashboard {
@@ -105,6 +115,12 @@
   transition: width 0.6s ease;
 }
 
+/* Hide progress bars for Study Time and Time Remaining (2nd and 3rd stats) */
+.summary-stat:nth-child(2) .progress-bar-bg,
+.summary-stat:nth-child(3) .progress-bar-bg {
+  display: none;
+}
+
 /* AI Insights Summary */
 .ai-insights-summary {
   background: white;
@@ -117,12 +133,13 @@
   overflow: hidden;
 }
 
-/* Mobile - allow scrolling if needed */
-@media (max-width: 1024px) {
+/* Mobile - ensure all content is visible */
+@media (max-width: 768px) {
   .ai-insights-summary {
-    overflow-y: visible;
-    min-height: auto;
-    flex: none;
+    overflow-y: visible !important;
+    min-height: auto !important;
+    flex: none !important;
+    max-height: none !important;
   }
 }
 
@@ -140,6 +157,14 @@
   gap: 0.75rem;
   flex: 1;
   overflow: hidden;
+}
+
+/* Mobile - ensure all insights are visible */
+@media (max-width: 768px) {
+  .insights-grid {
+    overflow: visible !important;
+    flex: none !important;
+  }
 }
 
 /* Web only - make larger than mobile */
