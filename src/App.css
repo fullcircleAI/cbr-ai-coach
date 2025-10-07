@@ -115,10 +115,11 @@
 .main-content {
   flex: 1;
   margin-left: 240px;
-  padding: 2rem;
+  padding: 1rem;
   background: var(--background-gradient);
   height: 100vh;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* Web only - ensure no scrolling */
@@ -126,6 +127,8 @@
   .main-content {
     height: 100vh;
     overflow: hidden;
+    padding: 1rem;
+    box-sizing: border-box;
   }
 }
 
