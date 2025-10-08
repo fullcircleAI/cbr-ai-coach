@@ -994,77 +994,99 @@
 
 @media (max-width: 600px) {
   .practice-test {
-    padding: 0.5rem 0.75rem !important;
+    padding: 0.35rem 0.5rem 0.5rem 0.5rem !important;
     border-radius: 0;
   }
   .practice-question-text {
-    font-size: 0.85rem;
-    margin-bottom: 0.25rem !important;
-    line-height: 1.3;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem !important;
+    line-height: 1.25;
+    padding: 0 0.25rem;
   }
   .practice-options-list {
-    gap: 0.15rem;
-    margin-bottom: 0.25rem !important;
+    gap: 0.3rem;
+    margin-bottom: 0.3rem !important;
+    padding: 0 0.25rem;
   }
   .practice-option-label {
-    font-size: 0.85rem;
-    padding: 0.25rem 0.35rem;
-    border-radius: 4px;
-    min-height: 40px;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.5rem;
+    border-radius: 6px;
+    min-height: 36px;
+    line-height: 1.3;
   }
   .practice-option-letter {
-    width: 16px;
-    height: 16px;
-    font-size: 0.85rem;
-    margin-right: 0.15rem;
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+    margin-right: 0.4rem;
+    border-radius: 4px;
   }
   .practice-navigation-row {
-    gap: 0.15rem;
+    gap: 0.3rem;
     margin-bottom: 0.5rem;
-    margin-top: 0.25rem;
+    margin-top: 0.3rem;
   }
   .practice-nav-btn {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    min-height: 40px;
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    min-height: 38px;
+    font-weight: 600;
   }
   .practice-exit-link-row {
-    margin-top: 0.25rem;
+    margin-top: 0.3rem;
   }
   .practice-progress-bar {
-    height: 4px;
-    margin-bottom: 0.25rem !important;
+    height: 3px;
+    margin-bottom: 0.3rem !important;
   }
   .practice-header-row {
-    gap: 0.15rem;
-    margin-bottom: 0.25rem !important;
+    gap: 0.3rem;
+    margin-bottom: 0.3rem !important;
+    padding: 0 0.25rem;
+  }
+  .practice-exit-btn, .practice-mute-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
   }
   .practice-explanation-section {
-    padding: 0.5rem 0.75rem;
-    margin-bottom: 0.25rem !important;
+    padding: 0.5rem 0.6rem;
+    margin-bottom: 0.3rem !important;
+    border-width: 1px;
   }
   .practice-explanation-label {
-    font-size: 0.85rem;
-    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.3px;
   }
   .practice-explanation-text {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.3;
   }
   .practice-subject-row {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0.3rem !important;
+    padding: 0 0.25rem;
+    font-size: 0.8rem;
+  }
+  .practice-question-number {
+    font-size: 0.75rem;
+  }
+  .practice-question-subject {
+    font-size: 0.85rem;
   }
   .practice-question-image {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0.3rem !important;
   }
   .practice-question-image img {
-    max-height: 180px !important;
+    max-height: 140px !important;
   }
   .duo-motivation {
-    font-size: 1rem;
-    padding: 0.4rem 0.8rem;
-    margin: 0.5rem 0 0.25rem 0;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    margin: 0.3rem 0 0.2rem 0;
+    min-width: 80px;
   }
 }
 
