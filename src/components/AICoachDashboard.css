@@ -164,6 +164,12 @@
     overflow: visible !important;
     flex: none !important;
   }
+  
+  .insight-card {
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
 }
 
 /* Web only - make larger than mobile */
