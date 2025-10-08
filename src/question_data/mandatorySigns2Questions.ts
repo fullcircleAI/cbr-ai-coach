@@ -22,7 +22,7 @@ export const mandatorySigns2Questions: Question[] = [
       { id: 'q-mand-text-2o3', text: 'Mandatory footpath for pedestrians.' },
     ],
     correctAnswerId: 'q-mand-text-2o3',
-    explanation: 'This sign indicates a mandatory footpath.',
+    explanation: 'This sign indicates a mandatory footpath. Pedestrians must use this path.',
     subject: 'Mandatory Signs',
   },
   {
@@ -34,7 +34,7 @@ export const mandatorySigns2Questions: Question[] = [
       { id: 'q-mand-text-3o3', text: 'Dismount and walk.' },
     ],
     correctAnswerId: 'q-mand-text-3o2',
-    explanation: 'This indicates a mandatory cycle track.',
+    explanation: 'This indicates a mandatory cycle track. Cyclists must use the designated track.',
     subject: 'Mandatory Signs',
   },
   {
@@ -58,7 +58,7 @@ export const mandatorySigns2Questions: Question[] = [
       { id: 'q-mand-text-5o3', text: 'Minimum speed limit of 50 km/h.' },
     ],
     correctAnswerId: 'q-mand-text-5o3',
-    explanation: 'This blue circular sign indicates a minimum speed limit.',
+    explanation: 'This blue circular sign indicates a minimum speed limit. Maximum speed is usually in a red circle.',
     subject: 'Mandatory Signs',
   },
   {
@@ -70,7 +70,7 @@ export const mandatorySigns2Questions: Question[] = [
       { id: 'q-mand-text-6o3', text: 'Pass the obstruction on either the left or right side.' },
     ],
     correctAnswerId: 'q-mand-text-6o3',
-    explanation: 'This sign means traffic may pass the obstruction on either side.',
+    explanation: 'This sign means traffic may pass the obstruction on either side. Choose the safest and most appropriate path.',
     subject: 'Mandatory Signs',
   },
   {
@@ -82,7 +82,7 @@ export const mandatorySigns2Questions: Question[] = [
       { id: 'q-mand-text-7o3', text: 'Mandatory bridleway; horse riders must use this path.' },
     ],
     correctAnswerId: 'q-mand-text-7o3',
-    explanation: 'This indicates a mandatory bridleway.',
+    explanation: 'This indicates a mandatory bridleway. Horse riders must use this designated path.',
     subject: 'Mandatory Signs',
   },
   {
@@ -94,7 +94,7 @@ export const mandatorySigns2Questions: Question[] = [
       { id: 'q-mand-text-8o3', text: 'No buses allowed on this road.' },
     ],
     correctAnswerId: 'q-mand-text-8o1',
-    explanation: 'This sign shows a route or lane mandatory for buses.',
+    explanation: 'This sign shows a route or lane mandatory for buses. Often taxis and cyclists can use it too.',
     subject: 'Mandatory Signs',
   },
   {
@@ -106,7 +106,7 @@ export const mandatorySigns2Questions: Question[] = [
       { id: 'q-mand-text-9o3', text: 'You must proceed straight only.' },
     ],
     correctAnswerId: 'q-mand-text-9o2',
-    explanation: 'This mandatory sign means drivers must proceed straight or turn right.',
+    explanation: 'This mandatory sign means drivers must proceed straight or turn right. Choose one of these directions.',
     subject: 'Mandatory Signs',
   },
   {

@@ -10,7 +10,7 @@ export const hazardPerceptionQuestions: Question[] = [
       { id: 'q-hp-1o3', text: 'Do Nothing' },
     ],
     correctAnswerId: 'q-hp-1o1',
-    explanation: 'Immediate braking is necessary as a child has suddenly appeared in your path.',
+    explanation: 'Immediate braking is necessary as a child has suddenly appeared in your path, creating a high-risk situation.',
     subject: 'Hazard Perception',
   },
   {
@@ -22,7 +22,7 @@ export const hazardPerceptionQuestions: Question[] = [
       { id: 'q-hp-2o3', text: 'Do Nothing' },
     ],
     correctAnswerId: 'q-hp-2o1',
-    explanation: 'Braking is required as a pedestrian has unexpectedly entered the roadway without looking, posing an...',
+    explanation: 'Braking is required as a pedestrian has unexpectedly entered the roadway without looking, posing an immediate collision risk.',
     subject: 'Hazard Perception',
   },
   {
@@ -46,7 +46,7 @@ export const hazardPerceptionQuestions: Question[] = [
       { id: 'q-hp-4o3', text: 'Do Nothing' },
     ],
     correctAnswerId: 'q-hp-4o2',
-    explanation: 'Releasing the accelerator allows you to assess if the car will fully emerge and prepares you to brak...',
+    explanation: 'Releasing the accelerator allows you to assess if the car will fully emerge and prepares you to brake if necessary, without overreacting if it waits.',
     subject: 'Hazard Perception',
   },
   {
@@ -58,7 +58,7 @@ export const hazardPerceptionQuestions: Question[] = [
       { id: 'q-hp-5o3', text: 'Do Nothing' },
     ],
     correctAnswerId: 'q-hp-5o1',
-    explanation: 'A vehicle suddenly swerving into your lane at high speed requires immediate braking to avoid a colli...',
+    explanation: 'A vehicle suddenly swerving into your lane at high speed requires immediate braking to avoid a collision and maintain a safe following distance.',
     subject: 'Hazard Perception',
   },
   {
@@ -70,7 +70,7 @@ export const hazardPerceptionQuestions: Question[] = [
       { id: 'q-hp-6o3', text: 'Do Nothing' },
     ],
     correctAnswerId: 'q-hp-6o1',
-    explanation: 'A child running after a ball into the road is a high-risk situation requiring immediate braking to p...',
+    explanation: 'A child running after a ball into the road is a high-risk situation requiring immediate braking to prevent hitting the child.',
     subject: 'Hazard Perception',
   },
   {
@@ -82,7 +82,7 @@ export const hazardPerceptionQuestions: Question[] = [
       { id: 'q-hp-7o3', text: 'Do Nothing' },
     ],
     correctAnswerId: 'q-hp-7o2',
-    explanation: 'Releasing the accelerator provides more space and time to react if the oncoming vehicle crosses the centerline.',
+    explanation: 'Releasing the accelerator provides more space and time to react if the oncoming vehicle crosses the centerline. It is a cautious approach to a potential hazard.',
     subject: 'Hazard Perception',
   },
   {
@@ -94,7 +94,7 @@ export const hazardPerceptionQuestions: Question[] = [
       { id: 'q-hp-8o3', text: 'Do Nothing' },
     ],
     correctAnswerId: 'q-hp-8o2',
-    explanation: 'Releasing the accelerator is the initial action to assess if a safe stop can be made before the stop line.',
+    explanation: 'Releasing the accelerator is the initial action to assess if a safe stop can be made before the stop line. If too close to stop safely, you might proceed through amber, but the primary action is to prepare to stop.',
     subject: 'Hazard Perception',
   },
   {
@@ -106,7 +106,7 @@ export const hazardPerceptionQuestions: Question[] = [
       { id: 'q-hp-9o3', text: 'Do Nothing' },
     ],
     correctAnswerId: 'q-hp-9o3',
-    explanation: 'In very slow or stationary traffic, maintain your position and speed (or lack thereof).',
+    explanation: 'In very slow or stationary traffic, maintain your position and speed (or lack thereof). Sudden braking or swerving can be dangerous for the filtering motorcyclist. Allow them to pass.',
     subject: 'Hazard Perception',
   },
   {
@@ -118,7 +118,7 @@ export const hazardPerceptionQuestions: Question[] = [
       { id: 'q-hp-10o3', text: 'Do Nothing' },
     ],
     correctAnswerId: 'q-hp-10o2',
-    explanation: 'Severe glare significantly reduces visibility.',
+    explanation: 'Severe glare significantly reduces visibility. Release the accelerator to slow down considerably and be prepared to brake or stop if needed as you cannot clearly see potential hazards at the junction.',
     subject: 'Hazard Perception',
   }
 ]; 

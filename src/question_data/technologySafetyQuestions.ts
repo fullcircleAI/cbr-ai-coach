@@ -11,7 +11,7 @@ export const technologySafetyQuestions: Question[] = [
       { id: 'q-ts-1o4', text: 'Reduces fuel consumption' }
     ],
     correctAnswerId: 'q-ts-1o1',
-    explanation: 'ABS (Anti-lock Braking System) prevents the wheels from locking during hard braking, allowing the dr...',
+    explanation: 'ABS (Anti-lock Braking System) prevents the wheels from locking during hard braking, allowing the driver to maintain steering control and reduce stopping distance.',
     subject: 'Technology & Safety'
   },
   {
@@ -24,7 +24,7 @@ export const technologySafetyQuestions: Question[] = [
       { id: 'q-ts-2o4', text: 'Manages the fuel injection' }
     ],
     correctAnswerId: 'q-ts-2o2',
-    explanation: 'ESP (Electronic Stability Program) helps maintain vehicle stability during cornering by automaticall...',
+    explanation: 'ESP (Electronic Stability Program) helps maintain vehicle stability during cornering by automatically applying brakes to individual wheels when it detects loss of control.',
     subject: 'Technology & Safety'
   },
   {
@@ -37,7 +37,7 @@ export const technologySafetyQuestions: Question[] = [
       { id: 'q-ts-3o4', text: 'To take photos while driving' }
     ],
     correctAnswerId: 'q-ts-3o2',
-    explanation: 'A rear-view camera helps with reversing and parking by providing a clear view of the area behind the...',
+    explanation: 'A rear-view camera helps with reversing and parking by providing a clear view of the area behind the vehicle, reducing blind spots.',
     subject: 'Technology & Safety'
   },
   {
@@ -50,7 +50,7 @@ export const technologySafetyQuestions: Question[] = [
       { id: 'q-ts-4o4', text: 'Controls the radio volume' }
     ],
     correctAnswerId: 'q-ts-4o2',
-    explanation: 'Adaptive Cruise Control (ACC) maintains a set speed while automatically adjusting to maintain a safe...',
+    explanation: 'Adaptive Cruise Control (ACC) maintains a set speed while automatically adjusting to maintain a safe distance from the vehicle ahead.',
     subject: 'Technology & Safety'
   },
   {
@@ -89,7 +89,7 @@ export const technologySafetyQuestions: Question[] = [
       { id: 'q-ts-7o4', text: 'Adjusts the suspension' }
     ],
     correctAnswerId: 'q-ts-7o1',
-    explanation: 'Autonomous Emergency Braking (AEB) automatically applies the brakes to prevent or reduce the severit...',
+    explanation: 'Autonomous Emergency Braking (AEB) automatically applies the brakes to prevent or reduce the severity of a collision when it detects an imminent crash.',
     subject: 'Technology & Safety'
   },
   {
@@ -102,7 +102,7 @@ export const technologySafetyQuestions: Question[] = [
       { id: 'q-ts-8o4', text: 'Controls the suspension' }
     ],
     correctAnswerId: 'q-ts-8o2',
-    explanation: 'Tire Pressure Monitoring System (TPMS) warns the driver when tire pressure is too low, which can aff...',
+    explanation: 'Tire Pressure Monitoring System (TPMS) warns the driver when tire pressure is too low, which can affect safety and fuel efficiency.',
     subject: 'Technology & Safety'
   }
 ];

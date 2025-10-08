@@ -10,7 +10,7 @@ export const trafficLightsSignalsQuestions: Question[] = [
       { id: 'q-tls-1o3', text: 'Continue at the same speed as it means the lights are about to turn green.' },
     ],
     correctAnswerId: 'q-tls-1o2',
-    explanation: 'Amber means stop unless you have already crossed the stop line or stopping might cause a collision.',
+    explanation: 'Amber means stop unless you\'ve already crossed the stop line or are so close that stopping suddenly might cause a collision.',
     subject: 'Traffic Lights & Signals',
   },
   {
@@ -22,7 +22,7 @@ export const trafficLightsSignalsQuestions: Question[] = [
       { id: 'q-tls-2o3', text: 'You have priority over all other traffic and pedestrians when turning left.' },
     ],
     correctAnswerId: 'q-tls-2o1',
-    explanation: 'A green filter arrow allows you to proceed in the direction of the arrow.',
+    explanation: 'A green filter arrow allows you to proceed in the direction of the arrow, even if the main light is red, provided you give way to any pedestrians or other road users who have priority.',
     subject: 'Traffic Lights & Signals',
   },
   {
@@ -34,7 +34,7 @@ export const trafficLightsSignalsQuestions: Question[] = [
       { id: 'q-tls-3o3', text: 'Wait for a police officer to direct traffic before proceeding.' },
     ],
     correctAnswerId: 'q-tls-3o2',
-    explanation: 'When traffic lights are out of order.',
+    explanation: 'When traffic lights are out of order, revert to standard priority rules as if the junction is unmarked, or follow any existing give way/stop signs. Always proceed with caution.',
     subject: 'Traffic Lights & Signals',
   },
   {
@@ -46,7 +46,7 @@ export const trafficLightsSignalsQuestions: Question[] = [
       { id: 'q-tls-4o3', text: 'The crossing is out of order; proceed normally.' },
     ],
     correctAnswerId: 'q-tls-4o2',
-    explanation: 'A flashing amber beacon at a pedestrian crossing means you must give way to pedestrians on the cross...',
+    explanation: 'A flashing amber beacon at a pedestrian crossing means you must give way to pedestrians on the crossing, but you may proceed if the crossing is clear.',
     subject: 'Traffic Lights & Signals',
   },
   {
@@ -58,7 +58,7 @@ export const trafficLightsSignalsQuestions: Question[] = [
       { id: 'q-tls-5o3', text: 'Obey the police officer\'s signal and stop.' },
     ],
     correctAnswerId: 'q-tls-5o3',
-    explanation: 'Signals given by a police officer directing traffic override all other traffic signals and signs.',
+    explanation: 'Signals given by a police officer directing traffic override all other traffic signals and signs. You must obey the officer.',
     subject: 'Traffic Lights & Signals',
   },
   {
@@ -70,7 +70,7 @@ export const trafficLightsSignalsQuestions: Question[] = [
       { id: 'q-tls-6o3', text: 'Cross quickly if you cannot see or hear a train approaching.' },
     ],
     correctAnswerId: 'q-tls-6o2',
-    explanation: 'Twin flashing red lights at a level crossing mean a train is approaching.',
+    explanation: 'Twin flashing red lights at a level crossing mean a train is approaching. You must stop before the stop line or barrier and wait.',
     subject: 'Traffic Lights & Signals',
   },
   {
@@ -94,7 +94,7 @@ export const trafficLightsSignalsQuestions: Question[] = [
       { id: 'q-tls-8o3', text: 'Cyclists can proceed if no other traffic is present.' },
     ],
     correctAnswerId: 'q-tls-8o2',
-    explanation: 'A red bicycle symbol at traffic lights means cyclists must stop and wait for the green signal specif...',
+    explanation: 'A red bicycle symbol at traffic lights means cyclists must stop and wait for the green signal specific to them or a general green light.',
     subject: 'Traffic Lights & Signals',
   },
   {
@@ -106,7 +106,7 @@ export const trafficLightsSignalsQuestions: Question[] = [
       { id: 'q-tls-9o3', text: 'Adjust light timings based on real-time traffic flow detected by sensors.' },
     ],
     correctAnswerId: 'q-tls-9o3',
-    explanation: 'Adaptive traffic light systems use sensors to detect traffic volume and adjust signal timings to opt...',
+    explanation: 'Adaptive traffic light systems use sensors to detect traffic volume and adjust signal timings to optimize flow and reduce delays.',
     subject: 'Traffic Lights & Signals',
   },
   {
@@ -118,7 +118,7 @@ export const trafficLightsSignalsQuestions: Question[] = [
       { id: 'q-tls-10o3', text: 'Prepare to go; the lights will shortly change to green.' },
     ],
     correctAnswerId: 'q-tls-10o3',
-    explanation: 'Red and amber lights showing together indicate that the lights are about to change to green.',
+    explanation: 'Red and amber lights showing together indicate that the lights are about to change to green. You should prepare to proceed when it turns green.',
     subject: 'Traffic Lights & Signals',
   },
 ]; 

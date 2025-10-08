@@ -10,7 +10,7 @@ export const insightPracticeQuestions: Question[] = [
       { id: 'q-insight-1o3', text: 'Assume drivers from the right will slow down for you as you enter.' },
     ],
     correctAnswerId: 'q-insight-1o2',
-    explanation: 'Always wait for a clear view and a safe gap before joining a busy road.',
+    explanation: 'Always wait for a clear view and a safe gap before joining a busy road, especially when your view is blocked. Never assume others will slow down for you.',
     subject: 'Insight Practice',
   },
   {
@@ -22,7 +22,7 @@ export const insightPracticeQuestions: Question[] = [
       { id: 'q-insight-2o3', text: 'Return to the left lane as soon as it is safe, and only move out again when overtaking.' },
     ],
     correctAnswerId: 'q-insight-2o3',
-    explanation: 'On motorways, you must return to the left-most lane as soon as it is safe.',
+    explanation: 'On motorways, you must return to the left-most lane as soon as it is safe. Only use other lanes for overtaking.',
     subject: 'Insight Practice',
   },
   {
@@ -34,7 +34,7 @@ export const insightPracticeQuestions: Question[] = [
       { id: 'q-insight-3o3', text: 'The cyclist signaling to turn left across your path without much warning.' },
     ],
     correctAnswerId: 'q-insight-3o2',
-    explanation: 'Always anticipate that a cyclist may swerve if a car door opens.',
+    explanation: 'Always anticipate that a cyclist may swerve if a car door opens. Give cyclists extra space when passing parked cars.',
     subject: 'Insight Practice',
   },
   {
@@ -46,7 +46,7 @@ export const insightPracticeQuestions: Question[] = [
       { id: 'q-insight-4o3', text: 'Reduce your speed significantly, use dipped headlights (and fog lights if needed), and be ready to stop within the visible distance.' },
     ],
     correctAnswerId: 'q-insight-4o3',
-    explanation: 'In fog.',
+    explanation: 'In fog, reduce speed, use dipped headlights and fog lights if visibility is below 50m, and be able to stop within the distance you can see.',
     subject: 'Insight Practice',
   },
   {
@@ -58,7 +58,7 @@ export const insightPracticeQuestions: Question[] = [
       { id: 'q-insight-5o3', text: 'Sound your horn to let them know it is safe to cross after you pass.' },
     ],
     correctAnswerId: 'q-insight-5o2',
-    explanation: 'Always anticipate that a pedestrian may step onto the crossing.',
+    explanation: 'Always anticipate that a pedestrian may step onto the crossing. Slow down and be ready to stop.',
     subject: 'Insight Practice',
   },
   {
@@ -82,7 +82,7 @@ export const insightPracticeQuestions: Question[] = [
       { id: 'q-insight-7o3', text: 'Edge out slightly to see if the tractor driver waves you past, then overtake if they do.' },
     ],
     correctAnswerId: 'q-insight-7o2',
-    explanation: 'A solid white line means you must not cross or straddle it to overtake.',
+    explanation: 'A solid white line means you must not cross or straddle it to overtake, regardless of how clear the road ahead seems.',
     subject: 'Insight Practice',
   },
   {
@@ -94,7 +94,7 @@ export const insightPracticeQuestions: Question[] = [
       { id: 'q-insight-8o3', text: 'No special caution is needed unless a child is visibly climbing the fence.' },
     ],
     correctAnswerId: 'q-insight-8o2',
-    explanation: 'Children playing near a road require extra caution, even with a fence.',
+    explanation: 'Children playing near a road require extra caution, even with a fence. Be ready for sudden, unpredictable actions.',
     subject: 'Insight Practice',
   },
   {
@@ -106,7 +106,7 @@ export const insightPracticeQuestions: Question[] = [
       { id: 'q-insight-9o3', text: 'Immediately look for an opportunity to switch to the adjacent lane to bypass the queue, even if it means cutting in.' },
     ],
     correctAnswerId: 'q-insight-9o2',
-    explanation: 'Early.',
+    explanation: 'Early, smooth braking and using hazard lights to warn following traffic is safest when approaching a sudden queue.',
     subject: 'Insight Practice',
   },
   {
@@ -118,7 +118,7 @@ export const insightPracticeQuestions: Question[] = [
       { id: 'q-insight-10o3', text: 'Do not drive. Find another way to travel or postpone your journey until you are sure you are not affected.' },
     ],
     correctAnswerId: 'q-insight-10o3',
-    explanation: 'Never drive if you may be impaired by medication.',
+    explanation: 'Never drive if you may be impaired by medication. If in doubt, do not drive.',
     subject: 'Insight Practice',
   },
 ]; 

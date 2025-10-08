@@ -10,7 +10,7 @@ export const vehicleDocumentationQuestions: Question[] = [
       { id: 'q-vd-1o3', text: 'Driving license, vehicle registration, insurance certificate, and MOT certificate' }
     ],
     correctAnswerId: 'q-vd-1o3',
-    explanation: 'You must carry your driving license.',
+    explanation: 'You must carry your driving license, vehicle registration document (kentekenbewijs), insurance certificate, and MOT certificate (APK) when driving.',
     subject: 'Vehicle Documentation'
   },
   {
@@ -22,7 +22,7 @@ export const vehicleDocumentationQuestions: Question[] = [
       { id: 'q-vd-2o3', text: 'Annual driving license renewal' }
     ],
     correctAnswerId: 'q-vd-2o2',
-    explanation: 'APK (Algemene Periodieke Keuring) is the annual vehicle safety and emissions test that all vehicles...',
+    explanation: 'APK (Algemene Periodieke Keuring) is the annual vehicle safety and emissions test that all vehicles must pass to be roadworthy.',
     subject: 'Vehicle Documentation'
   },
   {
@@ -46,7 +46,7 @@ export const vehicleDocumentationQuestions: Question[] = [
       { id: 'q-vd-4o3', text: 'Heavy fine and possible vehicle confiscation' }
     ],
     correctAnswerId: 'q-vd-4o3',
-    explanation: 'Driving without valid insurance results in a heavy fine and possible vehicle confiscation.',
+    explanation: 'Driving without valid insurance results in a heavy fine and possible vehicle confiscation. It is a serious offense.',
     subject: 'Vehicle Documentation'
   },
   {
@@ -70,7 +70,7 @@ export const vehicleDocumentationQuestions: Question[] = [
       { id: 'q-vd-6o3', text: 'Wait until you find it' }
     ],
     correctAnswerId: 'q-vd-6o2',
-    explanation: 'If you lose your driving license.',
+    explanation: 'If you lose your driving license, you should report it to the police and apply for a replacement at your local municipality.',
     subject: 'Vehicle Documentation'
   },
   {
@@ -94,7 +94,7 @@ export const vehicleDocumentationQuestions: Question[] = [
       { id: 'q-vd-8o3', text: 'Wait until you find it' }
     ],
     correctAnswerId: 'q-vd-8o2',
-    explanation: 'If your vehicle registration document is stolen.',
+    explanation: 'If your vehicle registration document is stolen, you should report it to the police and apply for a replacement at the RDW.',
     subject: 'Vehicle Documentation'
   },
   {
@@ -106,7 +106,7 @@ export const vehicleDocumentationQuestions: Question[] = [
       { id: 'q-vd-9o3', text: 'Dutch insurance company' }
     ],
     correctAnswerId: 'q-vd-9o2',
-    explanation: 'The RDW (Rijksdienst voor het Wegverkeer) is the Dutch vehicle registration and licensing authority...',
+    explanation: 'The RDW (Rijksdienst voor het Wegverkeer) is the Dutch vehicle registration and licensing authority responsible for vehicle documentation.',
     subject: 'Vehicle Documentation'
   },
   {
@@ -142,7 +142,7 @@ export const vehicleDocumentationQuestions: Question[] = [
       { id: 'q-vd-12o3', text: 'Update both driving license and vehicle registration addresses' }
     ],
     correctAnswerId: 'q-vd-12o3',
-    explanation: 'When you move to a different address.',
+    explanation: 'When you move to a different address, you must update both your driving license and vehicle registration addresses at your local municipality.',
     subject: 'Vehicle Documentation'
   }
 ];

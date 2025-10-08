@@ -11,7 +11,7 @@ export const vehicleCategoriesQuestions: Question[] = [
       { id: 'q-vc-1o4', text: '140 km/h' }
     ],
     correctAnswerId: 'q-vc-1o3',
-    explanation: 'Motorcycles have the same speed limit as cars on motorways in the Netherlands.',
+    explanation: 'Motorcycles have the same speed limit as cars on motorways in the Netherlands, which is 130 km/h during good weather conditions.',
     subject: 'Vehicle Categories'
   },
   {
@@ -24,7 +24,7 @@ export const vehicleCategoriesQuestions: Question[] = [
       { id: 'q-vc-2o4', text: '110 km/h' }
     ],
     correctAnswerId: 'q-vc-2o1',
-    explanation: 'Trucks have a speed limit of 80 km/h on motorways in the Netherlands.',
+    explanation: 'Trucks have a speed limit of 80 km/h on motorways in the Netherlands, regardless of the weather conditions.',
     subject: 'Vehicle Categories'
   },
   {
@@ -50,7 +50,7 @@ export const vehicleCategoriesQuestions: Question[] = [
       { id: 'q-vc-4o4', text: '50 km/h' }
     ],
     correctAnswerId: 'q-vc-4o3',
-    explanation: 'Mopeds have a speed limit of 45 km/h on roads in the Netherlands.',
+    explanation: 'Mopeds have a speed limit of 45 km/h on roads in the Netherlands, unless otherwise indicated by traffic signs.',
     subject: 'Vehicle Categories'
   },
   {
@@ -63,7 +63,7 @@ export const vehicleCategoriesQuestions: Question[] = [
       { id: 'q-vc-5o4', text: '40 km/h' }
     ],
     correctAnswerId: 'q-vc-5o2',
-    explanation: 'Tractors have a speed limit of 25 km/h on roads in the Netherlands.',
+    explanation: 'Tractors have a speed limit of 25 km/h on roads in the Netherlands, unless they have special permission for higher speeds.',
     subject: 'Vehicle Categories'
   },
   {
@@ -76,7 +76,7 @@ export const vehicleCategoriesQuestions: Question[] = [
       { id: 'q-vc-6o4', text: 'The middle lane only' }
     ],
     correctAnswerId: 'q-vc-6o3',
-    explanation: 'Motorcycles can use any lane on a motorway, just like cars.',
+    explanation: 'Motorcycles can use any lane on a motorway, just like cars. They should follow the same lane discipline rules.',
     subject: 'Vehicle Categories'
   },
   {
@@ -89,7 +89,7 @@ export const vehicleCategoriesQuestions: Question[] = [
       { id: 'q-vc-7o4', text: 'The middle and right lanes' }
     ],
     correctAnswerId: 'q-vc-7o4',
-    explanation: 'Trucks should use the middle and right lanes on a three-lane motorway.',
+    explanation: 'Trucks should use the middle and right lanes on a three-lane motorway. They are not allowed to use the left lane for overtaking.',
     subject: 'Vehicle Categories'
   },
   {

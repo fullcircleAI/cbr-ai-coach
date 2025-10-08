@@ -10,7 +10,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-1o3', text: 'Honk to warn the cyclist' }
     ],
     correctAnswerId: 'q-bi-1o1',
-    explanation: 'At bicycle crossings.',
+    explanation: 'At bicycle crossings, motorists must stop and give way to cyclists who are waiting to cross or already crossing.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -22,7 +22,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-2o3', text: 'Whoever arrives first has priority' }
     ],
     correctAnswerId: 'q-bi-2o1',
-    explanation: 'Cyclists have priority when turning right at intersections.',
+    explanation: 'Cyclists have priority when turning right at intersections. Motorists must give way to cyclists in this situation.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -34,7 +34,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-3o3', text: '2 meters' }
     ],
     correctAnswerId: 'q-bi-3o2',
-    explanation: 'When overtaking cyclists, you must maintain a minimum distance of 1.',
+    explanation: 'When overtaking cyclists, you must maintain a minimum distance of 1.5 meters to ensure their safety.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -46,7 +46,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-4o3', text: 'Honk to make the cyclist move faster' }
     ],
     correctAnswerId: 'q-bi-4o2',
-    explanation: 'In 30 km/h zones.',
+    explanation: 'In 30 km/h zones, you should follow cyclists at a safe distance rather than overtaking, as the speed difference is minimal.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -58,7 +58,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-5o3', text: 'Park closer to the bicycle lane to save space' }
     ],
     correctAnswerId: 'q-bi-5o2',
-    explanation: 'Always check for approaching cyclists before opening your car door when parking next to a bicycle la...',
+    explanation: 'Always check for approaching cyclists before opening your car door when parking next to a bicycle lane to prevent accidents.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -70,7 +70,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-6o3', text: 'Honk to make the cyclist move to the side' }
     ],
     correctAnswerId: 'q-bi-6o2',
-    explanation: 'When there is no bicycle lane, cyclists have the right to use the road.',
+    explanation: 'When there is no bicycle lane, cyclists have the right to use the road. Maintain a safe distance and overtake only when it is safe to do so.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -106,7 +106,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-9o3', text: 'Honk to alert the cyclist' }
     ],
     correctAnswerId: 'q-bi-9o2',
-    explanation: 'When encountering a cyclist without proper lighting at night.',
+    explanation: 'When encountering a cyclist without proper lighting at night, slow down and pass with extra caution to ensure safety.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -118,7 +118,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-10o3', text: 'Honk to warn the children' }
     ],
     correctAnswerId: 'q-bi-10o2',
-    explanation: 'In residential areas with children cycling.',
+    explanation: 'In residential areas with children cycling, reduce your speed and be extra vigilant as children may not always follow traffic rules.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -130,7 +130,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-11o3', text: 'Honk to warn the cyclist to stay on the path' }
     ],
     correctAnswerId: 'q-bi-11o2',
-    explanation: 'When driving near shared bicycle and pedestrian paths.',
+    explanation: 'When driving near shared bicycle and pedestrian paths, be aware that cyclists may need to enter the road and be prepared to give way.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -142,7 +142,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-12o3', text: 'Honk to warn cyclists about the roadworks' }
     ],
     correctAnswerId: 'q-bi-12o2',
-    explanation: 'When a bicycle lane is blocked, cyclists may need to use the main road.',
+    explanation: 'When a bicycle lane is blocked, cyclists may need to use the main road. Be extra careful and give them space.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -154,7 +154,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-13o3', text: 'Drive as close as possible to force them into the lane' }
     ],
     correctAnswerId: 'q-bi-13o2',
-    explanation: 'Cyclists are not always required to use bicycle lanes.',
+    explanation: 'Cyclists are not always required to use bicycle lanes. Respect their choice and maintain a safe distance when passing.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -166,7 +166,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-14o3', text: 'Drive as close as possible to keep them in line' }
     ],
     correctAnswerId: 'q-bi-14o2',
-    explanation: 'When a cyclist is swerving, they may be avoiding obstacles or have difficulty maintaining balance.',
+    explanation: 'When a cyclist is swerving, they may be avoiding obstacles or have difficulty maintaining balance. Give extra space and pass with caution.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -178,7 +178,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-15o3', text: 'Drive as close as possible to get their attention' }
     ],
     correctAnswerId: 'q-bi-15o2',
-    explanation: 'When a cyclist appears distracted, give extra space and pass with caution.',
+    explanation: 'When a cyclist appears distracted, give extra space and pass with caution. Honking may startle them and cause an accident.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -190,7 +190,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-16o3', text: 'Drive as close as possible to keep them in line' }
     ],
     correctAnswerId: 'q-bi-16o2',
-    explanation: 'When a cyclist appears intoxicated, give extra space and pass with extreme caution.',
+    explanation: 'When a cyclist appears intoxicated, give extra space and pass with extreme caution. Their behavior may be unpredictable.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -202,7 +202,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-17o3', text: 'Drive as close as possible to keep them moving' }
     ],
     correctAnswerId: 'q-bi-17o2',
-    explanation: 'When a cyclist appears to have mechanical problems.',
+    explanation: 'When a cyclist appears to have mechanical problems, give extra space and pass with caution as they may need to stop suddenly.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -214,7 +214,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-18o3', text: 'Drive as close as possible to guide them' }
     ],
     correctAnswerId: 'q-bi-18o2',
-    explanation: 'When a cyclist appears lost or confused.',
+    explanation: 'When a cyclist appears lost or confused, give extra space and pass with caution as they may make unexpected movements.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -226,7 +226,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-19o3', text: 'Stop and offer help if safe to do so' }
     ],
     correctAnswerId: 'q-bi-19o3',
-    explanation: 'When a cyclist appears to be in distress, stop and offer help if it is safe to do so.',
+    explanation: 'When a cyclist appears to be in distress, stop and offer help if it is safe to do so. Otherwise, give extra space and pass with caution.',
     subject: 'Bicycle Interactions'
   },
   {
@@ -238,7 +238,7 @@ export const bicycleInteractionsQuestions: Question[] = [
       { id: 'q-bi-20o3', text: 'Drive as close as possible to keep them in line' }
     ],
     correctAnswerId: 'q-bi-20o2',
-    explanation: 'When a cyclist appears to be racing.',
+    explanation: 'When a cyclist appears to be racing, give extra space and pass with caution as their behavior may be unpredictable.',
     subject: 'Bicycle Interactions'
   }
 ];

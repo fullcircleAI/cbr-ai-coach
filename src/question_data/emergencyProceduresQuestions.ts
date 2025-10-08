@@ -10,7 +10,7 @@ export const emergencyProceduresQuestions: Question[] = [
       { id: 'q-ep-1o3', text: 'Wait for someone else to call the police' }
     ],
     correctAnswerId: 'q-ep-1o2',
-    explanation: 'If you are involved in a traffic accident, you must stop immediately and check for injuries.',
+    explanation: 'If you are involved in a traffic accident, you must stop immediately and check for injuries. Call emergency services if needed.',
     subject: 'Emergency Procedures'
   },
   {
@@ -22,7 +22,7 @@ export const emergencyProceduresQuestions: Question[] = [
       { id: 'q-ep-2o3', text: '999' }
     ],
     correctAnswerId: 'q-ep-2o2',
-    explanation: 'The emergency number in the Netherlands is 112.',
+    explanation: 'The emergency number in the Netherlands is 112. This number connects you to police, fire, and ambulance services.',
     subject: 'Emergency Procedures'
   },
   {
@@ -46,7 +46,7 @@ export const emergencyProceduresQuestions: Question[] = [
       { id: 'q-ep-4o3', text: 'Call the police immediately' }
     ],
     correctAnswerId: 'q-ep-4o2',
-    explanation: 'If you witness a traffic accident, stop and offer assistance if it is safe to do so.',
+    explanation: 'If you witness a traffic accident, stop and offer assistance if it is safe to do so. Call emergency services if needed.',
     subject: 'Emergency Procedures'
   },
   {
@@ -58,7 +58,7 @@ export const emergencyProceduresQuestions: Question[] = [
       { id: 'q-ep-5o3', text: 'Walk along the motorway to find help' }
     ],
     correctAnswerId: 'q-ep-5o2',
-    explanation: 'If your vehicle breaks down on a motorway, get out and stand behind the safety barrier.',
+    explanation: 'If your vehicle breaks down on a motorway, get out and stand behind the safety barrier. Use emergency phones to call for assistance.',
     subject: 'Emergency Procedures'
   },
   {
@@ -70,7 +70,7 @@ export const emergencyProceduresQuestions: Question[] = [
       { id: 'q-ep-6o3', text: 'Speed up to get out of the way' }
     ],
     correctAnswerId: 'q-ep-6o2',
-    explanation: 'If you see an emergency vehicle with lights and sirens.',
+    explanation: 'If you see an emergency vehicle with lights and sirens, move to the right and slow down to allow it to pass safely.',
     subject: 'Emergency Procedures'
   },
   {
@@ -82,7 +82,7 @@ export const emergencyProceduresQuestions: Question[] = [
       { id: 'q-ep-7o3', text: 'Drive away quickly' }
     ],
     correctAnswerId: 'q-ep-7o1',
-    explanation: 'In a minor accident with no injuries.',
+    explanation: 'In a minor accident with no injuries, exchange information with the other driver including names, addresses, and insurance details.',
     subject: 'Emergency Procedures'
   },
   {
@@ -94,7 +94,7 @@ export const emergencyProceduresQuestions: Question[] = [
       { id: 'q-ep-8o3', text: 'Call the police immediately' }
     ],
     correctAnswerId: 'q-ep-8o1',
-    explanation: 'If you hit a parked car.',
+    explanation: 'If you hit a parked car, leave a note with your contact information and report the incident to your insurance company.',
     subject: 'Emergency Procedures'
   },
   {
@@ -106,7 +106,7 @@ export const emergencyProceduresQuestions: Question[] = [
       { id: 'q-ep-9o3', text: 'Wait for someone else to help' }
     ],
     correctAnswerId: 'q-ep-9o2',
-    explanation: 'If you are involved in an accident with a cyclist or pedestrian.',
+    explanation: 'If you are involved in an accident with a cyclist or pedestrian, stop immediately and call emergency services (112).',
     subject: 'Emergency Procedures'
   },
   {
@@ -118,7 +118,7 @@ export const emergencyProceduresQuestions: Question[] = [
       { id: 'q-ep-10o3', text: 'Continue driving to find help' }
     ],
     correctAnswerId: 'q-ep-10o2',
-    explanation: 'If your vehicle catches fire, stop immediately and evacuate everyone from the vehicle.',
+    explanation: 'If your vehicle catches fire, stop immediately and evacuate everyone from the vehicle. Call emergency services and move to a safe distance.',
     subject: 'Emergency Procedures'
   },
   {
@@ -130,7 +130,7 @@ export const emergencyProceduresQuestions: Question[] = [
       { id: 'q-ep-11o3', text: 'Ignore it' }
     ],
     correctAnswerId: 'q-ep-11o2',
-    explanation: 'If you witness a hit-and-run accident.',
+    explanation: 'If you witness a hit-and-run accident, call the police and provide as many details as possible about the fleeing vehicle.',
     subject: 'Emergency Procedures'
   },
   {
@@ -142,7 +142,7 @@ export const emergencyProceduresQuestions: Question[] = [
       { id: 'q-ep-12o3', text: 'Drive away quickly' }
     ],
     correctAnswerId: 'q-ep-12o2',
-    explanation: 'If you are involved in an accident with an uninsured driver.',
+    explanation: 'If you are involved in an accident with an uninsured driver, call the police and your insurance company immediately.',
     subject: 'Emergency Procedures'
   }
 ];

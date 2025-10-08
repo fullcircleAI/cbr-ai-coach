@@ -11,7 +11,7 @@ export const environmentalZonesQuestions: Question[] = [
       { id: 'q-ez-1o4', text: 'A bicycle-only zone' }
     ],
     correctAnswerId: 'q-ez-1o2',
-    explanation: 'A "milieuzone" (environmental zone) is a city center area where certain vehicles are restricted from...',
+    explanation: 'A "milieuzone" (environmental zone) is a city center area where certain vehicles are restricted from entering to improve air quality and reduce pollution.',
     subject: 'Environmental Zones'
   },
   {
@@ -24,7 +24,7 @@ export const environmentalZonesQuestions: Question[] = [
       { id: 'q-ez-2o4', text: 'Motorcycles only' }
     ],
     correctAnswerId: 'q-ez-2o2',
-    explanation: 'Environmental zones typically restrict diesel vehicles and older cars that do not meet current emiss...',
+    explanation: 'Environmental zones typically restrict diesel vehicles and older cars that do not meet current emission standards to improve air quality.',
     subject: 'Environmental Zones'
   },
   {
@@ -76,7 +76,7 @@ export const environmentalZonesQuestions: Question[] = [
       { id: 'q-ez-6o4', text: 'Only emergency vehicles' }
     ],
     correctAnswerId: 'q-ez-6o2',
-    explanation: 'Emergency vehicles and electric vehicles are usually exempt from environmental zone restrictions as...',
+    explanation: 'Emergency vehicles and electric vehicles are usually exempt from environmental zone restrictions as they have low or zero emissions.',
     subject: 'Environmental Zones'
   }
 ];

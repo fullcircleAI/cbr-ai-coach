@@ -11,7 +11,7 @@ export const parkingRulesQuestions: Question[] = [
       { id: 'q-pr-1o4', text: '15 meters' }
     ],
     correctAnswerId: 'q-pr-1o2',
-    explanation: 'You must park at least 5 meters from a pedestrian crossing to ensure pedestrians have a clear view o...',
+    explanation: 'You must park at least 5 meters from a pedestrian crossing to ensure pedestrians have a clear view of approaching traffic.',
     subject: 'Parking Rules'
   },
   {
@@ -63,7 +63,7 @@ export const parkingRulesQuestions: Question[] = [
       { id: 'q-pr-5o4', text: '25 meters' }
     ],
     correctAnswerId: 'q-pr-5o3',
-    explanation: 'You must park at least 20 meters from a railway crossing to ensure trains have a clear view and can...',
+    explanation: 'You must park at least 20 meters from a railway crossing to ensure trains have a clear view and can stop safely if needed.',
     subject: 'Parking Rules'
   },
   {
@@ -89,7 +89,7 @@ export const parkingRulesQuestions: Question[] = [
       { id: 'q-pr-7o4', text: 'Parking allowed for residents only' }
     ],
     correctAnswerId: 'q-pr-7o2',
-    explanation: 'A broken yellow line along the edge of the road indicates that stopping is not allowed, which means...',
+    explanation: 'A broken yellow line along the edge of the road indicates that stopping is not allowed, which means you cannot stop or park your vehicle there.',
     subject: 'Parking Rules'
   },
   {
@@ -102,7 +102,7 @@ export const parkingRulesQuestions: Question[] = [
       { id: 'q-pr-8o4', text: 'Parking with a permit only' }
     ],
     correctAnswerId: 'q-pr-8o2',
-    explanation: 'A blue line indicates parking reserved for disabled persons.',
+    explanation: 'A blue line indicates parking reserved for disabled persons. You must have a valid disabled parking permit to park here.',
     subject: 'Parking Rules'
   },
   {
@@ -115,7 +115,7 @@ export const parkingRulesQuestions: Question[] = [
       { id: 'q-pr-9o4', text: 'Parking with a permit only' }
     ],
     correctAnswerId: 'q-pr-9o2',
-    explanation: 'A white "P" sign with a car symbol indicates that parking is permitted.',
+    explanation: 'A white "P" sign with a car symbol indicates that parking is permitted. Look for additional information on any conditions or restrictions.',
     subject: 'Parking Rules'
   },
   {
@@ -141,7 +141,7 @@ export const parkingRulesQuestions: Question[] = [
       { id: 'q-pr-11o4', text: 'Parking allowed for residents only' }
     ],
     correctAnswerId: 'q-pr-11o2',
-    explanation: 'A "No Stopping" sign with a red circle and crossed-out "S" indicates that stopping is not allowed, w...',
+    explanation: 'A "No Stopping" sign with a red circle and crossed-out "S" indicates that stopping is not allowed, which means you cannot stop or park your vehicle there.',
     subject: 'Parking Rules'
   },
   {
@@ -154,7 +154,7 @@ export const parkingRulesQuestions: Question[] = [
       { id: 'q-pr-12o4', text: 'Parking with a permit only' }
     ],
     correctAnswerId: 'q-pr-12o3',
-    explanation: 'A "Resident Parking" sign indicates that parking is reserved for residents of the area.',
+    explanation: 'A "Resident Parking" sign indicates that parking is reserved for residents of the area. You must have a valid resident parking permit to park here.',
     subject: 'Parking Rules'
   }
 ];

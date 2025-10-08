@@ -10,7 +10,7 @@ export const pedestrianCrossingsQuestions: Question[] = [
       { id: 'q-pc-1o3', text: 'Honk to warn the pedestrian' }
     ],
     correctAnswerId: 'q-pc-1o1',
-    explanation: 'At zebra crossings.',
+    explanation: 'At zebra crossings, you must stop and give way to pedestrians who are waiting to cross or already crossing.',
     subject: 'Pedestrian Crossings'
   },
   {
@@ -22,7 +22,7 @@ export const pedestrianCrossingsQuestions: Question[] = [
       { id: 'q-pc-2o3', text: 'Honk to warn the pedestrian' }
     ],
     correctAnswerId: 'q-pc-2o1',
-    explanation: 'Even when the light is green for you.',
+    explanation: 'Even when the light is green for you, you must stop and give way to pedestrians who are already crossing or about to cross.',
     subject: 'Pedestrian Crossings'
   },
   {
@@ -34,7 +34,7 @@ export const pedestrianCrossingsQuestions: Question[] = [
       { id: 'q-pc-3o3', text: 'Honk to warn the pedestrian' }
     ],
     correctAnswerId: 'q-pc-3o1',
-    explanation: 'At school crossings.',
+    explanation: 'At school crossings, you must stop and give way to pedestrians, especially children, who are crossing or waiting to cross.',
     subject: 'Pedestrian Crossings'
   },
   {
@@ -46,7 +46,7 @@ export const pedestrianCrossingsQuestions: Question[] = [
       { id: 'q-pc-4o3', text: 'Honk to warn the pedestrian' }
     ],
     correctAnswerId: 'q-pc-4o1',
-    explanation: 'Even when the light is red for pedestrians.',
+    explanation: 'Even when the light is red for pedestrians, you must stop and give way to pedestrians who are already crossing or about to cross.',
     subject: 'Pedestrian Crossings'
   },
   {
@@ -58,7 +58,7 @@ export const pedestrianCrossingsQuestions: Question[] = [
       { id: 'q-pc-5o3', text: 'Honk to warn the pedestrian' }
     ],
     correctAnswerId: 'q-pc-5o1',
-    explanation: 'When the light is green for pedestrians.',
+    explanation: 'When the light is green for pedestrians, you must stop and give way to pedestrians who are crossing or waiting to cross.',
     subject: 'Pedestrian Crossings'
   }
 ];

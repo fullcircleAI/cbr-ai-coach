@@ -38,7 +38,7 @@ export const roadInformationQuestions: Question[] = [
       { id: 'q-park-lane-3o3', text: 'Play area' }
     ],
     correctAnswerId: 'q-park-lane-3o1',
-    explanation: 'This blue rectangular sign with red diagonal line warns drivers of a playground area where children may be playing.',
+    explanation: 'This blue rectangular sign with red diagonal line warns drivers of a playground area where children may be playing. Drivers should reduce speed and be extra cautious.',
     subject: 'Road Information',
     imageUrl: '/images/signs/road information/q-park-lane-3.png',
     imageHint: 'playground'
@@ -52,7 +52,7 @@ export const roadInformationQuestions: Question[] = [
       { id: 'q-park-lane-4o3', text: 'Priority for oncoming traffic' }
     ],
     correctAnswerId: 'q-park-lane-4o1',
-    explanation: 'This blue square sign with red arrow down and white arrow up indicates that you have priority over o...',
+    explanation: 'This blue square sign with red arrow down and white arrow up indicates that you have priority over oncoming traffic in narrow sections.',
     subject: 'Road Information',
     imageUrl: '/images/signs/road information/q-park-lane-4.png',
     imageHint: 'priority oncoming traffic'
@@ -66,7 +66,7 @@ export const roadInformationQuestions: Question[] = [
       { id: 'q-park-lane-5o3', text: 'Priority route' }
     ],
     correctAnswerId: 'q-park-lane-5o1',
-    explanation: 'This white diamond sign with yellow square and three black lines indicates a priority road where you...',
+    explanation: 'This white diamond sign with yellow square and three black lines indicates a priority road where you have right of way over other traffic.',
     subject: 'Road Information',
     imageUrl: '/images/signs/road information/q-park-lane-5.png',
     imageHint: 'priority road'
@@ -80,7 +80,7 @@ export const roadInformationQuestions: Question[] = [
       { id: 'q-park-lane-6o3', text: 'Direction sign' }
     ],
     correctAnswerId: 'q-park-lane-6o1',
-    explanation: 'This blue rectangular sign with white text indicates a destination or place name, helping drivers na...',
+    explanation: 'This blue rectangular sign with white text indicates a destination or place name, helping drivers navigate to their intended location.',
     subject: 'Road Information',
     imageUrl: '/images/signs/road information/q-park-lane-6.png',
     imageHint: 'destination'
@@ -94,7 +94,7 @@ export const roadInformationQuestions: Question[] = [
       { id: 'q-park-lane-7o3', text: 'Merge lanes' }
     ],
     correctAnswerId: 'q-park-lane-7o1',
-    explanation: 'This blue square sign with three arrows indicates that lanes are merging from the left, requiring dr...',
+    explanation: 'This blue square sign with three arrows indicates that lanes are merging from the left, requiring drivers to be cautious and allow merging traffic.',
     subject: 'Road Information',
     imageUrl: '/images/signs/road information/q-park-lane-7.png',
     imageHint: 'lanes merging left'
@@ -136,7 +136,7 @@ export const roadInformationQuestions: Question[] = [
       { id: 'q-park-lane-10o3', text: 'Motor vehicles allowed' }
     ],
     correctAnswerId: 'q-park-lane-10o1',
-    explanation: 'This blue square sign with white car and red diagonal line indicates the end of a zone where motor v...',
+    explanation: 'This blue square sign with white car and red diagonal line indicates the end of a zone where motor vehicles were prohibited.',
     subject: 'Road Information',
     imageUrl: '/images/signs/road information/q-park-lane-10.png',
     imageHint: 'end no entry motor vehicles'

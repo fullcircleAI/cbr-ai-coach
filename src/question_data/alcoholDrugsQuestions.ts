@@ -10,7 +10,7 @@ export const alcoholDrugsQuestions: Question[] = [
       { id: 'q-ad-1o3', text: '0.08%' }
     ],
     correctAnswerId: 'q-ad-1o2',
-    explanation: 'The maximum blood alcohol concentration (BAC) allowed for drivers in the Netherlands is 0.',
+    explanation: 'The maximum blood alcohol concentration (BAC) allowed for drivers in the Netherlands is 0.05%. This is lower than many other countries to improve road safety.',
     subject: 'Alcohol & Drugs'
   },
   {
@@ -22,7 +22,7 @@ export const alcoholDrugsQuestions: Question[] = [
       { id: 'q-ad-2o3', text: '0.08%' }
     ],
     correctAnswerId: 'q-ad-2o1',
-    explanation: 'Drivers with less than 5 years of experience have a stricter BAC limit of 0.',
+    explanation: 'Drivers with less than 5 years of experience have a stricter BAC limit of 0.02%, which is essentially zero tolerance.',
     subject: 'Alcohol & Drugs'
   },
   {
@@ -34,7 +34,7 @@ export const alcoholDrugsQuestions: Question[] = [
       { id: 'q-ad-3o3', text: 'Fine of €240' }
     ],
     correctAnswerId: 'q-ad-3o3',
-    explanation: 'Driving with a BAC between 0.',
+    explanation: 'Driving with a BAC between 0.05% and 0.08% results in a fine of €240 and possible license suspension.',
     subject: 'Alcohol & Drugs'
   },
   {
@@ -46,7 +46,7 @@ export const alcoholDrugsQuestions: Question[] = [
       { id: 'q-ad-4o3', text: 'Criminal offense with possible imprisonment' }
     ],
     correctAnswerId: 'q-ad-4o3',
-    explanation: 'Driving with a BAC above 0.',
+    explanation: 'Driving with a BAC above 0.08% is a criminal offense that can result in imprisonment, heavy fines, and mandatory license suspension.',
     subject: 'Alcohol & Drugs'
   },
   {
@@ -58,7 +58,7 @@ export const alcoholDrugsQuestions: Question[] = [
       { id: 'q-ad-5o3', text: 'At least 24 hours' }
     ],
     correctAnswerId: 'q-ad-5o3',
-    explanation: 'The safest approach is to wait at least 24 hours after drinking alcohol before driving.',
+    explanation: 'The safest approach is to wait at least 24 hours after drinking alcohol before driving. Your judgment of when you feel sober is not reliable.',
     subject: 'Alcohol & Drugs'
   },
   {
@@ -70,7 +70,7 @@ export const alcoholDrugsQuestions: Question[] = [
       { id: 'q-ad-6o3', text: 'All drugs that affect driving ability' }
     ],
     correctAnswerId: 'q-ad-6o3',
-    explanation: 'It is illegal to drive under the influence of any drug that affects your driving ability, including...',
+    explanation: 'It is illegal to drive under the influence of any drug that affects your driving ability, including cannabis, prescription medications, and over-the-counter drugs.',
     subject: 'Alcohol & Drugs'
   },
   {
@@ -82,7 +82,7 @@ export const alcoholDrugsQuestions: Question[] = [
       { id: 'q-ad-7o3', text: 'Check with your doctor or pharmacist' }
     ],
     correctAnswerId: 'q-ad-7o3',
-    explanation: 'If you are taking medication that may affect your driving.',
+    explanation: 'If you are taking medication that may affect your driving, you should check with your doctor or pharmacist about whether it is safe to drive.',
     subject: 'Alcohol & Drugs'
   },
   {
@@ -94,7 +94,7 @@ export const alcoholDrugsQuestions: Question[] = [
       { id: 'q-ad-8o3', text: 'Erratic driving, slow reactions, and poor judgment' }
     ],
     correctAnswerId: 'q-ad-8o3',
-    explanation: 'Signs of drug-impaired driving include erratic driving behavior.',
+    explanation: 'Signs of drug-impaired driving include erratic driving behavior, slow reaction times, poor judgment, and difficulty maintaining lane position.',
     subject: 'Alcohol & Drugs'
   },
   {
@@ -106,7 +106,7 @@ export const alcoholDrugsQuestions: Question[] = [
       { id: 'q-ad-9o3', text: 'Same penalty as driving under the influence' }
     ],
     correctAnswerId: 'q-ad-9o3',
-    explanation: 'Refusing a breathalyzer test carries the same penalty as driving under the influence, as it is consi...',
+    explanation: 'Refusing a breathalyzer test carries the same penalty as driving under the influence, as it is considered an admission of guilt.',
     subject: 'Alcohol & Drugs'
   },
   {
@@ -118,7 +118,7 @@ export const alcoholDrugsQuestions: Question[] = [
       { id: 'q-ad-10o3', text: '24-48 hours' }
     ],
     correctAnswerId: 'q-ad-10o3',
-    explanation: 'Alcohol can stay in your system for 24-48 hours.',
+    explanation: 'Alcohol can stay in your system for 24-48 hours, depending on factors like body weight, metabolism, and amount consumed.',
     subject: 'Alcohol & Drugs'
   },
   {
@@ -130,7 +130,7 @@ export const alcoholDrugsQuestions: Question[] = [
       { id: 'q-ad-11o3', text: 'Follow them to their destination' }
     ],
     correctAnswerId: 'q-ad-11o2',
-    explanation: 'If you suspect another driver is under the influence.',
+    explanation: 'If you suspect another driver is under the influence, call the police emergency number (112) and provide the vehicle description and location.',
     subject: 'Alcohol & Drugs'
   },
   {
@@ -142,7 +142,7 @@ export const alcoholDrugsQuestions: Question[] = [
       { id: 'q-ad-12o3', text: 'All of the above' }
     ],
     correctAnswerId: 'q-ad-12o3',
-    explanation: 'The best ways to prevent drunk driving are to designate a sober driver.',
+    explanation: 'The best ways to prevent drunk driving are to designate a sober driver, take a taxi or public transport, or stay overnight. Never drive after drinking.',
     subject: 'Alcohol & Drugs'
   }
 ];
