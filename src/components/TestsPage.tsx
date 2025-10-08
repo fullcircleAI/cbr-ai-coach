@@ -238,9 +238,9 @@ export const TestsPage: React.FC = () => {
                   <div className="test-content">
                     <h3 className="test-name">{test.name}</h3>
                     <div className="test-time">
-                      {test.questionCount <= 15 ? '10 min' : 
-                       test.questionCount <= 25 ? '15 min' : 
-                       test.questionCount <= 35 ? '20 min' : '25 min'}
+                      {test.questionCount <= 15 ? '5 min' : 
+                       test.questionCount <= 25 ? '8 min' : 
+                       test.questionCount <= 35 ? '12 min' : '15 min'}
                     </div>
                   </div>
                 </div>
