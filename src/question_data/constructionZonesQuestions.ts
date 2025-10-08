@@ -10,7 +10,7 @@ export const constructionZonesQuestions: Question[] = [
       { id: 'q-cz-1o3', text: 'Speed up to get through quickly' }
     ],
     correctAnswerId: 'q-cz-1o1',
-    explanation: 'In construction zones, you must reduce your speed and be extra careful due to potential hazards and workers.',
+    explanation: 'In construction zones.',
     subject: 'Construction Zones'
   },
   {
@@ -22,7 +22,7 @@ export const constructionZonesQuestions: Question[] = [
       { id: 'q-cz-2o3', text: 'Honk to warn the workers' }
     ],
     correctAnswerId: 'q-cz-2o1',
-    explanation: 'When workers are present in construction zones, give them extra space and drive slowly to ensure their safety.',
+    explanation: 'When workers are present in construction zones.',
     subject: 'Construction Zones'
   },
   {
@@ -34,7 +34,7 @@ export const constructionZonesQuestions: Question[] = [
       { id: 'q-cz-3o3', text: 'Ignore the temporary speed limit' }
     ],
     correctAnswerId: 'q-cz-3o1',
-    explanation: 'Temporary speed limit signs in construction zones must be followed. They are legally enforceable and designed for safety.',
+    explanation: 'Temporary speed limit signs in construction zones must be followed.',
     subject: 'Construction Zones'
   },
   {
@@ -58,7 +58,7 @@ export const constructionZonesQuestions: Question[] = [
       { id: 'q-cz-5o3', text: 'Honk to get the flag person\'s attention' }
     ],
     correctAnswerId: 'q-cz-5o1',
-    explanation: 'Flag persons in construction zones have authority to direct traffic. You must follow their directions for safety.',
+    explanation: 'Flag persons in construction zones have authority to direct traffic.',
     subject: 'Construction Zones'
   },
   {
@@ -82,7 +82,7 @@ export const constructionZonesQuestions: Question[] = [
       { id: 'q-cz-7o3', text: 'Ignore the detour sign' }
     ],
     correctAnswerId: 'q-cz-7o1',
-    explanation: 'Detour signs in construction zones indicate alternative routes. You must follow the detour route for safety.',
+    explanation: 'Detour signs in construction zones indicate alternative routes.',
     subject: 'Construction Zones'
   },
   {
@@ -94,7 +94,7 @@ export const constructionZonesQuestions: Question[] = [
       { id: 'q-cz-8o3', text: 'Speed up to get through quickly' }
     ],
     correctAnswerId: 'q-cz-8o1',
-    explanation: 'When you see a "Road Work Ahead" sign, prepare to slow down and be extra careful as you approach the construction zone.',
+    explanation: 'When you see a "Road Work Ahead" sign.',
     subject: 'Construction Zones'
   }
 ];

@@ -10,7 +10,7 @@ export const prohibitorySigns2Questions: Question[] = [
       { id: 'q-prohibit2-1o3', text: 'No entry for cars' }
     ],
     correctAnswerId: 'q-prohibit2-1o1',
-    explanation: 'This red circular sign with blue inner circle and diagonal line prohibits entry for ALL vehicles, including cars, motorcycles, bicycles, and pedestrians.',
+    explanation: 'This red circular sign with blue inner circle and diagonal line prohibits entry for ALL vehicles, in...',
     subject: 'Prohibitory Signs 2',
     imageUrl: '/images/signs/prohibitory signs 2/q-prohibit2-1.png',
     imageHint: 'no entry all vehicles'
@@ -24,7 +24,7 @@ export const prohibitorySigns2Questions: Question[] = [
       { id: 'q-prohibit2-2o3', text: 'No entry for cars' }
     ],
     correctAnswerId: 'q-prohibit2-2o1',
-    explanation: 'This red circular sign with horizontal bar prohibits entry for ALL vehicles, including cars, motorcycles, bicycles, and pedestrians.',
+    explanation: 'This red circular sign with horizontal bar prohibits entry for ALL vehicles.',
     subject: 'Prohibitory Signs 2',
     imageUrl: '/images/signs/prohibitory signs 2/q-prohibit2-2.png',
     imageHint: 'no entry all vehicles'
@@ -52,7 +52,7 @@ export const prohibitorySigns2Questions: Question[] = [
       { id: 'q-prohibit2-4o3', text: 'Low bridge ahead' }
     ],
     correctAnswerId: 'q-prohibit2-4o1',
-    explanation: 'This sign prohibits vehicles exceeding 3.1 meters in height from using this road or area.',
+    explanation: 'This sign prohibits vehicles exceeding 3.',
     subject: 'Prohibitory Signs 2',
     imageUrl: '/images/signs/prohibitory signs 2/q-prohibit2-4.png',
     imageHint: 'height limit 3.1m'
@@ -122,7 +122,7 @@ export const prohibitorySigns2Questions: Question[] = [
       { id: 'q-prohibit2-9o3', text: 'Motor vehicle parking area' }
     ],
     correctAnswerId: 'q-prohibit2-9o1',
-    explanation: 'This red circular sign with diagonal bar prohibits entry for all motor vehicles (cars, motorcycles, lorries, etc.).',
+    explanation: 'This red circular sign with diagonal bar prohibits entry for all motor vehicles (cars, motorcycles, lorries, etc.',
     subject: 'Prohibitory Signs 2',
     imageUrl: '/images/signs/prohibitory signs 2/q-prohibit2-9.png',
     imageHint: 'no motor vehicles'

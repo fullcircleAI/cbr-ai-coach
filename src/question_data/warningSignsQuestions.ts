@@ -38,7 +38,7 @@ export const warningSignsQuestions: Question[] = [
       { id: 'q-new-warn-3o3', text: 'Multiple railway tracks' }
     ],
     correctAnswerId: 'q-new-warn-3o2',
-    explanation: 'This sign (St. Andrew\'s cross) indicates a rail crossing ahead with a single railway track.',
+    explanation: 'This warning sign indicates a rail crossing ahead with a single railway track.',
     subject: 'Warning Signs',
     imageUrl: '/images/signs/warningsigns/q-new-warn-3.png',
     imageHint: 'single railway crossing'
@@ -52,7 +52,7 @@ export const warningSignsQuestions: Question[] = [
       { id: 'q-new-warn-4o3', text: 'Overtaking permitted' }
     ],
     correctAnswerId: 'q-new-warn-4o1',
-    explanation: 'This sign warns that the road ahead carries two-way traffic, often encountered when leaving a one-way system.',
+    explanation: 'This sign warns that the road ahead carries two-way traffic.',
     subject: 'Warning Signs',
     imageUrl: '/images/signs/warningsigns/q-new-warn-4.png',
     imageHint: 'two way traffic'
@@ -94,7 +94,7 @@ export const warningSignsQuestions: Question[] = [
       { id: 'q-new-warn-7o3', text: 'Roadworks ahead warning' }
     ],
     correctAnswerId: 'q-new-warn-7o3',
-    explanation: 'This sign warns drivers of roadworks ahead, indicating potential obstructions or changes in road layout.',
+    explanation: 'This sign warns drivers of roadworks ahead.',
     subject: 'Warning Signs',
     imageUrl: '/images/signs/warningsigns/q-new-warn-7.png',
     imageHint: 'roadworks warning'
@@ -136,7 +136,7 @@ export const warningSignsQuestions: Question[] = [
       { id: 'q-new-warn-10o3', text: 'Uneven road surface' }
     ],
     correctAnswerId: 'q-new-warn-10o1',
-    explanation: 'This sign warns of loose chippings or stones on the road surface, which can reduce grip or be thrown up by vehicles.',
+    explanation: 'This sign warns of loose chippings or stones on the road surface.',
     subject: 'Warning Signs',
     imageUrl: '/images/signs/warningsigns/q-new-warn-10.png',
     imageHint: 'loose chippings warning'

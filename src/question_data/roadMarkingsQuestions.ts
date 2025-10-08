@@ -11,7 +11,7 @@ export const roadMarkingsQuestions: Question[] = [
       { id: 'q-rm-1o4', text: 'Overtaking allowed only during daylight' }
     ],
     correctAnswerId: 'q-rm-1o2',
-    explanation: 'A solid white line in the center of the road indicates that overtaking is not allowed. You must stay in your lane.',
+    explanation: 'A solid white line in the center of the road indicates that overtaking is not allowed.',
     subject: 'Road Markings'
   },
   {
@@ -50,7 +50,7 @@ export const roadMarkingsQuestions: Question[] = [
       { id: 'q-rm-4o4', text: 'Parking with a permit only' }
     ],
     correctAnswerId: 'q-rm-4o2',
-    explanation: 'A blue line indicates parking reserved for disabled persons. You must have a valid disabled parking permit to park here.',
+    explanation: 'A blue line indicates parking reserved for disabled persons.',
     subject: 'Road Markings'
   },
   {
@@ -63,7 +63,7 @@ export const roadMarkingsQuestions: Question[] = [
       { id: 'q-rm-5o4', text: 'A construction zone' }
     ],
     correctAnswerId: 'q-rm-5o1',
-    explanation: 'Zigzag lines indicate a pedestrian crossing. You must not park or overtake in this area.',
+    explanation: 'Zigzag lines indicate a pedestrian crossing.',
     subject: 'Road Markings'
   },
   {
@@ -89,7 +89,7 @@ export const roadMarkingsQuestions: Question[] = [
       { id: 'q-rm-7o4', text: 'A bicycle repair shop' }
     ],
     correctAnswerId: 'q-rm-7o1',
-    explanation: 'A white bicycle symbol indicates a bicycle lane. Motor vehicles should not drive in this lane.',
+    explanation: 'A white bicycle symbol indicates a bicycle lane.',
     subject: 'Road Markings'
   },
   {
@@ -102,7 +102,7 @@ export const roadMarkingsQuestions: Question[] = [
       { id: 'q-rm-8o4', text: 'You must honk your horn' }
     ],
     correctAnswerId: 'q-rm-8o2',
-    explanation: 'A white "STOP" word painted on the road reinforces the requirement to stop completely at the stop line or before entering the intersection.',
+    explanation: 'A white "STOP" word painted on the road reinforces the requirement to stop completely at the stop li...',
     subject: 'Road Markings'
   },
   {
@@ -115,7 +115,7 @@ export const roadMarkingsQuestions: Question[] = [
       { id: 'q-rm-9o4', text: 'A parking zone' }
     ],
     correctAnswerId: 'q-rm-9o1',
-    explanation: 'A white diamond symbol indicates a priority road. Traffic on this road has the right of way over traffic entering from side roads.',
+    explanation: 'A white diamond symbol indicates a priority road.',
     subject: 'Road Markings'
   },
   {
@@ -141,7 +141,7 @@ export const roadMarkingsQuestions: Question[] = [
       { id: 'q-rm-11o4', text: 'A bus terminal' }
     ],
     correctAnswerId: 'q-rm-11o1',
-    explanation: 'A white "BUS" text indicates a bus lane. Only buses and authorized vehicles may use this lane.',
+    explanation: 'A white "BUS" text indicates a bus lane.',
     subject: 'Road Markings'
   },
   {
@@ -154,7 +154,7 @@ export const roadMarkingsQuestions: Question[] = [
       { id: 'q-rm-12o4', text: 'A taxi office' }
     ],
     correctAnswerId: 'q-rm-12o1',
-    explanation: 'A white "TAXI" text indicates a taxi lane. Only taxis and authorized vehicles may use this lane.',
+    explanation: 'A white "TAXI" text indicates a taxi lane.',
     subject: 'Road Markings'
   }
 ];

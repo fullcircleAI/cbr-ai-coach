@@ -10,7 +10,7 @@ export const weatherConditionsQuestions: Question[] = [
       { id: 'q-wc-1o3', text: 'Speed up to get through the rain quickly' }
     ],
     correctAnswerId: 'q-wc-1o1',
-    explanation: 'In heavy rain, reduce your speed and increase your following distance to account for reduced visibility and longer stopping distances.',
+    explanation: 'In heavy rain.',
     subject: 'Weather Conditions'
   },
   {
@@ -22,7 +22,7 @@ export const weatherConditionsQuestions: Question[] = [
       { id: 'q-wc-2o3', text: 'Continue driving at normal speed' }
     ],
     correctAnswerId: 'q-wc-2o1',
-    explanation: 'In fog, use low beam headlights (high beams reflect off fog and reduce visibility) and reduce your speed significantly.',
+    explanation: 'In fog.',
     subject: 'Weather Conditions'
   },
   {
@@ -34,7 +34,7 @@ export const weatherConditionsQuestions: Question[] = [
       { id: 'q-wc-3o3', text: 'Speed up to get through the snow quickly' }
     ],
     correctAnswerId: 'q-wc-3o1',
-    explanation: 'In snow, reduce your speed and use gentle braking to avoid skidding. Sudden movements can cause loss of control.',
+    explanation: 'In snow, reduce your speed and use gentle braking to avoid skidding.',
     subject: 'Weather Conditions'
   },
   {
@@ -46,7 +46,7 @@ export const weatherConditionsQuestions: Question[] = [
       { id: 'q-wc-4o3', text: 'Speed up to get through the wind quickly' }
     ],
     correctAnswerId: 'q-wc-4o1',
-    explanation: 'In strong winds, reduce your speed and hold the steering wheel firmly to maintain control of your vehicle.',
+    explanation: 'In strong winds.',
     subject: 'Weather Conditions'
   }
 ];

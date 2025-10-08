@@ -11,7 +11,7 @@ export const expandedPriorityRulesQuestions: Question[] = [
       { id: 'q-epr-1o4', text: 'The vehicle going straight' }
     ],
     correctAnswerId: 'q-epr-1o2',
-    explanation: 'At an intersection with no traffic signs or signals, traffic from the right has the right of way. This is known as the "right before left" rule.',
+    explanation: 'At an intersection with no traffic signs or signals, traffic from the right has the right of way.',
     subject: 'Expanded Priority Rules'
   },
   {
@@ -24,7 +24,7 @@ export const expandedPriorityRulesQuestions: Question[] = [
       { id: 'q-epr-2o4', text: 'The vehicle on the right' }
     ],
     correctAnswerId: 'q-epr-2o1',
-    explanation: 'At a T-junction, traffic on the through road has the right of way. Traffic turning onto the through road must yield.',
+    explanation: 'At a T-junction, traffic on the through road has the right of way.',
     subject: 'Expanded Priority Rules'
   },
   {
@@ -37,7 +37,7 @@ export const expandedPriorityRulesQuestions: Question[] = [
       { id: 'q-epr-3o4', text: 'Traffic turning right' }
     ],
     correctAnswerId: 'q-epr-3o2',
-    explanation: 'At a roundabout, traffic already on the roundabout has the right of way. Traffic entering the roundabout must yield.',
+    explanation: 'At a roundabout, traffic already on the roundabout has the right of way.',
     subject: 'Expanded Priority Rules'
   },
   {
@@ -50,7 +50,7 @@ export const expandedPriorityRulesQuestions: Question[] = [
       { id: 'q-epr-4o4', text: 'The vehicle in the left lane' }
     ],
     correctAnswerId: 'q-epr-4o2',
-    explanation: 'When merging onto a motorway, traffic already on the motorway has the right of way. Merging traffic must adjust their speed and find a gap.',
+    explanation: 'When merging onto a motorway, traffic already on the motorway has the right of way.',
     subject: 'Expanded Priority Rules'
   },
   {
@@ -63,7 +63,7 @@ export const expandedPriorityRulesQuestions: Question[] = [
       { id: 'q-epr-5o4', text: 'The vehicle in the left lane' }
     ],
     correctAnswerId: 'q-epr-5o2',
-    explanation: 'When changing lanes, the vehicle already in the lane has the right of way. The vehicle changing lanes must yield and find a safe gap.',
+    explanation: 'When changing lanes, the vehicle already in the lane has the right of way.',
     subject: 'Expanded Priority Rules'
   },
   {
@@ -76,7 +76,7 @@ export const expandedPriorityRulesQuestions: Question[] = [
       { id: 'q-epr-6o4', text: 'The vehicle going straight' }
     ],
     correctAnswerId: 'q-epr-6o2',
-    explanation: 'At an intersection with a "Stop" sign, the vehicle at the stop sign must yield to all other traffic before proceeding.',
+    explanation: 'At an intersection with a "Stop" sign.',
     subject: 'Expanded Priority Rules'
   },
   {
@@ -89,7 +89,7 @@ export const expandedPriorityRulesQuestions: Question[] = [
       { id: 'q-epr-7o4', text: 'The vehicle going straight' }
     ],
     correctAnswerId: 'q-epr-7o2',
-    explanation: 'At an intersection with a "Give Way" sign, the vehicle at the give way sign must yield to all other traffic before proceeding.',
+    explanation: 'At an intersection with a "Give Way" sign.',
     subject: 'Expanded Priority Rules'
   },
   {
@@ -102,7 +102,7 @@ export const expandedPriorityRulesQuestions: Question[] = [
       { id: 'q-epr-8o4', text: 'Traffic turning left' }
     ],
     correctAnswerId: 'q-epr-8o1',
-    explanation: 'When a traffic light turns green, all traffic with a green light has the right of way, but must still yield to pedestrians and emergency vehicles.',
+    explanation: 'When a traffic light turns green.',
     subject: 'Expanded Priority Rules'
   },
   {
@@ -115,7 +115,7 @@ export const expandedPriorityRulesQuestions: Question[] = [
       { id: 'q-epr-9o4', text: 'Honk your horn' }
     ],
     correctAnswerId: 'q-epr-9o2',
-    explanation: 'When a traffic light turns yellow, you should stop if it is safe to do so. Only proceed if you cannot stop safely.',
+    explanation: 'When a traffic light turns yellow, you should stop if it is safe to do so.',
     subject: 'Expanded Priority Rules'
   },
   {
@@ -128,7 +128,7 @@ export const expandedPriorityRulesQuestions: Question[] = [
       { id: 'q-epr-10o4', text: 'Turn right if clear' }
     ],
     correctAnswerId: 'q-epr-10o1',
-    explanation: 'When a traffic light turns red, you must stop completely and wait for the light to turn green before proceeding.',
+    explanation: 'When a traffic light turns red.',
     subject: 'Expanded Priority Rules'
   },
   {
@@ -141,7 +141,7 @@ export const expandedPriorityRulesQuestions: Question[] = [
       { id: 'q-epr-11o4', text: 'Turn around' }
     ],
     correctAnswerId: 'q-epr-11o2',
-    explanation: 'When a traffic light is flashing yellow, you should proceed with caution and be prepared to stop if necessary.',
+    explanation: 'When a traffic light is flashing yellow.',
     subject: 'Expanded Priority Rules'
   },
   {
@@ -154,7 +154,7 @@ export const expandedPriorityRulesQuestions: Question[] = [
       { id: 'q-epr-12o4', text: 'Turn around' }
     ],
     correctAnswerId: 'q-epr-12o1',
-    explanation: 'When a traffic light is not working, you should treat it as a stop sign and yield to other traffic before proceeding.',
+    explanation: 'When a traffic light is not working.',
     subject: 'Expanded Priority Rules'
   }
 ];

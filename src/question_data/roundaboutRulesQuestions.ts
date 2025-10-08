@@ -10,7 +10,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-1o3', text: 'Stop completely before entering' }
     ],
     correctAnswerId: 'q-rr-1o1',
-    explanation: 'Before entering a roundabout, you must give way to traffic already in the roundabout, including cyclists and pedestrians.',
+    explanation: 'Before entering a roundabout.',
     subject: 'Roundabout Rules'
   },
   {
@@ -34,7 +34,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-3o3', text: 'Either lane is acceptable' }
     ],
     correctAnswerId: 'q-rr-3o1',
-    explanation: 'When turning left at a roundabout, use the left lane to enter and stay in the left lane while in the roundabout.',
+    explanation: 'When turning left at a roundabout.',
     subject: 'Roundabout Rules'
   },
   {
@@ -46,7 +46,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-4o3', text: 'Either lane is acceptable' }
     ],
     correctAnswerId: 'q-rr-4o3',
-    explanation: 'When going straight ahead at a roundabout, you can use either lane unless road markings indicate otherwise.',
+    explanation: 'When going straight ahead at a roundabout.',
     subject: 'Roundabout Rules'
   },
   {
@@ -58,7 +58,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-5o3', text: 'Either lane is acceptable' }
     ],
     correctAnswerId: 'q-rr-5o2',
-    explanation: 'When turning right at a roundabout, use the right lane to enter and stay in the right lane while in the roundabout.',
+    explanation: 'When turning right at a roundabout.',
     subject: 'Roundabout Rules'
   },
   {
@@ -70,7 +70,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-6o3', text: 'Never change lanes in a roundabout' }
     ],
     correctAnswerId: 'q-rr-6o1',
-    explanation: 'You can change lanes in a roundabout, but you must signal your intention and only change when it is safe to do so.',
+    explanation: 'You can change lanes in a roundabout.',
     subject: 'Roundabout Rules'
   },
   {
@@ -82,7 +82,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-7o3', text: 'Honk to warn the cyclist' }
     ],
     correctAnswerId: 'q-rr-7o1',
-    explanation: 'Cyclists in a roundabout have the same rights as other vehicles. You must give way to them before entering.',
+    explanation: 'Cyclists in a roundabout have the same rights as other vehicles.',
     subject: 'Roundabout Rules'
   },
   {
@@ -94,7 +94,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-8o3', text: 'Honk to warn the pedestrian' }
     ],
     correctAnswerId: 'q-rr-8o1',
-    explanation: 'When exiting a roundabout, you must give way to pedestrians who are waiting to cross or already crossing.',
+    explanation: 'When exiting a roundabout.',
     subject: 'Roundabout Rules'
   },
   {
@@ -106,7 +106,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-9o3', text: 'Stop completely before the roundabout' }
     ],
     correctAnswerId: 'q-rr-9o1',
-    explanation: 'Emergency vehicles with flashing lights have priority. Give way to them before entering the roundabout.',
+    explanation: 'Emergency vehicles with flashing lights have priority.',
     subject: 'Roundabout Rules'
   },
   {
@@ -118,7 +118,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-10o3', text: 'U-turns are not allowed in roundabouts' }
     ],
     correctAnswerId: 'q-rr-10o2',
-    explanation: 'To make a U-turn in a roundabout, signal left and continue around the roundabout to exit at the same road you entered from.',
+    explanation: 'To make a U-turn in a roundabout.',
     subject: 'Roundabout Rules'
   },
   {
@@ -130,7 +130,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-11o3', text: 'Honk to warn the truck driver' }
     ],
     correctAnswerId: 'q-rr-11o1',
-    explanation: 'Large trucks in a roundabout have the same rights as other vehicles. You must give way to them before entering.',
+    explanation: 'Large trucks in a roundabout have the same rights as other vehicles.',
     subject: 'Roundabout Rules'
   },
   {
@@ -142,7 +142,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-12o3', text: 'Honk to warn the entering car' }
     ],
     correctAnswerId: 'q-rr-12o2',
-    explanation: 'Once you are in a roundabout, you have priority over vehicles trying to enter. The entering vehicle must give way to you.',
+    explanation: 'Once you are in a roundabout, you have priority over vehicles trying to enter.',
     subject: 'Roundabout Rules'
   },
   {
@@ -154,7 +154,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-13o3', text: 'Honk to warn the bus driver' }
     ],
     correctAnswerId: 'q-rr-13o1',
-    explanation: 'Buses in a roundabout have the same rights as other vehicles. You must give way to them before entering.',
+    explanation: 'Buses in a roundabout have the same rights as other vehicles.',
     subject: 'Roundabout Rules'
   },
   {
@@ -178,7 +178,7 @@ export const roundaboutRulesQuestions: Question[] = [
       { id: 'q-rr-15o3', text: 'Honk to warn the motorcyclist' }
     ],
     correctAnswerId: 'q-rr-15o1',
-    explanation: 'Motorcycles in a roundabout have the same rights as other vehicles. You must give way to them before entering.',
+    explanation: 'Motorcycles in a roundabout have the same rights as other vehicles.',
     subject: 'Roundabout Rules'
   }
 ];

@@ -10,7 +10,7 @@ export const fatigueRestQuestions: Question[] = [
       { id: 'q-fr-1o3', text: 'Yawning, heavy eyelids, difficulty concentrating, and drifting in lane' }
     ],
     correctAnswerId: 'q-fr-1o3',
-    explanation: 'Signs of driver fatigue include yawning, heavy eyelids, difficulty concentrating, drifting in lane, missing exits, and feeling restless or irritable.',
+    explanation: 'Signs of driver fatigue include yawning.',
     subject: 'Fatigue & Rest'
   },
   {
@@ -22,7 +22,7 @@ export const fatigueRestQuestions: Question[] = [
       { id: 'q-fr-2o3', text: 'Every 6 hours' }
     ],
     correctAnswerId: 'q-fr-2o1',
-    explanation: 'You should take a break every 2 hours on long journeys, even if you don\'t feel tired. This helps prevent fatigue and maintains alertness.',
+    explanation: 'You should take a break every 2 hours on long journeys.',
     subject: 'Fatigue & Rest'
   },
   {
@@ -34,7 +34,7 @@ export const fatigueRestQuestions: Question[] = [
       { id: 'q-fr-3o3', text: '15-20 minutes' }
     ],
     correctAnswerId: 'q-fr-3o3',
-    explanation: 'Each break should be 15-20 minutes long. This gives you enough time to rest, stretch, and refresh yourself before continuing your journey.',
+    explanation: 'Each break should be 15-20 minutes long.',
     subject: 'Fatigue & Rest'
   },
   {
@@ -46,7 +46,7 @@ export const fatigueRestQuestions: Question[] = [
       { id: 'q-fr-4o3', text: 'Pull over in a safe place and rest' }
     ],
     correctAnswerId: 'q-fr-4o3',
-    explanation: 'If you feel tired while driving, you should pull over in a safe place and rest. Never try to continue driving when fatigued.',
+    explanation: 'If you feel tired while driving, you should pull over in a safe place and rest.',
     subject: 'Fatigue & Rest'
   },
   {
@@ -70,7 +70,7 @@ export const fatigueRestQuestions: Question[] = [
       { id: 'q-fr-6o3', text: 'A deep sleep' }
     ],
     correctAnswerId: 'q-fr-6o2',
-    explanation: 'Microsleep is a brief period of unconsciousness lasting 1-30 seconds. It can occur without warning and is extremely dangerous while driving.',
+    explanation: 'Microsleep is a brief period of unconsciousness lasting 1-30 seconds.',
     subject: 'Fatigue & Rest'
   },
   {
@@ -82,7 +82,7 @@ export const fatigueRestQuestions: Question[] = [
       { id: 'q-fr-7o3', text: 'Take a short nap in the car' }
     ],
     correctAnswerId: 'q-fr-7o2',
-    explanation: 'If you experience microsleep while driving, you should pull over immediately in a safe place and rest. This is a serious warning sign of fatigue.',
+    explanation: 'If you experience microsleep while driving.',
     subject: 'Fatigue & Rest'
   },
   {
@@ -94,7 +94,7 @@ export const fatigueRestQuestions: Question[] = [
       { id: 'q-fr-8o3', text: 'Late evening' }
     ],
     correctAnswerId: 'q-fr-8o1',
-    explanation: 'The best time to plan long journeys is early morning when you are fresh and alert. Avoid driving during your normal sleep hours.',
+    explanation: 'The best time to plan long journeys is early morning when you are fresh and alert.',
     subject: 'Fatigue & Rest'
   },
   {
@@ -106,7 +106,7 @@ export const fatigueRestQuestions: Question[] = [
       { id: 'q-fr-9o3', text: 'All of the above' }
     ],
     correctAnswerId: 'q-fr-9o3',
-    explanation: 'Before a long journey, you should avoid heavy meals, alcohol, and medications that cause drowsiness, as they can all contribute to fatigue.',
+    explanation: 'Before a long journey.',
     subject: 'Fatigue & Rest'
   },
   {
@@ -118,7 +118,7 @@ export const fatigueRestQuestions: Question[] = [
       { id: 'q-fr-10o3', text: 'Take a long nap' }
     ],
     correctAnswerId: 'q-fr-10o2',
-    explanation: 'During breaks on long journeys, you should get out of the car, stretch, walk around, and get some fresh air to help stay alert.',
+    explanation: 'During breaks on long journeys.',
     subject: 'Fatigue & Rest'
   },
   {
@@ -130,7 +130,7 @@ export const fatigueRestQuestions: Question[] = [
       { id: 'q-fr-11o3', text: '10 hours' }
     ],
     correctAnswerId: 'q-fr-11o2',
-    explanation: 'The recommended maximum driving time per day is 8 hours, including breaks. This helps prevent fatigue and maintains safety.',
+    explanation: 'The recommended maximum driving time per day is 8 hours, including breaks.',
     subject: 'Fatigue & Rest'
   },
   {
@@ -142,7 +142,7 @@ export const fatigueRestQuestions: Question[] = [
       { id: 'q-fr-12o3', text: 'Drink coffee and continue' }
     ],
     correctAnswerId: 'q-fr-12o2',
-    explanation: 'If you start to feel drowsy while driving, you should pull over in a safe place and take a short nap. Coffee and other stimulants are not reliable solutions.',
+    explanation: 'If you start to feel drowsy while driving.',
     subject: 'Fatigue & Rest'
   }
 ];

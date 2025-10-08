@@ -11,7 +11,7 @@ export const speedLimitQuestions: Question[] = [
       { id: 'q-sl-1o4', text: '140 km/h' }
     ],
     correctAnswerId: 'q-sl-1o1',
-    explanation: 'The maximum speed limit for cars on Dutch motorways is 100 km/h during good weather conditions. This was reduced from 130 km/h to 100 km/h in 2020 and remains at 100 km/h.',
+    explanation: 'The maximum speed limit for cars on Dutch motorways is 100 km/h during good weather conditions.',
     subject: 'Speed Limits'
   },
   {
@@ -24,7 +24,7 @@ export const speedLimitQuestions: Question[] = [
       { id: 'q-sl-2o4', text: '80 km/h' }
     ],
     correctAnswerId: 'q-sl-2o2',
-    explanation: 'The standard speed limit in built-up areas in the Netherlands is 50 km/h, unless otherwise indicated by traffic signs.',
+    explanation: 'The standard speed limit in built-up areas in the Netherlands is 50 km/h.',
     subject: 'Speed Limits'
   },
   {
@@ -37,7 +37,7 @@ export const speedLimitQuestions: Question[] = [
       { id: 'q-sl-3o4', text: '100 km/h' }
     ],
     correctAnswerId: 'q-sl-3o3',
-    explanation: 'On rural roads outside built-up areas, the speed limit for cars is 80 km/h, unless a different limit is indicated by traffic signs.',
+    explanation: 'On rural roads outside built-up areas.',
     subject: 'Speed Limits'
   },
   {
@@ -50,7 +50,7 @@ export const speedLimitQuestions: Question[] = [
       { id: 'q-sl-4o4', text: '130 km/h' }
     ],
     correctAnswerId: 'q-sl-4o2',
-    explanation: 'During bad weather conditions, the speed limit on motorways is reduced to 100 km/h for safety reasons.',
+    explanation: 'During bad weather conditions.',
     subject: 'Speed Limits'
   },
   {
@@ -63,7 +63,7 @@ export const speedLimitQuestions: Question[] = [
       { id: 'q-sl-5o4', text: '50 km/h' }
     ],
     correctAnswerId: 'q-sl-5o2',
-    explanation: 'In a 30 km/h zone, the maximum speed limit is 30 km/h. These zones are typically found in residential areas, near schools, or in areas with high pedestrian activity.',
+    explanation: 'In a 30 km/h zone, the maximum speed limit is 30 km/h.',
     subject: 'Speed Limits'
   },
   {
@@ -76,7 +76,7 @@ export const speedLimitQuestions: Question[] = [
       { id: 'q-sl-6o4', text: '140 km/h' }
     ],
     correctAnswerId: 'q-sl-6o1',
-    explanation: 'At night (between 19:00 and 06:00), the speed limit on motorways is 100 km/h to reduce noise pollution and improve safety.',
+    explanation: 'At night (between 19:00 and 06:00).',
     subject: 'Speed Limits'
   },
   {
@@ -115,7 +115,7 @@ export const speedLimitQuestions: Question[] = [
       { id: 'q-sl-9o4', text: '100 km/h' }
     ],
     correctAnswerId: 'q-sl-9o2',
-    explanation: 'In roadworks zones on motorways, the speed limit is typically reduced to 70 km/h to ensure the safety of workers and drivers.',
+    explanation: 'In roadworks zones on motorways.',
     subject: 'Speed Limits'
   },
   {
@@ -128,7 +128,7 @@ export const speedLimitQuestions: Question[] = [
       { id: 'q-sl-10o4', text: '70 km/h' }
     ],
     correctAnswerId: 'q-sl-10o2',
-    explanation: 'In residential areas with speed bumps, the speed limit is typically 30 km/h to ensure pedestrian safety.',
+    explanation: 'In residential areas with speed bumps.',
     subject: 'Speed Limits'
   },
   {
@@ -141,7 +141,7 @@ export const speedLimitQuestions: Question[] = [
       { id: 'q-sl-11o4', text: 'The normal motorway limit' }
     ],
     correctAnswerId: 'q-sl-11o1',
-    explanation: 'When a variable speed limit sign shows 80 km/h, you must follow that limit, which overrides the normal motorway speed limit.',
+    explanation: 'When a variable speed limit sign shows 80 km/h.',
     subject: 'Speed Limits'
   },
   {

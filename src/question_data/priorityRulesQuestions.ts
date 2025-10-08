@@ -24,7 +24,7 @@ export const priorityRulesQuestions: Question[] = [
       { id: 'q-priority-2o3', text: 'Both must stop and proceed alternately' },
     ],
     correctAnswerId: 'q-priority-2o1', // Vehicle 1 must give way
-    explanation: 'Vehicles on a minor road, often indicated by a give way or stop sign, must yield to traffic on the priority road.',
+    explanation: 'Vehicles on a minor road.',
     subject: 'Priority Rules',
     imageUrl: '/images/signs/prioritysigns/q-priority-2.png', // Ensure this image exists or is a placeholder
     imageHint: 'junction give way priority road'
@@ -38,7 +38,7 @@ export const priorityRulesQuestions: Question[] = [
       { id: 'q-priority-3o3', text: 'The vehicle turning left' },
     ],
     correctAnswerId: 'q-priority-3o1',
-    explanation: 'At an unmarked crossroads, the "priority to the right" rule applies. Vehicles approaching from the right have priority.',
+    explanation: 'At an unmarked crossroads, the "priority to the right" rule applies.',
     subject: 'Priority Rules',
   },
   {
@@ -50,7 +50,7 @@ export const priorityRulesQuestions: Question[] = [
       { id: 'q-priority-4o3', text: 'You have priority over all other traffic' },
     ],
     correctAnswerId: 'q-priority-4o2',
-    explanation: 'A "Give Way" sign means you must slow down and be prepared to stop if necessary to give way to traffic on the priority road.',
+    explanation: 'A "Give Way" sign means you must slow down and be prepared to stop if necessary to give way to traff...',
     subject: 'Priority Rules',
   },
   {
@@ -62,7 +62,7 @@ export const priorityRulesQuestions: Question[] = [
       { id: 'q-priority-5o3', text: 'The vehicle approaching from the left' },
     ],
     correctAnswerId: 'q-priority-5o1',
-    explanation: 'At a T-junction, vehicles on the through road (the top of the T) typically have priority over vehicles turning into the junction.',
+    explanation: 'At a T-junction.',
     subject: 'Priority Rules',
   },
   {
@@ -74,7 +74,7 @@ export const priorityRulesQuestions: Question[] = [
       { id: 'q-priority-6o3', text: 'They only have priority at traffic lights' },
     ],
     correctAnswerId: 'q-priority-6o2',
-    explanation: 'Emergency vehicles with flashing lights and sirens have priority over all other traffic. You must give way and allow them to pass safely.',
+    explanation: 'Emergency vehicles with flashing lights and sirens have priority over all other traffic.',
     subject: 'Priority Rules',
   },
   {
@@ -86,7 +86,7 @@ export const priorityRulesQuestions: Question[] = [
       { id: 'q-priority-7o3', text: 'The larger vehicle' },
     ],
     correctAnswerId: 'q-priority-7o2',
-    explanation: 'At a roundabout, traffic already on the roundabout has priority over traffic waiting to enter. You must give way to traffic on your right.',
+    explanation: 'At a roundabout, traffic already on the roundabout has priority over traffic waiting to enter.',
     subject: 'Priority Rules',
   },
   {
@@ -98,7 +98,7 @@ export const priorityRulesQuestions: Question[] = [
       { id: 'q-priority-8o3', text: 'Stop only if other vehicles are present' },
     ],
     correctAnswerId: 'q-priority-8o2',
-    explanation: 'A "Stop" sign requires you to stop completely at the stop line and give way to all traffic on the priority road before proceeding.',
+    explanation: 'A "Stop" sign requires you to stop completely at the stop line and give way to all traffic on the pr...',
     subject: 'Priority Rules',
   }
 ]; 

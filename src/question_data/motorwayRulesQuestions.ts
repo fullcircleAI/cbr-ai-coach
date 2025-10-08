@@ -11,7 +11,7 @@ export const motorwayRulesQuestions: Question[] = [
       { id: 'q-mr-1o4', text: '80 km/h' }
     ],
     correctAnswerId: 'q-mr-1o2',
-    explanation: 'The minimum speed limit on a motorway in the Netherlands is 60 km/h. Vehicles that cannot maintain this speed are not allowed on motorways.',
+    explanation: 'The minimum speed limit on a motorway in the Netherlands is 60 km/h.',
     subject: 'Motorway Rules'
   },
   {
@@ -24,7 +24,7 @@ export const motorwayRulesQuestions: Question[] = [
       { id: 'q-mr-2o4', text: 'All of the above' }
     ],
     correctAnswerId: 'q-mr-2o2',
-    explanation: 'Mopeds and tractors are not allowed on motorways as they cannot maintain the minimum speed limit and would create a safety hazard.',
+    explanation: 'Mopeds and tractors are not allowed on motorways as they cannot maintain the minimum speed limit and...',
     subject: 'Motorway Rules'
   },
   {
@@ -37,7 +37,7 @@ export const motorwayRulesQuestions: Question[] = [
       { id: 'q-mr-3o4', text: 'Try to repair the vehicle yourself' }
     ],
     correctAnswerId: 'q-mr-3o2',
-    explanation: 'If your vehicle breaks down on a motorway, you should get out of your vehicle and stand behind the safety barrier. Call for assistance using the emergency phones.',
+    explanation: 'If your vehicle breaks down on a motorway.',
     subject: 'Motorway Rules'
   },
   {
@@ -50,7 +50,7 @@ export const motorwayRulesQuestions: Question[] = [
       { id: 'q-mr-4o4', text: 'For making phone calls' }
     ],
     correctAnswerId: 'q-mr-4o2',
-    explanation: 'The hard shoulder is reserved for emergency stops and breakdowns only. It should not be used for normal driving, overtaking, or parking.',
+    explanation: 'The hard shoulder is reserved for emergency stops and breakdowns only.',
     subject: 'Motorway Rules'
   },
   {
@@ -63,7 +63,7 @@ export const motorwayRulesQuestions: Question[] = [
       { id: 'q-mr-5o4', text: 'Honk your horn to signal your intention' }
     ],
     correctAnswerId: 'q-mr-5o3',
-    explanation: 'When approaching a motorway exit, you should move to the right lane early and reduce your speed gradually to safely exit the motorway.',
+    explanation: 'When approaching a motorway exit.',
     subject: 'Motorway Rules'
   },
   {
@@ -76,7 +76,7 @@ export const motorwayRulesQuestions: Question[] = [
       { id: 'q-mr-6o4', text: 'Honk your horn to signal your intention' }
     ],
     correctAnswerId: 'q-mr-6o2',
-    explanation: 'When entering a motorway, you should accelerate to match the speed of traffic on the motorway and merge safely into a gap.',
+    explanation: 'When entering a motorway.',
     subject: 'Motorway Rules'
   },
   {
@@ -89,7 +89,7 @@ export const motorwayRulesQuestions: Question[] = [
       { id: 'q-mr-7o4', text: 'The speed limit only applies at night' }
     ],
     correctAnswerId: 'q-mr-7o2',
-    explanation: 'Variable speed limit signs on motorways display mandatory speed limits that you must follow. These are used to manage traffic flow and improve safety.',
+    explanation: 'Variable speed limit signs on motorways display mandatory speed limits that you must follow.',
     subject: 'Motorway Rules'
   },
   {
@@ -102,7 +102,7 @@ export const motorwayRulesQuestions: Question[] = [
       { id: 'q-mr-8o4', text: 'Use the hard shoulder to turn around' }
     ],
     correctAnswerId: 'q-mr-8o3',
-    explanation: 'If you miss your motorway exit, you should continue to the next exit and find an alternative route. Never reverse, stop, or turn around on a motorway.',
+    explanation: 'If you miss your motorway exit, you should continue to the next exit and find an alternative route.',
     subject: 'Motorway Rules'
   },
   {
@@ -115,7 +115,7 @@ export const motorwayRulesQuestions: Question[] = [
       { id: 'q-mr-9o4', text: 'To mark emergency stopping areas' }
     ],
     correctAnswerId: 'q-mr-9o2',
-    explanation: 'Lane markings on motorways help organize traffic flow, prevent accidents, and ensure safe driving by clearly defining where vehicles should drive.',
+    explanation: 'Lane markings on motorways help organize traffic flow.',
     subject: 'Motorway Rules'
   },
   {
@@ -128,7 +128,7 @@ export const motorwayRulesQuestions: Question[] = [
       { id: 'q-mr-10o4', text: 'Honk your horn continuously' }
     ],
     correctAnswerId: 'q-mr-10o2',
-    explanation: 'When overtaking on a motorway, you should use the left lane (the lane to the left of the vehicle you are overtaking).',
+    explanation: 'When overtaking on a motorway.',
     subject: 'Motorway Rules'
   },
   {
@@ -141,7 +141,7 @@ export const motorwayRulesQuestions: Question[] = [
       { id: 'q-mr-11o4', text: 'Honk your horn to signal your position' }
     ],
     correctAnswerId: 'q-mr-11o3',
-    explanation: 'When being overtaken on a motorway, you should maintain your speed and position. Do not speed up or change lanes unnecessarily.',
+    explanation: 'When being overtaken on a motorway, you should maintain your speed and position.',
     subject: 'Motorway Rules'
   },
   {
@@ -154,7 +154,7 @@ export const motorwayRulesQuestions: Question[] = [
       { id: 'q-mr-12o4', text: 'Stop immediately' }
     ],
     correctAnswerId: 'q-mr-12o2',
-    explanation: 'If you see an emergency vehicle on a motorway, you should move to the right lane and slow down to allow it to pass safely.',
+    explanation: 'If you see an emergency vehicle on a motorway.',
     subject: 'Motorway Rules'
   }
 ];
