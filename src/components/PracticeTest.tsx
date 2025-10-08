@@ -28,6 +28,14 @@ export const PracticeTest: React.FC = () => {
   const [testComplete, setTestComplete] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
+  // Hide mobile footer during practice tests
+  useEffect(() => {
+    document.body.classList.add('practice-test-active');
+    return () => {
+      document.body.classList.remove('practice-test-active');
+    };
+  }, []);
+
   useEffect(() => {
     const loadQuestions = () => {
       let questions: Question[] = [];

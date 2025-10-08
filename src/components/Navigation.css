@@ -197,6 +197,11 @@
     color: #1A3E7A;
   }
   
+  /* Hide footer during practice tests for more vertical space */
+  body.practice-test-active .footer-nav {
+    display: none !important;
+  }
+  
   .footer-icon {
     font-size: 1.4rem;
     margin-bottom: 0.2rem;

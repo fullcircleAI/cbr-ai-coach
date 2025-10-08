@@ -150,6 +150,12 @@
     overflow: hidden;
   }
   
+  /* Full height for practice tests when footer is hidden */
+  body.practice-test-active .main-content {
+    height: 100vh !important;
+    padding: 0 !important;
+  }
+  
   /* Make Tests and Settings pages scrollable */
   .main-content.tests-page,
   .main-content.settings-page {

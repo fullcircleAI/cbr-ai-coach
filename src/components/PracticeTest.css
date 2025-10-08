@@ -993,37 +993,37 @@
 
 @media (max-width: 600px) {
   .practice-test {
-    padding: 0.5rem 0.75rem !important;
+    padding: 1rem 0.75rem !important;
     border-radius: 0;
   }
   .practice-question-text {
     font-size: 0.92rem;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.3rem !important;
   }
   .practice-options-list {
-    gap: 0.4rem;
-    margin-bottom: 0.5rem !important;
+    gap: 0.2rem;
+    margin-bottom: 0.3rem !important;
   }
   .practice-option-label {
     font-size: 0.9rem;
-    padding: 0.5rem 0.6rem;
+    padding: 0.3rem 0.4rem;
     border-radius: 4px;
     min-height: 44px;
   }
   .practice-option-letter {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     font-size: 0.9rem;
-    margin-right: 0.4rem;
+    margin-right: 0.2rem;
   }
   .practice-navigation-row {
-    gap: 0.4rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+    gap: 0.2rem;
+    margin-bottom: 0.3rem;
+    margin-top: 0;
   }
   .practice-nav-btn {
     font-size: 0.92rem;
-    padding: 0.6rem 1rem;
+    padding: 0.4rem 0;
     border-radius: 4px;
     min-height: 44px;
   }
@@ -1032,21 +1032,21 @@
   }
   .practice-progress-bar {
     height: 5px;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.3rem !important;
   }
   .practice-header-row {
     gap: 0.2rem;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.2rem !important;
   }
   .practice-explanation-section {
     padding: 0.75rem 1rem;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.3rem !important;
   }
   .practice-subject-row {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.3rem !important;
   }
   .practice-question-image {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.3rem !important;
   }
 }
 
