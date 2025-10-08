@@ -19,12 +19,14 @@ export const PracticeTest: React.FC = () => {
   const { testId } = useParams<{ testId: string }>();
   const navigate = useNavigate();
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [showResult, setShowResult] = useState(false);
+  const [isAnswered, setIsAnswered] = useState(false);
+  const [showExplanation, setShowExplanation] = useState(false);
   const [score, setScore] = useState(0);
   const [startTime, setStartTime] = useState<number>(Date.now());
   const [testComplete, setTestComplete] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
 
   useEffect(() => {
     const loadQuestions = () => {
@@ -102,37 +104,31 @@ export const PracticeTest: React.FC = () => {
     loadQuestions();
   }, [testId]);
 
-  const handleAnswerSelect = (answerId: string) => {
-    if (!showResult) {
+  const handleAnswer = (answerId: string) => {
+    if (!isAnswered) {
       setSelectedAnswer(answerId);
-    }
-  };
-
-  const handleShowResult = () => {
-    if (selectedAnswer) {
-      setShowResult(true);
-      if (selectedAnswer === questions[currentQuestion].correctAnswerId) {
+      setIsAnswered(true);
+      setShowExplanation(true);
+      
+      if (answerId === questions[currentQuestionIndex].correctAnswerId) {
         setScore(score + 1);
       }
     }
   };
 
-  const handleNextQuestion = () => {
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
+  const nextQuestion = () => {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedAnswer(null);
-      setShowResult(false);
+      setIsAnswered(false);
+      setShowExplanation(false);
     } else {
       setTestComplete(true);
     }
   };
 
-  const handleRetakeTest = () => {
-    window.location.reload();
-  };
-
-  const handleBackToDashboard = () => {
-    navigate('/');
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
   };
 
   const getTestName = () => {
@@ -162,12 +158,23 @@ export const PracticeTest: React.FC = () => {
     }
   };
 
+  const getMotivationWord = () => {
+    const isCorrect = selectedAnswer === questions[currentQuestionIndex]?.correctAnswerId;
+    if (isCorrect) {
+      const words = ['Excellent!', 'Perfect!', 'Great!', 'Correct!', 'Well done!'];
+      return words[Math.floor(Math.random() * words.length)];
+    } else {
+      const words = ['Try again', 'Not quite', 'Incorrect', 'Wrong answer', 'Keep trying'];
+      return words[Math.floor(Math.random() * words.length)];
+    }
+  };
+
   if (questions.length === 0) {
     return (
       <div className="main-layout">
         <Navigation />
         <main className="main-content">
-          <div className="practice-test-container">
+          <div className="practice-test">
             <div style={{ textAlign: 'center', padding: '2rem' }}>
               <div>Loading questions...</div>
             </div>
@@ -186,7 +193,7 @@ export const PracticeTest: React.FC = () => {
       <div className="main-layout">
         <Navigation />
         <main className="main-content">
-          <div className="practice-test-container">
+          <div className="practice-test">
             <div className="test-result">
               <div className="result-header">
                 <h1>🎉 Test Complete!</h1>
@@ -218,10 +225,10 @@ export const PracticeTest: React.FC = () => {
               </div>
 
               <div className="result-actions">
-                <button className="action-button primary" onClick={handleRetakeTest}>
+                <button className="practice-nav-btn primary" onClick={() => window.location.reload()}>
                   🔄 Retake Test
                 </button>
-                <button className="action-button" onClick={handleBackToDashboard}>
+                <button className="practice-nav-btn" onClick={() => navigate('/')}>
                   🏠 Back to Dashboard
                 </button>
               </div>
@@ -232,93 +239,111 @@ export const PracticeTest: React.FC = () => {
     );
   }
 
-  const currentQ = questions[currentQuestion];
-  const progress = ((currentQuestion + 1) / questions.length) * 100;
+  const currentQuestion = questions[currentQuestionIndex];
+  const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+  const isCorrect = selectedAnswer === currentQuestion.correctAnswerId;
+  const motivationWord = getMotivationWord();
 
   return (
     <div className="main-layout">
       <Navigation />
       <main className="main-content">
-        <div className="practice-test-container">
-          <div className="test-header">
-            <div className="test-info">
-              <h2>{getTestName()}</h2>
-              <div className="test-progress">
-                Question {currentQuestion + 1} of {questions.length}
-              </div>
+        <div className="practice-test">
+          <div className="practice-progress-bar">
+            <div className="practice-progress-fill" style={{ width: `${progress}%` }} />
+          </div>
+          
+          <div className="practice-header-row">
+            <div className="practice-subject-row">
+              <span className="practice-question-number">
+                Question {currentQuestionIndex + 1} of {questions.length}:
+              </span>
+              <span className="practice-question-subject">{currentQuestion.subject}</span>
+            </div>
+            <div className="practice-header-controls">
+              <button
+                className="practice-exit-btn" 
+                onClick={() => navigate('/')}
+                aria-label="Back to Dashboard"
+                title="Back to Dashboard"
+              >
+                ←
+              </button>
+              <button className={`practice-mute-btn${isMuted ? ' muted' : ''}`} onClick={toggleMute} aria-label={isMuted ? 'Unmute' : 'Mute'}>
+                {isMuted ? '🔇' : '🔊'}
+              </button>
             </div>
           </div>
 
-          <div className="test-progress">
-            <div className="progress-bar-bg">
-              <div 
-                className="progress-bar-fill"
-                style={{ width: `${progress}%` }}
-              ></div>
-            </div>
-            <div className="progress-text">
-              {currentQuestion + 1} / {questions.length}
-            </div>
+          <div className="practice-question-text">
+            {currentQuestion.text}
           </div>
 
-          <div className="question-container">
-            <div className="question-card">
-              <div className="question-text">
-                {currentQ.text}
-              </div>
-              
-              {currentQ.imageUrl && (
-                <div className="question-image">
-                  <img 
-                    src={currentQ.imageUrl} 
-                    alt={currentQ.imageHint || 'Question image'} 
-                  />
-                </div>
-              )}
+          {currentQuestion.imageUrl && (
+            <div className="practice-question-image">
+              <img src={currentQuestion.imageUrl} alt="question visual" style={{ maxHeight: '220px', width: 'auto', objectFit: 'contain' }} />
+            </div>
+          )}
 
-              <div className="answer-options">
-                {currentQ.options.map((option) => (
-                  <button
-                    key={option.id}
-                    className={`answer-option ${selectedAnswer === option.id ? 'selected' : ''}`}
-                    onClick={() => handleAnswerSelect(option.id)}
-                  >
-                    {option.text}
-                  </button>
-                ))}
-              </div>
+          <div className="practice-options-list">
+            {currentQuestion.options.map((option, idx) => (
+              <label key={option.id} className={`practice-option-label${selectedAnswer === option.id ? ' selected' : ''}${isAnswered && currentQuestion.correctAnswerId === option.id ? ' correct' : ''}${isAnswered && selectedAnswer === option.id && selectedAnswer !== currentQuestion.correctAnswerId ? ' incorrect' : ''}`}> 
+                <input
+                  type="radio"
+                  name="practice-option"
+                  value={option.id}
+                  checked={selectedAnswer === option.id}
+                  onChange={() => handleAnswer(option.id)}
+                  disabled={isAnswered}
+                />
+                <span className="practice-option-letter">{String.fromCharCode(65 + idx)}</span>
+                <span className="practice-option-text">{option.text}</span>
+              </label>
+            ))}
+          </div>
 
-              {showResult && (
-                <div className="answer-explanation">
-                  <div className={`explanation-header ${selectedAnswer === currentQ.correctAnswerId ? 'correct' : 'incorrect'}`}>
-                    {selectedAnswer === currentQ.correctAnswerId ? '✅ Correct!' : '❌ Incorrect'}
-                  </div>
-                  <div className="explanation-text">
-                    {currentQ.explanation}
-                  </div>
-                </div>
-              )}
-
-              <div className="question-actions">
-                {!showResult ? (
-                  <button 
-                    className="action-button"
-                    onClick={handleShowResult}
-                    disabled={!selectedAnswer}
-                  >
-                    Check Answer
-                  </button>
-                ) : (
-                  <button 
-                    className="action-button"
-                    onClick={handleNextQuestion}
-                  >
-                    {currentQuestion < questions.length - 1 ? 'Next Question' : 'Finish Test'}
-                  </button>
+          {showExplanation && (
+            <div className="practice-explanation-section">
+              <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {isAnswered && (
+                  <span style={{
+                    position: 'absolute',
+                    left: 0,
+                    color: isCorrect ? '#059669' : '#dc2626',
+                    background: isCorrect ? 'linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%)' : 'linear-gradient(135deg, #fee2e2 0%, #fecaca 100%)',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    marginRight: '0.7rem',
+                    minWidth: 0,
+                    whiteSpace: 'nowrap',
+                    borderRadius: '8px',
+                    padding: '0.25em 0.6em',
+                    display: 'inline-block',
+                    boxShadow: isCorrect ? '0 1px 4px rgba(5, 150, 105, 0.2)' : '0 1px 4px rgba(220, 38, 38, 0.2)',
+                    border: isCorrect ? '1px solid #a7f3d0' : '1px solid #fecaca',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.3px',
+                  }}>
+                    {motivationWord}
+                  </span>
                 )}
+                <div className="practice-explanation-label" style={{ fontSize: '1rem', margin: '0 auto' }}>Explanation</div>
               </div>
+              <div className="practice-explanation-text" style={{ fontSize: '0.95rem' }}>{currentQuestion.explanation}</div>
             </div>
-          </div>
+          )}
+          
+          {/* Always show Next button after answering */}
+          {isAnswered && (
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '0' }}>
+              <button
+                className="practice-nav-btn"
+                onClick={nextQuestion}
+              >
+                {currentQuestionIndex < questions.length - 1 ? 'Next' : 'Finish'}
+              </button>
+            </div>
+          )}
         </div>
       </main>
     </div>

@@ -208,14 +208,6 @@ export const TestsPage: React.FC = () => {
     }
   ];
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'easy': return '#10b981';
-      case 'medium': return '#f59e0b';
-      case 'hard': return '#ef4444';
-      default: return '#6b7280';
-    }
-  };
 
   const handleTestClick = (testId: string) => {
     navigate(`/practice/${testId}`);
@@ -243,20 +235,13 @@ export const TestsPage: React.FC = () => {
                   className="test-card"
                   onClick={() => handleTestClick(test.id)}
                 >
-                  <div className="test-icon">{test.icon}</div>
                   <div className="test-content">
                     <h3 className="test-name">{test.name}</h3>
-                    <p className="test-description">{test.description}</p>
-                    <div className="test-meta">
-                      <span className="question-count">{test.questionCount} questions</span>
-                      <span 
-                        className="difficulty-badge"
-                        style={{ backgroundColor: getDifficultyColor(test.difficulty) }}
-                      >
-                        {test.difficulty}
-                      </span>
+                    <div className="test-time">
+                      {test.questionCount <= 15 ? '10 min' : 
+                       test.questionCount <= 25 ? '15 min' : 
+                       test.questionCount <= 35 ? '20 min' : '25 min'}
                     </div>
-                    <div className="test-category">{test.category}</div>
                   </div>
                 </div>
               ))}
