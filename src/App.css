@@ -122,13 +122,22 @@
   box-sizing: border-box;
 }
 
-/* Web only - ensure no scrolling */
+/* Web only - ensure no scrolling for dashboard, but allow for practice/tests/settings */
 @media (min-width: 1025px) {
   .main-content {
     height: 100vh;
     overflow: hidden;
     padding: 1rem;
     box-sizing: border-box;
+  }
+  
+  /* Make Tests, Settings, and Practice Test pages scrollable on desktop */
+  .main-content.tests-page,
+  .main-content.settings-page,
+  .main-content.practice-test-page {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: 100vh !important;
   }
 }
 
@@ -157,6 +166,7 @@
     height: calc(100vh - 120px); /* Account for tablet footer */
     overflow: hidden;
   }
+  
 }
 
 /* Dashboard Styles */
