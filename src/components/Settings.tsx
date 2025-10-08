@@ -205,55 +205,137 @@ export const Settings: React.FC = () => {
             {activeTab === 'account' && (
               <div className="settings-section">
                 <h2>👤 Account Settings</h2>
-                <div className="account-info">
-                  <div className="user-avatar-large">👤</div>
-                  <div className="user-details">
+                
+                <div className="settings-section">
+                  <h4>Profile Information</h4>
+                  <div className="profile-field">
+                    <label>Username</label>
                     {isEditing ? (
-                      <div className="edit-form">
+                      <div className="edit-field">
                         <input
                           type="text"
                           value={editUsername}
                           onChange={(e) => setEditUsername(e.target.value)}
-                          className="edit-input"
-                          placeholder="Enter your name"
+                          placeholder="Enter your username"
+                          maxLength={50}
+                          style={{ textAlign: 'left' }}
                         />
                         <div className="edit-actions">
-                          <button onClick={handleUpdateProfile} className="save-btn">
-                            Save
-                          </button>
-                          <button onClick={() => setIsEditing(false)} className="cancel-btn">
-                            Cancel
-                          </button>
+                          <button onClick={handleUpdateProfile} className="save-btn">Save</button>
+                          <button onClick={() => setIsEditing(false)} className="cancel-btn">Cancel</button>
                         </div>
                       </div>
                     ) : (
-                      <div className="user-info">
-                        <h3>{editUsername}</h3>
-                        <p>AI Learning Coach User</p>
-                        <button onClick={() => setIsEditing(true)} className="edit-btn">
-                          Edit Profile
-                        </button>
+                      <div className="display-field">
+                        <span>{editUsername}</span>
+                        <button onClick={() => setIsEditing(true)} className="edit-btn">Edit</button>
                       </div>
                     )}
                   </div>
-                </div>
-                
-                <div className="account-stats">
-                  <div className="stat-item">
-                    <span className="stat-label">Study Streak</span>
-                    <span className="stat-value">{studyStreak} days</span>
+                  
+                  <div className="profile-field">
+                    <label>Email</label>
+                    <div className="display-field">
+                      <span>ai.learner@example.com</span>
+                      <span className="email-note">(Auto-generated for account sync)</span>
+                    </div>
                   </div>
-                  <div className="stat-item">
-                    <span className="stat-label">Account Type</span>
-                    <span className="stat-value">Free</span>
+                  
+                  <div className="profile-field">
+                    <label>Language</label>
+                    <div className="display-field">
+                      <select className="language-select" style={{ textAlign: 'left' }}>
+                        <option value="en">English</option>
+                        <option value="nl">Nederlands</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div className="profile-field">
+                    <label>Account Status</label>
+                    <div className="display-field">
+                      <span className="premium-badge">🌟 Premium User</span>
+                    </div>
+                  </div>
+                  
+                  <div className="profile-field">
+                    <label>Data Storage</label>
+                    <div className="display-field">
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <span style={{ color: '#059669' }}>☁️</span>
+                        <span style={{ color: '#059669', fontWeight: 600 }}>Cloud Storage Active</span>
+                      </div>
+                      <div style={{ fontSize: '0.8rem', color: '#666', marginTop: '0.25rem' }}>
+                        Your data syncs across all devices
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="profile-field">
+                    <label>Cloud Storage Test</label>
+                    <div className="display-field">
+                      <button 
+                        onClick={handleTestCloudStorage}
+                        disabled={isTesting}
+                        style={{
+                          background: '#002868',
+                          color: 'white',
+                          border: 'none',
+                          padding: '0.5rem 1rem',
+                          borderRadius: '6px',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        {isTesting ? 'Testing...' : 'Test Connection'}
+                      </button>
+                      {testResults.length > 0 && (
+                        <div className="test-results">
+                          {testResults.map((result, index) => (
+                            <div key={index} className="test-result">{result}</div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
 
-                <div className="danger-zone">
-                  <h3>⚠️ Danger Zone</h3>
-                  <button className="delete-account-btn" onClick={handleDeleteAccount}>
-                    Delete Account
-                  </button>
+                <div className="settings-section">
+                  <h4>Learning Preferences</h4>
+                  <div className="preference-item">
+                    <label>Personalized Learning</label>
+                    <div className="preference-description">
+                      AI adapts to your learning style and pace
+                    </div>
+                    <label className="toggle-switch">
+                      <input
+                        type="checkbox"
+                        checked={personalizedLearning}
+                        onChange={handlePersonalizedLearningToggle}
+                      />
+                      <span className="toggle-slider"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div className="settings-section">
+                  <h4>Data Management</h4>
+                  <div className="data-actions">
+                    <button className="export-btn">Export My Data</button>
+                    <button className="import-btn">Import Data</button>
+                    <button className="clear-cache-btn">Clear Cache</button>
+                  </div>
+                </div>
+
+                <div className="settings-section">
+                  <h4>Danger Zone</h4>
+                  <div className="danger-actions">
+                    <button className="delete-account-btn" onClick={handleDeleteAccount}>
+                      Delete Account
+                    </button>
+                    <p className="danger-warning">
+                      This will permanently delete all your data and cannot be undone.
+                    </p>
+                  </div>
                 </div>
               </div>
             )}
@@ -261,81 +343,94 @@ export const Settings: React.FC = () => {
             {activeTab === 'study' && (
               <div className="settings-section">
                 <h2>📚 Study Settings</h2>
-                <div className="setting-item">
-                  <div className="setting-info">
-                    <h3>Personalized Learning</h3>
-                    <p>AI adapts to your learning style and pace</p>
-                  </div>
-                  <label className="toggle">
-                    <input
-                      type="checkbox"
-                      checked={personalizedLearning}
-                      onChange={handlePersonalizedLearningToggle}
-                    />
-                    <span className="slider"></span>
-                  </label>
-                </div>
                 
-                <div className="setting-item">
-                  <div className="setting-info">
-                    <h3>Study Notifications</h3>
-                    <p>Get reminded when it's time to study</p>
+                <div className="settings-section">
+                  <h4>Notifications</h4>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div>
+                        <div style={{ fontWeight: 600, color: '#002868' }}>Study Reminders</div>
+                        <div style={{ fontSize: '0.9rem', color: '#666' }}>Get notified when it's time to study</div>
+                      </div>
+                      <label className="toggle-switch">
+                        <input
+                          type="checkbox"
+                          checked={studyPreferences.notifications}
+                          onChange={(e) => handleStudyPreferenceChange('notifications', e.target.checked)}
+                        />
+                        <span className="toggle-slider"></span>
+                      </label>
+                    </div>
+
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div>
+                        <div style={{ fontWeight: 600, color: '#002868' }}>Optimal Time Alerts</div>
+                        <div style={{ fontSize: '0.9rem', color: '#666' }}>Remind me when I perform best</div>
+                      </div>
+                      <label className="toggle-switch">
+                        <input
+                          type="checkbox"
+                          checked={studyPreferences.optimalTimeReminders}
+                          onChange={(e) => handleStudyPreferenceChange('optimalTimeReminders', e.target.checked)}
+                        />
+                        <span className="toggle-slider"></span>
+                      </label>
+                    </div>
+
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div>
+                        <div style={{ fontWeight: 600, color: '#002868' }}>Knowledge Decay Alerts</div>
+                        <div style={{ fontSize: '0.9rem', color: '#666' }}>Warn when knowledge is fading</div>
+                      </div>
+                      <label className="toggle-switch">
+                        <input
+                          type="checkbox"
+                          checked={studyPreferences.knowledgeDecayAlerts}
+                          onChange={(e) => handleStudyPreferenceChange('knowledgeDecayAlerts', e.target.checked)}
+                        />
+                        <span className="toggle-slider"></span>
+                      </label>
+                    </div>
                   </div>
-                  <label className="toggle">
-                    <input
-                      type="checkbox"
-                      checked={studyPreferences.notifications}
-                      onChange={(e) => handleStudyPreferenceChange('notifications', e.target.checked)}
-                    />
-                    <span className="slider"></span>
-                  </label>
                 </div>
 
-                <div className="setting-item">
-                  <div className="setting-info">
-                    <h3>Optimal Time Reminders</h3>
-                    <p>Get notified at your best learning times</p>
-                  </div>
-                  <label className="toggle">
+                <div className="settings-section">
+                  <h4>Daily Goal</h4>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <input
-                      type="checkbox"
-                      checked={studyPreferences.optimalTimeReminders}
-                      onChange={(e) => handleStudyPreferenceChange('optimalTimeReminders', e.target.checked)}
+                      type="range"
+                      min="10"
+                      max="120"
+                      step="5"
+                      value={studyPreferences.dailyGoal}
+                      onChange={(e) => handleStudyPreferenceChange('dailyGoal', parseInt(e.target.value))}
+                      style={{ flex: 1 }}
                     />
-                    <span className="slider"></span>
-                  </label>
+                    <span style={{ fontWeight: 600, color: '#002868', minWidth: '60px' }}>
+                      {studyPreferences.dailyGoal} min
+                    </span>
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: '#666', marginTop: '0.5rem' }}>
+                    Target daily study time
+                  </div>
                 </div>
 
-                <div className="setting-item">
-                  <div className="setting-info">
-                    <h3>Knowledge Decay Alerts</h3>
-                    <p>Get notified when you need to review topics</p>
+                <div className="settings-section">
+                  <h4>Exam Date (Optional)</h4>
+                  <input
+                    type="date"
+                    style={{
+                      width: '100%',
+                      padding: '0.75rem',
+                      border: '2px solid #E2E8F0',
+                      borderRadius: '8px',
+                      fontSize: '1rem',
+                      fontFamily: 'inherit'
+                    }}
+                  />
+                  <div style={{ fontSize: '0.9rem', color: '#666', marginTop: '0.5rem' }}>
+                    Set your exam date for personalized study planning
                   </div>
-                  <label className="toggle">
-                    <input
-                      type="checkbox"
-                      checked={studyPreferences.knowledgeDecayAlerts}
-                      onChange={(e) => handleStudyPreferenceChange('knowledgeDecayAlerts', e.target.checked)}
-                    />
-                    <span className="slider"></span>
-                  </label>
-                </div>
-
-                <div className="setting-item">
-                  <div className="setting-info">
-                    <h3>Daily Study Goal</h3>
-                    <p>Set your daily study time target</p>
-                  </div>
-                  <select 
-                    value={studyPreferences.dailyGoal}
-                    onChange={(e) => handleStudyPreferenceChange('dailyGoal', parseInt(e.target.value))}
-                    className="goal-select"
-                  >
-                    <option value={15}>15 minutes</option>
-                    <option value={30}>30 minutes</option>
-                    <option value={45}>45 minutes</option>
-                    <option value={60}>1 hour</option>
-                  </select>
                 </div>
               </div>
             )}
@@ -343,36 +438,54 @@ export const Settings: React.FC = () => {
             {activeTab === 'privacy' && (
               <div className="settings-section">
                 <h2>🔒 Privacy & Security</h2>
-                <div className="privacy-info">
-                  <h3>Data Protection</h3>
-                  <p>Your data is encrypted and stored securely. We never share your personal information with third parties.</p>
-                  
-                  <h3>Data Usage</h3>
-                  <p>We use your performance data only to provide personalized learning recommendations and improve the AI coach.</p>
-                  
-                  <h3>Cloud Storage</h3>
-                  <p>Your progress is automatically backed up to the cloud for security and cross-device access.</p>
-                  
-                  <div className="cloud-test">
-                    <button 
-                      className="test-cloud-btn"
-                      onClick={handleTestCloudStorage}
-                      disabled={isTesting}
-                    >
-                      {isTesting ? 'Testing...' : 'Test Cloud Connection'}
-                    </button>
-                    {testResults.length > 0 && (
-                      <div className="test-results">
-                        {testResults.map((result, index) => (
-                          <div key={index} className="test-result">{result}</div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                  
-                  <button className="delete-data-btn">
-                    Delete All Data
-                  </button>
+                
+                <div className="settings-section">
+                  <h4>Data Collection</h4>
+                  <p>We collect the following data to provide you with the best learning experience:</p>
+                  <ul>
+                    <li>Your test results and performance data</li>
+                    <li>Study patterns and time spent on topics</li>
+                    <li>Device information for app optimization</li>
+                    <li>Usage analytics to improve features</li>
+                  </ul>
+                </div>
+
+                <div className="settings-section">
+                  <h4>How We Use Your Data</h4>
+                  <p>Your data is used for the following purposes:</p>
+                  <ul>
+                    <li>To provide personalized study recommendations</li>
+                    <li>To improve the app's features and user experience</li>
+                    <li>To analyze learning patterns and optimize content</li>
+                    <li>To track your progress and provide insights</li>
+                  </ul>
+                </div>
+
+                <div className="settings-section">
+                  <h4>Data Security</h4>
+                  <p>Your data is protected using industry-standard security measures:</p>
+                  <ul>
+                    <li>All data is encrypted in transit and at rest</li>
+                    <li>We use secure cloud infrastructure</li>
+                    <li>Regular security audits and updates</li>
+                    <li>No third-party access to your personal data</li>
+                  </ul>
+                </div>
+
+                <div className="settings-section">
+                  <h4>Your Rights</h4>
+                  <p>You have full control over your data:</p>
+                  <ul>
+                    <li>Access all your data at any time</li>
+                    <li>Export your data in a readable format</li>
+                    <li>Delete your account and all data permanently</li>
+                    <li>Use the app anonymously without creating an account</li>
+                  </ul>
+                </div>
+
+                <div className="settings-section">
+                  <h4>Contact Us</h4>
+                  <p>If you have any questions about this privacy policy, please contact us through the app or create an issue in our repository.</p>
                 </div>
               </div>
             )}
@@ -380,21 +493,65 @@ export const Settings: React.FC = () => {
             {activeTab === 'terms' && (
               <div className="settings-section">
                 <h2>📄 Terms & Conditions</h2>
-                <div className="terms-content">
-                  <h3>Usage Terms</h3>
-                  <p>By using this app, you agree to use it for educational purposes only. The AI Learning Coach provides recommendations but does not guarantee exam success.</p>
-                  
-                  <h3>Data Terms</h3>
-                  <p>Your data is used to provide personalized learning experiences. You can delete your data at any time.</p>
-                  
-                  <h3>AI Disclaimer</h3>
-                  <p>The AI analysis is based on learning science principles but should not be considered as a guarantee of exam performance.</p>
-                  
-                  <h3>Service Availability</h3>
-                  <p>We strive to maintain 99.9% uptime but cannot guarantee uninterrupted service.</p>
-                  
-                  <h3>Updates</h3>
-                  <p>We may update these terms from time to time. Continued use of the app constitutes acceptance of updated terms.</p>
+                
+                <div className="settings-section">
+                  <p><strong>Last updated:</strong> {new Date().toLocaleDateString()}</p>
+                </div>
+
+                <div className="settings-section">
+                  <h4>Acceptance of Terms</h4>
+                  <p>By using this Smart Dutch Driving Theory App, you agree to be bound by these terms and conditions.</p>
+                </div>
+
+                <div className="settings-section">
+                  <h4>Use of the App</h4>
+                  <ul>
+                    <li>This app is designed to help you learn Dutch driving theory</li>
+                    <li>While we strive for accuracy, we cannot guarantee exam success</li>
+                    <li>Use the app responsibly and in accordance with local laws</li>
+                    <li>Do not attempt to cheat or manipulate the learning system</li>
+                  </ul>
+                </div>
+
+                <div className="settings-section">
+                  <h4>User Responsibilities</h4>
+                  <ul>
+                    <li>Provide accurate information when creating an account</li>
+                    <li>Keep your account information secure</li>
+                    <li>Use the app for educational purposes only</li>
+                    <li>Respect the intellectual property rights of the content</li>
+                  </ul>
+                </div>
+
+                <div className="settings-section">
+                  <h4>Content and Accuracy</h4>
+                  <ul>
+                    <li>We regularly update content to match current Dutch driving theory standards</li>
+                    <li>While we strive for accuracy, official Dutch driving materials should be your primary reference</li>
+                    <li>We are not responsible for any discrepancies with official exam content</li>
+                    <li>Always verify information with official Dutch driving sources</li>
+                  </ul>
+                </div>
+
+                <div className="settings-section">
+                  <h4>Limitation of Liability</h4>
+                  <p>This app is provided "as is" without warranties. We are not liable for:</p>
+                  <ul>
+                    <li>Any damages resulting from use of the app</li>
+                    <li>Loss of data or progress due to technical issues</li>
+                    <li>Failure to pass the Dutch driving theory exam</li>
+                    <li>Any indirect or consequential damages</li>
+                  </ul>
+                </div>
+
+                <div className="settings-section">
+                  <h4>Changes to Terms</h4>
+                  <p>We may update these terms from time to time. Continued use of the app constitutes acceptance of any changes.</p>
+                </div>
+
+                <div className="settings-section">
+                  <h4>Governing Law</h4>
+                  <p>These terms are governed by the laws of the Netherlands, where Dutch driving theory exams are administered.</p>
                 </div>
               </div>
             )}
