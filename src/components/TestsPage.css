@@ -233,6 +233,7 @@ body .tests-page,
   .tests-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+    padding-bottom: 2rem;
   }
 
   .test-card {

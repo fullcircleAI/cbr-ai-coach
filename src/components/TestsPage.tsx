@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import './TestsPage.css';
@@ -15,14 +15,13 @@ interface PracticeTest {
 
 export const TestsPage: React.FC = () => {
   const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const practiceTests: PracticeTest[] = [
     {
       id: 'traffic-rules-signs',
       name: 'Traffic Rules & Signs',
       description: 'Master Dutch traffic rules, signs, and regulations',
-      questionCount: 25,
+      questionCount: 40,
       difficulty: 'medium',
       category: 'Rules',
       icon: '🚦'
@@ -209,12 +208,6 @@ export const TestsPage: React.FC = () => {
     }
   ];
 
-  const categories = ['all', 'Rules', 'Safety', 'Interactions', 'Zones', 'Signs', 'Vehicles', 'Technology', 'Advanced', 'Signals'];
-
-  const filteredTests = selectedCategory === 'all' 
-    ? practiceTests 
-    : practiceTests.filter(test => test.category === selectedCategory);
-
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'easy': return '#10b981';
@@ -236,32 +229,15 @@ export const TestsPage: React.FC = () => {
           <div className="tests-header">
             <div className="header-content">
               <div className="header-text">
-                <h1>🧪 Practice Tests</h1>
-                <p>Choose a practice test to improve your driving theory knowledge</p>
+                <h1>Practice</h1>
               </div>
             </div>
           </div>
 
           <div className="tests-content">
-            {/* Category Filter */}
-            <div className="category-filter">
-              <h3>Filter by Category</h3>
-              <div className="category-buttons">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
-                    onClick={() => setSelectedCategory(category)}
-                  >
-                    {category === 'all' ? 'All Tests' : category}
-                  </button>
-                ))}
-              </div>
-            </div>
-
             {/* Tests Grid */}
             <div className="tests-grid">
-              {filteredTests.map((test) => (
+              {practiceTests.map((test) => (
                 <div 
                   key={test.id}
                   className="test-card"
@@ -285,12 +261,6 @@ export const TestsPage: React.FC = () => {
                 </div>
               ))}
             </div>
-
-            {filteredTests.length === 0 && (
-              <div className="no-tests">
-                <p>No tests found in this category.</p>
-              </div>
-            )}
           </div>
         </div>
       </main>
