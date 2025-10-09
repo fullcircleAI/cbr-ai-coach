@@ -176,6 +176,36 @@ export const PracticeTest: React.FC = () => {
     }
   };
 
+  const getNextTest = () => {
+    const allTests = [
+      { id: 'traffic-lights-signals', name: 'Traffic Lights & Signals' },
+      { id: 'priority-rules', name: 'Priority & Right of Way' },
+      { id: 'hazard-perception', name: 'Hazard Perception' },
+      { id: 'speed-safety', name: 'Speed & Safety' },
+      { id: 'bicycle-interactions', name: 'Bicycle Interactions' },
+      { id: 'roundabout-rules', name: 'Roundabout Rules' },
+      { id: 'tram-interactions', name: 'Tram Interactions' },
+      { id: 'pedestrian-crossings', name: 'Pedestrian Crossings' },
+      { id: 'construction-zones', name: 'Construction Zones' },
+      { id: 'weather-conditions', name: 'Weather Conditions' },
+      { id: 'road-signs', name: 'Road Signs' },
+      { id: 'motorway-rules', name: 'Motorway Rules' },
+      { id: 'vehicle-knowledge', name: 'Vehicle Knowledge' },
+      { id: 'parking-rules', name: 'Parking Rules' },
+      { id: 'environmental', name: 'Environmental Zones' },
+      { id: 'technology-safety', name: 'Technology & Safety' },
+      { id: 'alcohol-drugs', name: 'Alcohol & Drugs' },
+      { id: 'fatigue-rest', name: 'Fatigue & Rest' },
+      { id: 'emergency-procedures', name: 'Emergency Procedures' },
+      { id: 'insight-practice', name: 'Insight Practice' },
+      { id: 'traffic-rules-signs', name: 'Traffic Rules & Signs' },
+    ];
+    
+    const currentIndex = allTests.findIndex(test => test.id === testId);
+    const nextIndex = (currentIndex + 1) % allTests.length;
+    return allTests[nextIndex];
+  };
+
   if (questions.length === 0) {
     return (
       <div className="main-layout">
@@ -194,6 +224,7 @@ export const PracticeTest: React.FC = () => {
   // Results page
   if (testComplete) {
     const percentage = Math.round((score / questions.length) * 100);
+    const nextTest = getNextTest();
 
     return (
       <div className="result-page">
@@ -214,11 +245,14 @@ export const PracticeTest: React.FC = () => {
                 <div className="score-percentage">{percentage}%</div>
               </div>
 
-              <div className={`result-message ${percentage >= 80 ? 'excellent' : percentage >= 60 ? 'good' : 'practice'}`}>
+              <div className="result-message practice">
                 {percentage >= 80 ? '🎯 Excellent Work!' : percentage >= 60 ? '👍 Good Job!' : '📚 Keep Practicing!'}
               </div>
 
               <div className="result-actions">
+                <button className="practice-nav-btn next-test" onClick={() => navigate(`/practice/${nextTest.id}`)}>
+                  ▶️ Next: {nextTest.name}
+                </button>
                 <button className="practice-nav-btn primary" onClick={() => window.location.reload()}>
                   🔄 Retake Test
                 </button>
