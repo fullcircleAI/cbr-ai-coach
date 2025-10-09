@@ -52,8 +52,8 @@
 .dashboard-summary {
   background: white;
   border-radius: 12px;
-  padding: 0.3rem;
-  margin-bottom: 0.3rem;
+  padding: 0.25rem;
+  margin-bottom: 0.25rem;
   box-shadow: 0 4px 12px rgba(26, 62, 122, 0.1);
   flex-shrink: 0;
 }
@@ -70,12 +70,12 @@
 }
 
 .summary-stat .stat-number {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: var(--primary-blue);
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.05rem;
   font-family: 'Courier New', monospace;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 /* Digital Clock Style for Time Stats */
@@ -106,9 +106,10 @@
 }
 
 .summary-stat .stat-label {
-  font-size: 0.58rem;
+  font-size: 0.55rem;
   color: var(--text-secondary);
   font-weight: 500;
+  margin-top: 0.05rem;
 }
 
 .summary-stat .progress-bar-bg {
@@ -135,7 +136,7 @@
 .ai-insights-summary {
   background: white;
   border-radius: 12px;
-  padding: 0.3rem;
+  padding: 0.25rem;
   box-shadow: 0 4px 12px rgba(26, 62, 122, 0.1);
   flex: 1;
   display: flex;
@@ -155,8 +156,8 @@
 
 .ai-insights-summary h3 {
   color: var(--text-primary);
-  margin-bottom: 0.3rem;
-  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.7rem;
   font-weight: 600;
   flex-shrink: 0;
 }
