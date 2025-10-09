@@ -521,23 +521,39 @@
   .settings-page {
     height: 100%;
     overflow: hidden;
+    padding-top: 1rem;
+  }
+
+  .settings-header {
+    margin-bottom: 1rem;
   }
 
   .settings-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .settings-main-menu {
     overflow: hidden;
+    gap: 0.65rem;
   }
 
   .settings-main-menu-btn {
-    padding: 1rem 1.2rem;
-    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    min-height: auto;
+    border-radius: 10px;
   }
 
   .settings-icon {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .settings-btn-left {
+    gap: 0.6rem;
+  }
+
+  .settings-arrow {
+    font-size: 1.5rem;
   }
 
   .settings-subpage {
