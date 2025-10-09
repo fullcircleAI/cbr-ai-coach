@@ -8,6 +8,8 @@ import { AICoachRecommendations } from './components/AICoachRecommendations';
 import { TestsPage } from './components/TestsPage';
 import { Settings } from './components/Settings';
 import { PracticeTest } from './components/PracticeTest';
+import { MockExamSelection } from './components/MockExamSelection';
+import { MockExam } from './components/MockExam';
 import './App.css';
 
 function App() {
@@ -46,6 +48,8 @@ function App() {
           <Route path="/" element={<AICoachDashboard />} />
           <Route path="/recommendations" element={<AICoachRecommendations />} />
           <Route path="/tests" element={<TestsPage />} />
+          <Route path="/mock-exam" element={<MockExamSelection />} />
+          <Route path="/mock-exam/:examId" element={<MockExam />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/practice/:testId" element={<PracticeTest />} />
         </Routes>

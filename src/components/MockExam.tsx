@@ -1,0 +1,384 @@
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { Navigation } from './Navigation';
+import './MockExam.css';
+import * as questionData from '../question_data';
+
+interface Question {
+  id: string;
+  text: string;
+  options: { id: string; text: string }[];
+  correctAnswerId: string;
+  explanation: string;
+  imageUrl?: string;
+  imageHint?: string;
+  subject: string;
+}
+
+interface MockExamConfig {
+  questions: number;
+  timeLimit: number; // in minutes
+  passRate: number; // percentage
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+}
+
+export const MockExam: React.FC = () => {
+  const { examId } = useParams<{ examId: string }>();
+  const navigate = useNavigate();
+
+  // Mock exam configurations following official CBR format
+  const examConfigs: Record<string, MockExamConfig> = {
+    'beginner': { questions: 50, timeLimit: 30, passRate: 88, difficulty: 'beginner' },
+    'intermediate': { questions: 50, timeLimit: 30, passRate: 88, difficulty: 'intermediate' },
+    'advanced': { questions: 50, timeLimit: 30, passRate: 88, difficulty: 'advanced' }
+  };
+
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [score, setScore] = useState(0);
+  const [isAnswered, setIsAnswered] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(0); // in seconds
+  const [isFinished, setIsFinished] = useState(false);
+  const [examConfig, setExamConfig] = useState<MockExamConfig | null>(null);
+  const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [showResults, setShowResults] = useState(false);
+  const [isExamStarted, setIsExamStarted] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+
+  // Hide mobile footer during mock exam
+  useEffect(() => {
+    document.body.classList.add('practice-test-active');
+    return () => {
+      document.body.classList.remove('practice-test-active');
+    };
+  }, []);
+
+  // Load exam configuration and questions
+  useEffect(() => {
+    if (!examId) return;
+
+    const config = examConfigs[examId];
+    if (!config) {
+      navigate('/mock-exam');
+      return;
+    }
+
+    setExamConfig(config);
+    setTimeLeft(config.timeLimit * 60); // Convert minutes to seconds
+
+    // Create formatted exam with proper question distribution
+    const formattedQuestions = createFormattedExam(config.difficulty);
+    setQuestions(formattedQuestions);
+  }, [examId, navigate]);
+
+  // Create formatted exam - 50 questions: 25 Traffic Rules, 15 Hazard Perception, 10 Insight
+  const createFormattedExam = (_difficulty: 'beginner' | 'intermediate' | 'advanced'): Question[] => {
+    const trafficRulesQuestions = [
+      ...questionData.trafficLightsSignalsQuestions,
+      ...questionData.priorityRulesQuestions,
+      ...questionData.speedLimitQuestions,
+      ...questionData.roadMarkingsQuestions,
+      ...questionData.expandedPriorityRulesQuestions,
+      ...questionData.motorwayRulesQuestions,
+      ...questionData.parkingRulesQuestions,
+      ...questionData.environmentalZonesQuestions,
+      ...questionData.technologySafetyQuestions,
+      ...questionData.alcoholDrugsQuestions,
+      ...questionData.fatigueRestQuestions,
+      ...questionData.emergencyProceduresQuestions,
+      ...questionData.bicycleInteractionsQuestions,
+      ...questionData.roundaboutRulesQuestions,
+      ...questionData.tramInteractionsQuestions,
+      ...questionData.pedestrianCrossingsQuestions,
+      ...questionData.constructionZonesQuestions,
+      ...questionData.weatherConditionsQuestions,
+      ...questionData.vehicleCategoriesQuestions,
+      ...questionData.vehicleDocumentationQuestions,
+      ...questionData.mandatorySignQuestions,
+      ...questionData.warningSignsQuestions,
+      ...questionData.prohibitorySignsQuestions,
+      ...questionData.prohibitorySigns2Questions,
+      ...questionData.roadInformationQuestions,
+      ...questionData.signIdentificationQuestions,
+      ...questionData.mandatorySigns2Questions
+    ];
+
+    const hazardPerceptionList = [...questionData.hazardPerceptionQuestions];
+    const trafficInsightList = [...questionData.insightPracticeQuestions];
+
+    // Shuffle each category
+    const shuffledTrafficRules = [...trafficRulesQuestions].sort(() => Math.random() - 0.5);
+    const shuffledHazardPerception = [...hazardPerceptionList].sort(() => Math.random() - 0.5);
+    const shuffledTrafficInsight = [...trafficInsightList].sort(() => Math.random() - 0.5);
+
+    // Select questions: 25 + 15 + 10 = 50
+    const selectedTrafficRules = shuffledTrafficRules.slice(0, 25);
+    const selectedHazardPerception = shuffledHazardPerception.slice(0, 15);
+    const selectedTrafficInsight = shuffledTrafficInsight.slice(0, 10);
+
+    // Combine and shuffle final exam
+    const exam = [
+      ...selectedTrafficRules,
+      ...selectedHazardPerception,
+      ...selectedTrafficInsight
+    ].sort(() => Math.random() - 0.5);
+
+    return exam;
+  };
+
+  // Timer countdown
+  useEffect(() => {
+    if (!isExamStarted || isFinished || timeLeft <= 0) return;
+
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev <= 1) {
+          finishExam();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [isExamStarted, isFinished, timeLeft]);
+
+  const startExam = () => {
+    setIsExamStarted(true);
+  };
+
+  const finishExam = () => {
+    setIsFinished(true);
+    setShowResults(true);
+
+    // Calculate final score
+    const correctAnswers = Object.values(answers).filter((answer, index) =>
+      answer === questions[index]?.correctAnswerId
+    ).length;
+
+    setScore(correctAnswers);
+    saveExamResults(correctAnswers);
+  };
+
+  const saveExamResults = (correctAnswers: number) => {
+    if (!examConfig || !examId) return;
+
+    const percentage = Math.round((correctAnswers / examConfig.questions) * 100);
+    const passed = percentage >= examConfig.passRate;
+
+    const results = {
+      examId,
+      score: correctAnswers,
+      percentage,
+      passed,
+      totalQuestions: examConfig.questions,
+      timeUsed: (examConfig.timeLimit * 60) - timeLeft,
+      timestamp: new Date().toISOString(),
+      difficulty: examConfig.difficulty
+    };
+
+    localStorage.setItem(`mockExamResults_${examId}`, JSON.stringify(results));
+  };
+
+  const handleAnswer = (answerId: string) => {
+    if (isAnswered || !isExamStarted) return;
+
+    setIsAnswered(true);
+    setSelectedAnswer(answerId);
+    setAnswers(prev => ({ ...prev, [currentQuestionIndex]: answerId }));
+
+    // Auto-advance after 1.5 seconds
+    setTimeout(() => {
+      nextQuestion();
+    }, 1500);
+  };
+
+  const nextQuestion = () => {
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(prev => prev + 1);
+      setSelectedAnswer(null);
+      setIsAnswered(false);
+    } else {
+      finishExam();
+    }
+  };
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  };
+
+  const currentQuestion = questions[currentQuestionIndex];
+  const progress = questions.length > 0 ? ((currentQuestionIndex + 1) / questions.length) * 100 : 0;
+
+  if (!examConfig || questions.length === 0) {
+    return null;
+  }
+
+  // Results Screen
+  if (showResults) {
+    const percentage = Math.round((score / examConfig.questions) * 100);
+    const passed = percentage >= examConfig.passRate;
+
+    return (
+      <div className="main-layout">
+        <Navigation />
+        <main className="main-content">
+          <div className="mock-exam-results">
+            <div className={`results-status ${passed ? 'passed' : 'failed'}`}>
+              <div className="status-icon">{passed ? '✅' : '❌'}</div>
+              <h2>{passed ? 'PASSED!' : 'FAILED'}</h2>
+            </div>
+
+            <div className="results-details">
+              <div className="result-item">
+                <span className="result-label">Score</span>
+                <span className="result-value">{score}/{examConfig.questions}</span>
+              </div>
+              <div className="result-item">
+                <span className="result-label">Percentage</span>
+                <span className="result-value">{percentage}%</span>
+              </div>
+              <div className="result-item">
+                <span className="result-label">Required</span>
+                <span className="result-value">{examConfig.passRate}%</span>
+              </div>
+              <div className="result-item">
+                <span className="result-label">Time Used</span>
+                <span className="result-value">{formatTime((examConfig.timeLimit * 60) - timeLeft)}</span>
+              </div>
+            </div>
+
+            <div className="results-actions">
+              <button className="practice-nav-btn primary" onClick={() => window.location.reload()}>
+                Retake Exam
+              </button>
+              <button className="practice-nav-btn" onClick={() => navigate('/mock-exam')}>
+                Back to Mock Exams
+              </button>
+              <button className="practice-nav-btn" onClick={() => navigate('/')}>
+                Dashboard
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  // Intro Screen
+  if (!isExamStarted) {
+    return (
+      <div className="main-layout">
+        <Navigation />
+        <main className="main-content">
+          <div className="mock-exam-intro">
+            <h1>Mock Exam</h1>
+            <h2>{examConfig.difficulty.charAt(0).toUpperCase() + examConfig.difficulty.slice(1)} Level</h2>
+
+            <div className="exam-info">
+              <div className="info-item">
+                <span className="info-label">Questions</span>
+                <span className="info-value">{examConfig.questions}</span>
+              </div>
+              <div className="info-item">
+                <span className="info-label">Time Limit</span>
+                <span className="info-value">{examConfig.timeLimit} min</span>
+              </div>
+              <div className="info-item">
+                <span className="info-label">Pass Rate</span>
+                <span className="info-value">{examConfig.passRate}%</span>
+              </div>
+            </div>
+
+            <div className="exam-instructions">
+              <h3>Instructions:</h3>
+              <ul>
+                <li>Answer all {examConfig.questions} questions</li>
+                <li>You have {examConfig.timeLimit} minutes to complete</li>
+                <li>Need {examConfig.passRate}% to pass</li>
+                <li>Questions are randomly selected</li>
+                <li>No explanations during exam</li>
+              </ul>
+            </div>
+
+            <button className="start-exam-btn" onClick={startExam}>
+              Start Mock Exam
+            </button>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  // Exam Screen (using Practice Test design)
+  return (
+    <div className="main-layout">
+      <Navigation />
+      <main className="main-content">
+        <div className="practice-test">
+          <div className="practice-progress-bar">
+            <div className="practice-progress-fill" style={{ width: `${progress}%` }} />
+          </div>
+
+          <div className="practice-header-row">
+            <div className="practice-subject-row">
+              <span className="practice-question-number">
+                Question {currentQuestionIndex + 1} of {questions.length}
+              </span>
+              <span className="exam-timer" style={{ color: timeLeft < 300 ? '#ef4444' : '#10b981' }}>
+                ⏱ {formatTime(timeLeft)}
+              </span>
+            </div>
+            <div className="practice-header-controls">
+              <button className="practice-exit-btn" onClick={() => navigate('/mock-exam')}>
+                ✕
+              </button>
+              <button 
+                className={`practice-mute-btn ${isMuted ? 'muted' : ''}`}
+                onClick={() => setIsMuted(!isMuted)}
+              >
+                {isMuted ? '🔇' : '🔊'}
+              </button>
+            </div>
+          </div>
+
+          <div className="practice-question-text">{currentQuestion.text}</div>
+
+          {currentQuestion.imageUrl && (
+            <div className="practice-question-image">
+              <img src={currentQuestion.imageUrl} alt="Question" />
+            </div>
+          )}
+
+          <div className="practice-options-list">
+            {currentQuestion.options.map((option, index) => {
+              const isSelected = selectedAnswer === option.id;
+              const isCorrect = option.id === currentQuestion.correctAnswerId;
+              const showResult = isAnswered;
+
+              return (
+                <button
+                  key={option.id}
+                  className={`practice-option-btn ${isSelected ? 'selected' : ''} ${
+                    showResult ? (isCorrect ? 'correct' : isSelected ? 'incorrect' : '') : ''
+                  }`}
+                  onClick={() => handleAnswer(option.id)}
+                  disabled={isAnswered}
+                >
+                  <span className="option-letter">
+                    {String.fromCharCode(65 + index)}
+                  </span>
+                  <span className="option-text">{option.text}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+};
+
