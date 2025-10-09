@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Navigation } from './Navigation';
-import './MockExamResults.css';
+import './PracticeResult.css';
 
 interface ResultsData {
   examId: string;
@@ -35,105 +34,51 @@ export const MockExamResults: React.FC = () => {
   };
 
   return (
-    <div className="main-layout">
-      <Navigation />
-      <main className="main-content">
-        <div className="mock-results-page">
-          <div className={`results-status-banner ${resultsData.passed ? 'passed' : 'failed'}`}>
-            <div className="status-icon">
-              {resultsData.passed ? '✅' : '❌'}
+    <div className="result-page">
+      <div className="result-content-row">
+        <div className="result-content-main">
+          <div className="result-card">
+            <div className="result-header">
+              <h1>Mock Exam Complete!</h1>
+              <h2>{getDifficultyLabel(resultsData.difficulty)} Level</h2>
             </div>
-            <h1>{resultsData.passed ? 'GEFELICITEERD!' : 'HELAAS'}</h1>
-            <h2>{resultsData.passed ? 'Je bent geslaagd!' : 'Je bent gezakt'}</h2>
-          </div>
-
-          <div className="results-summary">
-            <div className="exam-title">
-              <h3>{getDifficultyLabel(resultsData.difficulty)} Mock Exam</h3>
-              <p>Official CBR Format</p>
+            
+            <div className="result-score">
+              <div className="score-display">
+                <span className="score-number">{resultsData.score}</span>
+                <span className="score-separator">/</span>
+                <span className="score-total">{resultsData.totalQuestions}</span>
+              </div>
+              <div className="score-percentage">{resultsData.percentage}%</div>
             </div>
 
-            <div className="results-grid">
-              <div className="result-card">
-                <div className="result-label">Score</div>
-                <div className="result-value large">
-                  {resultsData.score}/{resultsData.totalQuestions}
-                </div>
-              </div>
-
-              <div className="result-card">
-                <div className="result-label">Percentage</div>
-                <div className={`result-value large ${resultsData.passed ? 'passed-text' : 'failed-text'}`}>
-                  {resultsData.percentage}%
-                </div>
-              </div>
-
-              <div className="result-card">
-                <div className="result-label">Pass Rate Required</div>
-                <div className="result-value">
-                  {resultsData.passRate}%
-                </div>
-              </div>
-
-              <div className="result-card">
-                <div className="result-label">Time Used</div>
-                <div className="result-value">
-                  {formatTime(resultsData.timeUsed)}
-                </div>
-              </div>
-
-              <div className="result-card">
-                <div className="result-label">Correct Answers</div>
-                <div className="result-value">
-                  {resultsData.score}
-                </div>
-              </div>
-
-              <div className="result-card">
-                <div className="result-label">Incorrect Answers</div>
-                <div className="result-value">
-                  {resultsData.totalQuestions - resultsData.score}
-                </div>
-              </div>
+            <div className={`result-message ${resultsData.passed ? 'excellent' : 'practice'}`}>
+              {resultsData.passed ? 'Excellent Work!' : 'Keep Practicing!'}
             </div>
-          </div>
 
-          <div className="results-message">
-            {resultsData.passed ? (
-              <div className="message-box success">
-                <p className="message-title">Uitstekend werk!</p>
-                <p>Je hebt het examen met succes afgerond. Je bent klaar om het echte CBR-examen af te leggen!</p>
-              </div>
-            ) : (
-              <div className="message-box failure">
-                <p className="message-title">Blijf oefenen!</p>
-                <p>Je had {Math.ceil(resultsData.passRate / 100 * resultsData.totalQuestions)} goede antwoorden nodig om te slagen. Oefen meer en probeer het opnieuw!</p>
-              </div>
-            )}
-          </div>
-
-          <div className="results-actions">
-            <button 
-              className="action-btn primary"
-              onClick={() => navigate(`/mock-exam/${resultsData.examId}`)}
-            >
-              Opnieuw proberen
-            </button>
-            <button 
-              className="action-btn secondary"
-              onClick={() => navigate('/mock-exam')}
-            >
-              Andere Mock Exam
-            </button>
-            <button 
-              className="action-btn"
-              onClick={() => navigate('/')}
-            >
-              Terug naar Dashboard
-            </button>
+            <div className="result-actions">
+              <button 
+                className="practice-nav-btn primary"
+                onClick={() => navigate(`/mock-exam/${resultsData.examId}`)}
+              >
+                Retake Exam
+              </button>
+              <button 
+                className="practice-nav-btn"
+                onClick={() => navigate('/mock-exam')}
+              >
+                All Mock Exams
+              </button>
+              <button 
+                className="practice-nav-btn"
+                onClick={() => navigate('/')}
+              >
+                Back to Dashboard
+              </button>
+            </div>
           </div>
         </div>
-      </main>
+      </div>
     </div>
   );
 };
