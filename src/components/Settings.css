@@ -20,18 +20,23 @@
   overflow: hidden;
 }
 
-.settings-header {
-  width: 100%;
-  text-align: center;
+/* Header - Same as Practice Test */
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  width: 100%;
+  max-width: 600px;
 }
 
-.settings-title {
-  font-size: 2.2rem;
-  font-weight: 900;
-  color: #002868;
+.test-info h2 {
   margin: 0;
-  letter-spacing: -1px;
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
 .settings-main-menu {
