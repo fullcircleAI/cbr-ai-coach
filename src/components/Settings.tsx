@@ -31,35 +31,15 @@ const faqs: FAQ[] = [
 ];
 
 export const Settings: React.FC = () => {
-  const [activePage, setActivePage] = useState<'main' | 'account' | 'study' | 'privacy' | 'terms' | 'faq' | 'support'>('main');
+  const [activePage, setActivePage] = useState<'main' | 'account' | 'privacy' | 'terms' | 'faq' | 'support'>('main');
   const [isEditing, setIsEditing] = useState(false);
   const [editUsername, setEditUsername] = useState('AI Learner');
   const [supportSubject, setSupportSubject] = useState('');
   const [supportMessage, setSupportMessage] = useState('');
   const [isSending, setIsSending] = useState(false);
   const [sendSuccess, setSendSuccess] = useState(false);
-  const [personalizedLearning, setPersonalizedLearning] = useState(true);
-  const [studyPreferences, setStudyPreferences] = useState({
-    notifications: true,
-    optimalTimeReminders: true,
-    knowledgeDecayAlerts: true,
-    dailyGoal: 30
-  });
-  const [studyStreak, setStudyStreak] = useState(0);
 
   useEffect(() => {
-    // Load personalized learning preference
-    const stored = localStorage.getItem('personalizedLearning');
-    if (stored !== null) {
-      setPersonalizedLearning(JSON.parse(stored));
-    }
-
-    // Load study streak
-    const streak = localStorage.getItem('studyStreak');
-    if (streak) {
-      setStudyStreak(parseInt(streak));
-    }
-
     // Load username
     const username = localStorage.getItem('username');
     if (username) {
@@ -67,11 +47,6 @@ export const Settings: React.FC = () => {
     }
   }, []);
 
-  const handlePersonalizedLearningToggle = () => {
-    const newValue = !personalizedLearning;
-    setPersonalizedLearning(newValue);
-    localStorage.setItem('personalizedLearning', JSON.stringify(newValue));
-  };
 
   const handleUpdateProfile = async () => {
     if (editUsername.trim()) {
@@ -110,11 +85,6 @@ export const Settings: React.FC = () => {
     }
   };
 
-  const handleStudyPreferenceChange = (key: string, value: any) => {
-    const newPreferences = { ...studyPreferences, [key]: value };
-    setStudyPreferences(newPreferences);
-    localStorage.setItem('studyPreferences', JSON.stringify(newPreferences));
-  };
 
   const handleBackToMain = () => {
     setActivePage('main');
@@ -133,16 +103,6 @@ export const Settings: React.FC = () => {
             <div className="settings-btn-left">
               <span className="settings-icon">👤</span>
               <span>Account</span>
-            </div>
-            <span className="settings-arrow">›</span>
-          </button>
-        </div>
-
-        <div className="settings-btn-wrapper">
-          <button className="settings-main-menu-btn" onClick={() => setActivePage('study')}>
-            <div className="settings-btn-left">
-              <span className="settings-icon">📚</span>
-              <span>Study Preferences</span>
             </div>
             <span className="settings-arrow">›</span>
           </button>
@@ -247,91 +207,6 @@ export const Settings: React.FC = () => {
     </div>
   );
 
-  // Study Preferences Sub-Page
-  const renderStudyPage = () => (
-    <div className="settings-subpage">
-      <div className="settings-subpage-header">
-        <button className="settings-back-btn" onClick={handleBackToMain}>
-          ← Back
-        </button>
-        <h2 className="settings-subpage-title">Study Preferences</h2>
-      </div>
-
-      <div className="settings-subpage-content">
-        <div className="settings-section">
-          <h3>AI Learning Coach</h3>
-          <div className="preference-item">
-            <div className="preference-label">
-              <span>Personalized Learning</span>
-              <p>Get AI-powered study recommendations</p>
-            </div>
-            <label className="toggle-switch">
-              <input
-                type="checkbox"
-                checked={personalizedLearning}
-                onChange={handlePersonalizedLearningToggle}
-              />
-              <span className="toggle-slider"></span>
-            </label>
-          </div>
-        </div>
-
-        <div className="settings-section">
-          <h3>Notifications</h3>
-          <div className="preference-item">
-            <div className="preference-label">
-              <span>Study Reminders</span>
-              <p>Receive notifications for optimal study times</p>
-            </div>
-            <label className="toggle-switch">
-              <input
-                type="checkbox"
-                checked={studyPreferences.optimalTimeReminders}
-                onChange={(e) => handleStudyPreferenceChange('optimalTimeReminders', e.target.checked)}
-              />
-              <span className="toggle-slider"></span>
-            </label>
-          </div>
-
-          <div className="preference-item">
-            <div className="preference-label">
-              <span>Knowledge Decay Alerts</span>
-              <p>Get notified when topics need review</p>
-            </div>
-            <label className="toggle-switch">
-              <input
-                type="checkbox"
-                checked={studyPreferences.knowledgeDecayAlerts}
-                onChange={(e) => handleStudyPreferenceChange('knowledgeDecayAlerts', e.target.checked)}
-              />
-              <span className="toggle-slider"></span>
-            </label>
-          </div>
-        </div>
-
-        <div className="settings-section">
-          <h3>Study Goals</h3>
-          <div className="preference-item">
-            <div className="preference-label">
-              <span>Daily Goal</span>
-              <p>Target study time in minutes per day</p>
-            </div>
-            <input
-              type="number"
-              className="goal-input"
-              value={studyPreferences.dailyGoal}
-              onChange={(e) => handleStudyPreferenceChange('dailyGoal', parseInt(e.target.value))}
-              min="5"
-              max="180"
-            />
-          </div>
-          <div className="preference-info">
-            <strong>Current Streak:</strong> {studyStreak} days 🔥
-          </div>
-        </div>
-      </div>
-    </div>
-  );
 
   // Privacy Policy Sub-Page
   const renderPrivacyPage = () => (
@@ -499,7 +374,6 @@ export const Settings: React.FC = () => {
         <div className="settings-container">
           {activePage === 'main' && renderMainMenu()}
           {activePage === 'account' && renderAccountPage()}
-          {activePage === 'study' && renderStudyPage()}
           {activePage === 'privacy' && renderPrivacyPage()}
           {activePage === 'terms' && renderTermsPage()}
           {activePage === 'faq' && renderFAQPage()}
