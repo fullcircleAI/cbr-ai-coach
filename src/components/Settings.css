@@ -541,12 +541,18 @@
     padding-top: 1rem;
   }
 
-  .settings-header {
+  /* Header - EXACT same as Practice mobile */
+  .tests-header {
+    padding: 1.5rem 1rem;
     margin-bottom: 1rem;
   }
 
-  .settings-title {
-    font-size: 1.5rem;
+  .header-text h1 {
+    font-size: 2rem;
+  }
+
+  .header-text p {
+    font-size: 1rem;
   }
 
   .settings-main-menu {
