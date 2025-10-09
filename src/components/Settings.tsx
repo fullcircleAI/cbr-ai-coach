@@ -100,50 +100,35 @@ export const Settings: React.FC = () => {
       <div className="settings-main-menu">
         <div className="settings-btn-wrapper">
           <button className="settings-main-menu-btn" onClick={() => setActivePage('account')}>
-            <div className="settings-btn-left">
-              <span className="settings-icon">👤</span>
-              <span>Account</span>
-            </div>
+            <span>Account</span>
             <span className="settings-arrow">›</span>
           </button>
         </div>
 
         <div className="settings-btn-wrapper">
           <button className="settings-main-menu-btn" onClick={() => setActivePage('privacy')}>
-            <div className="settings-btn-left">
-              <span className="settings-icon">🔒</span>
-              <span>Privacy Policy</span>
-            </div>
+            <span>Privacy Policy</span>
             <span className="settings-arrow">›</span>
           </button>
         </div>
 
         <div className="settings-btn-wrapper">
           <button className="settings-main-menu-btn" onClick={() => setActivePage('terms')}>
-            <div className="settings-btn-left">
-              <span className="settings-icon">📄</span>
-              <span>Terms of Service</span>
-            </div>
+            <span>Terms of Service</span>
             <span className="settings-arrow">›</span>
           </button>
         </div>
 
         <div className="settings-btn-wrapper">
           <button className="settings-main-menu-btn" onClick={() => setActivePage('faq')}>
-            <div className="settings-btn-left">
-              <span className="settings-icon">❓</span>
-              <span>FAQ</span>
-            </div>
+            <span>FAQ</span>
             <span className="settings-arrow">›</span>
           </button>
         </div>
 
         <div className="settings-btn-wrapper">
           <button className="settings-main-menu-btn" onClick={() => setActivePage('support')}>
-            <div className="settings-btn-left">
-              <span className="settings-icon">💬</span>
-              <span>Support</span>
-            </div>
+            <span>Support</span>
             <span className="settings-arrow">›</span>
           </button>
         </div>
