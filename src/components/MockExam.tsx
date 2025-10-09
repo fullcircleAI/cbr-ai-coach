@@ -150,7 +150,6 @@ export const MockExam: React.FC = () => {
 
   const finishExam = () => {
     setIsFinished(true);
-    setShowResults(true);
 
     // Calculate final score
     const correctAnswers = Object.values(answers).filter((answer, index) =>
@@ -158,28 +157,31 @@ export const MockExam: React.FC = () => {
     ).length;
 
     setScore(correctAnswers);
-    saveExamResults(correctAnswers);
+    
+    // Navigate to results page with data
+    if (examConfig && examId) {
+      const percentage = Math.round((correctAnswers / examConfig.questions) * 100);
+      const passed = percentage >= examConfig.passRate;
+      
+      const resultsData = {
+        examId,
+        score: correctAnswers,
+        percentage,
+        passed,
+        totalQuestions: examConfig.questions,
+        timeUsed: (examConfig.timeLimit * 60) - timeLeft,
+        difficulty: examConfig.difficulty,
+        passRate: examConfig.passRate
+      };
+      
+      // Save to localStorage
+      localStorage.setItem(`mockExamResults_${examId}`, JSON.stringify(resultsData));
+      
+      // Navigate to results page
+      navigate('/mock-exam/results', { state: resultsData });
+    }
   };
 
-  const saveExamResults = (correctAnswers: number) => {
-    if (!examConfig || !examId) return;
-
-    const percentage = Math.round((correctAnswers / examConfig.questions) * 100);
-    const passed = percentage >= examConfig.passRate;
-
-    const results = {
-      examId,
-      score: correctAnswers,
-      percentage,
-      passed,
-      totalQuestions: examConfig.questions,
-      timeUsed: (examConfig.timeLimit * 60) - timeLeft,
-      timestamp: new Date().toISOString(),
-      difficulty: examConfig.difficulty
-    };
-
-    localStorage.setItem(`mockExamResults_${examId}`, JSON.stringify(results));
-  };
 
   const handleAnswer = (answerId: string) => {
     if (isAnswered || !isExamStarted) return;
@@ -217,56 +219,6 @@ export const MockExam: React.FC = () => {
     return null;
   }
 
-  // Results Screen
-  if (showResults) {
-    const percentage = Math.round((score / examConfig.questions) * 100);
-    const passed = percentage >= examConfig.passRate;
-
-    return (
-      <div className="main-layout">
-        <Navigation />
-        <main className="main-content">
-          <div className="mock-exam-results">
-            <div className={`results-status ${passed ? 'passed' : 'failed'}`}>
-              <div className="status-icon">{passed ? '✅' : '❌'}</div>
-              <h2>{passed ? 'PASSED!' : 'FAILED'}</h2>
-            </div>
-
-            <div className="results-details">
-              <div className="result-item">
-                <span className="result-label">Score</span>
-                <span className="result-value">{score}/{examConfig.questions}</span>
-              </div>
-              <div className="result-item">
-                <span className="result-label">Percentage</span>
-                <span className="result-value">{percentage}%</span>
-              </div>
-              <div className="result-item">
-                <span className="result-label">Required</span>
-                <span className="result-value">{examConfig.passRate}%</span>
-              </div>
-              <div className="result-item">
-                <span className="result-label">Time Used</span>
-                <span className="result-value">{formatTime((examConfig.timeLimit * 60) - timeLeft)}</span>
-              </div>
-            </div>
-
-            <div className="results-actions">
-              <button className="practice-nav-btn primary" onClick={() => window.location.reload()}>
-                Retake Exam
-              </button>
-              <button className="practice-nav-btn" onClick={() => navigate('/mock-exam')}>
-                Back to Mock Exams
-              </button>
-              <button className="practice-nav-btn" onClick={() => navigate('/')}>
-                Dashboard
-              </button>
-            </div>
-          </div>
-        </main>
-      </div>
-    );
-  }
 
   // Intro Screen
   if (!isExamStarted) {
