@@ -157,8 +157,8 @@
 
 .ai-insights-summary h3 {
   color: var(--text-primary);
-  margin-bottom: 0.35rem;
-  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
   font-weight: 600;
   flex-shrink: 0;
 }
@@ -166,7 +166,7 @@
 .insights-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.3rem;
+  gap: 0.5rem;
   flex: 1;
   overflow: hidden;
 }
@@ -195,14 +195,14 @@
 .insight-card {
   display: flex;
   align-items: flex-start;
-  gap: 0.25rem;
-  padding: 0.3rem 0.4rem;
+  gap: 0.4rem;
+  padding: 0.5rem;
   border-radius: 6px;
   border: 1px solid #e5e7eb;
   transition: all 0.3s ease;
   flex-shrink: 0;
-  min-height: 45px;
-  max-height: 45px;
+  min-height: 75px;
+  max-height: 75px;
   overflow: hidden;
 }
 
@@ -245,11 +245,11 @@
 }
 
 .insight-content h4 {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin: 0 0 0.1rem 0;
-  line-height: 1.1;
+  margin: 0 0 0.2rem 0;
+  line-height: 1.2;
 }
 
 /* Web only - make larger than mobile */
@@ -264,10 +264,10 @@
 }
 
 .insight-content p {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   color: var(--text-secondary);
-  margin: 0;
-  line-height: 1.2;
+  margin: 0 0 0.15rem 0;
+  line-height: 1.3;
 }
 
 /* Web only - make larger than mobile */
@@ -281,11 +281,11 @@
 }
 
 .insight-explanation {
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   color: var(--text-secondary);
   font-weight: 500;
-  margin: 0.05rem 0 0 0;
-  line-height: 1.1;
+  margin: 0.1rem 0;
+  line-height: 1.2;
 }
 
 /* Web only - make larger than mobile */
@@ -300,9 +300,9 @@
 }
 
 .insight-frequency {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   color: var(--text-light);
-  margin: 0.05rem 0 0 0;
+  margin: 0.1rem 0 0 0;
   font-weight: 500;
 }
 
@@ -320,13 +320,13 @@
 .start-practice-btn {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  padding: 0.3rem 0.5rem;
+  gap: 0.3rem;
+  padding: 0.4rem 0.6rem;
   background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%);
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 800;
   cursor: pointer;
   transition: all 0.3s ease;
