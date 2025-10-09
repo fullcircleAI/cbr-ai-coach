@@ -93,6 +93,13 @@
   animation: mascotRotate 4s ease-in-out infinite;
 }
 
+.mascot-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  animation: mascotPulse 2s ease-in-out infinite, mascotRotate 3s ease-in-out infinite;
+}
+
 @keyframes mascotRotate {
   0%, 100% {
     transform: rotate(0deg);

@@ -24,7 +24,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
       <div className="splash-content">
         <div className="splash-circle">
           <div className="mascot-container">
-            <div className="mascot">😊</div>
+            <img src="/images/mascot.png" alt="Mascot" className="mascot-image" />
           </div>
         </div>
         <h1 className="splash-title">Theory Coach AI</h1>
