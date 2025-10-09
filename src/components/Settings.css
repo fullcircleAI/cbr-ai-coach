@@ -20,25 +20,25 @@
   overflow: hidden;
 }
 
-/* Header Styles - EXACT COPY from Practice Page */
+/* Header Styles - Reduced size for Settings page */
 .tests-header {
   text-align: center;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%);
   color: white;
   border-radius: 12px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .header-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .header-text h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 0;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
