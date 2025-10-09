@@ -127,9 +127,8 @@
   transition: width 0.6s ease;
 }
 
-/* Hide progress bars for Study Time and Time Remaining (2nd and 3rd stats) */
-.summary-stat:nth-child(2) .progress-bar-bg,
-.summary-stat:nth-child(3) .progress-bar-bg {
+/* Hide ALL progress bars (not needed, takes up space) */
+.summary-stat .progress-bar-bg {
   display: none;
 }
 
