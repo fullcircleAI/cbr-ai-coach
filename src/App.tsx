@@ -11,7 +11,11 @@ import { PracticeTest } from './components/PracticeTest';
 import './App.css';
 
 function App() {
-  const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(() => {
+    // Only show splash on first visit (like Duolingo)
+    const hasSeenSplash = localStorage.getItem('hasSeenSplash');
+    return !hasSeenSplash;
+  });
 
   useEffect(() => {
     // Add body class to prevent scrolling during splash
@@ -23,6 +27,7 @@ function App() {
   }, [showSplash]);
 
   const handleSplashFinish = () => {
+    localStorage.setItem('hasSeenSplash', 'true');
     setShowSplash(false);
   };
 

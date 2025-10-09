@@ -17,8 +17,8 @@ export const Navigation: React.FC = () => {
     },
     {
       id: 'tests',
-      label: 'Tests',
-      icon: '🧪',
+      label: 'Practice',
+      icon: '✏️',
       path: '/tests',
       description: 'Practice tests and mock exams'
     },
@@ -56,8 +56,8 @@ export const Navigation: React.FC = () => {
       {/* Sidebar Navigation */}
       <nav className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <div className="logo">
-          <div className="logo-icon">🧠</div>
-          <span>AI Learning Coach</span>
+          <div className="logo-icon">😊</div>
+          <span>Theory Coach AI</span>
         </div>
 
         <div className="nav-list">
