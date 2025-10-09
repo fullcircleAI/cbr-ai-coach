@@ -226,24 +226,36 @@
 .practice-nav-btn.next-test {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: #fff;
-  border: 3px solid #10b981;
-  font-weight: 700;
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  font-size: 1rem;
+  border: 4px solid #10b981;
+  font-weight: 800;
+  padding: 1.2rem 2.5rem;
+  border-radius: 16px;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  min-width: 160px;
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+  letter-spacing: 1px;
+  min-width: 200px;
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.6);
+  position: relative;
+  animation: pulse 2s infinite;
+  transform: scale(1.05);
 }
 
 .practice-nav-btn.next-test:hover {
   background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5);
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.7);
   border-color: #059669;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.6);
+  }
+  50% {
+    box-shadow: 0 8px 40px rgba(16, 185, 129, 0.9);
+  }
 }
 
 @keyframes fadeIn {
@@ -292,6 +304,12 @@
     width: 50% !important;
     min-width: 50% !important;
     max-width: 50% !important;
+  }
+  
+  .practice-nav-btn.next-test {
+    font-size: 1.1rem;
+    padding: 1.1rem 2rem;
+    transform: scale(1.05);
   }
 }
 
@@ -380,5 +398,13 @@
     min-width: 50% !important;
     max-width: 50% !important;
     margin: 0 auto;
+  }
+  
+  .practice-nav-btn.next-test {
+    font-size: 0.95rem;
+    padding: 1rem 1.2rem;
+    font-weight: 800;
+    transform: scale(1.05);
+    border-width: 3px;
   }
 }
