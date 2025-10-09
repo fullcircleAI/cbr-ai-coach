@@ -15,7 +15,20 @@
   .dashboard {
     height: calc(100vh - 100px) !important;
     max-height: calc(100vh - 100px) !important;
-    overflow: hidden !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+  
+  .ai-insights-summary {
+    overflow-y: visible !important;
+    min-height: auto !important;
+    flex: none !important;
+    max-height: none !important;
+  }
+  
+  .insights-grid {
+    overflow: visible !important;
+    flex: none !important;
   }
 }
 
