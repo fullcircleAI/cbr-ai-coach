@@ -37,6 +37,35 @@
     height: calc(100vh - 2rem);
     max-height: calc(100vh - 2rem);
   }
+  
+  /* Make score/time board bigger for web */
+  .dashboard-summary {
+    padding: 0.6rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+  
+  .summary-stats {
+    gap: 1rem !important;
+  }
+  
+  .summary-stat .stat-number {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.3rem !important;
+    letter-spacing: 1.5px !important;
+  }
+  
+  .summary-stat:nth-child(2) .stat-number,
+  .summary-stat:nth-child(3) .stat-number {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 1.1rem !important;
+    border: 2px solid #333 !important;
+    letter-spacing: 2px !important;
+  }
+  
+  .summary-stat .stat-label {
+    font-size: 0.85rem !important;
+    margin-top: 0.15rem !important;
+  }
 }
 
 /* Mobile and tablet - account for footer */
