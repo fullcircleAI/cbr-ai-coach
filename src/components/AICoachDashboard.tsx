@@ -83,7 +83,8 @@ export const AICoachDashboard: React.FC = () => {
   const formatTime = (hours: number) => {
     const wholeHours = Math.floor(hours);
     const minutes = Math.round((hours - wholeHours) * 60);
-    return `${wholeHours}h ${minutes}m`;
+    // Digital clock format like football scoreboard: "08:30"
+    return `${String(wholeHours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
   };
 
   const getTimeRemaining = () => {
