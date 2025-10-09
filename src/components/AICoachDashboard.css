@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 0 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
   overflow: hidden;
   max-height: 100%;
   box-sizing: border-box;
@@ -15,20 +15,19 @@
   .dashboard {
     height: calc(100vh - 100px) !important;
     max-height: calc(100vh - 100px) !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
+    overflow: hidden !important;
+    padding-bottom: 0 !important;
   }
   
   .ai-insights-summary {
-    overflow-y: visible !important;
-    min-height: auto !important;
-    flex: none !important;
-    max-height: none !important;
+    overflow: hidden !important;
+    flex: 1 !important;
+    padding-bottom: 0.2rem !important;
   }
   
   .insights-grid {
-    overflow: visible !important;
-    flex: none !important;
+    overflow: hidden !important;
+    flex: 1 !important;
   }
 }
 
@@ -168,6 +167,7 @@
   gap: 0.5rem;
   flex: 1;
   overflow: hidden;
+  padding-bottom: 0;
 }
 
 /* Mobile - ensure all insights are visible */
