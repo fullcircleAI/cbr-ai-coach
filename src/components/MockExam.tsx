@@ -36,13 +36,11 @@ export const MockExam: React.FC = () => {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [score, setScore] = useState(0);
   const [isAnswered, setIsAnswered] = useState(false);
   const [timeLeft, setTimeLeft] = useState(0); // in seconds
   const [isFinished, setIsFinished] = useState(false);
   const [examConfig, setExamConfig] = useState<MockExamConfig | null>(null);
   const [answers, setAnswers] = useState<Record<number, string>>({});
-  const [showResults, setShowResults] = useState(false);
   const [isExamStarted, setIsExamStarted] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
@@ -155,8 +153,6 @@ export const MockExam: React.FC = () => {
     const correctAnswers = Object.values(answers).filter((answer, index) =>
       answer === questions[index]?.correctAnswerId
     ).length;
-
-    setScore(correctAnswers);
     
     // Navigate to results page with data
     if (examConfig && examId) {
