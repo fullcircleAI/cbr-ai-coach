@@ -232,7 +232,7 @@ export const PracticeTest: React.FC = () => {
           <div className="result-content-main">
             <div className="result-card">
               <div className="result-header">
-                <h1>🎉 Test Complete!</h1>
+                <h1>Test Complete!</h1>
                 <h2>{getTestName()}</h2>
               </div>
               
@@ -246,18 +246,18 @@ export const PracticeTest: React.FC = () => {
               </div>
 
               <div className={`result-message ${percentage >= 80 ? 'excellent' : percentage >= 60 ? 'good' : 'practice'}`}>
-                {percentage >= 80 ? '🎯 Excellent Work!' : percentage >= 60 ? '👍 Good Job!' : '📚 Keep Practicing!'}
+                {percentage >= 80 ? 'Excellent Work!' : percentage >= 60 ? 'Good Job!' : 'Keep Practicing!'}
               </div>
 
               <div className="result-actions">
                 <button className="practice-nav-btn next-test" onClick={() => navigate(`/practice/${nextTest.id}`)}>
-                  ▶️ Next: {nextTest.name}
+                  Next: {nextTest.name}
                 </button>
                 <button className="practice-nav-btn primary" onClick={() => window.location.reload()}>
-                  🔄 Retake Test
+                  Retake Test
                 </button>
                 <button className="practice-nav-btn" onClick={() => navigate('/')}>
-                  🏠 Back to Dashboard
+                  Back to Dashboard
                 </button>
               </div>
             </div>
