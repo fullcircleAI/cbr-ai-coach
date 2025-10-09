@@ -93,10 +93,8 @@ export const Settings: React.FC = () => {
   // Main Settings Menu
   const renderMainMenu = () => (
     <div className="settings-page">
-      <div className="test-header">
-        <div className="test-info">
-          <h2>Settings</h2>
-        </div>
+      <div className="settings-header-row">
+        <h2 className="settings-page-title">Settings</h2>
       </div>
 
       <div className="settings-main-menu">
