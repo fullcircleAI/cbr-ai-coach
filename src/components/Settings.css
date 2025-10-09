@@ -2,18 +2,22 @@
 .settings-container {
   width: 100%;
   max-width: 100%;
-  min-height: 100vh;
+  height: 100%;
   padding: 1rem;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* ========== MAIN SETTINGS PAGE ========== */
 .settings-page {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-top: 2rem;
+  overflow: hidden;
 }
 
 .settings-header {
@@ -36,6 +40,8 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .settings-btn-wrapper {
@@ -83,6 +89,9 @@
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 2rem;
 }
 
 .settings-subpage-header {
@@ -506,10 +515,20 @@
 @media (max-width: 768px) {
   .settings-container {
     padding: 0.5rem;
+    height: calc(100vh - 100px);
+  }
+
+  .settings-page {
+    height: 100%;
+    overflow: hidden;
   }
 
   .settings-title {
     font-size: 1.8rem;
+  }
+
+  .settings-main-menu {
+    overflow: hidden;
   }
 
   .settings-main-menu-btn {
@@ -519,6 +538,10 @@
 
   .settings-icon {
     font-size: 1.2rem;
+  }
+
+  .settings-subpage {
+    height: calc(100vh - 100px);
   }
 
   .settings-subpage-title {
@@ -544,8 +567,22 @@
 
 /* Tablet (max-width: 1024px) */
 @media (max-width: 1024px) {
+  .settings-container {
+    height: calc(100vh - 120px);
+  }
+
+  .settings-page {
+    height: 100%;
+    overflow: hidden;
+  }
+
   .settings-main-menu {
     max-width: 100%;
+    overflow: hidden;
+  }
+
+  .settings-subpage {
+    height: calc(100vh - 120px);
   }
 }
 
@@ -553,13 +590,21 @@
 @media (min-width: 1025px) {
   .settings-container {
     padding: 2rem;
+    height: calc(100vh - 2rem);
   }
 
   .settings-page {
     padding-top: 3rem;
+    height: 100%;
+    overflow: hidden;
   }
 
   .settings-main-menu {
     max-width: 600px;
+    overflow: hidden;
+  }
+
+  .settings-subpage {
+    height: calc(100vh - 4rem);
   }
 }
