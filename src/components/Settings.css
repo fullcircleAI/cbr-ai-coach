@@ -20,23 +20,22 @@
   overflow: hidden;
 }
 
-/* Header - Same style as Practice Test */
-.settings-header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid #f0f0f0;
-  width: 100%;
-  max-width: 600px;
+/* Header Banner - Same as Practice Page */
+.page-header-banner {
+  background: linear-gradient(135deg, #002868 0%, #003d99 100%);
+  padding: 2rem 1.5rem;
+  margin: -1rem -1rem 2rem -1rem;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 4px 20px rgba(0, 40, 104, 0.2);
+  text-align: center;
 }
 
-.settings-page-title {
+.page-header-title {
   margin: 0;
-  color: #2c3e50;
-  font-size: 1.8rem;
-  font-weight: 700;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
 .settings-main-menu {
