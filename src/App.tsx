@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { SplashScreen } from './components/SplashScreen';
+import { InstallPrompt } from './components/InstallPrompt';
+import { OfflineIndicator } from './components/OfflineIndicator';
 import { AICoachDashboard } from './components/AICoachDashboard';
 import { AICoachRecommendations } from './components/AICoachRecommendations';
 import { TestsPage } from './components/TestsPage';
@@ -31,6 +33,10 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/* Global Components */}
+        <InstallPrompt />
+        <OfflineIndicator />
+        
         <Routes>
           <Route path="/" element={<AICoachDashboard />} />
           <Route path="/recommendations" element={<AICoachRecommendations />} />

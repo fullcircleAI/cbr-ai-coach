@@ -1,0 +1,63 @@
+.pull-to-refresh-container {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+.pull-to-refresh-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(180deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
+  transition: opacity 0.2s ease;
+  z-index: 100;
+}
+
+.pull-to-refresh-indicator.refreshing {
+  background: linear-gradient(180deg, rgba(102, 126, 234, 0.2) 0%, transparent 100%);
+}
+
+.refresh-icon {
+  font-size: 2rem;
+  transition: transform 0.1s ease;
+}
+
+.pull-to-refresh-indicator.refreshing .refresh-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.refresh-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #667eea;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.pull-to-refresh-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Only enable on touch devices */
+@media (pointer: coarse) {
+  .pull-to-refresh-container {
+    overscroll-behavior: none;
+  }
+}
+

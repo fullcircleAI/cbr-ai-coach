@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
+import { PullToRefresh } from './PullToRefresh';
 import './AICoachDashboard.css';
 
 interface UserProgress {
@@ -74,6 +75,14 @@ export const AICoachDashboard: React.FC = () => {
     setAiInsights(mockInsights);
   }, []);
 
+  const handleRefresh = async () => {
+    // Simulate data refresh
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    // Reload data (in real app, fetch from API)
+    window.location.reload();
+  };
+
   const getScoreColor = (score: number) => {
     if (score < 30) return 'red';
     if (score < 70) return 'orange';
@@ -126,7 +135,8 @@ export const AICoachDashboard: React.FC = () => {
     <div className="main-layout">
       <Navigation />
       <main className="main-content">
-        <div className="dashboard">
+        <PullToRefresh onRefresh={handleRefresh}>
+          <div className="dashboard">
           {/* Summarized Learning Progress */}
           <div className="dashboard-summary">
             <div className="summary-stats">
@@ -196,7 +206,8 @@ export const AICoachDashboard: React.FC = () => {
             </div>
           </div>
 
-        </div>
+          </div>
+        </PullToRefresh>
       </main>
     </div>
   );

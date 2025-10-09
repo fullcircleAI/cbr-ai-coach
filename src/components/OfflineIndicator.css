@@ -1,0 +1,117 @@
+.offline-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+  padding: 1rem;
+  animation: slideDown 0.4s ease;
+  pointer-events: none;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.offline-indicator.offline {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+.offline-indicator.online {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+  animation: slideDown 0.4s ease, fadeOut 0.5s ease 2.5s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.offline-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.offline-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.offline-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.offline-text strong {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.offline-subtext {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .offline-indicator {
+    padding: 0.8rem;
+  }
+
+  .offline-content {
+    gap: 0.8rem;
+  }
+
+  .offline-icon {
+    font-size: 1.3rem;
+  }
+
+  .offline-text strong {
+    font-size: 0.9rem;
+  }
+
+  .offline-subtext {
+    font-size: 0.8rem;
+  }
+}
+
+/* Desktop - show below sidebar */
+@media (min-width: 1025px) {
+  .offline-indicator {
+    left: 240px;
+  }
+}
+
+/* Account for mobile footer */
+@media (max-width: 1024px) {
+  .offline-indicator {
+    left: 0;
+  }
+}
+
+/* iOS Safe Area */
+.offline-indicator {
+  padding-top: calc(1rem + env(safe-area-inset-top));
+}
+
