@@ -25,7 +25,6 @@ export const PracticeTest: React.FC = () => {
   const [isAnswered, setIsAnswered] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
   const [score, setScore] = useState(0);
-  const [startTime, setStartTime] = useState<number>(Date.now());
   const [testComplete, setTestComplete] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
@@ -108,7 +107,6 @@ export const PracticeTest: React.FC = () => {
           questions = questionData.trafficLightsSignalsQuestions;
       }
       setQuestions(questions);
-      setStartTime(Date.now());
     };
     loadQuestions();
   }, [testId]);
@@ -196,7 +194,6 @@ export const PracticeTest: React.FC = () => {
   // Results page
   if (testComplete) {
     const percentage = Math.round((score / questions.length) * 100);
-    const timeSpent = Math.round((Date.now() - startTime) / 1000 / 60); // minutes
 
     return (
       <div className="result-page">
@@ -219,21 +216,6 @@ export const PracticeTest: React.FC = () => {
 
               <div className={`result-message ${percentage >= 80 ? 'excellent' : percentage >= 60 ? 'good' : 'practice'}`}>
                 {percentage >= 80 ? '🎯 Excellent Work!' : percentage >= 60 ? '👍 Good Job!' : '📚 Keep Practicing!'}
-              </div>
-
-              <div className="result-details">
-                <div className="detail-item">
-                  <span className="detail-label">Time Spent</span>
-                  <span className="detail-value">{timeSpent} {timeSpent === 1 ? 'minute' : 'minutes'}</span>
-                </div>
-                <div className="detail-item">
-                  <span className="detail-label">Correct Answers</span>
-                  <span className="detail-value">{score} / {questions.length}</span>
-                </div>
-                <div className="detail-item">
-                  <span className="detail-label">Accuracy</span>
-                  <span className="detail-value">{percentage}%</span>
-                </div>
               </div>
 
               <div className="result-actions">
