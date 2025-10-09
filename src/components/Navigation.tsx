@@ -18,7 +18,7 @@ export const Navigation: React.FC = () => {
     {
       id: 'tests',
       label: 'Practice',
-      icon: '✏️',
+      icon: '🧪',
       path: '/tests',
       description: 'Practice tests and mock exams'
     },
