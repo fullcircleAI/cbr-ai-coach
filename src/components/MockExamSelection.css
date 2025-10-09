@@ -41,6 +41,25 @@
   color: #991b1b;
 }
 
+.recent-score {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0.75rem 0;
+  text-align: center;
+}
+
+.recent-score.passed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.recent-score.failed {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .test-description {

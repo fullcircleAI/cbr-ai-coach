@@ -26,11 +26,11 @@ export const MockExam: React.FC = () => {
   const { examId } = useParams<{ examId: string }>();
   const navigate = useNavigate();
 
-  // Mock exam configurations following official CBR format
+  // Mock exam configurations - ONLY pass mark differs (official CBR format)
   const examConfigs: Record<string, MockExamConfig> = {
-    'beginner': { questions: 50, timeLimit: 30, passRate: 88, difficulty: 'beginner' },
-    'intermediate': { questions: 50, timeLimit: 30, passRate: 88, difficulty: 'intermediate' },
-    'advanced': { questions: 50, timeLimit: 30, passRate: 88, difficulty: 'advanced' }
+    'beginner': { questions: 50, timeLimit: 30, passRate: 88, difficulty: 'beginner' }, // Official CBR: 44/50
+    'intermediate': { questions: 50, timeLimit: 30, passRate: 92, difficulty: 'intermediate' }, // Higher: 46/50
+    'advanced': { questions: 50, timeLimit: 30, passRate: 96, difficulty: 'advanced' } // Highest: 48/50
   };
 
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -188,10 +188,10 @@ export const MockExam: React.FC = () => {
     setSelectedAnswer(answerId);
     setAnswers(prev => ({ ...prev, [currentQuestionIndex]: answerId }));
 
-    // Auto-advance after 1.5 seconds
+    // Instant next question (like real CBR - no delays)
     setTimeout(() => {
       nextQuestion();
-    }, 1500);
+    }, 300);
   };
 
   const nextQuestion = () => {
@@ -356,15 +356,11 @@ export const MockExam: React.FC = () => {
           <div className="practice-options-list">
             {currentQuestion.options.map((option, index) => {
               const isSelected = selectedAnswer === option.id;
-              const isCorrect = option.id === currentQuestion.correctAnswerId;
-              const showResult = isAnswered;
 
               return (
                 <button
                   key={option.id}
-                  className={`practice-option-btn ${isSelected ? 'selected' : ''} ${
-                    showResult ? (isCorrect ? 'correct' : isSelected ? 'incorrect' : '') : ''
-                  }`}
+                  className={`practice-option-btn ${isSelected ? 'selected' : ''}`}
                   onClick={() => handleAnswer(option.id)}
                   disabled={isAnswered}
                 >

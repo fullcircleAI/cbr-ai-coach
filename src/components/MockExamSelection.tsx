@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import './MockExamSelection.css';
 
 export const MockExamSelection: React.FC = () => {
   const navigate = useNavigate();
+  const [recentScores, setRecentScores] = useState<Record<string, any>>({});
 
   const mockExams = [
     {
@@ -36,6 +37,18 @@ export const MockExamSelection: React.FC = () => {
     }
   ];
 
+  useEffect(() => {
+    // Load recent scores from localStorage
+    const scores: Record<string, any> = {};
+    mockExams.forEach(exam => {
+      const result = localStorage.getItem(`mockExamResults_${exam.id}`);
+      if (result) {
+        scores[exam.id] = JSON.parse(result);
+      }
+    });
+    setRecentScores(scores);
+  }, []);
+
   const handleExamClick = (examId: string) => {
     navigate(`/mock-exam/${examId}`);
   };
@@ -55,28 +68,39 @@ export const MockExamSelection: React.FC = () => {
 
           <div className="tests-content">
             <div className="tests-grid">
-              {mockExams.map((exam) => (
-                <div
-                  key={exam.id}
-                  className="test-card"
-                  onClick={() => handleExamClick(exam.id)}
-                >
-                  <div className="test-content">
-                    <h3 className="test-name">{exam.name}</h3>
-                    <p className="test-description">{exam.description}</p>
-                    <div className="test-meta">
-                      <span>{exam.questions} questions</span>
-                      <span>•</span>
-                      <span>{exam.time} min</span>
-                      <span>•</span>
-                      <span>{exam.passRate}% to pass</span>
-                    </div>
-                    <div className={`test-difficulty ${exam.difficulty.toLowerCase()}`}>
-                      {exam.difficulty}
+              {mockExams.map((exam) => {
+                const recentScore = recentScores[exam.id];
+                
+                return (
+                  <div
+                    key={exam.id}
+                    className="test-card"
+                    onClick={() => handleExamClick(exam.id)}
+                  >
+                    <div className="test-content">
+                      <h3 className="test-name">{exam.name}</h3>
+                      <p className="test-description">{exam.description}</p>
+                      
+                      {recentScore && (
+                        <div className={`recent-score ${recentScore.passed ? 'passed' : 'failed'}`}>
+                          Recent: {recentScore.score}/{exam.questions} ({recentScore.percentage}%)
+                        </div>
+                      )}
+                      
+                      <div className="test-meta">
+                        <span>{exam.questions} questions</span>
+                        <span>•</span>
+                        <span>{exam.time} min</span>
+                        <span>•</span>
+                        <span>{exam.passRate}% to pass</span>
+                      </div>
+                      <div className={`test-difficulty ${exam.difficulty.toLowerCase()}`}>
+                        {exam.difficulty}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
