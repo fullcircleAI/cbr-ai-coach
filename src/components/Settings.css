@@ -91,7 +91,7 @@
   margin: 0 auto;
   height: 100%;
   overflow-y: auto;
-  padding-bottom: 2rem;
+  box-sizing: border-box;
 }
 
 .settings-subpage-header {
@@ -129,7 +129,7 @@
 }
 
 .settings-subpage-content {
-  padding: 0 0.5rem;
+  padding: 0 0.5rem 3rem 0.5rem;
 }
 
 /* ========== ACCOUNT PAGE ========== */
@@ -544,6 +544,10 @@
     height: calc(100vh - 100px);
   }
 
+  .settings-subpage-content {
+    padding-bottom: 5rem;
+  }
+
   .settings-subpage-title {
     font-size: 1.5rem;
   }
@@ -583,6 +587,10 @@
 
   .settings-subpage {
     height: calc(100vh - 120px);
+  }
+
+  .settings-subpage-content {
+    padding-bottom: 4rem;
   }
 }
 
