@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import * as questionData from '../question_data';
 import './PracticeTest.css';
+import './PracticeResult.css';
 
 interface Question {
   id: string;
@@ -198,11 +199,10 @@ export const PracticeTest: React.FC = () => {
     const timeSpent = Math.round((Date.now() - startTime) / 1000 / 60); // minutes
 
     return (
-      <div className="main-layout">
-        <Navigation />
-        <main className="main-content">
-          <div className="practice-test">
-            <div className="test-result">
+      <div className="result-page">
+        <div className="result-content-row">
+          <div className="result-content-main">
+            <div className="result-card">
               <div className="result-header">
                 <h1>🎉 Test Complete!</h1>
                 <h2>{getTestName()}</h2>
@@ -214,7 +214,7 @@ export const PracticeTest: React.FC = () => {
                   <span className="score-separator">/</span>
                   <span className="score-total">{questions.length}</span>
                 </div>
-                <div className="score-percentage">({percentage}%)</div>
+                <div className="score-percentage">{percentage}%</div>
               </div>
 
               <div className={`result-message ${percentage >= 80 ? 'excellent' : percentage >= 60 ? 'good' : 'practice'}`}>
@@ -223,11 +223,15 @@ export const PracticeTest: React.FC = () => {
 
               <div className="result-details">
                 <div className="detail-item">
-                  <span className="detail-label">Time Spent:</span>
-                  <span className="detail-value">{timeSpent} minutes</span>
+                  <span className="detail-label">Time Spent</span>
+                  <span className="detail-value">{timeSpent} {timeSpent === 1 ? 'minute' : 'minutes'}</span>
                 </div>
                 <div className="detail-item">
-                  <span className="detail-label">Accuracy:</span>
+                  <span className="detail-label">Correct Answers</span>
+                  <span className="detail-value">{score} / {questions.length}</span>
+                </div>
+                <div className="detail-item">
+                  <span className="detail-label">Accuracy</span>
                   <span className="detail-value">{percentage}%</span>
                 </div>
               </div>
@@ -242,7 +246,7 @@ export const PracticeTest: React.FC = () => {
               </div>
             </div>
           </div>
-        </main>
+        </div>
       </div>
     );
   }
