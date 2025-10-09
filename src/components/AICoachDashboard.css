@@ -72,17 +72,11 @@
 
 .summary-stat .stat-number {
   font-size: 0.75rem;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--primary-blue);
   margin-bottom: 0.15rem;
   font-family: 'Courier New', monospace;
   letter-spacing: 1px;
-}
-
-/* Make Average Score (first stat) extra bold */
-.summary-stat:nth-child(1) .stat-number {
-  font-weight: 900;
-  font-size: 0.85rem;
 }
 
 /* Digital Clock Style for Time Stats */
