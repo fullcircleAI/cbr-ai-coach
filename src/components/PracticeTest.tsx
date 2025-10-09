@@ -245,7 +245,7 @@ export const PracticeTest: React.FC = () => {
                 <div className="score-percentage">{percentage}%</div>
               </div>
 
-              <div className="result-message practice">
+              <div className={`result-message ${percentage >= 80 ? 'excellent' : percentage >= 60 ? 'good' : 'practice'}`}>
                 {percentage >= 80 ? '🎯 Excellent Work!' : percentage >= 60 ? '👍 Good Job!' : '📚 Keep Practicing!'}
               </div>
 

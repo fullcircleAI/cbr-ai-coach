@@ -119,6 +119,21 @@
   border-radius: 12px;
   margin: 0.5rem 0 1rem 0;
   width: 100%;
+}
+
+.result-message.excellent {
+  background: rgba(0, 40, 104, 0.1);
+  color: #002868;
+  border: 2px solid #002868;
+}
+
+.result-message.good {
+  background: rgba(136, 143, 166, 0.1);
+  color: #888fa6;
+  border: 2px solid #888fa6;
+}
+
+.result-message.practice {
   background: rgba(191, 10, 48, 0.1);
   color: #BF0A30;
   border: 2px solid #BF0A30;
@@ -263,6 +278,8 @@
   
   .result-message {
     font-size: 1.2rem;
+    width: 50% !important;
+    margin: 0.5rem auto 1rem auto !important;
   }
   
   .result-actions {
@@ -326,7 +343,8 @@
   .result-message {
     font-size: 1rem;
     padding: 0.6rem 1rem;
-    margin: 0.5rem 0;
+    margin: 0.5rem auto;
+    width: 50% !important;
   }
   
   .result-details {
