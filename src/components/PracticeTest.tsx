@@ -246,7 +246,10 @@ export const PracticeTest: React.FC = () => {
               </div>
 
               <div className="result-actions">
-                <button className="practice-nav-btn next-test" onClick={() => navigate(`/practice/${nextTest.id}`)}>
+                <button className="practice-nav-btn next-test" onClick={() => {
+                  // Force full page reload to properly reset the component state
+                  window.location.href = `/practice/${nextTest.id}`;
+                }}>
                   Next: {nextTest.name}
                 </button>
                 <button className="practice-nav-btn primary" onClick={() => window.location.reload()}>
