@@ -230,6 +230,10 @@ export const MockExam: React.FC = () => {
         <Navigation />
         <main className="main-content">
           <div className="mock-exam-intro">
+            <button className="back-btn" onClick={() => navigate('/mock-exam')}>
+              ← Back
+            </button>
+            
             <div className="intro-header">
               <h1 className="intro-title">Quiz {quizNumber}</h1>
               <p className="intro-subtitle">CBR Mock Exam</p>
@@ -275,7 +279,7 @@ export const MockExam: React.FC = () => {
             </div>
 
             <button className="start-exam-btn" onClick={startExam}>
-              Start Quiz
+              Start
             </button>
           </div>
         </main>
