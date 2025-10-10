@@ -247,7 +247,7 @@ export const TestsPage: React.FC = () => {
                 className="recommendation-start-btn"
                 onClick={() => handleTestClick(recommendedTest.id)}
               >
-                Start Practice →
+                Start
               </button>
             </div>
 

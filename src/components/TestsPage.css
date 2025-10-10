@@ -289,20 +289,21 @@ body .tests-page,
   color: #002868 !important;
   border: none;
   border-radius: 12px;
-  padding: 0.875rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 700;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 800;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   align-self: stretch;
   text-align: center;
+  letter-spacing: 0.5px;
 }
 
 .recommendation-start-btn:hover {
-  background: #f0f4f8;
+  background: #f8f9fa !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 .recommendation-start-btn:active {
@@ -330,7 +331,8 @@ body .tests-page,
   }
 
   .recommendation-start-btn {
-    padding: 0.75rem 1.25rem;
-    font-size: 0.95rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 800;
   }
 }
