@@ -24,6 +24,8 @@ export interface AIInsight {
   priority: 'red' | 'amber' | 'green';
   testId?: string;
   explanation?: string;
+  frequency?: number;
+  lastOccurrence?: string;
 }
 
 // Test metadata
