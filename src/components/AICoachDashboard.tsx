@@ -142,7 +142,7 @@ export const AICoachDashboard: React.FC = () => {
             <div className="summary-stats">
               <div className="summary-stat">
                 <div className="stat-number">{userProgress.averageScore}%</div>
-                <div className="stat-label">Average Score</div>
+                <div className="stat-label">Practice Average</div>
                 <div className="progress-bar-bg">
                   <div className="progress-bar-fill" 
                        style={{ 
