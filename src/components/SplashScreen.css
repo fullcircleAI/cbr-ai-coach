@@ -159,6 +159,16 @@
   }
 }
 
+/* Subtitle - Duolingo style */
+.splash-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  animation: titleFadeIn 0.5s ease-out 0.5s both;
+}
+
 /* Removed loading dots for Duolingo-style instant feel */
 
 /* Mobile Optimizations */
@@ -181,7 +191,7 @@
   .splash-title {
     font-size: 2rem;
   }
-
+  
   .splash-subtitle {
     font-size: 1rem;
   }
@@ -206,7 +216,7 @@
   .splash-title {
     font-size: 1.8rem;
   }
-
+  
   .splash-subtitle {
     font-size: 0.95rem;
   }
