@@ -285,29 +285,34 @@ body .tests-page,
 }
 
 .recommendation-start-btn {
+  /* iOS Native Button Specs */
   background: #ffffff !important;
   color: #002868 !important;
   border: none;
-  border-radius: 12px;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 800;
+  border-radius: 14px; /* iOS standard */
+  padding: 16px 24px; /* iOS standard touch target */
+  min-height: 50px; /* iOS minimum touch target */
+  font-size: 17px; /* iOS standard button text */
+  font-weight: 600; /* iOS semibold */
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* iOS easing */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08); /* iOS elevation */
   align-self: stretch;
   text-align: center;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.4px; /* iOS standard */
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .recommendation-start-btn:hover {
-  background: #f8f9fa !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  background: #f5f5f7 !important; /* iOS hover state */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .recommendation-start-btn:active {
-  transform: scale(0.98) translateY(0);
+  transform: scale(0.97); /* iOS press feedback */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Mobile - Compact recommendation banner */
@@ -331,8 +336,9 @@ body .tests-page,
   }
 
   .recommendation-start-btn {
-    padding: 0.875rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 800;
+    padding: 14px 20px; /* Mobile touch target */
+    min-height: 48px; /* Android minimum 48dp */
+    font-size: 16px; /* Mobile standard */
+    font-weight: 600;
   }
 }
