@@ -91,20 +91,20 @@
   justify-content: center;
   position: relative;
   z-index: 1;
+  background: white;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 .mascot-image {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 4px 24px rgba(0,40,104,0.22)) drop-shadow(0 0 16px #3a53a4aa) drop-shadow(0 0 32px #BF0A3088);
-  border-radius: 50%;
-  background: transparent;
-  box-shadow: 0 0 0 6px rgba(255,255,255,0.12), 0 0 32px 0 #3a53a433;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
   animation: mascot-wave 2s infinite;
-  transform-origin: 70% 80%;
+  transform-origin: center center;
 }
 
 @keyframes mascot-wave {
@@ -210,8 +210,8 @@
   }
 
   .mascot-image {
-    width: 130px;
-    height: 130px;
+    width: 110px;
+    height: 110px;
   }
 
   .splash-title {
@@ -235,8 +235,8 @@
   }
 
   .mascot-image {
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
   }
 
   .splash-title {
