@@ -241,21 +241,18 @@ export const MockExam: React.FC = () => {
 
             <div className="exam-info-cards">
               <div className="info-card">
-                <div className="info-icon">📝</div>
                 <div className="info-details">
                   <span className="info-value">{examConfig.questions}</span>
                   <span className="info-label">Questions</span>
                 </div>
               </div>
               <div className="info-card">
-                <div className="info-icon">⏱️</div>
                 <div className="info-details">
                   <span className="info-value">{examConfig.timeLimit}</span>
                   <span className="info-label">Minutes</span>
                 </div>
               </div>
               <div className="info-card">
-                <div className="info-icon">✅</div>
                 <div className="info-details">
                   <span className="info-value">{examConfig.passRate}%</span>
                   <span className="info-label">To Pass</span>
@@ -265,15 +262,12 @@ export const MockExam: React.FC = () => {
 
             <div className="exam-instructions">
               <div className="instruction-item">
-                <span className="instruction-icon">•</span>
                 <span>No explanations during exam</span>
               </div>
               <div className="instruction-item">
-                <span className="instruction-icon">•</span>
                 <span>Results shown at the end</span>
               </div>
               <div className="instruction-item">
-                <span className="instruction-icon">•</span>
                 <span>Questions randomly selected</span>
               </div>
             </div>

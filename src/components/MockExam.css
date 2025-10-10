@@ -77,15 +77,12 @@
   transform: scale(0.98);
 }
 
-.info-icon {
-  font-size: 2rem;
-}
-
 .info-details {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
+  width: 100%;
 }
 
 .info-value {
@@ -114,17 +111,21 @@
 .instruction-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   font-size: 1rem;
   color: #1e293b;
   line-height: 1.5;
+  text-align: left;
+  padding-left: 1.5rem;
+  position: relative;
 }
 
-.instruction-icon {
+.instruction-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
   color: #002868;
-  font-weight: 800;
-  font-size: 1.2rem;
-  flex-shrink: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* Start Button - iOS Style */
@@ -268,18 +269,16 @@
 
   .info-card {
     padding: 0.75rem;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 0.75rem;
-  }
-
-  .info-icon {
-    font-size: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
   }
 
   .info-details {
-    align-items: flex-start;
+    align-items: center;
     flex: 1;
+    width: 100%;
   }
 
   .info-value {
@@ -298,10 +297,6 @@
 
   .instruction-item {
     font-size: 0.85rem;
-  }
-
-  .instruction-icon {
-    font-size: 0.9rem;
   }
 
   .start-exam-btn {
