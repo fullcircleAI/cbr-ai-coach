@@ -1,8 +1,15 @@
 .pull-to-refresh-container {
   height: 100%;
-  overflow-y: auto;
+  overflow: visible;
   -webkit-overflow-scrolling: touch;
   position: relative;
+}
+
+/* Dashboard should never scroll on mobile */
+@media (max-width: 768px) {
+  .dashboard .pull-to-refresh-container {
+    overflow: hidden !important;
+  }
 }
 
 .pull-to-refresh-indicator {

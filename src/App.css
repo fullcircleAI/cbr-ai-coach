@@ -179,6 +179,11 @@ input, textarea, [contenteditable="true"] {
     padding: 0 !important;
   }
   
+  /* Dashboard must NEVER scroll on mobile */
+  .main-content:not(.tests-page):not(.settings-page) {
+    overflow: hidden !important;
+  }
+  
   /* Make Tests and Settings pages scrollable - single scroll */
   .main-content.tests-page,
   .main-content.settings-page {
