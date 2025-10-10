@@ -253,11 +253,6 @@ body .tests-page,
 .recommendation-header {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-}
-
-.recommendation-icon {
-  font-size: 1.25rem;
 }
 
 .recommendation-title {
@@ -320,10 +315,6 @@ body .tests-page,
     padding: 1.25rem;
     margin-bottom: 1.5rem;
     border-radius: 14px;
-  }
-
-  .recommendation-icon {
-    font-size: 1.1rem;
   }
 
   .recommendation-title {

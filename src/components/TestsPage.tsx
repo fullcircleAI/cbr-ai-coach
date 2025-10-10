@@ -237,7 +237,6 @@ export const TestsPage: React.FC = () => {
             {/* Recommendation Banner - iOS/Android Style */}
             <div className="recommendation-banner">
               <div className="recommendation-header">
-                <span className="recommendation-icon">🎯</span>
                 <span className="recommendation-title">Recommended for You</span>
               </div>
               <div className="recommendation-content">
@@ -248,7 +247,7 @@ export const TestsPage: React.FC = () => {
                 className="recommendation-start-btn"
                 onClick={() => handleTestClick(recommendedTest.id)}
               >
-                Start Now
+                Start Practice →
               </button>
             </div>
 
