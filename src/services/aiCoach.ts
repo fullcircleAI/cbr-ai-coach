@@ -306,9 +306,9 @@ class AICoachService {
   // Get study time (total time spent practicing)
   getStudyTime(): number {
     const history = this.getTestHistory();
-    // Estimate: 1 minute per question (rough estimate)
+    // Estimate: 1.5 minutes per question (realistic average)
     const totalQuestions = history.reduce((sum, result) => sum + result.totalQuestions, 0);
-    const hours = totalQuestions / 60; // Convert to hours
+    const hours = totalQuestions / 40; // 1.5 min per Q = 40 Q per hour
     return parseFloat(hours.toFixed(1));
   }
 }

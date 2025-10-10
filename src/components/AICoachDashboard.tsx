@@ -114,7 +114,7 @@ export const AICoachDashboard: React.FC = () => {
               </div>
               <div className="summary-stat">
                 <div className="stat-number">{formatTime(getTimeRemaining().remaining)}</div>
-                <div className="stat-label">Time Remaining</div>
+                <div className="stat-label">Hours to 24h Goal</div>
                 <div className="progress-bar-bg">
                   <div className="progress-bar-fill" 
                        style={{ 
