@@ -1144,13 +1144,34 @@
   .practice-explanation-text {
     font-size: 0.85rem;
     line-height: 1.5;
-    max-height: none !important;
-    overflow: visible !important;
+    max-height: 120px !important;
+    overflow-y: auto !important;
     display: block !important;
     white-space: normal !important;
     text-overflow: clip !important;
     -webkit-line-clamp: unset !important;
     -webkit-box-orient: unset !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-right: 0.5rem;
+  }
+  
+  .practice-explanation-text::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .practice-explanation-text::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+  }
+  
+  .practice-explanation-text::-webkit-scrollbar-thumb {
+    background: rgba(26, 62, 122, 0.3);
+    border-radius: 2px;
+  }
+  
+  .practice-explanation-text::-webkit-scrollbar-thumb:hover {
+    background: rgba(26, 62, 122, 0.5);
   }
   .practice-subject-row {
     margin-bottom: 0.3rem !important;
