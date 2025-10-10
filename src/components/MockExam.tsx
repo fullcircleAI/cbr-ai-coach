@@ -221,44 +221,61 @@ export const MockExam: React.FC = () => {
   }
 
 
-  // Intro Screen
+  // Intro Screen - Native iOS/Android style
   if (!isExamStarted) {
+    const quizNumber = examId === 'beginner' ? '1' : examId === 'intermediate' ? '2' : '3';
+    
     return (
       <div className="main-layout">
         <Navigation />
         <main className="main-content">
           <div className="mock-exam-intro">
-            <h1>Mock Exam</h1>
-            <h2>{examConfig.difficulty.charAt(0).toUpperCase() + examConfig.difficulty.slice(1)} Level</h2>
+            <div className="intro-header">
+              <h1 className="intro-title">Quiz {quizNumber}</h1>
+              <p className="intro-subtitle">CBR Mock Exam</p>
+            </div>
 
-            <div className="exam-info">
-              <div className="info-item">
-                <span className="info-label">Questions</span>
-                <span className="info-value">{examConfig.questions}</span>
+            <div className="exam-info-cards">
+              <div className="info-card">
+                <div className="info-icon">📝</div>
+                <div className="info-details">
+                  <span className="info-value">{examConfig.questions}</span>
+                  <span className="info-label">Questions</span>
+                </div>
               </div>
-              <div className="info-item">
-                <span className="info-label">Time Limit</span>
-                <span className="info-value">{examConfig.timeLimit} min</span>
+              <div className="info-card">
+                <div className="info-icon">⏱️</div>
+                <div className="info-details">
+                  <span className="info-value">{examConfig.timeLimit}</span>
+                  <span className="info-label">Minutes</span>
+                </div>
               </div>
-              <div className="info-item">
-                <span className="info-label">Pass Rate</span>
-                <span className="info-value">{examConfig.passRate}%</span>
+              <div className="info-card">
+                <div className="info-icon">✅</div>
+                <div className="info-details">
+                  <span className="info-value">{examConfig.passRate}%</span>
+                  <span className="info-label">To Pass</span>
+                </div>
               </div>
             </div>
 
             <div className="exam-instructions">
-              <h3>Instructions:</h3>
-              <ul>
-                <li>Answer all {examConfig.questions} questions</li>
-                <li>You have {examConfig.timeLimit} minutes to complete</li>
-                <li>Need {examConfig.passRate}% to pass</li>
-                <li>Questions are randomly selected</li>
-                <li>No explanations during exam</li>
-              </ul>
+              <div className="instruction-item">
+                <span className="instruction-icon">•</span>
+                <span>No explanations during exam</span>
+              </div>
+              <div className="instruction-item">
+                <span className="instruction-icon">•</span>
+                <span>Results shown at the end</span>
+              </div>
+              <div className="instruction-item">
+                <span className="instruction-icon">•</span>
+                <span>Questions randomly selected</span>
+              </div>
             </div>
 
             <button className="start-exam-btn" onClick={startExam}>
-              Start Mock Exam
+              Start Quiz
             </button>
           </div>
         </main>
