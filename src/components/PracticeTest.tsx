@@ -183,33 +183,14 @@ export const PracticeTest: React.FC = () => {
   };
 
   const getNextTest = () => {
-    const allTests = [
-      { id: 'traffic-lights-signals', name: 'Traffic Lights & Signals' },
-      { id: 'priority-rules', name: 'Priority & Right of Way' },
-      { id: 'hazard-perception', name: 'Hazard Perception' },
-      { id: 'speed-safety', name: 'Speed & Safety' },
-      { id: 'bicycle-interactions', name: 'Bicycle Interactions' },
-      { id: 'roundabout-rules', name: 'Roundabout Rules' },
-      { id: 'tram-interactions', name: 'Tram Interactions' },
-      { id: 'pedestrian-crossings', name: 'Pedestrian Crossings' },
-      { id: 'construction-zones', name: 'Construction Zones' },
-      { id: 'weather-conditions', name: 'Weather Conditions' },
-      { id: 'road-signs', name: 'Road Signs' },
-      { id: 'motorway-rules', name: 'Motorway Rules' },
-      { id: 'vehicle-knowledge', name: 'Vehicle Knowledge' },
-      { id: 'parking-rules', name: 'Parking Rules' },
-      { id: 'environmental', name: 'Environmental Zones' },
-      { id: 'technology-safety', name: 'Technology & Safety' },
-      { id: 'alcohol-drugs', name: 'Alcohol & Drugs' },
-      { id: 'fatigue-rest', name: 'Fatigue & Rest' },
-      { id: 'emergency-procedures', name: 'Emergency Procedures' },
-      { id: 'insight-practice', name: 'Insight Practice' },
-      { id: 'traffic-rules-signs', name: 'Traffic Rules & Signs' },
-    ];
+    // Return recommended test (synchronized with dashboard and practice page)
+    // If user just completed the recommended test, suggest next logical test
+    if (testId === 'traffic-lights-signals') {
+      return { id: 'priority-rules', name: 'Priority & Right of Way' };
+    }
     
-    const currentIndex = allTests.findIndex(test => test.id === testId);
-    const nextIndex = (currentIndex + 1) % allTests.length;
-    return allTests[nextIndex];
+    // Default recommendation (same as dashboard)
+    return { id: 'traffic-lights-signals', name: 'Traffic Lights & Signals' };
   };
 
   if (questions.length === 0) {

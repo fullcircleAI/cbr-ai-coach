@@ -16,6 +16,13 @@ interface PracticeTest {
 export const TestsPage: React.FC = () => {
   const navigate = useNavigate();
 
+  // Get the recommended test (synchronized with dashboard)
+  const recommendedTest = {
+    id: 'traffic-lights-signals',
+    name: 'Traffic Lights & Signals',
+    reason: 'Focus here for +15% score boost'
+  };
+
   const practiceTests: PracticeTest[] = [
     {
       id: 'traffic-rules-signs',
@@ -227,6 +234,24 @@ export const TestsPage: React.FC = () => {
           </div>
 
           <div className="tests-content">
+            {/* Recommendation Banner - iOS/Android Style */}
+            <div className="recommendation-banner">
+              <div className="recommendation-header">
+                <span className="recommendation-icon">🎯</span>
+                <span className="recommendation-title">Recommended for You</span>
+              </div>
+              <div className="recommendation-content">
+                <h3 className="recommendation-test-name">{recommendedTest.name}</h3>
+                <p className="recommendation-reason">{recommendedTest.reason}</p>
+              </div>
+              <button 
+                className="recommendation-start-btn"
+                onClick={() => handleTestClick(recommendedTest.id)}
+              >
+                Start Now
+              </button>
+            </div>
+
             {/* Tests Grid */}
             <div className="tests-grid">
               {practiceTests.map((test) => (
