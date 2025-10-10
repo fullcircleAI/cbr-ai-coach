@@ -179,11 +179,11 @@ input, textarea, [contenteditable="true"] {
     padding: 0 !important;
   }
   
-  /* Make Tests and Settings pages scrollable */
+  /* Make Tests and Settings pages scrollable - single scroll */
   .main-content.tests-page,
   .main-content.settings-page {
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
   }
 }
 
@@ -397,18 +397,14 @@ button:active, .test-card:active, .settings-main-menu-btn:active, .practice-opti
   scroll-behavior: smooth;
 }
 
-/* Prevent overscroll bounce */
+/* Prevent overscroll bounce on body only */
 body {
   overscroll-behavior-y: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
 }
 
 #root {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
 /* Loading skeleton animation */
