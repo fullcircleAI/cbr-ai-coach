@@ -10,30 +10,30 @@ export const MockExamSelection: React.FC = () => {
   const mockExams = [
     {
       id: 'beginner',
-      name: 'Beginner Mock Exam',
-      description: 'Perfect for first-time test takers',
+      name: 'Quiz 1',
+      description: '',
       questions: 50,
       time: 30,
       passRate: 88,
-      difficulty: 'Easy'
+      difficulty: ''
     },
     {
       id: 'intermediate',
-      name: 'Intermediate Mock Exam',
-      description: 'Standard CBR exam difficulty',
+      name: 'Quiz 2',
+      description: '',
       questions: 50,
       time: 30,
-      passRate: 88,
-      difficulty: 'Medium'
+      passRate: 92,
+      difficulty: ''
     },
     {
       id: 'advanced',
-      name: 'Advanced Mock Exam',
-      description: 'Challenging questions for mastery',
+      name: 'Quiz 3',
+      description: '',
       questions: 50,
       time: 30,
-      passRate: 88,
-      difficulty: 'Hard'
+      passRate: 96,
+      difficulty: ''
     }
   ];
 
@@ -80,7 +80,6 @@ export const MockExamSelection: React.FC = () => {
                   >
                     <div className="test-content">
                       <h3 className="test-name">{exam.name}</h3>
-                      <p className="test-description">{exam.description}</p>
                       
                       {recentScore && (
                         <div className={`recent-score ${recentScore.passed ? 'passed' : 'failed'}`}>
@@ -94,9 +93,6 @@ export const MockExamSelection: React.FC = () => {
                         <span>{exam.time} min</span>
                         <span>•</span>
                         <span>{exam.passRate}% to pass</span>
-                      </div>
-                      <div className={`test-difficulty ${exam.difficulty.toLowerCase()}`}>
-                        {exam.difficulty}
                       </div>
                     </div>
                   </div>
