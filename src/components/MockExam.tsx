@@ -231,7 +231,7 @@ export const MockExam: React.FC = () => {
         <main className="main-content">
           <div className="mock-exam-intro">
             <button className="back-btn" onClick={() => navigate('/mock-exam')}>
-              ← Back
+              × Close
             </button>
             
             <div className="intro-header">

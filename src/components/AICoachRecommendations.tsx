@@ -122,7 +122,7 @@ export const AICoachRecommendations: React.FC = () => {
               className="back-button"
               onClick={() => navigate('/')}
             >
-              ← Back to Dashboard
+              × Close
             </button>
           </div>
 
