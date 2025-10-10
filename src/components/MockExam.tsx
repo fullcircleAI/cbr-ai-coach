@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
+import { lightHaptic, impactHaptic } from '../utils/haptics';
 import './MockExam.css';
 import * as questionData from '../question_data';
 
@@ -68,6 +69,7 @@ export const MockExam: React.FC = () => {
     // Create formatted exam with proper question distribution
     const formattedQuestions = createFormattedExam(config.difficulty);
     setQuestions(formattedQuestions);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [examId, navigate]);
 
   // Create formatted exam - 50 questions: 25 Traffic Rules, 15 Hazard Perception, 10 Insight
@@ -140,6 +142,7 @@ export const MockExam: React.FC = () => {
     }, 1000);
 
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isExamStarted, isFinished, timeLeft]);
 
   const startExam = () => {
@@ -147,6 +150,7 @@ export const MockExam: React.FC = () => {
   };
 
   const finishExam = () => {
+    impactHaptic(); // Heavy haptic for exam completion
     setIsFinished(true);
 
     // Calculate final score
@@ -182,6 +186,7 @@ export const MockExam: React.FC = () => {
   const handleAnswer = (answerId: string) => {
     if (isAnswered || !isExamStarted) return;
 
+    lightHaptic(); // Haptic feedback on answer selection
     setIsAnswered(true);
     setSelectedAnswer(answerId);
     setAnswers(prev => ({ ...prev, [currentQuestionIndex]: answerId }));

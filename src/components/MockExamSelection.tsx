@@ -47,6 +47,7 @@ export const MockExamSelection: React.FC = () => {
       }
     });
     setRecentScores(scores);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleExamClick = (examId: string) => {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import * as questionData from '../question_data';
+import { lightHaptic, successHaptic, errorHaptic } from '../utils/haptics';
 import './PracticeTest.css';
 import './PracticeResult.css';
 
@@ -113,17 +114,22 @@ export const PracticeTest: React.FC = () => {
 
   const handleAnswer = (answerId: string) => {
     if (!isAnswered) {
+      lightHaptic(); // Haptic feedback on selection
       setSelectedAnswer(answerId);
       setIsAnswered(true);
       setShowExplanation(true);
       
       if (answerId === questions[currentQuestionIndex].correctAnswerId) {
         setScore(score + 1);
+        successHaptic(); // Success haptic for correct answer
+      } else {
+        errorHaptic(); // Error haptic for wrong answer
       }
     }
   };
 
   const nextQuestion = () => {
+    lightHaptic(); // Haptic feedback on next question
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedAnswer(null);
