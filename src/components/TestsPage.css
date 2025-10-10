@@ -39,7 +39,7 @@ body .tests-page,
 }
 
 /* Additional aggressive overrides to remove any blue tint */
-.tests-page *,
+.tests-page *:not(.recommendation-banner):not(.recommendation-start-btn),
 .tests-page *::before,
 .tests-page *::after {
   background-color: transparent !important;
@@ -235,7 +235,7 @@ body .tests-page,
 
 /* Recommendation Banner - Native iOS/Android Style */
 .recommendation-banner {
-  background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%);
+  background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%) !important;
   border-radius: 16px;
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -285,8 +285,8 @@ body .tests-page,
 }
 
 .recommendation-start-btn {
-  background: #ffffff;
-  color: #002868;
+  background: #ffffff !important;
+  color: #002868 !important;
   border: none;
   border-radius: 12px;
   padding: 0.875rem 1.5rem;
