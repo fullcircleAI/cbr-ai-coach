@@ -222,6 +222,22 @@ export const PracticeTest: React.FC = () => {
     const percentage = Math.round((score / questions.length) * 100);
     const nextTest = getNextTest();
 
+    // Smart Coaching Logic: Determine readiness level
+    const isCritical = percentage < 60;  // Must retry
+    const needsWork = percentage >= 60 && percentage < 80;  // Recommended retry
+    const hasMastery = percentage >= 80;  // Ready to progress
+
+    // Coaching messages based on performance
+    const getCoachingMessage = () => {
+      if (isCritical) {
+        return "Let's master this first! Practice makes perfect.";
+      } else if (needsWork) {
+        return "Almost there! 80% mastery recommended before moving on.";
+      } else {
+        return "Excellent Work!";
+      }
+    };
+
     return (
       <div className="result-page">
         <div className="result-content-row">
@@ -241,23 +257,56 @@ export const PracticeTest: React.FC = () => {
                 <div className="score-percentage">{percentage}%</div>
               </div>
 
-              <div className={`result-message ${percentage >= 80 ? 'excellent' : percentage >= 60 ? 'good' : 'practice'}`}>
-                {percentage >= 80 ? 'Excellent Work!' : percentage >= 60 ? 'Good Job!' : 'Keep Practicing!'}
+              <div className={`result-message ${hasMastery ? 'excellent' : needsWork ? 'good' : 'practice'}`}>
+                {getCoachingMessage()}
               </div>
 
               <div className="result-actions">
-                <button className="practice-nav-btn next-test" onClick={() => {
-                  // Force full page reload to properly reset the component state
-                  window.location.href = `/practice/${nextTest.id}`;
-                }}>
-                  Next: {nextTest.name}
-                </button>
-                <button className="practice-nav-btn primary" onClick={() => window.location.reload()}>
-                  Retake Test
-                </button>
-                <button className="practice-nav-btn" onClick={() => navigate('/')}>
-                  Back to Dashboard
-                </button>
+                {/* Critical (<60%): Only show Retry button */}
+                {isCritical && (
+                  <>
+                    <button className="practice-nav-btn primary" onClick={() => window.location.reload()}>
+                      Retry Test
+                    </button>
+                    <button className="practice-nav-btn" onClick={() => navigate('/')}>
+                      Back to Dashboard
+                    </button>
+                  </>
+                )}
+
+                {/* Needs Work (60-79%): Show both, prioritize Retry */}
+                {needsWork && (
+                  <>
+                    <button className="practice-nav-btn primary" onClick={() => window.location.reload()}>
+                      Retry Test (Recommended)
+                    </button>
+                    <button className="practice-nav-btn" onClick={() => {
+                      window.location.href = `/practice/${nextTest.id}`;
+                    }}>
+                      Next: {nextTest.name}
+                    </button>
+                    <button className="practice-nav-btn" onClick={() => navigate('/')}>
+                      Back to Dashboard
+                    </button>
+                  </>
+                )}
+
+                {/* Mastery (80%+): Encourage progression */}
+                {hasMastery && (
+                  <>
+                    <button className="practice-nav-btn next-test primary" onClick={() => {
+                      window.location.href = `/practice/${nextTest.id}`;
+                    }}>
+                      Next: {nextTest.name}
+                    </button>
+                    <button className="practice-nav-btn" onClick={() => window.location.reload()}>
+                      Retry Test
+                    </button>
+                    <button className="practice-nav-btn" onClick={() => navigate('/')}>
+                      Back to Dashboard
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           </div>
