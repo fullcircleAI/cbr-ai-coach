@@ -27,7 +27,7 @@ export const Navigation: React.FC = () => {
       label: 'Mock Exam',
       icon: '📝',
       path: '/mock-exam',
-      description: 'Full CBR mock exams'
+      description: 'Full mock exams'
     },
     {
       id: 'settings',

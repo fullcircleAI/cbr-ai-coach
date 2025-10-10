@@ -73,7 +73,7 @@ export const InstallPrompt: React.FC = () => {
         
         <div className="install-icon">📱</div>
         
-        <h3 className="install-title">Install CBR AI Coach</h3>
+        <h3 className="install-title">Install Theory Coach AI</h3>
         <p className="install-description">
           Install our app for quick access and offline practice. Works just like a native app!
         </p>

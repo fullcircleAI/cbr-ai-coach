@@ -70,7 +70,7 @@ export const Settings: React.FC = () => {
 
     setIsSending(true);
     try {
-      const mailtoLink = `mailto:support@cbraicoach.com?subject=${encodeURIComponent(supportSubject)}&body=${encodeURIComponent(`From: ${editUsername}\n\n${supportMessage}`)}`;
+      const mailtoLink = `mailto:support@theorycoach.com?subject=${encodeURIComponent(supportSubject)}&body=${encodeURIComponent(`From: ${editUsername}\n\n${supportMessage}`)}`;
       window.open(mailtoLink);
       setSendSuccess(true);
       setSupportSubject('');
@@ -79,7 +79,7 @@ export const Settings: React.FC = () => {
       setTimeout(() => setSendSuccess(false), 3000);
     } catch (error) {
       console.error('Error sending support email:', error);
-      alert('Failed to open email client. Please send an email manually to support@cbraicoach.com');
+      alert('Failed to open email client. Please send an email manually to support@theorycoach.com');
     } finally {
       setIsSending(false);
     }
@@ -225,7 +225,7 @@ export const Settings: React.FC = () => {
           <p>You have the right to access, export, and delete your data at any time. You can manage your data through the Account settings.</p>
 
           <h3>Contact</h3>
-          <p>For privacy concerns, contact us at privacy@cbraicoach.com</p>
+          <p>For privacy concerns, contact us at privacy@theorycoach.com</p>
         </div>
       </div>
     </div>
@@ -244,10 +244,10 @@ export const Settings: React.FC = () => {
       <div className="settings-subpage-content">
         <div className="policy-content">
           <h3>1. Acceptance of Terms</h3>
-          <p>By using CBR AI Coach, you agree to these Terms of Service. If you do not agree, please do not use the app.</p>
+          <p>By using Theory Coach AI, you agree to these Terms of Service. If you do not agree, please do not use the app.</p>
 
           <h3>2. Service Description</h3>
-          <p>CBR AI Coach is an educational platform designed to help users prepare for the Dutch CBR driving theory exam through AI-powered learning.</p>
+          <p>Theory Coach AI is an educational platform designed to help users prepare for the Dutch driving theory exam through AI-powered learning.</p>
 
           <h3>3. User Responsibilities</h3>
           <p>You are responsible for maintaining the confidentiality of your account and for all activities under your account. You must provide accurate information.</p>
@@ -256,7 +256,7 @@ export const Settings: React.FC = () => {
           <p>You agree to use the service only for lawful purposes and in accordance with these Terms. You may not use the service to cheat or gain unfair advantages.</p>
 
           <h3>5. Intellectual Property</h3>
-          <p>All content, features, and functionality are owned by CBR AI Coach and are protected by copyright and other intellectual property laws.</p>
+          <p>All content, features, and functionality are owned by Theory Coach AI and are protected by copyright and other intellectual property laws.</p>
 
           <h3>6. Disclaimer</h3>
           <p>The service is provided "as is" without warranties of any kind. We do not guarantee that the service will be error-free or uninterrupted.</p>
@@ -268,7 +268,7 @@ export const Settings: React.FC = () => {
           <p>We reserve the right to modify these Terms at any time. Continued use of the service constitutes acceptance of modified Terms.</p>
 
           <h3>9. Contact</h3>
-          <p>For questions about these Terms, contact legal@cbraicoach.com</p>
+          <p>For questions about these Terms, contact legal@theorycoach.com</p>
         </div>
       </div>
     </div>
@@ -348,8 +348,8 @@ export const Settings: React.FC = () => {
 
           <div className="support-info">
             <h3>Other Ways to Reach Us</h3>
-            <p>📧 Email: support@cbraicoach.com</p>
-            <p>🌐 Website: www.cbraicoach.com</p>
+            <p>📧 Email: support@theorycoach.com</p>
+            <p>🌐 Website: www.theorycoach.com</p>
           </div>
         </div>
       </div>

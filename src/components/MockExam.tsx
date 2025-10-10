@@ -27,11 +27,11 @@ export const MockExam: React.FC = () => {
   const { examId } = useParams<{ examId: string }>();
   const navigate = useNavigate();
 
-  // Mock exam configurations - ONLY pass mark differs (official CBR format)
+  // Mock exam configurations - ONLY pass mark differs
   const examConfigs: Record<string, MockExamConfig> = {
-    'beginner': { questions: 50, timeLimit: 30, passRate: 88, difficulty: 'beginner' }, // Official CBR: 44/50
-    'intermediate': { questions: 50, timeLimit: 30, passRate: 92, difficulty: 'intermediate' }, // Higher: 46/50
-    'advanced': { questions: 50, timeLimit: 30, passRate: 96, difficulty: 'advanced' } // Highest: 48/50
+    'beginner': { questions: 50, timeLimit: 30, passRate: 88, difficulty: 'beginner' }, // 44/50
+    'intermediate': { questions: 50, timeLimit: 30, passRate: 92, difficulty: 'intermediate' }, // 46/50
+    'advanced': { questions: 50, timeLimit: 30, passRate: 96, difficulty: 'advanced' } // 48/50
   };
 
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -191,7 +191,7 @@ export const MockExam: React.FC = () => {
     setSelectedAnswer(answerId);
     setAnswers(prev => ({ ...prev, [currentQuestionIndex]: answerId }));
 
-    // Instant next question (like real CBR - no delays)
+    // Instant next question (no delays)
     setTimeout(() => {
       nextQuestion();
     }, 300);
@@ -236,7 +236,7 @@ export const MockExam: React.FC = () => {
             
             <div className="intro-header">
               <h1 className="intro-title">Quiz {quizNumber}</h1>
-              <p className="intro-subtitle">CBR Mock Exam</p>
+              <p className="intro-subtitle">Mock Exam</p>
             </div>
 
             <div className="exam-info-cards">
