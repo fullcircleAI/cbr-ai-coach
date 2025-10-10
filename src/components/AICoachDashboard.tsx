@@ -122,7 +122,11 @@ export const AICoachDashboard: React.FC = () => {
         testId = 'speed-limits'; // Continue with strengths
         break;
       case 'recommendation':
-        testId = 'alcohol-drugs'; // General recommendation
+        if (insight.message.includes('Traffic Lights')) {
+          testId = 'traffic-lights-signals'; // Match what we show!
+        } else {
+          testId = 'traffic-rules-signs'; // Better default
+        }
         break;
       default:
         testId = 'traffic-lights-signals';
