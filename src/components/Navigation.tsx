@@ -23,6 +23,13 @@ export const Navigation: React.FC = () => {
       description: 'Practice tests and mock exams'
     },
     {
+      id: 'mock-exam',
+      label: 'Mock Exam',
+      icon: '📝',
+      path: '/mock-exam',
+      description: 'Full mock exams'
+    },
+    {
       id: 'settings',
       label: 'Settings',
       icon: '⚙️',
