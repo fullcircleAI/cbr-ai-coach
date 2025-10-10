@@ -63,7 +63,7 @@ export const Navigation: React.FC = () => {
       {/* Sidebar Navigation */}
       <nav className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <div className="logo">
-          <div className="logo-icon">🧠</div>
+          <img src="/images/mascot.png" alt="Mascot" className="logo-mascot" />
           <span>AI Learning Coach</span>
         </div>
 
