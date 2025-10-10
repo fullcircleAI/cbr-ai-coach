@@ -288,10 +288,10 @@ export const PracticeTest: React.FC = () => {
               <button
                 className="practice-exit-btn" 
                 onClick={() => navigate('/')}
-                aria-label="Back to Dashboard"
-                title="Back to Dashboard"
+                aria-label="Exit Practice"
+                title="Exit Practice"
               >
-                ←
+                ×
               </button>
               <button className={`practice-mute-btn${isMuted ? ' muted' : ''}`} onClick={toggleMute} aria-label={isMuted ? 'Unmute' : 'Mute'}>
                 {isMuted ? '🔇' : '🔊'}
