@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import { PullToRefresh } from './PullToRefresh';
+import { aiCoach } from '../services/aiCoach';
+import type { AIInsight } from '../services/aiCoach';
 import './AICoachDashboard.css';
 
 interface UserProgress {
@@ -13,14 +15,6 @@ interface UserProgress {
   strongAreas: string[];
 }
 
-interface AIInsight {
-  type: 'mistake' | 'strength' | 'recommendation';
-  message: string;
-  priority: 'amber' | 'green' | 'red';
-  frequency?: number;
-  lastOccurrence?: string;
-  explanation?: string;
-}
 
 export const AICoachDashboard: React.FC = () => {
   const navigate = useNavigate();
@@ -37,42 +31,20 @@ export const AICoachDashboard: React.FC = () => {
   const [aiInsights, setAiInsights] = useState<AIInsight[]>([]);
 
   useEffect(() => {
-    // Simulate loading user data
-    const mockData: UserProgress = {
-      averageScore: 75,
-      totalQuestions: 120,
-      correctAnswers: 90,
-      studyTime: 8.5,
-      weakAreas: ['Traffic Lights', 'Priority Rules', 'Roundabouts'],
-      strongAreas: ['Speed Limits', 'Parking Rules']
+    // Load REAL data from AI Coach
+    const realData: UserProgress = {
+      averageScore: aiCoach.getPracticeAverage(),
+      totalQuestions: aiCoach.getTestHistory().reduce((sum, t) => sum + t.totalQuestions, 0),
+      correctAnswers: aiCoach.getTestHistory().reduce((sum, t) => sum + t.score, 0),
+      studyTime: aiCoach.getStudyTime(),
+      weakAreas: [],
+      strongAreas: []
     };
 
-        const mockInsights: AIInsight[] = [
-          {
-            type: 'recommendation',
-            message: "Traffic Lights",
-            priority: 'red',
-            explanation: 'Focus here for +15% score boost'
-          },
-          {
-            type: 'mistake',
-            message: "Red and amber signals",
-            priority: 'amber',
-            frequency: 4,
-            lastOccurrence: '2 hours ago',
-            explanation: 'Mixing up light sequence'
-          },
-          {
-            type: 'strength',
-            message: "Speed Limits",
-            priority: 'green',
-            frequency: 0,
-            explanation: '90% accuracy'
-          }
-        ];
+    const realInsights = aiCoach.getAIInsights();
 
-    setUserProgress(mockData);
-    setAiInsights(mockInsights);
+    setUserProgress(realData);
+    setAiInsights(realInsights);
   }, []);
 
   const handleRefresh = async () => {
@@ -104,34 +76,8 @@ export const AICoachDashboard: React.FC = () => {
   };
 
   const navigateToRecommendedTest = (insight: AIInsight) => {
-    // Map insight types to specific practice tests
-    let testId = '';
-    switch (insight.type) {
-      case 'mistake':
-        if (insight.message.includes('Traffic Lights')) {
-          testId = 'traffic-lights-signals';
-        } else if (insight.message.includes('Priority Rules')) {
-          testId = 'priority-rules';
-        } else if (insight.message.includes('Roundabouts')) {
-          testId = 'roundabouts';
-        } else {
-          testId = 'traffic-lights-signals'; // Default
-        }
-        break;
-      case 'strength':
-        testId = 'speed-limits'; // Continue with strengths
-        break;
-      case 'recommendation':
-        if (insight.message.includes('Traffic Lights')) {
-          testId = 'traffic-lights-signals'; // Match what we show!
-        } else {
-          testId = 'traffic-rules-signs'; // Better default
-        }
-        break;
-      default:
-        testId = 'traffic-lights-signals';
-    }
-    
+    // Use testId from AI Coach (already calculated)
+    const testId = insight.testId || 'traffic-rules-signs';
     navigate(`/practice/${testId}`);
   };
 

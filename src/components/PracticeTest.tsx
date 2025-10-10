@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import * as questionData from '../question_data';
 import { lightHaptic, successHaptic, errorHaptic } from '../utils/haptics';
+import { aiCoach } from '../services/aiCoach';
 import './PracticeTest.css';
 import './PracticeResult.css';
 
@@ -136,6 +137,16 @@ export const PracticeTest: React.FC = () => {
       setIsAnswered(false);
       setShowExplanation(false);
     } else {
+      // Test complete - save results to AI Coach
+      const percentage = Math.round((score / questions.length) * 100);
+      aiCoach.saveTestResult({
+        testId: testId || '',
+        testName: getTestName(),
+        score: score,
+        totalQuestions: questions.length,
+        percentage: percentage,
+        date: new Date().toISOString()
+      });
       setTestComplete(true);
     }
   };
@@ -183,14 +194,12 @@ export const PracticeTest: React.FC = () => {
   };
 
   const getNextTest = () => {
-    // Return recommended test (synchronized with dashboard and practice page)
-    // If user just completed the recommended test, suggest next logical test
-    if (testId === 'traffic-lights-signals') {
-      return { id: 'priority-rules', name: 'Priority & Right of Way' };
-    }
-    
-    // Default recommendation (same as dashboard)
-    return { id: 'traffic-lights-signals', name: 'Traffic Lights & Signals' };
+    // Get REAL next recommendation from AI Coach
+    const recommendation = aiCoach.getTopRecommendation();
+    return { 
+      id: recommendation.testId, 
+      name: recommendation.testName 
+    };
   };
 
   if (questions.length === 0) {

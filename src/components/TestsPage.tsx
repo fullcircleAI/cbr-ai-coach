@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navigation } from './Navigation';
+import { aiCoach } from '../services/aiCoach';
 import './TestsPage.css';
 
 interface PracticeTest {
@@ -16,12 +17,21 @@ interface PracticeTest {
 export const TestsPage: React.FC = () => {
   const navigate = useNavigate();
 
-  // Get the recommended test (synchronized with dashboard)
-  const recommendedTest = {
-    id: 'traffic-lights-signals',
-    name: 'Traffic Lights & Signals',
-    reason: 'Focus here for +15% score boost'
-  };
+  // Get REAL recommendation from AI Coach
+  const [recommendedTest, setRecommendedTest] = useState({
+    id: 'traffic-rules-signs',
+    name: 'Traffic Rules & Signs',
+    reason: 'Perfect starting point'
+  });
+
+  useEffect(() => {
+    const recommendation = aiCoach.getTopRecommendation();
+    setRecommendedTest({
+      id: recommendation.testId,
+      name: recommendation.testName,
+      reason: recommendation.reason
+    });
+  }, []);
 
   const practiceTests: PracticeTest[] = [
     {
