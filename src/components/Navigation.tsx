@@ -62,10 +62,6 @@ export const Navigation: React.FC = () => {
 
       {/* Sidebar Navigation */}
       <nav className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-        <div className="logo">
-          <img src="/images/mascot.png" alt="Mascot" className="logo-mascot" />
-        </div>
-
         <div className="nav-list">
           {navItems.map((item) => (
             <button
@@ -74,7 +70,6 @@ export const Navigation: React.FC = () => {
               onClick={() => handleNavClick(item.path)}
               title={item.label}
             >
-              <div className="nav-icon">{item.icon}</div>
               <span className="nav-label">{item.label}</span>
             </button>
           ))}
