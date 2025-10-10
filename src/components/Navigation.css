@@ -215,8 +215,18 @@
   }
   
   .footer-icon {
-    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
     margin-bottom: 0.2rem;
+  }
+  
+  .footer-icon svg {
+    width: 24px;
+    height: 24px;
+    transition: stroke 0.2s ease;
   }
   
   .footer-label {

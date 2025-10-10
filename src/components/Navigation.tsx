@@ -2,6 +2,40 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './Navigation.css';
 
+// Instagram-style SVG Icons with theme blue color
+const DashboardIcon = ({ active }: { active: boolean }) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={active ? '#1A3E7A' : '#7f8c8d'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="7" height="7" />
+    <rect x="14" y="3" width="7" height="7" />
+    <rect x="14" y="14" width="7" height="7" />
+    <rect x="3" y="14" width="7" height="7" />
+  </svg>
+);
+
+const PracticeIcon = ({ active }: { active: boolean }) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={active ? '#1A3E7A' : '#7f8c8d'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+    <polyline points="14 2 14 8 20 8" />
+    <line x1="9" y1="15" x2="15" y2="15" />
+    <line x1="9" y1="12" x2="15" y2="12" />
+  </svg>
+);
+
+const MockExamIcon = ({ active }: { active: boolean }) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={active ? '#1A3E7A' : '#7f8c8d'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9 11l3 3L22 4" />
+    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+  </svg>
+);
+
+const SettingsIcon = ({ active }: { active: boolean }) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={active ? '#1A3E7A' : '#7f8c8d'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="3" />
+    <path d="M12 1v6m0 6v6m6-12h-6m-6 0H1m11 6h6m-6 0H1" />
+    <path d="M12 1a11 11 0 0 1 0 22 11 11 0 0 1 0-22" />
+  </svg>
+);
+
 export const Navigation: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -11,28 +45,28 @@ export const Navigation: React.FC = () => {
     {
       id: 'dashboard',
       label: 'Dashboard',
-      icon: '📊',
+      icon: DashboardIcon,
       path: '/',
       description: 'Your learning dashboard'
     },
     {
       id: 'tests',
       label: 'Practice',
-      icon: '🧪',
+      icon: PracticeIcon,
       path: '/tests',
       description: 'Practice tests and mock exams'
     },
     {
       id: 'mock-exam',
       label: 'Mock Exam',
-      icon: '📝',
+      icon: MockExamIcon,
       path: '/mock-exam',
       description: 'Full mock exams'
     },
     {
       id: 'settings',
       label: 'Settings',
-      icon: '⚙️',
+      icon: SettingsIcon,
       path: '/settings',
       description: 'App settings and preferences'
     }
@@ -94,16 +128,21 @@ export const Navigation: React.FC = () => {
 
       {/* Mobile Footer Navigation */}
       <div className="footer-nav">
-        {navItems.map((item) => (
-          <button
-            key={item.id}
-            className={`footer-btn ${isActive(item.path) ? 'active' : ''}`}
-            onClick={() => handleNavClick(item.path)}
-            title={item.label}
-          >
-            <div className="footer-icon">{item.icon}</div>
-          </button>
-        ))}
+        {navItems.map((item) => {
+          const IconComponent = item.icon;
+          return (
+            <button
+              key={item.id}
+              className={`footer-btn ${isActive(item.path) ? 'active' : ''}`}
+              onClick={() => handleNavClick(item.path)}
+              title={item.label}
+            >
+              <div className="footer-icon">
+                <IconComponent active={isActive(item.path)} />
+              </div>
+            </button>
+          );
+        })}
       </div>
     </>
   );
