@@ -1,0 +1,61 @@
+{
+  "navigation": {
+    "dashboard": "Dashboard",
+    "practice": "Oefenen",
+    "mockExam": "Proefexamen",
+    "settings": "Instellingen"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "averageScore": "Gemiddelde Score",
+    "studyTime": "Studietijd",
+    "timeRemaining": "Uren tot 24u Doel",
+    "yourProgress": "Je Voortgang",
+    "startPractice": "Start Oefenen"
+  },
+  "practice": {
+    "title": "Oefenen",
+    "recommendedForYou": "Aanbevolen voor Jou",
+    "startTest": "Start",
+    "question": "Vraag",
+    "of": "van",
+    "nextQuestion": "Volgende Vraag",
+    "finishTest": "Test Afronden",
+    "explanation": "Uitleg"
+  },
+  "settings": {
+    "title": "Instellingen",
+    "account": "Account",
+    "language": "Taal",
+    "privacy": "Privacybeleid",
+    "terms": "Servicevoorwaarden",
+    "faq": "Veelgestelde Vragen",
+    "support": "Ondersteuning"
+  },
+  "quiz": {
+    "title": "Proefexamen"
+  },
+  "questions": {
+    "trafficLights": {
+      "q1": {
+        "text": "Je nadert verkeerslichten die net op oranje (geel) zijn gesprongen. Wat is de algemene regel die je moet volgen?",
+        "options": {
+          "o1": "Versnel om erdoorheen te rijden voordat het rood wordt.",
+          "o2": "Stop voor de stopstreep, tenzij je zo dichtbij bent dat veilig stoppen een ongeval zou veroorzaken.",
+          "o3": "Ga door met dezelfde snelheid omdat dit betekent dat de lichten op groen gaan springen."
+        },
+        "explanation": "Oranje betekent stoppen, tenzij je de stopstreep al bent gepasseerd of zo dichtbij bent dat plotseling stoppen een botsing zou kunnen veroorzaken."
+      },
+      "q2": {
+        "text": "Wat betekent een groene filterpijl (bijv. voor linksaf) bij verkeerslichten wanneer het hoofdlicht rood is?",
+        "options": {
+          "o1": "Je mag linksaf als de weg vrij is, maar geef voetgangers die oversteken voorrang.",
+          "o2": "Je moet wachten op het groene hoofdlicht voordat je linksaf gaat.",
+          "o3": "Je hebt voorrang op al het andere verkeer en voetgangers bij het linksaf slaan."
+        },
+        "explanation": "Een groene filterpijl laat je toe om in de richting van de pijl te rijden, zelfs als het hoofdlicht rood is, mits je voorrang geeft aan voetgangers of andere weggebruikers die voorrang hebben."
+      }
+    }
+  }
+}
+

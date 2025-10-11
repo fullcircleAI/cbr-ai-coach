@@ -1,0 +1,61 @@
+{
+  "navigation": {
+    "dashboard": "Dashboard",
+    "practice": "Practice",
+    "mockExam": "Mock Exam",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "averageScore": "Practice Average",
+    "studyTime": "Study Time",
+    "timeRemaining": "Hours to 24h Goal",
+    "yourProgress": "Your Progress",
+    "startPractice": "Start Practice"
+  },
+  "practice": {
+    "title": "Practice",
+    "recommendedForYou": "Recommended for You",
+    "startTest": "Start",
+    "question": "Question",
+    "of": "of",
+    "nextQuestion": "Next Question",
+    "finishTest": "Finish Test",
+    "explanation": "Explanation"
+  },
+  "settings": {
+    "title": "Settings",
+    "account": "Account",
+    "language": "Language",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "faq": "FAQ",
+    "support": "Support"
+  },
+  "quiz": {
+    "title": "Mock Exam"
+  },
+  "questions": {
+    "trafficLights": {
+      "q1": {
+        "text": "You are approaching traffic lights that have just changed to amber (yellow). What is the general rule you should follow?",
+        "options": {
+          "o1": "Accelerate to pass through before it turns red.",
+          "o2": "Stop before the stop line, unless you are so close that to stop safely would cause an accident.",
+          "o3": "Continue at the same speed as it means the lights are about to turn green."
+        },
+        "explanation": "Amber means stop unless you've already crossed the stop line or are so close that stopping suddenly might cause a collision."
+      },
+      "q2": {
+        "text": "What does a green filter arrow (e.g., for turning left) at traffic lights indicate when the main light is red?",
+        "options": {
+          "o1": "You may turn left if the way is clear, but give way to pedestrians crossing.",
+          "o2": "You must wait for the main green light before turning left.",
+          "o3": "You have priority over all other traffic and pedestrians when turning left."
+        },
+        "explanation": "A green filter arrow allows you to proceed in the direction of the arrow, even if the main light is red, provided you give way to any pedestrians or other road users who have priority."
+      }
+    }
+  }
+}
+
