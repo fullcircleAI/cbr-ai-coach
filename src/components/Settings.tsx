@@ -31,7 +31,7 @@ const faqs: FAQ[] = [
 ];
 
 export const Settings: React.FC = () => {
-  const [activePage, setActivePage] = useState<'main' | 'account' | 'privacy' | 'terms' | 'faq' | 'support'>('main');
+  const [activePage, setActivePage] = useState<'main' | 'account' | 'language' | 'privacy' | 'terms' | 'faq' | 'support'>('main');
   const [isEditing, setIsEditing] = useState(false);
   const [editUsername, setEditUsername] = useState('AI Learner');
   const [supportSubject, setSupportSubject] = useState('');
@@ -105,6 +105,13 @@ export const Settings: React.FC = () => {
         <div className="settings-btn-wrapper">
           <button className="settings-main-menu-btn" onClick={() => setActivePage('account')}>
             <span>Account</span>
+            <span className="settings-arrow">›</span>
+          </button>
+        </div>
+
+        <div className="settings-btn-wrapper">
+          <button className="settings-main-menu-btn" onClick={() => setActivePage('language')}>
+            <span>Language</span>
             <span className="settings-arrow">›</span>
           </button>
         </div>
@@ -196,6 +203,74 @@ export const Settings: React.FC = () => {
     </div>
   );
 
+  // Language Selection Sub-Page
+  const renderLanguagePage = () => {
+    const [selectedLanguage, setSelectedLanguage] = useState<string>(() => {
+      return localStorage.getItem('preferredLanguage') || 'en';
+    });
+
+    const handleLanguageSelect = (language: string) => {
+      setSelectedLanguage(language);
+      localStorage.setItem('preferredLanguage', language);
+      // Show success message
+      alert(`Language changed to ${language === 'en' ? 'English' : language === 'nl' ? 'Dutch' : 'Arabic'}`);
+    };
+
+    return (
+      <div className="settings-subpage">
+        <div className="settings-subpage-header">
+          <button className="settings-back-btn" onClick={handleBackToMain}>
+            ←
+          </button>
+          <h2 className="settings-subpage-title">Language</h2>
+        </div>
+
+        <div className="settings-subpage-content">
+          <div className="language-section">
+            <p className="language-description">Select your preferred language for the app interface</p>
+            
+            <div className="language-options-settings">
+              <button
+                className={`language-option-settings ${selectedLanguage === 'en' ? 'active' : ''}`}
+                onClick={() => handleLanguageSelect('en')}
+                aria-label="Select English language"
+              >
+                <div className="language-content-settings">
+                  <span className="flag-settings">🇬🇧</span>
+                  <span className="language-name-settings">English</span>
+                  {selectedLanguage === 'en' && <span className="checkmark">✓</span>}
+                </div>
+              </button>
+              
+              <button
+                className={`language-option-settings ${selectedLanguage === 'nl' ? 'active' : ''}`}
+                onClick={() => handleLanguageSelect('nl')}
+                aria-label="Select Dutch language"
+              >
+                <div className="language-content-settings">
+                  <span className="flag-settings">🇳🇱</span>
+                  <span className="language-name-settings">Dutch</span>
+                  {selectedLanguage === 'nl' && <span className="checkmark">✓</span>}
+                </div>
+              </button>
+
+              <button
+                className={`language-option-settings ${selectedLanguage === 'ar' ? 'active' : ''}`}
+                onClick={() => handleLanguageSelect('ar')}
+                aria-label="Select Arabic language"
+              >
+                <div className="language-content-settings">
+                  <span className="flag-settings">🇸🇦</span>
+                  <span className="language-name-settings">Arabic</span>
+                  {selectedLanguage === 'ar' && <span className="checkmark">✓</span>}
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   // Privacy Policy Sub-Page
   const renderPrivacyPage = () => (
@@ -363,6 +438,7 @@ export const Settings: React.FC = () => {
         <div className="settings-container">
           {activePage === 'main' && renderMainMenu()}
           {activePage === 'account' && renderAccountPage()}
+          {activePage === 'language' && renderLanguagePage()}
           {activePage === 'privacy' && renderPrivacyPage()}
           {activePage === 'terms' && renderTermsPage()}
           {activePage === 'faq' && renderFAQPage()}

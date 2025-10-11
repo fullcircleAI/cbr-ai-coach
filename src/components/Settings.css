@@ -655,3 +655,149 @@
     height: calc(100vh - 4rem);
   }
 }
+
+/* ========== LANGUAGE SELECTION IN SETTINGS ========== */
+.language-section {
+  margin-bottom: 2rem;
+}
+
+.language-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.language-options-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.language-option-settings {
+  display: block;
+  width: 100%;
+  border: 2px solid #E2E8F0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #F8FAFC 0%, #E8ECF1 100%);
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(26, 62, 122, 0.1);
+  transition: all 0.2s ease;
+  min-height: 68px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.language-option-settings:hover {
+  border-color: #1A3E7A;
+  box-shadow: 0 6px 20px rgba(26, 62, 122, 0.2);
+  transform: translateY(-2px);
+}
+
+.language-option-settings:active {
+  transform: translateY(0);
+  background: linear-gradient(135deg, #E8ECF1 0%, #D8E0E8 100%);
+}
+
+.language-option-settings.active {
+  border-color: #1A3E7A;
+  border-width: 3px;
+  background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%);
+}
+
+.language-content-settings {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.25rem 1.5rem;
+  min-height: 68px;
+  position: relative;
+  gap: 1rem;
+}
+
+.language-option-settings.active .language-content-settings {
+  color: white;
+}
+
+.flag-settings {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  flex-shrink: 0;
+}
+
+.language-name-settings {
+  font-size: 1.25rem;
+  color: #002868;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  margin: 0;
+  flex: 1;
+}
+
+.language-option-settings.active .language-name-settings {
+  color: white;
+}
+
+.checkmark {
+  font-size: 1.75rem;
+  color: white;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+/* Mobile responsive for language section */
+@media (max-width: 768px) {
+  .language-options-settings {
+    gap: 0.875rem;
+  }
+
+  .language-option-settings {
+    min-height: 60px;
+  }
+
+  .language-content-settings {
+    padding: 1rem 1.25rem;
+    min-height: 60px;
+  }
+
+  .flag-settings {
+    font-size: 1.75rem;
+  }
+
+  .language-name-settings {
+    font-size: 1.125rem;
+  }
+
+  .checkmark {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 375px) {
+  .language-option-settings {
+    min-height: 56px;
+  }
+
+  .language-content-settings {
+    padding: 0.875rem 1rem;
+    min-height: 56px;
+  }
+
+  .flag-settings {
+    font-size: 1.5rem;
+  }
+
+  .language-name-settings {
+    font-size: 1rem;
+  }
+
+  .checkmark {
+    font-size: 1.25rem;
+  }
+}
