@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 import './Navigation.css';
 
 // Instagram-style SVG Icons with theme blue color
@@ -39,33 +40,34 @@ const SettingsIcon = ({ active }: { active: boolean }) => (
 export const Navigation: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { t_nested } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
     {
       id: 'dashboard',
-      label: 'Dashboard',
+      label: t_nested('navigation.dashboard'),
       icon: DashboardIcon,
       path: '/',
       description: 'Your learning dashboard'
     },
     {
       id: 'tests',
-      label: 'Practice',
+      label: t_nested('navigation.practice'),
       icon: PracticeIcon,
       path: '/tests',
       description: 'Practice tests and mock exams'
     },
     {
       id: 'mock-exam',
-      label: 'Mock Exam',
+      label: t_nested('navigation.exam'),
       icon: MockExamIcon,
       path: '/mock-exam',
       description: 'Full mock exams'
     },
     {
       id: 'settings',
-      label: 'Settings',
+      label: t_nested('navigation.settings'),
       icon: SettingsIcon,
       path: '/settings',
       description: 'App settings and preferences'
