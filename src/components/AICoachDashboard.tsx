@@ -128,7 +128,7 @@ export const AICoachDashboard: React.FC = () => {
 
           {/* AI Insights Summary */}
           <div className="ai-insights-summary">
-            <h3>AI Learning Analysis</h3>
+            <h3>Your Progress</h3>
             <div className="insights-grid">
               {aiInsights.map((insight, index) => (
                 <div key={index} className={`insight-card ${insight.priority}`}>
