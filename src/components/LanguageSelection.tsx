@@ -1,16 +1,14 @@
-import { useNavigate } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
+import type { Language } from '../types_i18n';
 import './LanguageSelection.css';
 
-type Language = 'en' | 'nl' | 'ar';
-
 export const LanguageSelection: React.FC = () => {
-  const navigate = useNavigate();
+  const { setLanguage } = useLanguage();
 
   const handleLanguageSelect = (language: Language) => {
-    // Save language preference
-    localStorage.setItem('preferredLanguage', language);
-    // Navigate to dashboard
-    navigate('/');
+    // Set language (this will also save to localStorage)
+    setLanguage(language);
+    // No need to navigate - App.tsx will automatically show the app once language is set
   };
 
   return (
