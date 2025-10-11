@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import { Navigation } from './Navigation';
 import './MockExamSelection.css';
 
 export const MockExamSelection: React.FC = () => {
   const navigate = useNavigate();
-  const { t_nested } = useLanguage();
+  const { t } = useTranslation();
   const [recentScores, setRecentScores] = useState<Record<string, any>>({});
 
   const mockExams = [
@@ -64,7 +64,7 @@ export const MockExamSelection: React.FC = () => {
           <div className="tests-header">
             <div className="header-content">
               <div className="header-text">
-                <h1>{t_nested('quiz.title')}</h1>
+                <h1>{t('quiz.title')}</h1>
               </div>
             </div>
           </div>

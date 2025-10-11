@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import { Navigation } from './Navigation';
 import { aiCoach } from '../services/aiCoach';
 import './TestsPage.css';
@@ -17,7 +17,7 @@ interface PracticeTest {
 
 export const TestsPage: React.FC = () => {
   const navigate = useNavigate();
-  const { t_nested } = useLanguage();
+  const { t } = useTranslation();
 
   // Get REAL recommendation from AI Coach
   const [recommendedTest, setRecommendedTest] = useState({
@@ -240,7 +240,7 @@ export const TestsPage: React.FC = () => {
           <div className="tests-header">
             <div className="header-content">
               <div className="header-text">
-                <h1>{t_nested('practice.title')}</h1>
+                <h1>{t('practice.title')}</h1>
               </div>
             </div>
           </div>
@@ -249,7 +249,7 @@ export const TestsPage: React.FC = () => {
             {/* Recommendation Banner - iOS/Android Style */}
             <div className="recommendation-banner">
               <div className="recommendation-header">
-                <span className="recommendation-title">{t_nested('practice.recommendedForYou')}</span>
+                <span className="recommendation-title">{t('practice.recommendedForYou')}</span>
               </div>
               <div className="recommendation-content">
                 <h3 className="recommendation-test-name">{recommendedTest.name}</h3>
@@ -259,7 +259,7 @@ export const TestsPage: React.FC = () => {
                 className="recommendation-start-btn"
                 onClick={() => handleTestClick(recommendedTest.id)}
               >
-                {t_nested('practice.startTest')}
+                {t('practice.startTest')}
               </button>
             </div>
 

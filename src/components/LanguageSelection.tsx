@@ -1,14 +1,15 @@
-import { useLanguage } from '../contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import type { Language } from '../types_i18n';
 import './LanguageSelection.css';
 
 export const LanguageSelection: React.FC = () => {
-  const { setLanguage } = useLanguage();
+  const { i18n } = useTranslation();
 
   const handleLanguageSelect = (language: Language) => {
-    // Set language (this will also save to localStorage)
-    setLanguage(language);
-    // No need to navigate - App.tsx will automatically show the app once language is set
+    // Set language in i18n (this will also save to localStorage)
+    i18n.changeLanguage(language);
+    // Trigger reload to show app
+    window.location.reload();
   };
 
   return (

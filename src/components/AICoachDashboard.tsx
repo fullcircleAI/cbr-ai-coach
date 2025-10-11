@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import { Navigation } from './Navigation';
 import { PullToRefresh } from './PullToRefresh';
 import { aiCoach } from '../services/aiCoach';
@@ -19,7 +19,7 @@ interface UserProgress {
 
 export const AICoachDashboard: React.FC = () => {
   const navigate = useNavigate();
-  const { t_nested } = useLanguage();
+  const { t } = useTranslation();
   
   const [userProgress, setUserProgress] = useState<UserProgress>({
     averageScore: 0,
@@ -94,7 +94,7 @@ export const AICoachDashboard: React.FC = () => {
             <div className="summary-stats">
               <div className="summary-stat">
                 <div className="stat-number">{userProgress.averageScore}%</div>
-                <div className="stat-label">{t_nested('dashboard.averageScore')}</div>
+                <div className="stat-label">{t('dashboard.averageScore')}</div>
                 <div className="progress-bar-bg">
                   <div className="progress-bar-fill" 
                        style={{ 
@@ -105,7 +105,7 @@ export const AICoachDashboard: React.FC = () => {
               </div>
               <div className="summary-stat">
                 <div className="stat-number">{formatTime(userProgress.studyTime)}</div>
-                <div className="stat-label">{t_nested('dashboard.studyTime')}</div>
+                <div className="stat-label">{t('dashboard.studyTime')}</div>
                 <div className="progress-bar-bg">
                   <div className="progress-bar-fill" 
                        style={{ 
@@ -116,7 +116,7 @@ export const AICoachDashboard: React.FC = () => {
               </div>
               <div className="summary-stat">
                 <div className="stat-number">{formatTime(getTimeRemaining().remaining)}</div>
-                <div className="stat-label">{t_nested('dashboard.timeRemaining')}</div>
+                <div className="stat-label">{t('dashboard.timeRemaining')}</div>
                 <div className="progress-bar-bg">
                   <div className="progress-bar-fill" 
                        style={{ 
@@ -130,7 +130,7 @@ export const AICoachDashboard: React.FC = () => {
 
           {/* AI Insights Summary */}
           <div className="ai-insights-summary">
-            <h3>{t_nested('dashboard.yourProgress')}</h3>
+            <h3>{t('dashboard.yourProgress')}</h3>
             <div className="insights-grid">
               {aiInsights.map((insight, index) => (
                 <div key={index} className={`insight-card ${insight.priority}`}>
@@ -148,7 +148,7 @@ export const AICoachDashboard: React.FC = () => {
                         className="start-practice-btn"
                         onClick={() => navigateToRecommendedTest(insight)}
                       >
-                        <span className="btn-text">{t_nested('dashboard.startPractice')}</span>
+                        <span className="btn-text">{t('dashboard.startPractice')}</span>
                         <span className="btn-time">15 min</span>
                       </button>
                     )}

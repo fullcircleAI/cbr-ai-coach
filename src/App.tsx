@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import { SplashScreen } from './components/SplashScreen';
 import { LanguageSelection } from './components/LanguageSelection';
 import { InstallPrompt } from './components/InstallPrompt';
@@ -17,7 +17,8 @@ import './App.css';
 
 // AppContent component that checks for language selection
 function AppContent() {
-  const { currentLanguage } = useLanguage();
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   const [showSplash, setShowSplash] = useState(() => {
     // Only show splash on first visit (like Duolingo)
     const hasSeenSplash = localStorage.getItem('hasSeenSplash');
@@ -82,11 +83,9 @@ function AppContent() {
 
 function App() {
   return (
-    <LanguageProvider>
-      <Router>
-        <AppContent />
-      </Router>
-    </LanguageProvider>
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 

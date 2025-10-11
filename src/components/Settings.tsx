@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import { Navigation } from './Navigation';
 import './Settings.css';
 
@@ -32,7 +32,7 @@ const faqs: FAQ[] = [
 ];
 
 export const Settings: React.FC = () => {
-  const { t_nested } = useLanguage();
+  const { t } = useTranslation();
   const [activePage, setActivePage] = useState<'main' | 'account' | 'language' | 'privacy' | 'terms' | 'faq' | 'support'>('main');
   const [isEditing, setIsEditing] = useState(false);
   const [editUsername, setEditUsername] = useState('AI Learner');
@@ -98,7 +98,7 @@ export const Settings: React.FC = () => {
       <div className="tests-header">
         <div className="header-content">
           <div className="header-text">
-            <h1>{t_nested('settings.title')}</h1>
+            <h1>{t('settings.title')}</h1>
           </div>
         </div>
       </div>
@@ -106,42 +106,42 @@ export const Settings: React.FC = () => {
       <div className="settings-main-menu">
         <div className="settings-btn-wrapper">
           <button className="settings-main-menu-btn" onClick={() => setActivePage('account')}>
-            <span>{t_nested('settings.account')}</span>
+            <span>{t('settings.account')}</span>
             <span className="settings-arrow">›</span>
           </button>
         </div>
 
         <div className="settings-btn-wrapper">
           <button className="settings-main-menu-btn" onClick={() => setActivePage('language')}>
-            <span>{t_nested('settings.language')}</span>
+            <span>{t('settings.language')}</span>
             <span className="settings-arrow">›</span>
           </button>
         </div>
 
         <div className="settings-btn-wrapper">
           <button className="settings-main-menu-btn" onClick={() => setActivePage('privacy')}>
-            <span>{t_nested('settings.privacy')}</span>
+            <span>{t('settings.privacy')}</span>
             <span className="settings-arrow">›</span>
           </button>
         </div>
 
         <div className="settings-btn-wrapper">
           <button className="settings-main-menu-btn" onClick={() => setActivePage('terms')}>
-            <span>{t_nested('settings.terms')}</span>
+            <span>{t('settings.terms')}</span>
             <span className="settings-arrow">›</span>
           </button>
         </div>
 
         <div className="settings-btn-wrapper">
           <button className="settings-main-menu-btn" onClick={() => setActivePage('faq')}>
-            <span>{t_nested('settings.faq')}</span>
+            <span>{t('settings.faq')}</span>
             <span className="settings-arrow">›</span>
           </button>
         </div>
 
         <div className="settings-btn-wrapper">
           <button className="settings-main-menu-btn" onClick={() => setActivePage('support')}>
-            <span>{t_nested('settings.support')}</span>
+            <span>{t('settings.support')}</span>
             <span className="settings-arrow">›</span>
           </button>
         </div>
