@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 import { Navigation } from './Navigation';
 import * as questionData from '../question_data';
+import { getTranslatedQuestions } from '../services/questionTranslationService';
 import { lightHaptic, successHaptic, errorHaptic } from '../utils/haptics';
 import { aiCoach } from '../services/aiCoach';
 import './PracticeTest.css';
@@ -21,6 +23,7 @@ interface Question {
 export const PracticeTest: React.FC = () => {
   const { testId } = useParams<{ testId: string }>();
   const navigate = useNavigate();
+  const { currentLanguage } = useLanguage();
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
@@ -108,10 +111,18 @@ export const PracticeTest: React.FC = () => {
         default:
           questions = questionData.trafficLightsSignalsQuestions;
       }
-      setQuestions(questions);
+      
+      // Translate questions based on current language
+      const translatedQuestions = getTranslatedQuestions(
+        testId || '',
+        questions,
+        currentLanguage || 'en'
+      );
+      
+      setQuestions(translatedQuestions);
     };
     loadQuestions();
-  }, [testId]);
+  }, [testId, currentLanguage]);
 
   const handleAnswer = (answerId: string) => {
     if (!isAnswered) {
