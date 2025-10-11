@@ -33,21 +33,28 @@
    ```
 
 5. **Components Translated** ✅
-   - **Navigation**: Dashboard, Practice, Mock Exam, Settings labels
+   - **Navigation**: Dashboard, Practice, Mock Exam, Settings labels ✅
+   - **AICoachDashboard**: Stats labels, progress title, start button ✅
+   - **TestsPage**: Title, recommendation banner, start button ✅
+   - **Settings**: All main menu items, titles ✅
+   - **MockExamSelection**: Mock exam page title ✅
 
 ---
 
 ## ⚠️ **PHASE 2: IN PROGRESS - Component Translation**
 
+### **Components FULLY Translated:**
+- ✅ **Navigation** (all labels)
+- ✅ **AICoachDashboard** (all visible text)
+- ✅ **TestsPage / Practice** (all visible text)
+- ✅ **Settings** (main menu + titles)
+- ✅ **MockExamSelection** (title)
+
 ### **Components STILL NEED Translation Hooks:**
 
 #### **High Priority (Most Visible):**
-- [ ] **AICoachDashboard** - Main dashboard text
-- [ ] **TestsPage** - Practice test list
-- [ ] **PracticeTest** - Test questions, options, explanations
-- [ ] **MockExamSelection** - Mock exam list
-- [ ] **MockExam** - Exam interface
-- [ ] **Settings** - Settings labels
+- [ ] **PracticeTest** - Test questions, options, explanations, UI labels
+- [ ] **MockExam** - Exam interface, rules, instructions
 
 #### **Medium Priority:**
 - [ ] **AICoachRecommendations** - Recommendations text
