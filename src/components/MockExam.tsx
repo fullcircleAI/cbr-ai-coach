@@ -231,33 +231,12 @@ export const MockExam: React.FC = () => {
         <main className="main-content">
           <div className="mock-exam-intro">
             <button className="back-btn" onClick={() => navigate('/mock-exam')}>
-              × Close
+              ←
             </button>
             
             <div className="intro-header">
               <h1 className="intro-title">Theory Exam</h1>
               <p className="intro-subtitle">Official Format</p>
-            </div>
-
-            <div className="exam-info-cards">
-              <div className="info-card">
-                <div className="info-details">
-                  <span className="info-value">{examConfig.questions}</span>
-                  <span className="info-label">Questions</span>
-                </div>
-              </div>
-              <div className="info-card">
-                <div className="info-details">
-                  <span className="info-value">{examConfig.timeLimit}</span>
-                  <span className="info-label">Minutes</span>
-                </div>
-              </div>
-              <div className="info-card">
-                <div className="info-details">
-                  <span className="info-value">{examConfig.passRate}%</span>
-                  <span className="info-label">Required</span>
-                </div>
-              </div>
             </div>
 
             <div className="exam-rules">
