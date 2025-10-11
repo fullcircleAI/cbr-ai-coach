@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import { Navigation } from './Navigation';
 import * as questionData from '../question_data';
-import { getTranslatedQuestions } from '../services/questionTranslationService';
 import { lightHaptic, successHaptic, errorHaptic } from '../utils/haptics';
 import { aiCoach } from '../services/aiCoach';
 import './PracticeTest.css';
@@ -23,7 +22,7 @@ interface Question {
 export const PracticeTest: React.FC = () => {
   const { testId } = useParams<{ testId: string }>();
   const navigate = useNavigate();
-  const { currentLanguage } = useLanguage();
+  const { t, i18n } = useTranslation();
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
@@ -112,17 +111,28 @@ export const PracticeTest: React.FC = () => {
           questions = questionData.trafficLightsSignalsQuestions;
       }
       
-      // Translate questions based on current language
-      const translatedQuestions = getTranslatedQuestions(
-        testId || '',
-        questions,
-        currentLanguage || 'en'
-      );
-      
-      setQuestions(translatedQuestions);
+      // If Traffic Lights test, use i18n translations
+      if (testId === 'traffic-lights-signals') {
+        const translatedQuestions = questions.map((q, index) => {
+          const qKey = `q${index + 1}`;
+          return {
+            ...q,
+            text: t(`questions.trafficLights.${qKey}.text`),
+            options: q.options.map((opt, optIndex) => ({
+              ...opt,
+              text: t(`questions.trafficLights.${qKey}.o${optIndex + 1}`)
+            })),
+            explanation: t(`questions.trafficLights.${qKey}.explanation`)
+          };
+        });
+        setQuestions(translatedQuestions);
+      } else {
+        // Other tests use English for now
+        setQuestions(questions);
+      }
     };
     loadQuestions();
-  }, [testId, currentLanguage]);
+  }, [testId, t]);
 
   const handleAnswer = (answerId: string) => {
     if (!isAnswered) {
