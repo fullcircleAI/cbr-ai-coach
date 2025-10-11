@@ -154,12 +154,17 @@ input, textarea, [contenteditable="true"] {
     box-sizing: border-box;
   }
   
-  /* Make Tests, Settings, and Practice Test pages scrollable on desktop */
+  /* Make Tests and Practice Test pages scrollable on desktop */
   .main-content.tests-page,
-  .main-content.settings-page,
   .main-content.practice-test-page {
     overflow-y: auto !important;
     overflow-x: hidden !important;
+    height: 100vh !important;
+  }
+  
+  /* Settings page: overflow hidden at main-content level, scrolling handled by subpage */
+  .main-content.settings-page {
+    overflow: hidden !important;
     height: 100vh !important;
   }
 }
@@ -184,11 +189,15 @@ input, textarea, [contenteditable="true"] {
     overflow: hidden !important;
   }
   
-  /* Make Tests and Settings pages scrollable - single scroll */
-  .main-content.tests-page,
-  .main-content.settings-page {
+  /* Make Tests page scrollable - single scroll */
+  .main-content.tests-page {
     overflow-y: auto !important;
     overflow-x: hidden !important;
+  }
+  
+  /* Settings page: overflow hidden at main-content level, scrolling handled by subpage */
+  .main-content.settings-page {
+    overflow: hidden !important;
   }
 }
 

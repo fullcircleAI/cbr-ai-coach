@@ -145,7 +145,7 @@ export const Settings: React.FC = () => {
     <div className="settings-subpage">
       <div className="settings-subpage-header">
         <button className="settings-back-btn" onClick={handleBackToMain}>
-          ← Back
+          ←
         </button>
         <h2 className="settings-subpage-title">Account</h2>
       </div>
@@ -202,7 +202,7 @@ export const Settings: React.FC = () => {
     <div className="settings-subpage">
       <div className="settings-subpage-header">
         <button className="settings-back-btn" onClick={handleBackToMain}>
-          ← Back
+          ←
         </button>
         <h2 className="settings-subpage-title">Privacy Policy</h2>
       </div>
@@ -236,7 +236,7 @@ export const Settings: React.FC = () => {
     <div className="settings-subpage">
       <div className="settings-subpage-header">
         <button className="settings-back-btn" onClick={handleBackToMain}>
-          ← Back
+          ←
         </button>
         <h2 className="settings-subpage-title">Terms of Service</h2>
       </div>
@@ -279,7 +279,7 @@ export const Settings: React.FC = () => {
     <div className="settings-subpage">
       <div className="settings-subpage-header">
         <button className="settings-back-btn" onClick={handleBackToMain}>
-          ← Back
+          ←
         </button>
         <h2 className="settings-subpage-title">FAQ</h2>
       </div>
@@ -302,7 +302,7 @@ export const Settings: React.FC = () => {
     <div className="settings-subpage">
       <div className="settings-subpage-header">
         <button className="settings-back-btn" onClick={handleBackToMain}>
-          ← Back
+          ←
         </button>
         <h2 className="settings-subpage-title">Support</h2>
       </div>
