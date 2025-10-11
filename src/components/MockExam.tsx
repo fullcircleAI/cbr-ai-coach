@@ -64,7 +64,26 @@ export const MockExam: React.FC = () => {
     }
 
     setExamConfig(config);
-    setTimeLeft(config.timeLimit * 60); // Convert minutes to seconds
+    
+    // Check if exam was already started (Rule 6: Timer continues)
+    const savedStartTime = localStorage.getItem(`mockExamStart_${examId}`);
+    if (savedStartTime) {
+      const startTime = parseInt(savedStartTime);
+      const elapsed = Math.floor((Date.now() - startTime) / 1000); // seconds
+      const remainingTime = (config.timeLimit * 60) - elapsed;
+      
+      if (remainingTime > 0) {
+        // Exam still in progress
+        setTimeLeft(remainingTime);
+        setIsExamStarted(true);
+      } else {
+        // Time's up
+        setTimeLeft(0);
+      }
+    } else {
+      // New exam - set full time
+      setTimeLeft(config.timeLimit * 60);
+    }
 
     // Create formatted exam with proper question distribution
     const formattedQuestions = createFormattedExam(config.difficulty);
@@ -147,6 +166,11 @@ export const MockExam: React.FC = () => {
 
   const startExam = () => {
     setIsExamStarted(true);
+    // Save exam start time to localStorage (Rule 6: Timer continues)
+    if (examId) {
+      const startTime = Date.now();
+      localStorage.setItem(`mockExamStart_${examId}`, startTime.toString());
+    }
   };
 
   const finishExam = () => {
@@ -176,6 +200,9 @@ export const MockExam: React.FC = () => {
       
       // Save to localStorage
       localStorage.setItem(`mockExamResults_${examId}`, JSON.stringify(resultsData));
+      
+      // Clear exam start time (exam finished)
+      localStorage.removeItem(`mockExamStart_${examId}`);
       
       // Navigate to results page
       navigate('/mock-exam/results', { state: resultsData });
@@ -235,8 +262,7 @@ export const MockExam: React.FC = () => {
             </button>
             
             <div className="intro-header">
-              <h1 className="intro-title">Theory Exam</h1>
-              <p className="intro-subtitle">Official Format</p>
+              <h1 className="intro-title">Mock Exam</h1>
             </div>
 
             <div className="exam-rules">
@@ -248,7 +274,7 @@ export const MockExam: React.FC = () => {
                 </div>
                 <div className="rule-item">
                   <span className="rule-number">2.</span>
-                  <span className="rule-text">Each question has 3 answer options - select the correct one</span>
+                  <span className="rule-text">Each question has multiple answer options - select the correct one</span>
                 </div>
                 <div className="rule-item">
                   <span className="rule-number">3.</span>

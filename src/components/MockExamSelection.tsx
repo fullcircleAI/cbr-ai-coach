@@ -10,7 +10,7 @@ export const MockExamSelection: React.FC = () => {
   const mockExams = [
     {
       id: 'beginner',
-      name: 'Quiz 1',
+      name: 'Exam 1',
       description: '',
       questions: 50,
       time: 30,
@@ -19,7 +19,7 @@ export const MockExamSelection: React.FC = () => {
     },
     {
       id: 'intermediate',
-      name: 'Quiz 2',
+      name: 'Exam 2',
       description: '',
       questions: 50,
       time: 30,
@@ -28,7 +28,7 @@ export const MockExamSelection: React.FC = () => {
     },
     {
       id: 'advanced',
-      name: 'Quiz 3',
+      name: 'Exam 3',
       description: '',
       questions: 50,
       time: 30,
