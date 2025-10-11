@@ -235,8 +235,8 @@ export const MockExam: React.FC = () => {
             </button>
             
             <div className="intro-header">
-              <h1 className="intro-title">Quiz {quizNumber}</h1>
-              <p className="intro-subtitle">Mock Exam</p>
+              <h1 className="intro-title">Theory Exam</h1>
+              <p className="intro-subtitle">Official Format</p>
             </div>
 
             <div className="exam-info-cards">
@@ -255,21 +255,40 @@ export const MockExam: React.FC = () => {
               <div className="info-card">
                 <div className="info-details">
                   <span className="info-value">{examConfig.passRate}%</span>
-                  <span className="info-label">To Pass</span>
+                  <span className="info-label">Required</span>
                 </div>
               </div>
             </div>
 
-            <div className="exam-instructions">
-              <div className="instruction-item">
-                <span>No explanations during exam</span>
+            <div className="exam-rules">
+              <h3 className="rules-title">Exam Rules</h3>
+              <div className="rules-list">
+                <div className="rule-item">
+                  <span className="rule-number">1.</span>
+                  <span className="rule-text">You must answer all 50 questions within 30 minutes</span>
+                </div>
+                <div className="rule-item">
+                  <span className="rule-number">2.</span>
+                  <span className="rule-text">Each question has 3 answer options - select the correct one</span>
+                </div>
+                <div className="rule-item">
+                  <span className="rule-number">3.</span>
+                  <span className="rule-text">You cannot go back to previous questions once answered</span>
+                </div>
+                <div className="rule-item">
+                  <span className="rule-number">4.</span>
+                  <span className="rule-text">Your answers are not checked until the exam is complete</span>
+                </div>
+                <div className="rule-item">
+                  <span className="rule-number">5.</span>
+                  <span className="rule-text">A minimum score of {examConfig.passRate}% is required to pass</span>
+                </div>
+                <div className="rule-item">
+                  <span className="rule-number">6.</span>
+                  <span className="rule-text">The timer will continue even if you close or refresh the page</span>
+                </div>
               </div>
-              <div className="instruction-item">
-                <span>Results shown at the end</span>
-              </div>
-              <div className="instruction-item">
-                <span>Questions randomly selected</span>
-              </div>
+              <p className="rules-footer">Good luck with your examination.</p>
             </div>
 
             <button className="start-exam-btn" onClick={startExam}>
