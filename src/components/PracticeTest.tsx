@@ -111,23 +111,47 @@ export const PracticeTest: React.FC = () => {
           questions = questionData.trafficLightsSignalsQuestions;
       }
       
-      // If Traffic Lights test, use i18n translations
-      if (testId === 'traffic-lights-signals') {
-        const translatedQuestions = questions.map((q, index) => {
-          const qKey = `q${index + 1}`;
-          return {
-            ...q,
-            text: t(`questions.trafficLights.${qKey}.text`),
-            options: q.options.map((opt, optIndex) => ({
-              ...opt,
-              text: t(`questions.trafficLights.${qKey}.o${optIndex + 1}`)
-            })),
-            explanation: t(`questions.trafficLights.${qKey}.explanation`)
-          };
-        });
-        setQuestions(translatedQuestions);
+      // Map test IDs to translation keys
+      const testTranslationKeys: Record<string, string> = {
+        'traffic-lights-signals': 'trafficLights',
+        'hazard-perception': 'hazardPerception',
+        'priority-rules': 'priorityRules',
+        'speed-safety': 'speedLimit',
+        // Add more as we translate them
+      };
+      
+      const translationKey = testTranslationKeys[testId || ''];
+      
+      // If test has translations, use them
+      if (translationKey && i18n.language !== 'en') {
+        try {
+          const translatedQuestions = questions.map((q, index) => {
+            const qKey = `q${index + 1}`;
+            const baseKey = `questions.${translationKey}.${qKey}`;
+            
+            // Check if translation exists
+            const hasTranslation = i18n.exists(`${baseKey}.text`);
+            
+            if (hasTranslation) {
+              return {
+                ...q,
+                text: t(`${baseKey}.text`),
+                options: q.options.map((opt, optIndex) => ({
+                  ...opt,
+                  text: t(`${baseKey}.o${optIndex + 1}`)
+                })),
+                explanation: t(`${baseKey}.explanation`)
+              };
+            }
+            return q; // Fall back to English
+          });
+          setQuestions(translatedQuestions);
+        } catch (error) {
+          // If translation fails, use English
+          setQuestions(questions);
+        }
       } else {
-        // Other tests use English for now
+        // Use English (default)
         setQuestions(questions);
       }
     };
