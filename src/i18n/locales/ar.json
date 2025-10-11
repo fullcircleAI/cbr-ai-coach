@@ -37,16 +37,76 @@
   },
   "questions": {
     "trafficLights": {
-      "q1": { "text": "أنت تقترب من إشارات المرور التي تحولت للتو إلى الكهرماني (الأصفر). ما هي القاعدة العامة التي يجب عليك اتباعها؟", "o1": "تسريع المرور قبل أن يتحول إلى الأحمر.", "o2": "توقف قبل خط التوقف، إلا إذا كنت قريبًا جدًا بحيث يؤدي التوقف بأمان إلى وقوع حادث.", "o3": "استمر بنفس السرعة لأن ذلك يعني أن الإشارات على وشك التحول إلى الأخضر.", "explanation": "الكهرماني يعني التوقف ما لم تكن قد تجاوزت خط التوقف بالفعل أو كنت قريبًا جدًا بحيث قد يتسبب التوقف المفاجئ في حدوث تصادم." },
-      "q2": { "text": "ماذا يعني السهم الأخضر المرشح (مثلاً، للانعطاف يسارًا) عند إشارات المرور عندما يكون الضوء الرئيسي أحمر؟", "o1": "يمكنك الانعطاف يسارًا إذا كان الطريق خاليًا، ولكن أعط الأولوية للمشاة الذين يعبرون.", "o2": "يجب عليك انتظار الضوء الأخضر الرئيسي قبل الانعطاف يسارًا.", "o3": "لديك الأولوية على جميع المركبات والمشاة الآخرين عند الانعطاف يسارًا.", "explanation": "يسمح لك السهم الأخضر المرشح بالمضي في اتجاه السهم، حتى لو كان الضوء الرئيسي أحمر، بشرط أن تعطي الأولوية لأي مشاة أو مستخدمي طريق آخرين لديهم الأولوية." },
-      "q3": { "text": "إذا كانت إشارات المرور معطلة (لا تعمل على الإطلاق)، كيف يجب أن تتعامل مع التقاطع؟", "o1": "تعامل معه كما لو كان لديك الأولوية على جميع المركبات.", "o2": "تابع بحذر شديد وتعامل مع التقاطع كتقاطع غير مميز أو أعط الأولوية، اعتمادًا على علامات الطريق أو اللافتات.", "o3": "انتظر حتى يوجه ضابط شرطة حركة المرور قبل المتابعة.", "explanation": "عندما تكون إشارات المرور معطلة، ارجع إلى قواعد الأولوية القياسية كما لو كان التقاطع غير مميز، أو اتبع أي لافتات منح الأولوية/التوقف الموجودة. تابع دائمًا بحذر." },
-      "q4": { "text": "ماذا تعني المنارة الكهرمانية الوامضة المركبة فوق معبر المشاة عندما يعبر المشاة؟", "o1": "يجب عليك التوقف والانتظار حتى تتوقف المنارة عن الوميض.", "o2": "يمكنك المتابعة إذا كان الطريق خاليًا، مع إعطاء الأولوية للمشاة الذين لا يزالون على المعبر.", "o3": "المعبر معطل؛ تابع بشكل طبيعي.", "explanation": "تعني المنارة الكهرمانية الوامضة عند معبر المشاة أنه يجب عليك إعطاء الأولوية للمشاة على المعبر، ولكن يمكنك المتابعة إذا كان المعبر خاليًا." },
-      "q5": { "text": "ضابط شرطة يوجه حركة المرور عند تقاطع ويشير لك بالتوقف، لكن إشارة المرور لك خضراء. ماذا يجب عليك أن تفعل؟", "o1": "امتثل لإشارة المرور الخضراء وتابع.", "o2": "أشر إلى الضوء الأخضر لإبلاغ الضابط ثم تابع.", "o3": "امتثل لإشارة ضابط الشرطة وتوقف.", "explanation": "الإشارات التي يعطيها ضابط شرطة يوجه حركة المرور تتجاوز جميع إشارات ولافتات المرور الأخرى. يجب عليك الامتثال للضابط." },
-      "q6": { "text": "عند معبر السكك الحديدية، بدأ ضوءان أحمران وامضان في الوميض. ما هو إجراؤك الفوري؟", "o1": "توقف فورًا، حتى لو كنت بالفعل على المعبر.", "o2": "توقف قبل الحاجز أو خط التوقف وانتظر حتى تتوقف الأضواء عن الوميض ويرتفع الحاجز بالكامل.", "o3": "اعبر بسرعة إذا كنت لا ترى أو تسمع قطارًا يقترب.", "explanation": "يعني ضوءان أحمران وامضان عند معبر السكك الحديدية أن قطارًا يقترب. يجب عليك التوقف قبل خط التوقف أو الحاجز والانتظار." },
-      "q7": { "text": "بعض إشارات المرور لديها إشارة ضوء أبيض للترام أو الحافلات. ماذا يعني شريط أبيض أفقي ثابت لهذه المركبات؟", "o1": "تابع بحذر.", "o2": "استعد للتوقف.", "o3": "توقف.", "explanation": "بالنسبة للترام أو الحافلات، يعني شريط أبيض أفقي ثابت عند إشارة المرور عادةً التوقف." },
-      "q8": { "text": "ترى ضوء إشارة يظهر رمز دراجة أحمر. ماذا يعني هذا للدراجين؟", "o1": "يجب على الدراجين النزول والمشي.", "o2": "يجب على الدراجين التوقف والانتظار لإشارة دراجة خضراء.", "o3": "يمكن للدراجين المتابعة إذا لم تكن هناك حركة مرور أخرى.", "explanation": "يعني رمز الدراجة الأحمر عند إشارات المرور أنه يجب على الدراجين التوقف والانتظار للإشارة الخضراء الخاصة بهم أو ضوء أخضر عام." },
-      "q9": { "text": "ما الذي صمم نظام إشارات المرور الذكي أو التكيفي للقيام به؟", "o1": "تغيير الأضواء على فترات ثابتة بغض النظر عن حركة المرور.", "o2": "إعطاء الأولوية للحافلات ومركبات الطوارئ من خلال منحهم أضواء خضراء فورية.", "o3": "ضبط توقيتات الإضاءة بناءً على تدفق حركة المرور في الوقت الفعلي الذي تكتشفه أجهزة الاستشعار.", "explanation": "تستخدم أنظمة إشارات المرور التكيفية أجهزة استشعار لاكتشاف حجم حركة المرور وضبط توقيتات الإشارة لتحسين التدفق وتقليل التأخير." },
-      "q10": { "text": "إذا أظهرت إشارة المرور اللون الأحمر والكهرماني معًا، لماذا يجب أن تستعد؟", "o1": "توقف، لأن الأضواء على وشك التحول إلى الأحمر.", "o2": "تابع بحذر، لأن الأضواء معطلة.", "o3": "استعد للذهاب؛ ستتغير الأضواء قريبًا إلى الأخضر.", "explanation": "تشير الأضواء الحمراء والكهرمانية معًا إلى أن الأضواء على وشك التحول إلى الأخضر. يجب أن تستعد للمتابعة عندما يتحول إلى الأخضر." }
+      "q1": {
+        "text": "You are approaching traffic lights that have just changed to amber (yellow). What is the general rule you should follow?",
+        "o1": "Accelerate to pass through before it turns red.",
+        "o2": "Stop before the stop line, unless you are so close that to stop safely would cause an accident.",
+        "o3": "Continue at the same speed as it means the lights are about to turn green.",
+        "explanation": "Amber means stop unless you've already crossed the stop line or are so close that stopping suddenly might cause a collision."
+      },
+      "q2": {
+        "text": "What does a green filter arrow (e.g., for turning left) at traffic lights indicate when the main light is red?",
+        "o1": "You may turn left if the way is clear, but give way to pedestrians crossing.",
+        "o2": "You must wait for the main green light before turning left.",
+        "o3": "You have priority over all other traffic and pedestrians when turning left.",
+        "explanation": "A green filter arrow allows you to proceed in the direction of the arrow, even if the main light is red, provided you give way to any pedestrians or other road users who have priority."
+      },
+      "q3": {
+        "text": "If traffic lights are out of order (not working at all), how should you treat the junction?",
+        "o1": "Treat it as if you have priority over all traffic.",
+        "o2": "Proceed with extreme caution and treat the junction as an unmarked crossroads or give way, depending on road markings or signs.",
+        "o3": "Wait for a police officer to direct traffic before proceeding.",
+        "explanation": "When traffic lights are out of order, revert to standard priority rules as if the junction is unmarked, or follow any existing give way/stop signs. Always proceed with caution."
+      },
+      "q4": {
+        "text": "What does a flashing amber beacon mounted above a pedestrian crossing (Pelican or Puffin crossing) signify when pedestrians are crossing?",
+        "o1": "You must stop and wait until the beacon stops flashing.",
+        "o2": "You may proceed if the way is clear, giving way to pedestrians still on the crossing.",
+        "o3": "The crossing is out of order; proceed normally.",
+        "explanation": "A flashing amber beacon at a pedestrian crossing means you must give way to pedestrians on the crossing, but you may proceed if the crossing is clear."
+      },
+      "q5": {
+        "text": "A police officer is directing traffic at a junction and signals you to stop, but the traffic light for you is green. What must you do?",
+        "o1": "Obey the green traffic light and proceed.",
+        "o2": "Point to the green light to inform the officer and then proceed.",
+        "o3": "Obey the police officer's signal and stop.",
+        "explanation": "Signals given by a police officer directing traffic override all other traffic signals and signs. You must obey the officer."
+      },
+      "q6": {
+        "text": "At a level crossing, twin flashing red lights have started to flash. What is your immediate action?",
+        "o1": "Stop immediately, even if you are already on the crossing.",
+        "o2": "Stop before the barrier or stop line and wait until the lights stop flashing and any barrier is fully raised.",
+        "o3": "Cross quickly if you cannot see or hear a train approaching.",
+        "explanation": "Twin flashing red lights at a level crossing mean a train is approaching. You must stop before the stop line or barrier and wait."
+      },
+      "q7": {
+        "text": "Some traffic lights have a white light signal for trams or buses. What does a steady white horizontal bar mean for these vehicles?",
+        "o1": "Proceed with caution.",
+        "o2": "Prepare to stop.",
+        "o3": "Stop.",
+        "explanation": "For trams or buses, a steady white horizontal bar at a traffic light signal typically means Stop."
+      },
+      "q8": {
+        "text": "You see a signal light showing a red bicycle symbol. What does this mean for cyclists?",
+        "o1": "Cyclists must dismount and walk.",
+        "o2": "Cyclists must stop and wait for a green bicycle signal.",
+        "o3": "Cyclists can proceed if no other traffic is present.",
+        "explanation": "A red bicycle symbol at traffic lights means cyclists must stop and wait for the green signal specific to them or a general green light."
+      },
+      "q9": {
+        "text": "What is an intelligent or adaptive traffic light system designed to do?",
+        "o1": "Change lights at fixed intervals regardless of traffic.",
+        "o2": "Prioritize buses and emergency vehicles by giving them immediate green lights.",
+        "o3": "Adjust light timings based on real-time traffic flow detected by sensors.",
+        "explanation": "Adaptive traffic light systems use sensors to detect traffic volume and adjust signal timings to optimize flow and reduce delays."
+      },
+      "q10": {
+        "text": "If a traffic light shows red and amber together, what should you prepare to do?",
+        "o1": "Stop, as the lights are about to turn red.",
+        "o2": "Proceed with caution, as the lights are faulty.",
+        "o3": "Prepare to go; the lights will shortly change to green.",
+        "explanation": "Red and amber lights showing together indicate that the lights are about to change to green. You should prepare to proceed when it turns green."
+      }
     }
   }
 }

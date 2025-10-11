@@ -37,16 +37,76 @@
   },
   "questions": {
     "trafficLights": {
-      "q1": { "text": "Je nadert verkeerslichten die net op oranje (geel) zijn gesprongen. Wat is de algemene regel die je moet volgen?", "o1": "Versnel om erdoorheen te rijden voordat het rood wordt.", "o2": "Stop voor de stopstreep, tenzij je zo dichtbij bent dat veilig stoppen een ongeval zou veroorzaken.", "o3": "Ga door met dezelfde snelheid omdat dit betekent dat de lichten op groen gaan springen.", "explanation": "Oranje betekent stoppen, tenzij je de stopstreep al bent gepasseerd of zo dichtbij bent dat plotseling stoppen een botsing zou kunnen veroorzaken." },
-      "q2": { "text": "Wat betekent een groene filterpijl (bijv. voor linksaf) bij verkeerslichten wanneer het hoofdlicht rood is?", "o1": "Je mag linksaf als de weg vrij is, maar geef voetgangers die oversteken voorrang.", "o2": "Je moet wachten op het groene hoofdlicht voordat je linksaf gaat.", "o3": "Je hebt voorrang op al het andere verkeer en voetgangers bij het linksaf slaan.", "explanation": "Een groene filterpijl laat je toe om in de richting van de pijl te rijden, zelfs als het hoofdlicht rood is, mits je voorrang geeft aan voetgangers of andere weggebruikers die voorrang hebben." },
-      "q3": { "text": "Als verkeerslichten defect zijn (helemaal niet werken), hoe moet je dan de kruising behandelen?", "o1": "Behandel het alsof je voorrang hebt op al het verkeer.", "o2": "Ga met uiterste voorzichtigheid verder en behandel de kruising als een ongemarkeerd kruispunt of verlenen voorrang, afhankelijk van wegmarkeringen of borden.", "o3": "Wacht tot een politieagent het verkeer regelt voordat je verder gaat.", "explanation": "Wanneer verkeerslichten defect zijn, keer terug naar standaard voorrangsregels alsof de kruising ongemarkeerd is, of volg eventuele bestaande voorrangs-/stopborden. Ga altijd voorzichtig verder." },
-      "q4": { "text": "Wat betekent een knipperend oranje baken boven een voetgangersoversteekplaats wanneer voetgangers oversteken?", "o1": "Je moet stoppen en wachten totdat het baken stopt met knipperen.", "o2": "Je mag doorrijden als de weg vrij is, terwijl je voorrang geeft aan voetgangers die nog op de oversteekplaats zijn.", "o3": "De oversteekplaats is defect; ga normaal verder.", "explanation": "Een knipperend oranje baken bij een voetgangersoversteekplaats betekent dat je voorrang moet geven aan voetgangers op de oversteekplaats, maar je mag doorrijden als de oversteekplaats vrij is." },
-      "q5": { "text": "Een politieagent regelt het verkeer bij een kruising en geeft je het signaal om te stoppen, maar het verkeerslicht voor jou is groen. Wat moet je doen?", "o1": "Gehoorzaam het groene verkeerslicht en ga verder.", "o2": "Wijs naar het groene licht om de agent te informeren en ga dan verder.", "o3": "Gehoorzaam het signaal van de politieagent en stop.", "explanation": "Signalen gegeven door een politieagent die het verkeer regelt, hebben voorrang op alle andere verkeerssignalen en borden. Je moet de agent gehoorzamen." },
-      "q6": { "text": "Bij een spoorwegovergang beginnen twee knipperende rode lichten te knipperen. Wat is je directe actie?", "o1": "Stop onmiddellijk, zelfs als je al op de overgang bent.", "o2": "Stop voor de slagboom of stopstreep en wacht tot de lichten stoppen met knipperen en de slagboom volledig omhoog is.", "o3": "Steek snel over als je geen trein ziet of hoort naderen.", "explanation": "Twee knipperende rode lichten bij een spoorwegovergang betekenen dat een trein nadert. Je moet voor de stopstreep of slagboom stoppen en wachten." },
-      "q7": { "text": "Sommige verkeerslichten hebben een wit lichtsignaal voor trams of bussen. Wat betekent een constante witte horizontale balk voor deze voertuigen?", "o1": "Ga voorzichtig verder.", "o2": "Bereid je voor om te stoppen.", "o3": "Stop.", "explanation": "Voor trams of bussen betekent een constante witte horizontale balk bij een verkeerslicht doorgaans Stop." },
-      "q8": { "text": "Je ziet een signaallicht met een rood fietssymbool. Wat betekent dit voor fietsers?", "o1": "Fietsers moeten afstappen en lopen.", "o2": "Fietsers moeten stoppen en wachten op een groen fietssignaal.", "o3": "Fietsers kunnen doorrijden als er geen ander verkeer is.", "explanation": "Een rood fietssymbool bij verkeerslichten betekent dat fietsers moeten stoppen en wachten op het groene signaal dat specifiek voor hen is of een algemeen groen licht." },
-      "q9": { "text": "Wat is een intelligent of adaptief verkeerslichtensysteem ontworpen om te doen?", "o1": "Lichten op vaste intervallen veranderen, ongeacht het verkeer.", "o2": "Bussen en hulpdiensten prioriteit geven door hen onmiddellijk groen licht te geven.", "o3": "Licht timings aanpassen op basis van real-time verkeersstromen gedetecteerd door sensoren.", "explanation": "Adaptieve verkeerslichtensystemen gebruiken sensoren om verkeersvolume te detecteren en signaaltijden aan te passen om de stroom te optimaliseren en vertragingen te verminderen." },
-      "q10": { "text": "Als een verkeerslicht rood en oranje samen toont, waarop moet je je voorbereiden?", "o1": "Stop, want de lichten gaan op rood springen.", "o2": "Ga voorzichtig verder, want de lichten zijn defect.", "o3": "Bereid je voor om te gaan; de lichten zullen binnenkort op groen springen.", "explanation": "Rood en oranje lichten die samen worden getoond, geven aan dat de lichten op het punt staan om op groen te springen. Je moet je voorbereiden om door te gaan wanneer het groen wordt." }
+      "q1": {
+        "text": "You are approaching traffic lights that have just changed to amber (yellow). What is the general rule you should follow?",
+        "o1": "Accelerate to pass through before it turns red.",
+        "o2": "Stop before the stop line, unless you are so close that to stop safely would cause an accident.",
+        "o3": "Continue at the same speed as it means the lights are about to turn green.",
+        "explanation": "Amber means stop unless you've already crossed the stop line or are so close that stopping suddenly might cause a collision."
+      },
+      "q2": {
+        "text": "What does a green filter arrow (e.g., for turning left) at traffic lights indicate when the main light is red?",
+        "o1": "You may turn left if the way is clear, but give way to pedestrians crossing.",
+        "o2": "You must wait for the main green light before turning left.",
+        "o3": "You have priority over all other traffic and pedestrians when turning left.",
+        "explanation": "A green filter arrow allows you to proceed in the direction of the arrow, even if the main light is red, provided you give way to any pedestrians or other road users who have priority."
+      },
+      "q3": {
+        "text": "If traffic lights are out of order (not working at all), how should you treat the junction?",
+        "o1": "Treat it as if you have priority over all traffic.",
+        "o2": "Proceed with extreme caution and treat the junction as an unmarked crossroads or give way, depending on road markings or signs.",
+        "o3": "Wait for a police officer to direct traffic before proceeding.",
+        "explanation": "When traffic lights are out of order, revert to standard priority rules as if the junction is unmarked, or follow any existing give way/stop signs. Always proceed with caution."
+      },
+      "q4": {
+        "text": "What does a flashing amber beacon mounted above a pedestrian crossing (Pelican or Puffin crossing) signify when pedestrians are crossing?",
+        "o1": "You must stop and wait until the beacon stops flashing.",
+        "o2": "You may proceed if the way is clear, giving way to pedestrians still on the crossing.",
+        "o3": "The crossing is out of order; proceed normally.",
+        "explanation": "A flashing amber beacon at a pedestrian crossing means you must give way to pedestrians on the crossing, but you may proceed if the crossing is clear."
+      },
+      "q5": {
+        "text": "A police officer is directing traffic at a junction and signals you to stop, but the traffic light for you is green. What must you do?",
+        "o1": "Obey the green traffic light and proceed.",
+        "o2": "Point to the green light to inform the officer and then proceed.",
+        "o3": "Obey the police officer's signal and stop.",
+        "explanation": "Signals given by a police officer directing traffic override all other traffic signals and signs. You must obey the officer."
+      },
+      "q6": {
+        "text": "At a level crossing, twin flashing red lights have started to flash. What is your immediate action?",
+        "o1": "Stop immediately, even if you are already on the crossing.",
+        "o2": "Stop before the barrier or stop line and wait until the lights stop flashing and any barrier is fully raised.",
+        "o3": "Cross quickly if you cannot see or hear a train approaching.",
+        "explanation": "Twin flashing red lights at a level crossing mean a train is approaching. You must stop before the stop line or barrier and wait."
+      },
+      "q7": {
+        "text": "Some traffic lights have a white light signal for trams or buses. What does a steady white horizontal bar mean for these vehicles?",
+        "o1": "Proceed with caution.",
+        "o2": "Prepare to stop.",
+        "o3": "Stop.",
+        "explanation": "For trams or buses, a steady white horizontal bar at a traffic light signal typically means Stop."
+      },
+      "q8": {
+        "text": "You see a signal light showing a red bicycle symbol. What does this mean for cyclists?",
+        "o1": "Cyclists must dismount and walk.",
+        "o2": "Cyclists must stop and wait for a green bicycle signal.",
+        "o3": "Cyclists can proceed if no other traffic is present.",
+        "explanation": "A red bicycle symbol at traffic lights means cyclists must stop and wait for the green signal specific to them or a general green light."
+      },
+      "q9": {
+        "text": "What is an intelligent or adaptive traffic light system designed to do?",
+        "o1": "Change lights at fixed intervals regardless of traffic.",
+        "o2": "Prioritize buses and emergency vehicles by giving them immediate green lights.",
+        "o3": "Adjust light timings based on real-time traffic flow detected by sensors.",
+        "explanation": "Adaptive traffic light systems use sensors to detect traffic volume and adjust signal timings to optimize flow and reduce delays."
+      },
+      "q10": {
+        "text": "If a traffic light shows red and amber together, what should you prepare to do?",
+        "o1": "Stop, as the lights are about to turn red.",
+        "o2": "Proceed with caution, as the lights are faulty.",
+        "o3": "Prepare to go; the lights will shortly change to green.",
+        "explanation": "Red and amber lights showing together indicate that the lights are about to change to green. You should prepare to proceed when it turns green."
+      }
     }
   }
 }
