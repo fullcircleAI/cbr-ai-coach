@@ -36,17 +36,2231 @@
     "title": "Mock Exam"
   },
   "questions": {
+    "alcoholDrugs": {
+      "q1": {
+        "text": "What is the maximum blood alcohol concentration (BAC) allowed for drivers in the Netherlands?",
+        "explanation": "The maximum blood alcohol concentration (BAC) allowed for drivers in the Netherlands is 0.05%. This is lower than many other countries to improve road safety.",
+        "o1": "0.02%",
+        "o2": "0.05%",
+        "o3": "0.08%"
+      },
+      "q2": {
+        "text": "What is the maximum BAC for drivers with less than 5 years of experience?",
+        "explanation": "Drivers with less than 5 years of experience have a stricter BAC limit of 0.02%, which is essentially zero tolerance.",
+        "o1": "0.02%",
+        "o2": "0.05%",
+        "o3": "0.08%"
+      },
+      "q3": {
+        "text": "What is the penalty for driving with a BAC between 0.05% and 0.08%?",
+        "explanation": "Driving with a BAC between 0.05% and 0.08% results in a fine of €240 and possible license suspension.",
+        "o1": "Warning only",
+        "o2": "Fine of €140",
+        "o3": "Fine of €240"
+      },
+      "q4": {
+        "text": "What is the penalty for driving with a BAC above 0.08%?",
+        "explanation": "Driving with a BAC above 0.08% is a criminal offense that can result in imprisonment, heavy fines, and mandatory license suspension.",
+        "o1": "Fine of €240",
+        "o2": "Fine of €340",
+        "o3": "Criminal offense with possible imprisonment"
+      },
+      "q5": {
+        "text": "How long should you wait after drinking alcohol before driving?",
+        "explanation": "The safest approach is to wait at least 24 hours after drinking alcohol before driving. Your judgment of when you feel sober is not reliable.",
+        "o1": "1 hour per drink",
+        "o2": "2 hours per drink",
+        "o3": "At least 24 hours"
+      },
+      "q6": {
+        "text": "What drugs are illegal to drive under the influence of in the Netherlands?",
+        "explanation": "It is illegal to drive under the influence of any drug that affects your driving ability, including cannabis, prescription medications, and over-the-counter drugs.",
+        "o1": "Only hard drugs like cocaine and heroin",
+        "o2": "Only prescription medications",
+        "o3": "All drugs that affect driving ability"
+      },
+      "q7": {
+        "text": "What should you do if you are taking medication that may affect your driving?",
+        "explanation": "If you are taking medication that may affect your driving, you should check with your doctor or pharmacist about whether it is safe to drive.",
+        "o1": "Drive as normal",
+        "o2": "Drive only during the day",
+        "o3": "Check with your doctor or pharmacist"
+      },
+      "q8": {
+        "text": "What are the signs of drug-impaired driving?",
+        "explanation": "Signs of drug-impaired driving include erratic driving behavior, slow reaction times, poor judgment, and difficulty maintaining lane position.",
+        "o1": "Only erratic driving behavior",
+        "o2": "Only slow reaction times",
+        "o3": "Erratic driving, slow reactions, and poor judgment"
+      },
+      "q9": {
+        "text": "What is the penalty for refusing a breathalyzer test?",
+        "explanation": "Refusing a breathalyzer test carries the same penalty as driving under the influence, as it is considered an admission of guilt.",
+        "o1": "No penalty",
+        "o2": "Small fine",
+        "o3": "Same penalty as driving under the influence"
+      },
+      "q10": {
+        "text": "How long does alcohol stay in your system?",
+        "explanation": "Alcohol can stay in your system for 24-48 hours, depending on factors like body weight, metabolism, and amount consumed.",
+        "o1": "1-2 hours",
+        "o2": "4-6 hours",
+        "o3": "24-48 hours"
+      },
+      "q11": {
+        "text": "What should you do if you suspect another driver is under the influence?",
+        "explanation": "If you suspect another driver is under the influence, call the police emergency number (112) and provide the vehicle description and location.",
+        "o1": "Confront them directly",
+        "o2": "Call the police emergency number",
+        "o3": "Follow them to their destination"
+      },
+      "q12": {
+        "text": "What is the best way to prevent drunk driving?",
+        "explanation": "The best ways to prevent drunk driving are to designate a sober driver, take a taxi or public transport, or stay overnight. Never drive after drinking.",
+        "o1": "Designate a sober driver",
+        "o2": "Take a taxi or public transport",
+        "o3": "All of the above"
+      }
+    },
+    "bicycleInteractions": {
+      "q1": {
+        "text": "You approach an intersection with a bicycle crossing. A cyclist is waiting to cross. What should you do?",
+        "explanation": "At bicycle crossings, motorists must stop and give way to cyclists who are waiting to cross or already crossing.",
+        "o1": "Stop and give way to the cyclist",
+        "o2": "Continue driving, cyclists must wait",
+        "o3": "Honk to warn the cyclist"
+      },
+      "q2": {
+        "text": "You want to turn right at an intersection. A cyclist is approaching from the opposite direction, also turning right. Who has priority?",
+        "explanation": "Cyclists have priority when turning right at intersections. Motorists must give way to cyclists in this situation.",
+        "o1": "The cyclist has priority",
+        "o2": "You have priority as a motorist",
+        "o3": "Whoever arrives first has priority"
+      },
+      "q3": {
+        "text": "You are driving on a road with a bicycle lane. A cyclist is riding in the bicycle lane. What is the minimum distance you must maintain when overtaking?",
+        "explanation": "When overtaking cyclists, you must maintain a minimum distance of 1.5 meters to ensure their safety.",
+        "o1": "1 meter",
+        "o2": "1.5 meters",
+        "o3": "2 meters"
+      },
+      "q4": {
+        "text": "You are driving in a 30 km/h zone. A cyclist is riding ahead of you at 20 km/h. What should you do?",
+        "explanation": "In 30 km/h zones, you should follow cyclists at a safe distance rather than overtaking, as the speed difference is minimal.",
+        "o1": "Overtake immediately when safe",
+        "o2": "Follow behind at a safe distance",
+        "o3": "Honk to make the cyclist move faster"
+      },
+      "q5": {
+        "text": "You are parking your car. You see a bicycle lane next to the parking space. What should you do?",
+        "explanation": "Always check for approaching cyclists before opening your car door when parking next to a bicycle lane to prevent accidents.",
+        "o1": "Park normally, cyclists can go around",
+        "o2": "Check for cyclists before opening your door",
+        "o3": "Park closer to the bicycle lane to save space"
+      },
+      "q6": {
+        "text": "You are driving on a road without a bicycle lane. A cyclist is riding on the right side of the road. What should you do?",
+        "explanation": "When there is no bicycle lane, cyclists have the right to use the road. Maintain a safe distance and overtake only when it is safe to do so.",
+        "o1": "Drive as close as possible to the cyclist",
+        "o2": "Maintain a safe distance and overtake when possible",
+        "o3": "Honk to make the cyclist move to the side"
+      },
+      "q7": {
+        "text": "You are approaching a roundabout. A cyclist is already in the roundabout. What should you do?",
+        "explanation": "At roundabouts, you must give way to traffic already in the roundabout, including cyclists.",
+        "o1": "Enter the roundabout, cyclists must give way",
+        "o2": "Wait for the cyclist to exit the roundabout",
+        "o3": "Enter and overtake the cyclist immediately"
+      },
+      "q8": {
+        "text": "You are driving on a narrow road. A cyclist is approaching from the opposite direction. What should you do?",
+        "explanation": "On narrow roads, slow down and give cyclists extra space when passing to ensure their safety.",
+        "o1": "Continue driving, the cyclist must move aside",
+        "o2": "Slow down and give the cyclist extra space",
+        "o3": "Stop completely and let the cyclist pass"
+      },
+      "q9": {
+        "text": "You are driving at night. You see a cyclist ahead without proper lighting. What should you do?",
+        "explanation": "When encountering a cyclist without proper lighting at night, slow down and pass with extra caution to ensure safety.",
+        "o1": "Flash your headlights to warn the cyclist",
+        "o2": "Slow down and pass with extra caution",
+        "o3": "Honk to alert the cyclist"
+      },
+      "q10": {
+        "text": "You are driving in a residential area. Children are riding bicycles on the street. What should you do?",
+        "explanation": "In residential areas with children cycling, reduce your speed and be extra vigilant as children may not always follow traffic rules.",
+        "o1": "Drive normally, children should be careful",
+        "o2": "Reduce speed and be extra vigilant",
+        "o3": "Honk to warn the children"
+      },
+      "q11": {
+        "text": "You are driving on a road with a shared bicycle and pedestrian path. A cyclist is using the path. What should you do?",
+        "explanation": "When driving near shared bicycle and pedestrian paths, be aware that cyclists may need to enter the road and be prepared to give way.",
+        "o1": "Ignore the cyclist, they are on a separate path",
+        "o2": "Be aware that the cyclist may enter the road",
+        "o3": "Honk to warn the cyclist to stay on the path"
+      },
+      "q12": {
+        "text": "You are driving on a road with a bicycle lane. The bicycle lane is blocked by roadworks. What should you do?",
+        "explanation": "When a bicycle lane is blocked, cyclists may need to use the main road. Be extra careful and give them space.",
+        "o1": "Continue driving normally",
+        "o2": "Be extra careful as cyclists may use the main road",
+        "o3": "Honk to warn cyclists about the roadworks"
+      },
+      "q13": {
+        "text": "You are driving on a road with a bicycle lane. A cyclist is riding outside the bicycle lane. What should you do?",
+        "explanation": "Cyclists are not always required to use bicycle lanes. Respect their choice and maintain a safe distance when passing.",
+        "o1": "Honk to make the cyclist use the bicycle lane",
+        "o2": "Respect the cyclist\\",
+        "o3": "Drive as close as possible to force them into the lane"
+      },
+      "q14": {
+        "text": "You are driving on a road with a bicycle lane. A cyclist is riding in the bicycle lane but swerving slightly. What should you do?",
+        "explanation": "When a cyclist is swerving, they may be avoiding obstacles or have difficulty maintaining balance. Give extra space and pass with caution.",
+        "o1": "Honk to warn the cyclist",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as close as possible to keep them in line"
+      },
+      "q15": {
+        "text": "You are driving on a road with a bicycle lane. A cyclist is riding in the bicycle lane but appears to be looking at their phone. What should you do?",
+        "explanation": "When a cyclist appears distracted, give extra space and pass with caution. Honking may startle them and cause an accident.",
+        "o1": "Honk to alert the cyclist",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as close as possible to get their attention"
+      },
+      "q16": {
+        "text": "You are driving on a road with a bicycle lane. A cyclist is riding in the bicycle lane but appears to be intoxicated. What should you do?",
+        "explanation": "When a cyclist appears intoxicated, give extra space and pass with extreme caution. Their behavior may be unpredictable.",
+        "o1": "Honk to alert the cyclist",
+        "o2": "Give extra space and pass with extreme caution",
+        "o3": "Drive as close as possible to keep them in line"
+      },
+      "q17": {
+        "text": "You are driving on a road with a bicycle lane. A cyclist is riding in the bicycle lane but appears to be having mechanical problems. What should you do?",
+        "explanation": "When a cyclist appears to have mechanical problems, give extra space and pass with caution as they may need to stop suddenly.",
+        "o1": "Honk to alert the cyclist",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as close as possible to keep them moving"
+      },
+      "q18": {
+        "text": "You are driving on a road with a bicycle lane. A cyclist is riding in the bicycle lane but appears to be lost or confused. What should you do?",
+        "explanation": "When a cyclist appears lost or confused, give extra space and pass with caution as they may make unexpected movements.",
+        "o1": "Honk to alert the cyclist",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as close as possible to guide them"
+      },
+      "q19": {
+        "text": "You are driving on a road with a bicycle lane. A cyclist is riding in the bicycle lane but appears to be in distress. What should you do?",
+        "explanation": "When a cyclist appears to be in distress, stop and offer help if it is safe to do so. Otherwise, give extra space and pass with caution.",
+        "o1": "Honk to alert the cyclist",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Stop and offer help if safe to do so"
+      },
+      "q20": {
+        "text": "You are driving on a road with a bicycle lane. A cyclist is riding in the bicycle lane but appears to be racing. What should you do?",
+        "explanation": "When a cyclist appears to be racing, give extra space and pass with caution as their behavior may be unpredictable.",
+        "o1": "Honk to alert the cyclist",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as close as possible to keep them in line"
+      }
+    },
+    "constructionZones": {
+      "q1": {
+        "text": "You are driving and see a construction zone ahead. What should you do?",
+        "explanation": "In construction zones, you must reduce your speed and be extra careful due to potential hazards and workers.",
+        "o1": "Reduce speed and be extra careful",
+        "o2": "Continue driving at normal speed",
+        "o3": "Speed up to get through quickly"
+      },
+      "q2": {
+        "text": "You are driving in a construction zone and see workers on the road. What should you do?",
+        "explanation": "When workers are present in construction zones, give them extra space and drive slowly to ensure their safety.",
+        "o1": "Give extra space to workers and drive slowly",
+        "o2": "Continue driving normally",
+        "o3": "Honk to warn the workers"
+      },
+      "q3": {
+        "text": "You are driving in a construction zone and see a temporary speed limit sign. What should you do?",
+        "explanation": "Temporary speed limit signs in construction zones must be followed. They are legally enforceable and designed for safety.",
+        "o1": "Follow the temporary speed limit",
+        "o2": "Continue driving at the normal speed limit",
+        "o3": "Ignore the temporary speed limit"
+      },
+      "q4": {
+        "text": "You are driving in a construction zone and see a lane closure. What should you do?",
+        "explanation": "When a lane is closed in a construction zone, merge into the open lane when it is safe to do so.",
+        "o1": "Merge into the open lane when safe",
+        "o2": "Continue driving in the closed lane",
+        "o3": "Stop and wait for the lane to reopen"
+      },
+      "q5": {
+        "text": "You are driving in a construction zone and see a flag person directing traffic. What should you do?",
+        "explanation": "Flag persons in construction zones have authority to direct traffic. You must follow their directions for safety.",
+        "o1": "Follow the flag person\\",
+        "o2": "Continue driving normally",
+        "o3": "Honk to get the flag person\\"
+      },
+      "q6": {
+        "text": "You are driving in a construction zone and see construction equipment on the road. What should you do?",
+        "explanation": "When construction equipment is on the road, give it extra space and drive slowly to avoid accidents.",
+        "o1": "Give extra space to the equipment and drive slowly",
+        "o2": "Continue driving normally",
+        "o3": "Speed up to get past the equipment quickly"
+      },
+      "q7": {
+        "text": "You are driving in a construction zone and see a detour sign. What should you do?",
+        "explanation": "Detour signs in construction zones indicate alternative routes. You must follow the detour route for safety.",
+        "o1": "Follow the detour route",
+        "o2": "Continue driving on the original route",
+        "o3": "Ignore the detour sign"
+      },
+      "q8": {
+        "text": "You are driving in a construction zone and see a \"Road Work Ahead\" sign. What should you do?",
+        "explanation": "When you see a \"Road Work Ahead\" sign, prepare to slow down and be extra careful as you approach the construction zone.",
+        "o1": "Prepare to slow down and be extra careful",
+        "o2": "Continue driving at normal speed",
+        "o3": "Speed up to get through quickly"
+      }
+    },
+    "emergencyProcedures": {
+      "q1": {
+        "text": "What should you do if you are involved in a traffic accident?",
+        "explanation": "If you are involved in a traffic accident, you must stop immediately and check for injuries. Call emergency services if needed.",
+        "o1": "Drive away quickly",
+        "o2": "Stop immediately and check for injuries",
+        "o3": "Wait for someone else to call the police"
+      },
+      "q2": {
+        "text": "What is the emergency number in the Netherlands?",
+        "explanation": "The emergency number in the Netherlands is 112. This number connects you to police, fire, and ambulance services.",
+        "o1": "911",
+        "o2": "112",
+        "o3": "999"
+      },
+      "q3": {
+        "text": "When should you call the emergency number 112?",
+        "explanation": "Call 112 for life-threatening situations and serious accidents where immediate assistance is needed.",
+        "o1": "Only for life-threatening situations",
+        "o2": "For any traffic accident",
+        "o3": "For life-threatening situations and serious accidents"
+      },
+      "q4": {
+        "text": "What should you do if you witness a traffic accident?",
+        "explanation": "If you witness a traffic accident, stop and offer assistance if it is safe to do so. Call emergency services if needed.",
+        "o1": "Continue driving",
+        "o2": "Stop and offer assistance if safe to do so",
+        "o3": "Call the police immediately"
+      },
+      "q5": {
+        "text": "What should you do if your vehicle breaks down on a motorway?",
+        "explanation": "If your vehicle breaks down on a motorway, get out and stand behind the safety barrier. Use emergency phones to call for assistance.",
+        "o1": "Stay in your vehicle",
+        "o2": "Get out and stand behind the barrier",
+        "o3": "Walk along the motorway to find help"
+      },
+      "q6": {
+        "text": "What should you do if you see an emergency vehicle with lights and sirens?",
+        "explanation": "If you see an emergency vehicle with lights and sirens, move to the right and slow down to allow it to pass safely.",
+        "o1": "Ignore it and continue driving",
+        "o2": "Move to the right and slow down",
+        "o3": "Speed up to get out of the way"
+      },
+      "q7": {
+        "text": "What should you do if you are involved in a minor accident with no injuries?",
+        "explanation": "In a minor accident with no injuries, exchange information with the other driver including names, addresses, and insurance details.",
+        "o1": "Exchange information with the other driver",
+        "o2": "Call the police immediately",
+        "o3": "Drive away quickly"
+      },
+      "q8": {
+        "text": "What should you do if you hit a parked car?",
+        "explanation": "If you hit a parked car, leave a note with your contact information and report the incident to your insurance company.",
+        "o1": "Leave a note with your contact information",
+        "o2": "Wait for the owner to return",
+        "o3": "Call the police immediately"
+      },
+      "q9": {
+        "text": "What should you do if you are involved in an accident with a cyclist or pedestrian?",
+        "explanation": "If you are involved in an accident with a cyclist or pedestrian, stop immediately and call emergency services (112).",
+        "o1": "Drive away quickly",
+        "o2": "Stop immediately and call emergency services",
+        "o3": "Wait for someone else to help"
+      },
+      "q10": {
+        "text": "What should you do if your vehicle catches fire?",
+        "explanation": "If your vehicle catches fire, stop immediately and evacuate everyone from the vehicle. Call emergency services and move to a safe distance.",
+        "o1": "Try to put out the fire yourself",
+        "o2": "Stop immediately and evacuate everyone",
+        "o3": "Continue driving to find help"
+      },
+      "q11": {
+        "text": "What should you do if you witness a hit-and-run accident?",
+        "explanation": "If you witness a hit-and-run accident, call the police and provide as many details as possible about the fleeing vehicle.",
+        "o1": "Follow the fleeing vehicle",
+        "o2": "Call the police and provide details",
+        "o3": "Ignore it"
+      },
+      "q12": {
+        "text": "What should you do if you are involved in an accident with an uninsured driver?",
+        "explanation": "If you are involved in an accident with an uninsured driver, call the police and your insurance company immediately.",
+        "o1": "Accept cash payment",
+        "o2": "Call the police and your insurance company",
+        "o3": "Drive away quickly"
+      }
+    },
+    "environmentalZones": {
+      "q1": {
+        "text": "What is a \"milieuzone\" (environmental zone) in the Netherlands?",
+        "explanation": "A \"milieuzone\" (environmental zone) is a city center area where certain vehicles are restricted from entering to improve air quality and reduce pollution.",
+        "o1": "A nature reserve area",
+        "o2": "A city center with restricted vehicle access",
+        "o3": "A parking area for electric vehicles",
+        "o4": "A bicycle-only zone"
+      },
+      "q2": {
+        "text": "Which vehicles are typically restricted in environmental zones?",
+        "explanation": "Environmental zones typically restrict diesel vehicles and older cars that do not meet current emission standards to improve air quality.",
+        "o1": "All vehicles",
+        "o2": "Diesel vehicles and older cars",
+        "o3": "Electric vehicles only",
+        "o4": "Motorcycles only"
+      },
+      "q3": {
+        "text": "What sign indicates the entrance to an environmental zone?",
+        "explanation": "The entrance to an environmental zone is marked with a red circle containing \"MILIEUZONE\" to indicate restricted access.",
+        "o1": "A red circle with \"MILIEUZONE\"",
+        "o2": "A blue circle with \"MILIEUZONE\"",
+        "o3": "A green circle with \"MILIEUZONE\"",
+        "o4": "A yellow triangle with \"MILIEUZONE\""
+      },
+      "q4": {
+        "text": "What sign indicates the exit from an environmental zone?",
+        "explanation": "The exit from an environmental zone is marked with a red circle containing \"MILIEUZONE\" with a diagonal line through it.",
+        "o1": "A red circle with \"MILIEUZONE\" and a diagonal line",
+        "o2": "A blue circle with \"MILIEUZONE\" and a diagonal line",
+        "o3": "A green circle with \"MILIEUZONE\" and a diagonal line",
+        "o4": "A yellow triangle with \"MILIEUZONE\" and a diagonal line"
+      },
+      "q5": {
+        "text": "What is the penalty for entering an environmental zone with a restricted vehicle?",
+        "explanation": "Entering an environmental zone with a restricted vehicle typically results in a fine of €95.",
+        "o1": "No penalty",
+        "o2": "A warning letter",
+        "o3": "A fine of €95",
+        "o4": "Vehicle confiscation"
+      },
+      "q6": {
+        "text": "Which vehicles are usually exempt from environmental zone restrictions?",
+        "explanation": "Emergency vehicles and electric vehicles are usually exempt from environmental zone restrictions as they have low or zero emissions.",
+        "o1": "All vehicles",
+        "o2": "Emergency vehicles and electric vehicles",
+        "o3": "Only electric vehicles",
+        "o4": "Only emergency vehicles"
+      }
+    },
+    "expandedPriorityRules": {
+      "q1": {
+        "text": "At an intersection with no traffic signs or signals, who has the right of way?",
+        "explanation": "At an intersection with no traffic signs or signals, traffic from the right has the right of way. This is known as the \"right before left\" rule.",
+        "o1": "The vehicle on the left",
+        "o2": "The vehicle on the right",
+        "o3": "The larger vehicle",
+        "o4": "The vehicle going straight"
+      },
+      "q2": {
+        "text": "At a T-junction, who has the right of way?",
+        "explanation": "At a T-junction, traffic on the through road has the right of way. Traffic turning onto the through road must yield.",
+        "o1": "Traffic on the through road",
+        "o2": "Traffic turning onto the through road",
+        "o3": "The vehicle on the left",
+        "o4": "The vehicle on the right"
+      },
+      "q3": {
+        "text": "At a roundabout, who has the right of way?",
+        "explanation": "At a roundabout, traffic already on the roundabout has the right of way. Traffic entering the roundabout must yield.",
+        "o1": "Traffic entering the roundabout",
+        "o2": "Traffic already on the roundabout",
+        "o3": "Traffic turning left",
+        "o4": "Traffic turning right"
+      },
+      "q4": {
+        "text": "When merging onto a motorway, who has the right of way?",
+        "explanation": "When merging onto a motorway, traffic already on the motorway has the right of way. Merging traffic must adjust their speed and find a gap.",
+        "o1": "Traffic merging onto the motorway",
+        "o2": "Traffic already on the motorway",
+        "o3": "The vehicle with the higher speed",
+        "o4": "The vehicle in the left lane"
+      },
+      "q5": {
+        "text": "When changing lanes, who has the right of way?",
+        "explanation": "When changing lanes, the vehicle already in the lane has the right of way. The vehicle changing lanes must yield and find a safe gap.",
+        "o1": "The vehicle changing lanes",
+        "o2": "The vehicle already in the lane",
+        "o3": "The vehicle with the higher speed",
+        "o4": "The vehicle in the left lane"
+      },
+      "q6": {
+        "text": "At an intersection with a \"Stop\" sign, who has the right of way?",
+        "explanation": "At an intersection with a \"Stop\" sign, the vehicle at the stop sign must yield to all other traffic before proceeding.",
+        "o1": "The vehicle at the stop sign",
+        "o2": "All other traffic",
+        "o3": "The vehicle on the right",
+        "o4": "The vehicle going straight"
+      },
+      "q7": {
+        "text": "At an intersection with a \"Give Way\" sign, who has the right of way?",
+        "explanation": "At an intersection with a \"Give Way\" sign, the vehicle at the give way sign must yield to all other traffic before proceeding.",
+        "o1": "The vehicle at the give way sign",
+        "o2": "All other traffic",
+        "o3": "The vehicle on the right",
+        "o4": "The vehicle going straight"
+      },
+      "q8": {
+        "text": "When a traffic light turns green, who has the right of way?",
+        "explanation": "When a traffic light turns green, all traffic with a green light has the right of way, but must still yield to pedestrians and emergency vehicles.",
+        "o1": "All traffic with a green light",
+        "o2": "Pedestrians crossing",
+        "o3": "Emergency vehicles",
+        "o4": "Traffic turning left"
+      },
+      "q9": {
+        "text": "When a traffic light turns yellow, what should you do?",
+        "explanation": "When a traffic light turns yellow, you should stop if it is safe to do so. Only proceed if you cannot stop safely.",
+        "o1": "Speed up to get through",
+        "o2": "Stop if it is safe to do so",
+        "o3": "Ignore the light",
+        "o4": "Honk your horn"
+      },
+      "q10": {
+        "text": "When a traffic light turns red, what should you do?",
+        "explanation": "When a traffic light turns red, you must stop completely and wait for the light to turn green before proceeding.",
+        "o1": "Stop completely",
+        "o2": "Slow down but continue",
+        "o3": "Speed up to get through",
+        "o4": "Turn right if clear"
+      },
+      "q11": {
+        "text": "When a traffic light is flashing yellow, what should you do?",
+        "explanation": "When a traffic light is flashing yellow, you should proceed with caution and be prepared to stop if necessary.",
+        "o1": "Stop completely",
+        "o2": "Proceed with caution",
+        "o3": "Speed up",
+        "o4": "Turn around"
+      },
+      "q12": {
+        "text": "When a traffic light is not working, what should you do?",
+        "explanation": "When a traffic light is not working, you should treat it as a stop sign and yield to other traffic before proceeding.",
+        "o1": "Treat it as a stop sign",
+        "o2": "Ignore it completely",
+        "o3": "Speed up to get through",
+        "o4": "Turn around"
+      }
+    },
+    "fatigueRest": {
+      "q1": {
+        "text": "What are the signs of driver fatigue?",
+        "explanation": "Signs of driver fatigue include yawning, heavy eyelids, difficulty concentrating, drifting in lane, missing exits, and feeling restless or irritable.",
+        "o1": "Only yawning",
+        "o2": "Only heavy eyelids",
+        "o3": "Yawning, heavy eyelids, difficulty concentrating, and drifting in lane"
+      },
+      "q2": {
+        "text": "How often should you take breaks on long journeys?",
+        "explanation": "You should take a break every 2 hours on long journeys, even if you don\\",
+        "o1": "Every 2 hours",
+        "o2": "Every 4 hours",
+        "o3": "Every 6 hours"
+      },
+      "q3": {
+        "text": "How long should each break be on a long journey?",
+        "explanation": "Each break should be 15-20 minutes long. This gives you enough time to rest, stretch, and refresh yourself before continuing your journey.",
+        "o1": "5 minutes",
+        "o2": "10 minutes",
+        "o3": "15-20 minutes"
+      },
+      "q4": {
+        "text": "What should you do if you feel tired while driving?",
+        "explanation": "If you feel tired while driving, you should pull over in a safe place and rest. Never try to continue driving when fatigued.",
+        "o1": "Continue driving and try to stay awake",
+        "o2": "Open the window and turn up the radio",
+        "o3": "Pull over in a safe place and rest"
+      },
+      "q5": {
+        "text": "How much sleep should you get before a long journey?",
+        "explanation": "You should get 7-8 hours of sleep before a long journey to ensure you are well-rested and alert while driving.",
+        "o1": "4-5 hours",
+        "o2": "6-7 hours",
+        "o3": "7-8 hours"
+      },
+      "q6": {
+        "text": "What is microsleep?",
+        "explanation": "Microsleep is a brief period of unconsciousness lasting 1-30 seconds. It can occur without warning and is extremely dangerous while driving.",
+        "o1": "A very short nap",
+        "o2": "A brief period of unconsciousness lasting 1-30 seconds",
+        "o3": "A deep sleep"
+      },
+      "q7": {
+        "text": "What should you do if you experience microsleep while driving?",
+        "explanation": "If you experience microsleep while driving, you should pull over immediately in a safe place and rest. This is a serious warning sign of fatigue.",
+        "o1": "Continue driving carefully",
+        "o2": "Pull over immediately and rest",
+        "o3": "Take a short nap in the car"
+      },
+      "q8": {
+        "text": "What is the best time to plan long journeys?",
+        "explanation": "The best time to plan long journeys is early morning when you are fresh and alert. Avoid driving during your normal sleep hours.",
+        "o1": "Early morning when you are fresh",
+        "o2": "Late afternoon",
+        "o3": "Late evening"
+      },
+      "q9": {
+        "text": "What should you avoid before a long journey?",
+        "explanation": "Before a long journey, you should avoid heavy meals, alcohol, and medications that cause drowsiness, as they can all contribute to fatigue.",
+        "o1": "Heavy meals",
+        "o2": "Alcohol",
+        "o3": "All of the above"
+      },
+      "q10": {
+        "text": "What should you do during breaks on long journeys?",
+        "explanation": "During breaks on long journeys, you should get out of the car, stretch, walk around, and get some fresh air to help stay alert.",
+        "o1": "Stay in the car and rest",
+        "o2": "Get out, stretch, and walk around",
+        "o3": "Take a long nap"
+      },
+      "q11": {
+        "text": "What is the recommended maximum driving time per day?",
+        "explanation": "The recommended maximum driving time per day is 8 hours, including breaks. This helps prevent fatigue and maintains safety.",
+        "o1": "6 hours",
+        "o2": "8 hours",
+        "o3": "10 hours"
+      },
+      "q12": {
+        "text": "What should you do if you are driving and start to feel drowsy?",
+        "explanation": "If you start to feel drowsy while driving, you should pull over in a safe place and take a short nap. Coffee and other stimulants are not reliable solutions.",
+        "o1": "Continue driving to your destination",
+        "o2": "Pull over and take a short nap",
+        "o3": "Drink coffee and continue"
+      }
+    },
+    "hazardPerception": {
+      "q1": {
+        "text": "Your speed is 50 km/h. A child on a scooter suddenly emerges from behind the parked car on the right. What do you do?",
+        "explanation": "Immediate braking is necessary as a child has suddenly appeared in your path, creating a high-risk situation.",
+        "o1": "Brake",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q2": {
+        "text": "Your speed is 30 km/h. A pedestrian looking at their phone steps off the pavement from between parked cars. What do you do?",
+        "explanation": "Braking is required as a pedestrian has unexpectedly entered the roadway without looking, posing an immediate collision risk.",
+        "o1": "Brake",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q3": {
+        "text": "Your speed is 80 km/h on a country road. A deer suddenly jumps out from bushes on the side, about 50 meters ahead. No oncoming traffic is visible. What do you do?",
+        "explanation": "A deer at 50 meters at 80 km/h is an immediate hazard requiring emergency braking to avoid a collision.",
+        "o1": "Brake",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q4": {
+        "text": "Your speed is 50 km/h approaching a T-junction on your right. A car is at the give-way line, partially obscured by a hedge. Its front wheels start to turn slightly as if to pull out. What do you do?",
+        "explanation": "Releasing the accelerator allows you to assess if the car will fully emerge and prepares you to brake if necessary, without overreacting if it waits.",
+        "o1": "Brake",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q5": {
+        "text": "Your speed is 100 km/h in the middle lane of a three-lane motorway. The car ahead of you, without indicating, suddenly swerves into your lane to avoid a much slower vehicle in its original lane. What do you do?",
+        "explanation": "A vehicle suddenly swerving into your lane at high speed requires immediate braking to avoid a collision and maintain a safe following distance.",
+        "o1": "Brake",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q6": {
+        "text": "Your speed is 30 km/h in a residential area. Children are playing football on a grass verge. A ball rolls onto the road just ahead, and a child starts to run towards it. What do you do?",
+        "explanation": "A child running after a ball into the road is a high-risk situation requiring immediate braking to prevent hitting the child.",
+        "o1": "Brake",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q7": {
+        "text": "Your speed is 60 km/h approaching a slight bend to the left on a two-lane road. An oncoming vehicle appears to be drifting slightly towards the centerline as it negotiates the bend. What do you do?",
+        "explanation": "Releasing the accelerator provides more space and time to react if the oncoming vehicle crosses the centerline. It is a cautious approach to a potential hazard.",
+        "o1": "Brake",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q8": {
+        "text": "Your speed is 70 km/h on a main road approaching traffic lights about 150 meters ahead. They are currently green but suddenly change to amber. What do you do?",
+        "explanation": "Releasing the accelerator is the initial action to assess if a safe stop can be made before the stop line. If too close to stop safely, you might proceed through amber, but the primary action is to prepare to stop.",
+        "o1": "Brake",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q9": {
+        "text": "Your speed is 10 km/h in very slow-moving/queuing traffic. A motorcyclist is filtering between your lane and the lane to your right, approaching from behind. The gap is tight. What do you do?",
+        "explanation": "In very slow or stationary traffic, maintain your position and speed (or lack thereof). Sudden braking or swerving can be dangerous for the filtering motorcyclist. Allow them to pass.",
+        "o1": "Brake",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q10": {
+        "text": "Your speed is 50 km/h driving towards a junction where you intend to turn right. The sun is very low, causing significant glare and making it very difficult to see if any vehicles are emerging from the side road. What do you do?",
+        "explanation": "Severe glare significantly reduces visibility. Release the accelerator to slow down considerably and be prepared to brake or stop if needed as you cannot clearly see potential hazards at the junction.",
+        "o1": "Brake",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      }
+    },
+    "insightPractice": {
+      "q1": {
+        "text": "You are approaching a T-junction and want to turn right onto a busy main road. Your view to the left is blocked by a parked van, and traffic is moving quickly.\\n\\nWhat is the safest way to proceed?",
+        "explanation": "Always wait for a clear view and a safe gap before joining a busy road, especially when your view is blocked. Never assume others will slow down for you.",
+        "o1": "Rely on your ability to accelerate quickly and join the traffic as soon as possible.",
+        "o2": "Wait until you have a clear view and there is a safe gap in both directions, even if it takes longer.",
+        "o3": "Assume drivers from the right will slow down for you as you enter."
+      },
+      "q2": {
+        "text": "You have just overtaken a lorry on a three-lane motorway and are now in the middle lane. The right lane is clear, and there is another slower vehicle further ahead in the left lane.\\n\\nWhat should you do according to proper motorway driving discipline?",
+        "explanation": "On motorways, you must return to the left-most lane as soon as it is safe. Only use other lanes for overtaking.",
+        "o1": "Stay in the middle lane to overtake the next vehicle ahead.",
+        "o2": "Move to the right lane to give yourself more space from other traffic.",
+        "o3": "Return to the left lane as soon as it is safe, and only move out again when overtaking."
+      },
+      "q3": {
+        "text": "You are driving along a residential street with parked cars on your left. A cyclist is riding ahead of you, close to the parked cars.\\n\\nWhat is the main hazard you should anticipate?",
+        "explanation": "Always anticipate that a cyclist may swerve if a car door opens. Give cyclists extra space when passing parked cars.",
+        "o1": "The cyclist suddenly speeding up and creating a gap.",
+        "o2": "A car door opening unexpectedly, causing the cyclist to swerve into your path.",
+        "o3": "The cyclist signaling to turn left across your path without much warning."
+      },
+      "q4": {
+        "text": "You encounter dense fog on a familiar road, and visibility is reduced to about 50 meters.\\n\\nWhat is the best action to take?",
+        "explanation": "In fog, reduce speed, use dipped headlights and fog lights if visibility is below 50m, and be able to stop within the distance you can see.",
+        "o1": "Turn on your full beam headlights to see further into the fog.",
+        "o2": "Maintain your normal speed but double your following distance.",
+        "o3": "Reduce your speed significantly, use dipped headlights (and fog lights if needed), and be ready to stop within the visible distance."
+      },
+      "q5": {
+        "text": "You are approaching a zebra crossing. A pedestrian is standing at the edge, looking in your direction, but has not yet stepped onto the crossing.\\n\\nWhat should you do?",
+        "explanation": "Always anticipate that a pedestrian may step onto the crossing. Slow down and be ready to stop.",
+        "o1": "Continue at your current speed as they have not stepped onto the crossing.",
+        "o2": "Slow down and be fully prepared to stop, making eye contact if possible.",
+        "o3": "Sound your horn to let them know it is safe to cross after you pass."
+      },
+      "q6": {
+        "text": "You are approaching an unmarked crossroads in a residential area. Another vehicle is approaching from your right, and you will arrive at the junction at the same time.\\n\\nWho has priority in this situation?",
+        "explanation": "At unmarked crossroads in the Netherlands, priority is given to traffic from the right.",
+        "o1": "You have priority if your road appears wider or more major.",
+        "o2": "The vehicle from your right has priority.",
+        "o3": "The vehicle that arrives at the junction first has priority."
+      },
+      "q7": {
+        "text": "You are following a slow-moving tractor on a single carriageway road. There is a solid white line on your side of the center marking. The road ahead appears clear for a long distance.\\n\\nWhat should you do?",
+        "explanation": "A solid white line means you must not cross or straddle it to overtake, regardless of how clear the road ahead seems.",
+        "o1": "Overtake quickly and carefully as the road is clear and the tractor is slow.",
+        "o2": "Do not overtake because the solid white line prohibits crossing it for overtaking.",
+        "o3": "Edge out slightly to see if the tractor driver waves you past, then overtake if they do."
+      },
+      "q8": {
+        "text": "You are driving past a park where children are playing football close to the road. There is a waist-high fence separating the park from the pavement and road.\\n\\nWhat is the safest approach?",
+        "explanation": "Children playing near a road require extra caution, even with a fence. Be ready for sudden, unpredictable actions.",
+        "o1": "Maintain normal caution; the fence provides adequate safety separation.",
+        "o2": "Reduce speed and be extra alert; children or a ball could still come onto the road unexpectedly.",
+        "o3": "No special caution is needed unless a child is visibly climbing the fence."
+      },
+      "q9": {
+        "text": "On a 100 km/h dual carriageway, you see a queue of stationary or very slow-moving traffic ahead in your lane due to congestion.\\n\\nWhat is the best way to warn following traffic and reduce risk?",
+        "explanation": "Early, smooth braking and using hazard lights to warn following traffic is safest when approaching a sudden queue.",
+        "o1": "Maintain your speed for as long as possible then brake hard to minimize time lost and fit into the queue.",
+        "o2": "Check mirrors, brake early and smoothly, and briefly activate your hazard warning lights to alert following traffic.",
+        "o3": "Immediately look for an opportunity to switch to the adjacent lane to bypass the queue, even if it means cutting in."
+      },
+      "q10": {
+        "text": "You are due to drive early in the morning but have taken an over-the-counter cold and flu medication the night before. The packaging warns that the medication \"may cause drowsiness.\" You feel slightly tired but otherwise okay.\\n\\nWhat should you do?",
+        "explanation": "Never drive if you may be impaired by medication. If in doubt, do not drive.",
+        "o1": "Drive as planned; the main effects of the medication should have worn off overnight.",
+        "o2": "Have a strong coffee before driving to counteract any residual drowsiness.",
+        "o3": "Do not drive. Find another way to travel or postpone your journey until you are sure you are not affected."
+      }
+    },
+    "mandatorySigns2": {
+      "q1": {
+        "text": "A blue circular sign shows a white arrow pointing left. What does this indicate?",
+        "explanation": "This sign indicates a mandatory footpath. Pedestrians must use this path.",
+        "o1": "You may turn left if clear.",
+        "o2": "Compulsory left turn ahead.",
+        "o3": "One-way street to the left.",
+        "o4": "What is the primary meaning of a round blue sign with a white pedestrian symbol?",
+        "o5": "Warning: pedestrians crossing.",
+        "o6": "Pedestrians are prohibited here.",
+        "o7": "Mandatory footpath for pedestrians."
+      },
+      "q2": {
+        "text": "If you see a round blue sign with a bicycle symbol, what are you required to do as a cyclist?",
+        "explanation": "This indicates a mandatory cycle track. Cyclists must use the designated track.",
+        "o1": "Avoid this area.",
+        "o2": "Use the indicated cycle track.",
+        "o3": "Dismount and walk."
+      },
+      "q3": {
+        "text": "A blue circular sign depicts a white arrow curving to the right, indicating you must pass an obstruction on which side?",
+        "explanation": "This blue circular sign indicates a minimum speed limit. Maximum speed is usually in a red circle.",
+        "o1": "On the left side.",
+        "o2": "On the right side.",
+        "o3": "Either side is permitted.",
+        "o4": "Maximum speed limit of 50 km/h.",
+        "o5": "Recommended speed of 50 km/h.",
+        "o6": "Minimum speed limit of 50 km/h."
+      },
+      "q4": {
+        "text": "A circular blue sign shows arrows pointing left and right around a central island symbol. What action is mandated?",
+        "explanation": "This sign means traffic may pass the obstruction on either side. Choose the safest and most appropriate path.",
+        "o1": "Turn left or right only.",
+        "o2": "Proceed straight on.",
+        "o3": "Pass the obstruction on either the left or right side."
+      },
+      "q5": {
+        "text": "You see a circular blue sign with a horse symbol. What does it mean for horse riders?",
+        "explanation": "This indicates a mandatory bridleway. Horse riders must use this designated path.",
+        "o1": "Horses are not allowed.",
+        "o2": "Warning: horses may be present.",
+        "o3": "Mandatory bridleway; horse riders must use this path."
+      },
+      "q6": {
+        "text": "What does a blue circular sign with a bus symbol indicate?",
+        "explanation": "This sign shows a route or lane mandatory for buses. Often taxis and cyclists can use it too.",
+        "o1": "Route reserved for buses only.",
+        "o2": "Bus stop ahead.",
+        "o3": "No buses allowed on this road."
+      },
+      "q7": {
+        "text": "A blue circular sign shows a white arrow pointing straight ahead and another white arrow pointing right. What is required?",
+        "explanation": "This mandatory sign means drivers must proceed straight or turn right. Choose one of these directions.",
+        "o1": "You must turn right.",
+        "o2": "You must proceed straight or turn right.",
+        "o3": "You must proceed straight only."
+      }
+    },
+    "mandatorySigns": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a bicycle symbol and diagonal line indicates that bicycles are prohibited from entering this road or area. Cyclists must find an alternative route.",
+        "o1": "No entry for bicycles",
+        "o2": "Bicycle route ahead",
+        "o3": "Bicycle parking area"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a tractor symbol indicates a compulsory route that must be used by tractors and agricultural vehicles.",
+        "o1": "Compulsory route for tractors",
+        "o2": "Agricultural vehicles route",
+        "o3": "Tractors must use this route"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with arrows indicates a roundabout ahead, and traffic must circulate in the direction shown by the arrows (typically anti-clockwise in right-hand traffic countries).",
+        "o1": "Roundabout ahead",
+        "o2": "Compulsory roundabout circulation",
+        "o3": "Turn left or right"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a tram symbol and diagonal line indicates that trams are prohibited from entering this road or area. Trams must find an alternative route.",
+        "o1": "No entry for trams",
+        "o2": "Tram route ahead",
+        "o3": "Tram stop ahead"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a white arrow pointing right indicates a compulsory right turn. Drivers must turn right.",
+        "o1": "Compulsory right turn",
+        "o2": "No right turn",
+        "o3": "Road bends right"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a vehicle symbol and branching arrows indicates a compulsory route for vehicles. The arrows show that vehicles must use this route and can choose to go left or right.",
+        "o1": "Compulsory route for vehicles",
+        "o2": "Vehicles may choose left or right",
+        "o3": "No vehicles allowed"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a white diagonal arrow pointing down-right indicates a compulsory diagonal direction. Drivers must follow the direction shown by the arrow.",
+        "o1": "Compulsory direction ahead",
+        "o2": "Compulsory direction right",
+        "o3": "Compulsory diagonal direction"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a bus symbol indicates a compulsory route for buses. Buses must use this designated route.",
+        "o1": "Bus stop ahead",
+        "o2": "No buses allowed",
+        "o3": "Compulsory route for buses"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with two arrows (one straight, one right) indicates that vehicles must proceed straight ahead or turn right. Both directions are permitted.",
+        "o1": "Compulsory direction ahead",
+        "o2": "Compulsory direction right",
+        "o3": "Proceed straight or turn right"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a horse rider symbol indicates a compulsory path for horse riders. Horse riders must use this designated path.",
+        "o1": "Compulsory path for horse riders",
+        "o2": "Horse riders prohibited",
+        "o3": "Horse crossing ahead"
+      }
+    },
+    "motorwayRules": {
+      "q1": {
+        "text": "What is the minimum speed limit on a motorway in the Netherlands?",
+        "explanation": "The minimum speed limit on a motorway in the Netherlands is 60 km/h. Vehicles that cannot maintain this speed are not allowed on motorways.",
+        "o1": "50 km/h",
+        "o2": "60 km/h",
+        "o3": "70 km/h",
+        "o4": "80 km/h"
+      },
+      "q2": {
+        "text": "Which vehicles are not allowed on motorways?",
+        "explanation": "Mopeds and tractors are not allowed on motorways as they cannot maintain the minimum speed limit and would create a safety hazard.",
+        "o1": "Motorcycles",
+        "o2": "Mopeds and tractors",
+        "o3": "Cars towing trailers",
+        "o4": "All of the above"
+      },
+      "q3": {
+        "text": "What should you do if your vehicle breaks down on a motorway?",
+        "explanation": "If your vehicle breaks down on a motorway, you should get out of your vehicle and stand behind the safety barrier. Call for assistance using the emergency phones.",
+        "o1": "Stay in your vehicle",
+        "o2": "Get out and stand behind the barrier",
+        "o3": "Walk along the motorway to find help",
+        "o4": "Try to repair the vehicle yourself"
+      },
+      "q4": {
+        "text": "What is the purpose of the hard shoulder on a motorway?",
+        "explanation": "The hard shoulder is reserved for emergency stops and breakdowns only. It should not be used for normal driving, overtaking, or parking.",
+        "o1": "For overtaking slow vehicles",
+        "o2": "For emergency stops and breakdowns",
+        "o3": "For parking when tired",
+        "o4": "For making phone calls"
+      },
+      "q5": {
+        "text": "What should you do when approaching a motorway exit?",
+        "explanation": "When approaching a motorway exit, you should move to the right lane early and reduce your speed gradually to safely exit the motorway.",
+        "o1": "Speed up to get through quickly",
+        "o2": "Move to the left lane early",
+        "o3": "Move to the right lane early",
+        "o4": "Honk your horn to signal your intention"
+      },
+      "q6": {
+        "text": "What should you do when entering a motorway?",
+        "explanation": "When entering a motorway, you should accelerate to match the speed of traffic on the motorway and merge safely into a gap.",
+        "o1": "Stop and wait for a large gap",
+        "o2": "Accelerate to match motorway speed",
+        "o3": "Slow down to let other vehicles pass",
+        "o4": "Honk your horn to signal your intention"
+      },
+      "q7": {
+        "text": "What does a variable speed limit sign on a motorway mean?",
+        "explanation": "Variable speed limit signs on motorways display mandatory speed limits that you must follow. These are used to manage traffic flow and improve safety.",
+        "o1": "The speed limit is optional",
+        "o2": "You must follow the displayed speed limit",
+        "o3": "The speed limit only applies to trucks",
+        "o4": "The speed limit only applies at night"
+      },
+      "q8": {
+        "text": "What should you do if you miss your motorway exit?",
+        "explanation": "If you miss your motorway exit, you should continue to the next exit and find an alternative route. Never reverse, stop, or turn around on a motorway.",
+        "o1": "Reverse back to the exit",
+        "o2": "Stop and turn around",
+        "o3": "Continue to the next exit",
+        "o4": "Use the hard shoulder to turn around"
+      },
+      "q9": {
+        "text": "What is the purpose of lane markings on a motorway?",
+        "explanation": "Lane markings on motorways help organize traffic flow, prevent accidents, and ensure safe driving by clearly defining where vehicles should drive.",
+        "o1": "To separate different types of vehicles",
+        "o2": "To organize traffic flow and prevent accidents",
+        "o3": "To create parking spaces",
+        "o4": "To mark emergency stopping areas"
+      },
+      "q10": {
+        "text": "What should you do when overtaking on a motorway?",
+        "explanation": "When overtaking on a motorway, you should use the left lane (the lane to the left of the vehicle you are overtaking).",
+        "o1": "Use the hard shoulder",
+        "o2": "Use the left lane",
+        "o3": "Use the right lane",
+        "o4": "Honk your horn continuously"
+      },
+      "q11": {
+        "text": "What should you do when being overtaken on a motorway?",
+        "explanation": "When being overtaken on a motorway, you should maintain your speed and position. Do not speed up or change lanes unnecessarily.",
+        "o1": "Speed up to prevent being overtaken",
+        "o2": "Move to the right lane",
+        "o3": "Maintain your speed and position",
+        "o4": "Honk your horn to signal your position"
+      },
+      "q12": {
+        "text": "What should you do if you see an emergency vehicle on a motorway?",
+        "explanation": "If you see an emergency vehicle on a motorway, you should move to the right lane and slow down to allow it to pass safely.",
+        "o1": "Ignore it and continue driving",
+        "o2": "Move to the right and slow down",
+        "o3": "Speed up to get out of the way",
+        "o4": "Stop immediately"
+      }
+    },
+    "parkingRules": {
+      "q1": {
+        "text": "What is the minimum distance you must park from a pedestrian crossing?",
+        "explanation": "You must park at least 5 meters from a pedestrian crossing to ensure pedestrians have a clear view of approaching traffic.",
+        "o1": "3 meters",
+        "o2": "5 meters",
+        "o3": "10 meters",
+        "o4": "15 meters"
+      },
+      "q2": {
+        "text": "What is the minimum distance you must park from a junction?",
+        "explanation": "You must park at least 5 meters from a junction to ensure other drivers have a clear view of approaching traffic.",
+        "o1": "3 meters",
+        "o2": "5 meters",
+        "o3": "10 meters",
+        "o4": "15 meters"
+      },
+      "q3": {
+        "text": "What is the minimum distance you must park from a bus stop?",
+        "explanation": "You must park at least 10 meters from a bus stop to allow buses to pull in and out safely.",
+        "o1": "5 meters",
+        "o2": "10 meters",
+        "o3": "15 meters",
+        "o4": "20 meters"
+      },
+      "q4": {
+        "text": "What is the minimum distance you must park from a fire hydrant?",
+        "explanation": "You must park at least 5 meters from a fire hydrant to ensure emergency services can access it when needed.",
+        "o1": "3 meters",
+        "o2": "5 meters",
+        "o3": "10 meters",
+        "o4": "15 meters"
+      },
+      "q5": {
+        "text": "What is the minimum distance you must park from a railway crossing?",
+        "explanation": "You must park at least 20 meters from a railway crossing to ensure trains have a clear view and can stop safely if needed.",
+        "o1": "10 meters",
+        "o2": "15 meters",
+        "o3": "20 meters",
+        "o4": "25 meters"
+      },
+      "q6": {
+        "text": "What does a solid yellow line along the edge of the road indicate?",
+        "explanation": "A solid yellow line along the edge of the road indicates that parking is not allowed at any time.",
+        "o1": "No parking allowed",
+        "o2": "No stopping allowed",
+        "o3": "Parking allowed for 30 minutes",
+        "o4": "Parking allowed for residents only"
+      },
+      "q7": {
+        "text": "What does a broken yellow line along the edge of the road indicate?",
+        "explanation": "A broken yellow line along the edge of the road indicates that stopping is not allowed, which means you cannot stop or park your vehicle there.",
+        "o1": "No parking allowed",
+        "o2": "No stopping allowed",
+        "o3": "Parking allowed for 30 minutes",
+        "o4": "Parking allowed for residents only"
+      },
+      "q8": {
+        "text": "What does a blue line along the edge of the road indicate?",
+        "explanation": "A blue line indicates parking reserved for disabled persons. You must have a valid disabled parking permit to park here.",
+        "o1": "No parking allowed",
+        "o2": "Parking for disabled persons only",
+        "o3": "Parking for residents only",
+        "o4": "Parking with a permit only"
+      },
+      "q9": {
+        "text": "What does a white \"P\" sign with a car symbol indicate?",
+        "explanation": "A white \"P\" sign with a car symbol indicates that parking is permitted. Look for additional information on any conditions or restrictions.",
+        "o1": "No parking allowed",
+        "o2": "Parking permitted",
+        "o3": "Parking for residents only",
+        "o4": "Parking with a permit only"
+      },
+      "q10": {
+        "text": "What does a \"No Parking\" sign with a red circle and crossed-out \"P\" indicate?",
+        "explanation": "A \"No Parking\" sign with a red circle and crossed-out \"P\" indicates that parking is not allowed at any time.",
+        "o1": "No parking allowed",
+        "o2": "No stopping allowed",
+        "o3": "Parking allowed for 30 minutes",
+        "o4": "Parking allowed for residents only"
+      },
+      "q11": {
+        "text": "What does a \"No Stopping\" sign with a red circle and crossed-out \"S\" indicate?",
+        "explanation": "A \"No Stopping\" sign with a red circle and crossed-out \"S\" indicates that stopping is not allowed, which means you cannot stop or park your vehicle there.",
+        "o1": "No parking allowed",
+        "o2": "No stopping allowed",
+        "o3": "Parking allowed for 30 minutes",
+        "o4": "Parking allowed for residents only"
+      },
+      "q12": {
+        "text": "What does a \"Resident Parking\" sign indicate?",
+        "explanation": "A \"Resident Parking\" sign indicates that parking is reserved for residents of the area. You must have a valid resident parking permit to park here.",
+        "o1": "No parking allowed",
+        "o2": "Parking for disabled persons only",
+        "o3": "Parking for residents only",
+        "o4": "Parking with a permit only"
+      }
+    },
+    "pedestrianCrossings": {
+      "q1": {
+        "text": "You are driving and see a pedestrian waiting at a zebra crossing. What should you do?",
+        "explanation": "At zebra crossings, you must stop and give way to pedestrians who are waiting to cross or already crossing.",
+        "o1": "Stop and give way to the pedestrian",
+        "o2": "Continue driving, pedestrians must wait",
+        "o3": "Honk to warn the pedestrian"
+      },
+      "q2": {
+        "text": "You are driving and see a pedestrian crossing at a traffic light. The light is green for you. What should you do?",
+        "explanation": "Even when the light is green for you, you must stop and give way to pedestrians who are already crossing or about to cross.",
+        "o1": "Stop and give way to the pedestrian",
+        "o2": "Continue driving, the light is green",
+        "o3": "Honk to warn the pedestrian"
+      },
+      "q3": {
+        "text": "You are driving and see a pedestrian crossing at a school crossing. What should you do?",
+        "explanation": "At school crossings, you must stop and give way to pedestrians, especially children, who are crossing or waiting to cross.",
+        "o1": "Stop and give way to the pedestrian",
+        "o2": "Continue driving, school crossings are not mandatory",
+        "o3": "Honk to warn the pedestrian"
+      },
+      "q4": {
+        "text": "You are driving and see a pedestrian crossing at a pedestrian crossing with a traffic light. The light is red for pedestrians. What should you do?",
+        "explanation": "Even when the light is red for pedestrians, you must stop and give way to pedestrians who are already crossing or about to cross.",
+        "o1": "Stop and give way to the pedestrian",
+        "o2": "Continue driving, the light is red for pedestrians",
+        "o3": "Honk to warn the pedestrian"
+      },
+      "q5": {
+        "text": "You are driving and see a pedestrian crossing at a pedestrian crossing with a traffic light. The light is green for pedestrians. What should you do?",
+        "explanation": "When the light is green for pedestrians, you must stop and give way to pedestrians who are crossing or waiting to cross.",
+        "o1": "Stop and give way to the pedestrian",
+        "o2": "Continue driving, the light is green for pedestrians",
+        "o3": "Honk to warn the pedestrian"
+      }
+    },
+    "priorityRules": {
+      "q1": {
+        "text": "Based on the image, who has the right of way?",
+        "explanation": "Trams generally have priority over other vehicles, especially when they are on tracks.",
+        "o1": "1",
+        "o2": "2",
+        "o3": "none"
+      },
+      "q2": {
+        "text": "Who must give way at this junction according to the signs?",
+        "explanation": "Vehicles on a minor road, often indicated by a give way or stop sign, must yield to traffic on the priority road.",
+        "o1": "1",
+        "o2": "2",
+        "o3": "Both must stop and proceed alternately"
+      },
+      "q3": {
+        "text": "At an unmarked crossroads, which vehicle has priority?",
+        "explanation": "At an unmarked crossroads, the \"priority to the right\" rule applies. Vehicles approaching from the right have priority.",
+        "o1": "The vehicle approaching from the right",
+        "o2": "The larger vehicle",
+        "o3": "The vehicle turning left"
+      },
+      "q4": {
+        "text": "What does a \"Give Way\" sign (inverted triangle) mean?",
+        "explanation": "A \"Give Way\" sign means you must slow down and be prepared to stop if necessary to give way to traffic on the priority road.",
+        "o1": "You must stop completely before proceeding",
+        "o2": "You must slow down and give way to traffic on the priority road",
+        "o3": "You have priority over all other traffic"
+      },
+      "q5": {
+        "text": "At a T-junction, which vehicle typically has priority?",
+        "explanation": "At a T-junction, vehicles on the through road (the top of the T) typically have priority over vehicles turning into the junction.",
+        "o1": "The vehicle on the through road",
+        "o2": "The vehicle turning into the junction",
+        "o3": "The vehicle approaching from the left"
+      },
+      "q6": {
+        "text": "What is the priority rule for emergency vehicles with flashing lights and sirens?",
+        "explanation": "Emergency vehicles with flashing lights and sirens have priority over all other traffic. You must give way and allow them to pass safely.",
+        "o1": "They must follow normal traffic rules",
+        "o2": "They have priority over all other traffic and you must give way",
+        "o3": "They only have priority at traffic lights"
+      },
+      "q7": {
+        "text": "At a roundabout, who has priority?",
+        "explanation": "At a roundabout, traffic already on the roundabout has priority over traffic waiting to enter. You must give way to traffic on your right.",
+        "o1": "Traffic entering the roundabout",
+        "o2": "Traffic already on the roundabout",
+        "o3": "The larger vehicle"
+      },
+      "q8": {
+        "text": "What does a \"Stop\" sign (octagonal red sign) require you to do?",
+        "explanation": "A \"Stop\" sign requires you to stop completely at the stop line and give way to all traffic on the priority road before proceeding.",
+        "o1": "Slow down and proceed if the way is clear",
+        "o2": "Stop completely and give way to all traffic",
+        "o3": "Stop only if other vehicles are present"
+      }
+    },
+    "prohibitorySigns2": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with blue inner circle and diagonal line prohibits entry for ALL vehicles, including cars, motorcycles, bicycles, and pedestrians.",
+        "o1": "No entry for all vehicles",
+        "o2": "No entry for motor vehicles",
+        "o3": "No entry for cars"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with horizontal bar prohibits entry for ALL vehicles, including cars, motorcycles, bicycles, and pedestrians.",
+        "o1": "No entry for all vehicles",
+        "o2": "No entry for motor vehicles",
+        "o3": "No entry for cars"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with two vehicles facing each other prohibits entry for all vehicles.",
+        "o1": "No entry for vehicles",
+        "o2": "No entry for motor vehicles",
+        "o3": "No entry for cars"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign prohibits vehicles exceeding 3.1 meters in height from using this road or area.",
+        "o1": "No entry for vehicles exceeding 3.1m in height",
+        "o2": "Height limit 3.1m",
+        "o3": "Low bridge ahead"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a white U-turn arrow indicates that U-turns are prohibited at this location.",
+        "o1": "No U-turn",
+        "o2": "U-turn permitted",
+        "o3": "Turn around ahead"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a car silhouette prohibits entry for motor vehicles.",
+        "o1": "No entry for motor vehicles",
+        "o2": "No entry for cars",
+        "o3": "Motor vehicle route"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with \"50\" indicates a speed limit of 50 km/h.",
+        "o1": "Speed limit 50 km/h",
+        "o2": "Maximum speed 50 km/h",
+        "o3": "Speed limit ends"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a lorry symbol prohibits entry for lorries and heavy goods vehicles.",
+        "o1": "No entry for lorries",
+        "o2": "Lorry route",
+        "o3": "Lorry parking area"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with diagonal bar prohibits entry for all motor vehicles (cars, motorcycles, lorries, etc.).",
+        "o1": "No entry for motor vehicles",
+        "o2": "Motor vehicle route",
+        "o3": "Motor vehicle parking area"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign prohibits mopeds from using this road or area.",
+        "o1": "No entry for mopeds",
+        "o2": "Moped route",
+        "o3": "Moped parking area"
+      }
+    },
+    "prohibitorySigns": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates the end of a previously imposed 50 km/h speed limit. National or other posted speed limits now apply.",
+        "o1": "Maximum speed 50 km/h",
+        "o2": "Speed limit ends",
+        "o3": "Minimum speed 50 km/h"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign prohibits vehicles with an actual weight exceeding 5,4 tonnes from proceeding.",
+        "o1": "Vehicles weighing heavier than indicated forbidden",
+        "o2": "No entry for lorries",
+        "o3": "Axle weight limit 5,4t"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates that tractors and other specified agricultural vehicles are prohibited from this road.",
+        "o1": "Agricultural vehicles route",
+        "o2": "No entry for slow vehicles",
+        "o3": "Tractors prohibited"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign means no entry for bicycles. Cyclists must find an alternative route.",
+        "o1": "Cyclists not permitted",
+        "o2": "Cycle route ahead",
+        "o3": "Shared path for pedestrians and cyclists"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates that stopping and parking are forbidden along this section of road.",
+        "o1": "No parking zone",
+        "o2": "Stopping and parking forbidden",
+        "o3": "Clearway, no stopping on carriageway"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign marks the end of a zone where a specific speed limit (e.g., 30 km/h) was in force.",
+        "o1": "Speed limit 30 km/h applies",
+        "o2": "End of all restrictions in zone",
+        "o3": "End of the zone with speed limit"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates the beginning of a zone where a specific speed limit (in this case, 30 km/h) applies.",
+        "o1": "Begin of a zone with speed limit",
+        "o2": "Residential area, walking speed",
+        "o3": "Recommended speed 30 km/h"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates the end of a previously imposed overtaking prohibition. Standard overtaking rules now apply.",
+        "o1": "Overtaking permitted",
+        "o2": "End of the overtaking prohibition",
+        "o3": "No overtaking by lorries"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign prohibits entry for cyclists, mopeds, and tractors.",
+        "o1": "No entry for any vehicles",
+        "o2": "Cyclists, mopeds and tractors prohibited",
+        "o3": "Route for agricultural vehicles and cycles only"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates that motorcycles (motorbikes) are prohibited from using this road or area.",
+        "o1": "Motorcycles must use this lane",
+        "o2": "Motorbikes - Motorcycles prohibited",
+        "o3": "Motorcycle parking area"
+      }
+    },
+    "roadInformation": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates the beginning of a motorway, which has specific rules and restrictions.",
+        "o1": "Motorway",
+        "o2": "Expressway",
+        "o3": "Highway"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue square sign with white \"P\" indicates a parking area where vehicles are allowed to park.",
+        "o1": "Parking",
+        "o2": "Parking area",
+        "o3": "Parking permitted"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue rectangular sign with red diagonal line warns drivers of a playground area where children may be playing. Drivers should reduce speed and be extra cautious.",
+        "o1": "Playground",
+        "o2": "Children at play",
+        "o3": "Play area"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue square sign with red arrow down and white arrow up indicates that you have priority over oncoming traffic in narrow sections.",
+        "o1": "Priority over oncoming traffic",
+        "o2": "Right of way over oncoming traffic",
+        "o3": "Priority for oncoming traffic"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This white diamond sign with yellow square and three black lines indicates a priority road where you have right of way over other traffic.",
+        "o1": "Priority road",
+        "o2": "Main road",
+        "o3": "Priority route"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue rectangular sign with white text indicates a destination or place name, helping drivers navigate to their intended location.",
+        "o1": "Destination",
+        "o2": "Place name",
+        "o3": "Direction sign"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue square sign with three arrows indicates that lanes are merging from the left, requiring drivers to be cautious and allow merging traffic.",
+        "o1": "Lanes merging from the left",
+        "o2": "Lane reduction",
+        "o3": "Merge lanes"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue rectangular sign with white arrow indicates a compulsory direction that traffic must follow.",
+        "o1": "Compulsory direction",
+        "o2": "Turn right",
+        "o3": "Direction arrow"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue rectangular sign with red circle and \"2m\" indicates a height restriction of 2 meters maximum.",
+        "o1": "Height restriction",
+        "o2": "Maximum height 2m",
+        "o3": "Height limit"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue square sign with white car and red diagonal line indicates the end of a zone where motor vehicles were prohibited.",
+        "o1": "End of no entry for motor vehicles",
+        "o2": "End of motor vehicle prohibition",
+        "o3": "Motor vehicles allowed"
+      }
+    },
+    "roadMarkings": {
+      "q1": {
+        "text": "What does a solid white line in the center of the road indicate?",
+        "explanation": "A solid white line in the center of the road indicates that overtaking is not allowed. You must stay in your lane.",
+        "o1": "You can overtake if safe",
+        "o2": "No overtaking allowed",
+        "o3": "Overtaking allowed only for motorcycles",
+        "o4": "Overtaking allowed only during daylight"
+      },
+      "q2": {
+        "text": "What does a broken white line in the center of the road indicate?",
+        "explanation": "A broken white line indicates that overtaking is allowed if it is safe to do so and there is sufficient visibility.",
+        "o1": "No overtaking allowed",
+        "o2": "Overtaking allowed if safe",
+        "o3": "Overtaking allowed only for emergency vehicles",
+        "o4": "Overtaking allowed only on the left"
+      },
+      "q3": {
+        "text": "What does a yellow line along the edge of the road indicate?",
+        "explanation": "A yellow line along the edge of the road indicates that parking is not allowed at any time.",
+        "o1": "No parking allowed",
+        "o2": "Parking allowed for 30 minutes",
+        "o3": "Parking allowed for residents only",
+        "o4": "Parking allowed during certain hours"
+      },
+      "q4": {
+        "text": "What does a blue line along the edge of the road indicate?",
+        "explanation": "A blue line indicates parking reserved for disabled persons. You must have a valid disabled parking permit to park here.",
+        "o1": "No parking allowed",
+        "o2": "Parking for disabled persons only",
+        "o3": "Parking for residents only",
+        "o4": "Parking with a permit only"
+      },
+      "q5": {
+        "text": "What does a zigzag line on the road indicate?",
+        "explanation": "Zigzag lines indicate a pedestrian crossing. You must not park or overtake in this area.",
+        "o1": "A pedestrian crossing",
+        "o2": "A bus stop",
+        "o3": "A school zone",
+        "o4": "A construction zone"
+      },
+      "q6": {
+        "text": "What does a white arrow pointing straight ahead on the road indicate?",
+        "explanation": "A white arrow pointing straight ahead indicates that you must proceed in that direction.",
+        "o1": "You must turn left",
+        "o2": "You must turn right",
+        "o3": "You must go straight ahead",
+        "o4": "You can choose any direction"
+      },
+      "q7": {
+        "text": "What does a white bicycle symbol on the road indicate?",
+        "explanation": "A white bicycle symbol indicates a bicycle lane. Motor vehicles should not drive in this lane.",
+        "o1": "A bicycle lane",
+        "o2": "A bicycle crossing",
+        "o3": "A bicycle parking area",
+        "o4": "A bicycle repair shop"
+      },
+      "q8": {
+        "text": "What does a white \"STOP\" word painted on the road indicate?",
+        "explanation": "A white \"STOP\" word painted on the road reinforces the requirement to stop completely at the stop line or before entering the intersection.",
+        "o1": "You must slow down",
+        "o2": "You must stop completely",
+        "o3": "You must yield to pedestrians",
+        "o4": "You must honk your horn"
+      },
+      "q9": {
+        "text": "What does a white diamond symbol on the road indicate?",
+        "explanation": "A white diamond symbol indicates a priority road. Traffic on this road has the right of way over traffic entering from side roads.",
+        "o1": "A priority road",
+        "o2": "A school zone",
+        "o3": "A construction zone",
+        "o4": "A parking zone"
+      },
+      "q10": {
+        "text": "What does a white \"GIVE WAY\" text painted on the road indicate?",
+        "explanation": "A white \"GIVE WAY\" text reinforces the requirement to yield to other traffic before proceeding.",
+        "o1": "You must stop completely",
+        "o2": "You must yield to other traffic",
+        "o3": "You must honk your horn",
+        "o4": "You must slow down only"
+      },
+      "q11": {
+        "text": "What does a white \"BUS\" text painted on the road indicate?",
+        "explanation": "A white \"BUS\" text indicates a bus lane. Only buses and authorized vehicles may use this lane.",
+        "o1": "A bus lane",
+        "o2": "A bus stop",
+        "o3": "A bus parking area",
+        "o4": "A bus terminal"
+      },
+      "q12": {
+        "text": "What does a white \"TAXI\" text painted on the road indicate?",
+        "explanation": "A white \"TAXI\" text indicates a taxi lane. Only taxis and authorized vehicles may use this lane.",
+        "o1": "A taxi lane",
+        "o2": "A taxi stand",
+        "o3": "A taxi parking area",
+        "o4": "A taxi office"
+      }
+    },
+    "roundaboutRules": {
+      "q1": {
+        "text": "You are approaching a roundabout. What should you do before entering?",
+        "explanation": "Before entering a roundabout, you must give way to traffic already in the roundabout, including cyclists and pedestrians.",
+        "o1": "Give way to traffic already in the roundabout",
+        "o2": "Enter immediately if no cars are visible",
+        "o3": "Stop completely before entering"
+      },
+      "q2": {
+        "text": "You are in a roundabout and want to exit. What should you do?",
+        "explanation": "When exiting a roundabout, you must signal right to indicate your intention to leave the roundabout.",
+        "o1": "Signal right before exiting",
+        "o2": "Signal left before exiting",
+        "o3": "No need to signal when exiting"
+      },
+      "q3": {
+        "text": "You are approaching a roundabout and want to turn left. Which lane should you use?",
+        "explanation": "When turning left at a roundabout, use the left lane to enter and stay in the left lane while in the roundabout.",
+        "o1": "Left lane",
+        "o2": "Right lane",
+        "o3": "Either lane is acceptable"
+      },
+      "q4": {
+        "text": "You are approaching a roundabout and want to go straight ahead. Which lane should you use?",
+        "explanation": "When going straight ahead at a roundabout, you can use either lane unless road markings indicate otherwise.",
+        "o1": "Left lane",
+        "o2": "Right lane",
+        "o3": "Either lane is acceptable"
+      },
+      "q5": {
+        "text": "You are approaching a roundabout and want to turn right. Which lane should you use?",
+        "explanation": "When turning right at a roundabout, use the right lane to enter and stay in the right lane while in the roundabout.",
+        "o1": "Left lane",
+        "o2": "Right lane",
+        "o3": "Either lane is acceptable"
+      },
+      "q6": {
+        "text": "You are in a roundabout and want to change lanes. What should you do?",
+        "explanation": "You can change lanes in a roundabout, but you must signal your intention and only change when it is safe to do so.",
+        "o1": "Signal and change lanes when safe",
+        "o2": "Change lanes immediately",
+        "o3": "Never change lanes in a roundabout"
+      },
+      "q7": {
+        "text": "You are approaching a roundabout and see a cyclist already in the roundabout. What should you do?",
+        "explanation": "Cyclists in a roundabout have the same rights as other vehicles. You must give way to them before entering.",
+        "o1": "Give way to the cyclist",
+        "o2": "Enter the roundabout, cyclists must give way",
+        "o3": "Honk to warn the cyclist"
+      },
+      "q8": {
+        "text": "You are in a roundabout and see a pedestrian waiting to cross at an exit. What should you do?",
+        "explanation": "When exiting a roundabout, you must give way to pedestrians who are waiting to cross or already crossing.",
+        "o1": "Give way to the pedestrian",
+        "o2": "Continue driving, pedestrians must wait",
+        "o3": "Honk to warn the pedestrian"
+      },
+      "q9": {
+        "text": "You are approaching a roundabout and see an emergency vehicle with flashing lights. What should you do?",
+        "explanation": "Emergency vehicles with flashing lights have priority. Give way to them before entering the roundabout.",
+        "o1": "Give way to the emergency vehicle",
+        "o2": "Enter the roundabout normally",
+        "o3": "Stop completely before the roundabout"
+      },
+      "q10": {
+        "text": "You are in a roundabout and want to make a U-turn. What should you do?",
+        "explanation": "To make a U-turn in a roundabout, signal left and continue around the roundabout to exit at the same road you entered from.",
+        "o1": "Signal right and exit at the next exit",
+        "o2": "Signal left and continue around",
+        "o3": "U-turns are not allowed in roundabouts"
+      },
+      "q11": {
+        "text": "You are approaching a roundabout and see a large truck already in the roundabout. What should you do?",
+        "explanation": "Large trucks in a roundabout have the same rights as other vehicles. You must give way to them before entering.",
+        "o1": "Give way to the truck",
+        "o2": "Enter the roundabout, trucks must give way",
+        "o3": "Honk to warn the truck driver"
+      },
+      "q12": {
+        "text": "You are in a roundabout and see a car trying to enter from your right. What should you do?",
+        "explanation": "Once you are in a roundabout, you have priority over vehicles trying to enter. The entering vehicle must give way to you.",
+        "o1": "Give way to the entering car",
+        "o2": "Continue driving, you have priority",
+        "o3": "Honk to warn the entering car"
+      },
+      "q13": {
+        "text": "You are approaching a roundabout and see a bus already in the roundabout. What should you do?",
+        "explanation": "Buses in a roundabout have the same rights as other vehicles. You must give way to them before entering.",
+        "o1": "Give way to the bus",
+        "o2": "Enter the roundabout, buses must give way",
+        "o3": "Honk to warn the bus driver"
+      },
+      "q14": {
+        "text": "You are in a roundabout and want to exit but see a cyclist in the exit lane. What should you do?",
+        "explanation": "When exiting a roundabout, you must give way to cyclists who are already in the exit lane.",
+        "o1": "Give way to the cyclist",
+        "o2": "Exit normally, cyclists must give way",
+        "o3": "Honk to warn the cyclist"
+      },
+      "q15": {
+        "text": "You are approaching a roundabout and see a motorcycle already in the roundabout. What should you do?",
+        "explanation": "Motorcycles in a roundabout have the same rights as other vehicles. You must give way to them before entering.",
+        "o1": "Give way to the motorcycle",
+        "o2": "Enter the roundabout, motorcycles must give way",
+        "o3": "Honk to warn the motorcyclist"
+      }
+    },
+    "signIdentification": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a warning sign, indicated by its triangular shape and red border.",
+        "o1": "Warning sign",
+        "o2": "Prohibitory sign",
+        "o3": "Mandatory sign"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a warning sign (St. Andrew\\",
+        "o1": "Prohibitory sign",
+        "o2": "Warning sign",
+        "o3": "Mandatory sign"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a mandatory sign, indicated by its circular shape and blue background.",
+        "o1": "Mandatory sign",
+        "o2": "Warning sign",
+        "o3": "Prohibitory sign"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This is an information sign, indicated by its rectangular shape and blue background.",
+        "o1": "Information sign",
+        "o2": "Warning sign",
+        "o3": "Prohibitory sign"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a priority sign, indicated by its diamond shape and yellow background.",
+        "o1": "Priority sign",
+        "o2": "Warning sign",
+        "o3": "Prohibitory sign"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a direction sign, indicated by its rectangular shape and green background.",
+        "o1": "Direction sign",
+        "o2": "Warning sign",
+        "o3": "Prohibitory sign"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a service sign, indicated by its rectangular shape and blue background.",
+        "o1": "Service sign",
+        "o2": "Warning sign",
+        "o3": "Prohibitory sign"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This is an additional sign, indicated by its rectangular shape and white background.",
+        "o1": "Additional sign",
+        "o2": "Warning sign",
+        "o3": "Prohibitory sign"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a temporary sign, indicated by its yellow background and often used for road works.",
+        "o1": "Temporary sign",
+        "o2": "Warning sign",
+        "o3": "Prohibitory sign"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a regulatory sign, indicated by its circular shape and red border or blue background.",
+        "o1": "Regulatory sign",
+        "o2": "Warning sign",
+        "o3": "Information sign"
+      }
+    },
+    "speedLimit": {
+      "q1": {
+        "text": "What is the maximum speed limit for cars on a motorway in the Netherlands during good weather conditions?",
+        "explanation": "The maximum speed limit for cars on Dutch motorways is 100 km/h during good weather conditions. This was reduced from 130 km/h to 100 km/h in 2020 and remains at 100 km/h.",
+        "o1": "100 km/h",
+        "o2": "120 km/h",
+        "o3": "130 km/h",
+        "o4": "140 km/h"
+      },
+      "q2": {
+        "text": "What is the speed limit for cars in built-up areas (within city limits) in the Netherlands?",
+        "explanation": "The standard speed limit in built-up areas in the Netherlands is 50 km/h, unless otherwise indicated by traffic signs.",
+        "o1": "30 km/h",
+        "o2": "50 km/h",
+        "o3": "70 km/h",
+        "o4": "80 km/h"
+      },
+      "q3": {
+        "text": "What is the speed limit for cars on rural roads outside built-up areas?",
+        "explanation": "On rural roads outside built-up areas, the speed limit for cars is 80 km/h, unless a different limit is indicated by traffic signs.",
+        "o1": "60 km/h",
+        "o2": "70 km/h",
+        "o3": "80 km/h",
+        "o4": "100 km/h"
+      },
+      "q4": {
+        "text": "What is the speed limit for cars on a motorway during bad weather conditions (rain, snow, fog)?",
+        "explanation": "During bad weather conditions, the speed limit on motorways is reduced to 100 km/h for safety reasons.",
+        "o1": "80 km/h",
+        "o2": "100 km/h",
+        "o3": "120 km/h",
+        "o4": "130 km/h"
+      },
+      "q5": {
+        "text": "What is the speed limit for cars in a 30 km/h zone?",
+        "explanation": "In a 30 km/h zone, the maximum speed limit is 30 km/h. These zones are typically found in residential areas, near schools, or in areas with high pedestrian activity.",
+        "o1": "20 km/h",
+        "o2": "30 km/h",
+        "o3": "40 km/h",
+        "o4": "50 km/h"
+      },
+      "q6": {
+        "text": "What is the speed limit for cars on a motorway at night (between 19:00 and 06:00)?",
+        "explanation": "At night (between 19:00 and 06:00), the speed limit on motorways is 100 km/h to reduce noise pollution and improve safety.",
+        "o1": "100 km/h",
+        "o2": "120 km/h",
+        "o3": "130 km/h",
+        "o4": "140 km/h"
+      },
+      "q7": {
+        "text": "What is the speed limit for cars on a dual carriageway (autoweg) outside built-up areas?",
+        "explanation": "On dual carriageways (autoweg) outside built-up areas, the speed limit for cars is 100 km/h.",
+        "o1": "80 km/h",
+        "o2": "100 km/h",
+        "o3": "120 km/h",
+        "o4": "130 km/h"
+      },
+      "q8": {
+        "text": "What is the speed limit for cars when towing a trailer on a motorway?",
+        "explanation": "When towing a trailer on a motorway, the speed limit is 90 km/h for safety reasons.",
+        "o1": "80 km/h",
+        "o2": "90 km/h",
+        "o3": "100 km/h",
+        "o4": "120 km/h"
+      },
+      "q9": {
+        "text": "What is the speed limit for cars in a roadworks zone on a motorway?",
+        "explanation": "In roadworks zones on motorways, the speed limit is typically reduced to 70 km/h to ensure the safety of workers and drivers.",
+        "o1": "50 km/h",
+        "o2": "70 km/h",
+        "o3": "80 km/h",
+        "o4": "100 km/h"
+      },
+      "q10": {
+        "text": "What is the speed limit for cars in a residential area with speed bumps?",
+        "explanation": "In residential areas with speed bumps, the speed limit is typically 30 km/h to ensure pedestrian safety.",
+        "o1": "20 km/h",
+        "o2": "30 km/h",
+        "o3": "50 km/h",
+        "o4": "70 km/h"
+      },
+      "q11": {
+        "text": "What is the speed limit for cars on a motorway when there is a variable speed limit sign showing 80 km/h?",
+        "explanation": "When a variable speed limit sign shows 80 km/h, you must follow that limit, which overrides the normal motorway speed limit.",
+        "o1": "80 km/h",
+        "o2": "100 km/h",
+        "o3": "130 km/h",
+        "o4": "The normal motorway limit"
+      },
+      "q12": {
+        "text": "What is the speed limit for cars in a special zone marked with a \"Zone 30\" sign?",
+        "explanation": "A \"Zone 30\" sign indicates that the speed limit is 30 km/h throughout the entire zone, not just at the entrance.",
+        "o1": "20 km/h",
+        "o2": "30 km/h",
+        "o3": "50 km/h",
+        "o4": "70 km/h"
+      }
+    },
+    "technologySafety": {
+      "q1": {
+        "text": "What does ABS (Anti-lock Braking System) do?",
+        "explanation": "ABS (Anti-lock Braking System) prevents the wheels from locking during hard braking, allowing the driver to maintain steering control and reduce stopping distance.",
+        "o1": "Prevents the wheels from locking during braking",
+        "o2": "Automatically applies the brakes",
+        "o3": "Increases braking distance",
+        "o4": "Reduces fuel consumption"
+      },
+      "q2": {
+        "text": "What does ESP (Electronic Stability Program) do?",
+        "explanation": "ESP (Electronic Stability Program) helps maintain vehicle stability during cornering by automatically applying brakes to individual wheels when it detects loss of control.",
+        "o1": "Controls the engine speed",
+        "o2": "Helps maintain vehicle stability during cornering",
+        "o3": "Controls the air conditioning",
+        "o4": "Manages the fuel injection"
+      },
+      "q3": {
+        "text": "What is a rear-view camera used for?",
+        "explanation": "A rear-view camera helps with reversing and parking by providing a clear view of the area behind the vehicle, reducing blind spots.",
+        "o1": "To watch movies while driving",
+        "o2": "To help with reversing and parking",
+        "o3": "To monitor traffic behind",
+        "o4": "To take photos while driving"
+      },
+      "q4": {
+        "text": "What does Adaptive Cruise Control (ACC) do?",
+        "explanation": "Adaptive Cruise Control (ACC) maintains a set speed while automatically adjusting to maintain a safe distance from the vehicle ahead.",
+        "o1": "Automatically steers the vehicle",
+        "o2": "Maintains a safe distance from the vehicle ahead",
+        "o3": "Automatically parks the vehicle",
+        "o4": "Controls the radio volume"
+      },
+      "q5": {
+        "text": "What does Lane Departure Warning (LDW) do?",
+        "explanation": "Lane Departure Warning (LDW) warns the driver when the vehicle drifts out of the lane without using the turn signal.",
+        "o1": "Automatically steers the vehicle back into the lane",
+        "o2": "Warns the driver when the vehicle drifts out of the lane",
+        "o3": "Changes lanes automatically",
+        "o4": "Controls the turn signals"
+      },
+      "q6": {
+        "text": "What does Blind Spot Monitoring (BSM) do?",
+        "explanation": "Blind Spot Monitoring (BSM) warns the driver of vehicles in the blind spot when changing lanes.",
+        "o1": "Automatically changes lanes",
+        "o2": "Warns of vehicles in the blind spot",
+        "o3": "Controls the mirrors",
+        "o4": "Adjusts the seat position"
+      },
+      "q7": {
+        "text": "What does Autonomous Emergency Braking (AEB) do?",
+        "explanation": "Autonomous Emergency Braking (AEB) automatically applies the brakes to prevent or reduce the severity of a collision when it detects an imminent crash.",
+        "o1": "Automatically applies brakes to prevent collisions",
+        "o2": "Controls the steering wheel",
+        "o3": "Manages the fuel system",
+        "o4": "Adjusts the suspension"
+      },
+      "q8": {
+        "text": "What does Tire Pressure Monitoring System (TPMS) do?",
+        "explanation": "Tire Pressure Monitoring System (TPMS) warns the driver when tire pressure is too low, which can affect safety and fuel efficiency.",
+        "o1": "Automatically inflates the tires",
+        "o2": "Warns of low tire pressure",
+        "o3": "Changes the tires automatically",
+        "o4": "Controls the suspension"
+      }
+    },
     "trafficLights": {
-      "q1": { "text": "You are approaching traffic lights that have just changed to amber (yellow). What is the general rule you should follow?", "o1": "Accelerate to pass through before it turns red.", "o2": "Stop before the stop line, unless you are so close that to stop safely would cause an accident.", "o3": "Continue at the same speed as it means the lights are about to turn green.", "explanation": "Amber means stop unless you've already crossed the stop line or are so close that stopping suddenly might cause a collision." },
-      "q2": { "text": "What does a green filter arrow (e.g., for turning left) at traffic lights indicate when the main light is red?", "o1": "You may turn left if the way is clear, but give way to pedestrians crossing.", "o2": "You must wait for the main green light before turning left.", "o3": "You have priority over all other traffic and pedestrians when turning left.", "explanation": "A green filter arrow allows you to proceed in the direction of the arrow, even if the main light is red, provided you give way to any pedestrians or other road users who have priority." },
-      "q3": { "text": "If traffic lights are out of order (not working at all), how should you treat the junction?", "o1": "Treat it as if you have priority over all traffic.", "o2": "Proceed with extreme caution and treat the junction as an unmarked crossroads or give way, depending on road markings or signs.", "o3": "Wait for a police officer to direct traffic before proceeding.", "explanation": "When traffic lights are out of order, revert to standard priority rules as if the junction is unmarked, or follow any existing give way/stop signs. Always proceed with caution." },
-      "q4": { "text": "What does a flashing amber beacon mounted above a pedestrian crossing (Pelican or Puffin crossing) signify when pedestrians are crossing?", "o1": "You must stop and wait until the beacon stops flashing.", "o2": "You may proceed if the way is clear, giving way to pedestrians still on the crossing.", "o3": "The crossing is out of order; proceed normally.", "explanation": "A flashing amber beacon at a pedestrian crossing means you must give way to pedestrians on the crossing, but you may proceed if the crossing is clear." },
-      "q5": { "text": "A police officer is directing traffic at a junction and signals you to stop, but the traffic light for you is green. What must you do?", "o1": "Obey the green traffic light and proceed.", "o2": "Point to the green light to inform the officer and then proceed.", "o3": "Obey the police officer's signal and stop.", "explanation": "Signals given by a police officer directing traffic override all other traffic signals and signs. You must obey the officer." },
-      "q6": { "text": "At a level crossing, twin flashing red lights have started to flash. What is your immediate action?", "o1": "Stop immediately, even if you are already on the crossing.", "o2": "Stop before the barrier or stop line and wait until the lights stop flashing and any barrier is fully raised.", "o3": "Cross quickly if you cannot see or hear a train approaching.", "explanation": "Twin flashing red lights at a level crossing mean a train is approaching. You must stop before the stop line or barrier and wait." },
-      "q7": { "text": "Some traffic lights have a white light signal for trams or buses. What does a steady white horizontal bar mean for these vehicles?", "o1": "Proceed with caution.", "o2": "Prepare to stop.", "o3": "Stop.", "explanation": "For trams or buses, a steady white horizontal bar at a traffic light signal typically means Stop." },
-      "q8": { "text": "You see a signal light showing a red bicycle symbol. What does this mean for cyclists?", "o1": "Cyclists must dismount and walk.", "o2": "Cyclists must stop and wait for a green bicycle signal.", "o3": "Cyclists can proceed if no other traffic is present.", "explanation": "A red bicycle symbol at traffic lights means cyclists must stop and wait for the green signal specific to them or a general green light." },
-      "q9": { "text": "What is an intelligent or adaptive traffic light system designed to do?", "o1": "Change lights at fixed intervals regardless of traffic.", "o2": "Prioritize buses and emergency vehicles by giving them immediate green lights.", "o3": "Adjust light timings based on real-time traffic flow detected by sensors.", "explanation": "Adaptive traffic light systems use sensors to detect traffic volume and adjust signal timings to optimize flow and reduce delays." },
-      "q10": { "text": "If a traffic light shows red and amber together, what should you prepare to do?", "o1": "Stop, as the lights are about to turn red.", "o2": "Proceed with caution, as the lights are faulty.", "o3": "Prepare to go; the lights will shortly change to green.", "explanation": "Red and amber lights showing together indicate that the lights are about to change to green. You should prepare to proceed when it turns green." }
+      "q1": {
+        "text": "You are approaching traffic lights that have just changed to amber (yellow). What is the general rule you should follow?",
+        "explanation": "Amber means stop unless you\\",
+        "o1": "Accelerate to pass through before it turns red.",
+        "o2": "Stop before the stop line, unless you are so close that to stop safely would cause an accident.",
+        "o3": "Continue at the same speed as it means the lights are about to turn green."
+      },
+      "q2": {
+        "text": "What does a green filter arrow (e.g., for turning left) at traffic lights indicate when the main light is red?",
+        "explanation": "A green filter arrow allows you to proceed in the direction of the arrow, even if the main light is red, provided you give way to any pedestrians or other road users who have priority.",
+        "o1": "You may turn left if the way is clear, but give way to pedestrians crossing.",
+        "o2": "You must wait for the main green light before turning left.",
+        "o3": "You have priority over all other traffic and pedestrians when turning left."
+      },
+      "q3": {
+        "text": "If traffic lights are out of order (not working at all), how should you treat the junction?",
+        "explanation": "When traffic lights are out of order, revert to standard priority rules as if the junction is unmarked, or follow any existing give way/stop signs. Always proceed with caution.",
+        "o1": "Treat it as if you have priority over all traffic.",
+        "o2": "Proceed with extreme caution and treat the junction as an unmarked crossroads or give way, depending on road markings or signs.",
+        "o3": "Wait for a police officer to direct traffic before proceeding."
+      },
+      "q4": {
+        "text": "What does a flashing amber beacon mounted above a pedestrian crossing (Pelican or Puffin crossing) signify when pedestrians are crossing?",
+        "explanation": "A flashing amber beacon at a pedestrian crossing means you must give way to pedestrians on the crossing, but you may proceed if the crossing is clear.",
+        "o1": "You must stop and wait until the beacon stops flashing.",
+        "o2": "You may proceed if the way is clear, giving way to pedestrians still on the crossing.",
+        "o3": "The crossing is out of order; proceed normally."
+      },
+      "q5": {
+        "text": "A police officer is directing traffic at a junction and signals you to stop, but the traffic light for you is green. What must you do?",
+        "explanation": "Signals given by a police officer directing traffic override all other traffic signals and signs. You must obey the officer.",
+        "o1": "Obey the green traffic light and proceed.",
+        "o2": "Point to the green light to inform the officer and then proceed.",
+        "o3": "Obey the police officer\\"
+      },
+      "q6": {
+        "text": "At a level crossing, twin flashing red lights have started to flash. What is your immediate action?",
+        "explanation": "Twin flashing red lights at a level crossing mean a train is approaching. You must stop before the stop line or barrier and wait.",
+        "o1": "Stop immediately, even if you are already on the crossing.",
+        "o2": "Stop before the barrier or stop line and wait until the lights stop flashing and any barrier is fully raised.",
+        "o3": "Cross quickly if you cannot see or hear a train approaching."
+      },
+      "q7": {
+        "text": "Some traffic lights have a white light signal for trams or buses. What does a steady white horizontal bar mean for these vehicles?",
+        "explanation": "For trams or buses, a steady white horizontal bar at a traffic light signal typically means \"Stop\".",
+        "o1": "Proceed with caution.",
+        "o2": "Prepare to stop.",
+        "o3": "Stop."
+      },
+      "q8": {
+        "text": "You see a signal light showing a red bicycle symbol. What does this mean for cyclists?",
+        "explanation": "A red bicycle symbol at traffic lights means cyclists must stop and wait for the green signal specific to them or a general green light.",
+        "o1": "Cyclists must dismount and walk.",
+        "o2": "Cyclists must stop and wait for a green bicycle signal.",
+        "o3": "Cyclists can proceed if no other traffic is present."
+      },
+      "q9": {
+        "text": "What is an \"intelligent\" or \"adaptive\" traffic light system designed to do?",
+        "explanation": "Adaptive traffic light systems use sensors to detect traffic volume and adjust signal timings to optimize flow and reduce delays.",
+        "o1": "Change lights at fixed intervals regardless of traffic.",
+        "o2": "Prioritize buses and emergency vehicles by giving them immediate green lights.",
+        "o3": "Adjust light timings based on real-time traffic flow detected by sensors."
+      },
+      "q10": {
+        "text": "If a traffic light shows red and amber together, what should you prepare to do?",
+        "explanation": "Red and amber lights showing together indicate that the lights are about to change to green. You should prepare to proceed when it turns green.",
+        "o1": "Stop, as the lights are about to turn red.",
+        "o2": "Proceed with caution, as the lights are faulty.",
+        "o3": "Prepare to go; the lights will shortly change to green."
+      }
+    },
+    "tramInteractions": {
+      "q1": {
+        "text": "You are driving and see a tram approaching from behind. What should you do?",
+        "explanation": "Trams have priority over other vehicles. You must give way to trams and allow them to pass safely.",
+        "o1": "Give way to the tram",
+        "o2": "Continue driving normally",
+        "o3": "Speed up to avoid the tram"
+      },
+      "q2": {
+        "text": "You are driving and see a tram stopped at a tram stop. What should you do?",
+        "explanation": "When a tram is stopped at a tram stop, you must stop and wait for passengers to safely board or alight before proceeding.",
+        "o1": "Stop and wait for passengers to board/alight",
+        "o2": "Continue driving past the tram",
+        "o3": "Honk to warn passengers"
+      },
+      "q3": {
+        "text": "You are driving and see a tram crossing your path. What should you do?",
+        "explanation": "Trams have priority at intersections and crossings. You must give way to trams and wait for them to pass.",
+        "o1": "Give way to the tram",
+        "o2": "Continue driving, trams must give way",
+        "o3": "Speed up to cross before the tram"
+      },
+      "q4": {
+        "text": "You are driving on a road with tram tracks. What should you do?",
+        "explanation": "When driving on roads with tram tracks, drive carefully and be constantly aware of trams that may be approaching.",
+        "o1": "Drive carefully and be aware of trams",
+        "o2": "Drive normally, trams will avoid you",
+        "o3": "Avoid driving on roads with tram tracks"
+      },
+      "q5": {
+        "text": "You are driving and see a tram with flashing lights. What should you do?",
+        "explanation": "Trams with flashing lights have priority and may be making an emergency stop. Give way to them immediately.",
+        "o1": "Give way to the tram immediately",
+        "o2": "Continue driving normally",
+        "o3": "Honk to warn the tram driver"
+      },
+      "q6": {
+        "text": "You are driving and see a tram approaching from the opposite direction. What should you do?",
+        "explanation": "When a tram is approaching from the opposite direction, give it extra space and be prepared to stop if necessary.",
+        "o1": "Drive normally, trams have their own lane",
+        "o2": "Give extra space to the tram",
+        "o3": "Stop completely and let the tram pass"
+      },
+      "q7": {
+        "text": "You are driving and see a tram making a turn. What should you do?",
+        "explanation": "Trams have priority when making turns. You must give way to trams and wait for them to complete their turn.",
+        "o1": "Give way to the tram",
+        "o2": "Continue driving, trams must give way",
+        "o3": "Speed up to avoid the tram"
+      },
+      "q8": {
+        "text": "You are driving and see a tram at a tram stop with passengers boarding. What should you do?",
+        "explanation": "When a tram is at a stop with passengers boarding, you must stop and wait for the tram to depart before proceeding.",
+        "o1": "Stop and wait for the tram to depart",
+        "o2": "Continue driving past the tram",
+        "o3": "Honk to warn passengers"
+      },
+      "q9": {
+        "text": "You are driving and see a tram with its doors open. What should you do?",
+        "explanation": "When a tram has its doors open, it means passengers are boarding or alighting. You must stop and wait for the doors to close.",
+        "o1": "Stop and wait for the doors to close",
+        "o2": "Continue driving past the tram",
+        "o3": "Honk to warn the tram driver"
+      },
+      "q10": {
+        "text": "You are driving and see a tram with a red light. What should you do?",
+        "explanation": "Trams with red lights have priority and may be making an emergency stop. You must give way to them immediately.",
+        "o1": "Give way to the tram",
+        "o2": "Continue driving normally",
+        "o3": "Honk to warn the tram driver"
+      }
+    },
+    "vehicleCategories": {
+      "q1": {
+        "text": "What is the speed limit for motorcycles on motorways in the Netherlands?",
+        "explanation": "Motorcycles have the same speed limit as cars on motorways in the Netherlands, which is 130 km/h during good weather conditions.",
+        "o1": "100 km/h",
+        "o2": "120 km/h",
+        "o3": "130 km/h",
+        "o4": "140 km/h"
+      },
+      "q2": {
+        "text": "What is the speed limit for trucks on motorways in the Netherlands?",
+        "explanation": "Trucks have a speed limit of 80 km/h on motorways in the Netherlands, regardless of the weather conditions.",
+        "o1": "80 km/h",
+        "o2": "90 km/h",
+        "o3": "100 km/h",
+        "o4": "110 km/h"
+      },
+      "q3": {
+        "text": "What is the speed limit for buses on motorways in the Netherlands?",
+        "explanation": "Buses have a speed limit of 80 km/h on motorways in the Netherlands, the same as trucks.",
+        "o1": "80 km/h",
+        "o2": "90 km/h",
+        "o3": "100 km/h",
+        "o4": "110 km/h"
+      },
+      "q4": {
+        "text": "What is the speed limit for mopeds on roads in the Netherlands?",
+        "explanation": "Mopeds have a speed limit of 45 km/h on roads in the Netherlands, unless otherwise indicated by traffic signs.",
+        "o1": "25 km/h",
+        "o2": "30 km/h",
+        "o3": "45 km/h",
+        "o4": "50 km/h"
+      },
+      "q5": {
+        "text": "What is the speed limit for tractors on roads in the Netherlands?",
+        "explanation": "Tractors have a speed limit of 25 km/h on roads in the Netherlands, unless they have special permission for higher speeds.",
+        "o1": "15 km/h",
+        "o2": "25 km/h",
+        "o3": "30 km/h",
+        "o4": "40 km/h"
+      },
+      "q6": {
+        "text": "Which lane should motorcycles use on a three-lane motorway?",
+        "explanation": "Motorcycles can use any lane on a motorway, just like cars. They should follow the same lane discipline rules.",
+        "o1": "The right lane only",
+        "o2": "The left lane only",
+        "o3": "Any lane they choose",
+        "o4": "The middle lane only"
+      },
+      "q7": {
+        "text": "Which lane should trucks use on a three-lane motorway?",
+        "explanation": "Trucks should use the middle and right lanes on a three-lane motorway. They are not allowed to use the left lane for overtaking.",
+        "o1": "The right lane only",
+        "o2": "The left lane only",
+        "o3": "Any lane they choose",
+        "o4": "The middle and right lanes"
+      },
+      "q8": {
+        "text": "What is the speed limit for cars towing trailers on motorways?",
+        "explanation": "Cars towing trailers have a speed limit of 90 km/h on motorways in the Netherlands.",
+        "o1": "80 km/h",
+        "o2": "90 km/h",
+        "o3": "100 km/h",
+        "o4": "110 km/h"
+      }
+    },
+    "vehicleDocumentation": {
+      "q1": {
+        "text": "What documents must you carry when driving in the Netherlands?",
+        "explanation": "You must carry your driving license, vehicle registration document (kentekenbewijs), insurance certificate, and MOT certificate (APK) when driving.",
+        "o1": "Only driving license",
+        "o2": "Driving license and vehicle registration document",
+        "o3": "Driving license, vehicle registration, insurance certificate, and MOT certificate"
+      },
+      "q2": {
+        "text": "What is the APK (Algemene Periodieke Keuring)?",
+        "explanation": "APK (Algemene Periodieke Keuring) is the annual vehicle safety and emissions test that all vehicles must pass to be roadworthy.",
+        "o1": "Annual vehicle insurance check",
+        "o2": "Annual vehicle safety and emissions test",
+        "o3": "Annual driving license renewal"
+      },
+      "q3": {
+        "text": "How often must a new car have an APK test?",
+        "explanation": "A new car must have its first APK test after 3 years, then every year thereafter.",
+        "o1": "Every year",
+        "o2": "Every 2 years",
+        "o3": "Every 3 years"
+      },
+      "q4": {
+        "text": "What happens if you drive without valid insurance?",
+        "explanation": "Driving without valid insurance results in a heavy fine and possible vehicle confiscation. It is a serious offense.",
+        "o1": "Warning only",
+        "o2": "Fine of €140",
+        "o3": "Heavy fine and possible vehicle confiscation"
+      },
+      "q5": {
+        "text": "What is the minimum insurance coverage required in the Netherlands?",
+        "explanation": "The minimum insurance coverage required in the Netherlands is third-party liability insurance (WA-verzekering).",
+        "o1": "Third-party liability only",
+        "o2": "Third-party liability and theft",
+        "o3": "Comprehensive coverage"
+      },
+      "q6": {
+        "text": "What should you do if you lose your driving license?",
+        "explanation": "If you lose your driving license, you should report it to the police and apply for a replacement at your local municipality.",
+        "o1": "Continue driving normally",
+        "o2": "Report it to the police and apply for a replacement",
+        "o3": "Wait until you find it"
+      },
+      "q7": {
+        "text": "What is the penalty for driving without a valid driving license?",
+        "explanation": "Driving without a valid driving license is a serious offense that can result in a heavy fine and possible imprisonment.",
+        "o1": "Warning only",
+        "o2": "Fine of €140",
+        "o3": "Heavy fine and possible imprisonment"
+      },
+      "q8": {
+        "text": "What should you do if your vehicle registration document is stolen?",
+        "explanation": "If your vehicle registration document is stolen, you should report it to the police and apply for a replacement at the RDW.",
+        "o1": "Continue driving normally",
+        "o2": "Report it to the police and apply for a replacement",
+        "o3": "Wait until you find it"
+      },
+      "q9": {
+        "text": "What is the RDW (Rijksdienst voor het Wegverkeer)?",
+        "explanation": "The RDW (Rijksdienst voor het Wegverkeer) is the Dutch vehicle registration and licensing authority responsible for vehicle documentation.",
+        "o1": "Dutch driving school association",
+        "o2": "Dutch vehicle registration and licensing authority",
+        "o3": "Dutch insurance company"
+      },
+      "q10": {
+        "text": "What should you do if you buy a used car?",
+        "explanation": "When you buy a used car, you must transfer ownership within 14 days at the RDW or a post office.",
+        "o1": "Transfer ownership immediately",
+        "o2": "Transfer ownership within 14 days",
+        "o3": "Transfer ownership within 30 days"
+      },
+      "q11": {
+        "text": "What happens if you fail to transfer vehicle ownership on time?",
+        "explanation": "Failing to transfer vehicle ownership within 14 days results in a fine of €340.",
+        "o1": "No penalty",
+        "o2": "Small fine",
+        "o3": "Fine of €340"
+      },
+      "q12": {
+        "text": "What should you do if you move to a different address?",
+        "explanation": "When you move to a different address, you must update both your driving license and vehicle registration addresses at your local municipality.",
+        "o1": "Update your driving license address",
+        "o2": "Update your vehicle registration address",
+        "o3": "Update both driving license and vehicle registration addresses"
+      }
+    },
+    "warningSigns": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns drivers of potential traffic jams ahead.",
+        "o1": "Warning for traffic jams",
+        "o2": "No overtaking",
+        "o3": "End of motorway"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates a railroad crossing ahead that is equipped with barriers.",
+        "o1": "Pedestrian crossing",
+        "o2": "No entry for trains",
+        "o3": "Railroad crossing ahead with barriers"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign (St. Andrew\\",
+        "o1": "Tramway crossing",
+        "o2": "Rail crossing ahead with 1 railway",
+        "o3": "Multiple railway tracks"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns that the road ahead carries two-way traffic, often encountered when leaving a one-way system.",
+        "o1": "Two-way traffic ahead",
+        "o2": "One-way street",
+        "o3": "Overtaking permitted"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns of a double curve ahead, the first to the left, followed by a curve to the right.",
+        "o1": "Sharp right turn",
+        "o2": "Winding road for 1km",
+        "o3": "Double curve ahead, to the left then to the right"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns drivers to be aware of bicycles and cyclists in the area or crossing the road.",
+        "o1": "Warning for bikes and cyclists",
+        "o2": "No cycling allowed",
+        "o3": "Cycle path ahead"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns drivers of roadworks ahead, indicating potential obstructions or changes in road layout.",
+        "o1": "Speed bumps ahead",
+        "o2": "Uneven road surface",
+        "o3": "Roadworks ahead warning"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns of strong crosswinds in the area, which can affect vehicle stability.",
+        "o1": "Danger of falling leaves",
+        "o2": "Heavy crosswinds in area warning",
+        "o3": "Airport nearby"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns of a double curve ahead, the first to the right, followed by a curve to the left.",
+        "o1": "No U-turns allowed",
+        "o2": "Slippery road surface",
+        "o3": "Road bends right then left"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns of loose chippings or stones on the road surface, which can reduce grip or be thrown up by vehicles.",
+        "o1": "Loose chippings and stones on the road warning",
+        "o2": "Risk of falling rocks",
+        "o3": "Uneven road surface"
+      }
+    },
+    "weatherConditions": {
+      "q1": {
+        "text": "You are driving in heavy rain. What should you do?",
+        "explanation": "In heavy rain, reduce your speed and increase your following distance to account for reduced visibility and longer stopping distances.",
+        "o1": "Reduce speed and increase following distance",
+        "o2": "Continue driving at normal speed",
+        "o3": "Speed up to get through the rain quickly"
+      },
+      "q2": {
+        "text": "You are driving in fog. What should you do?",
+        "explanation": "In fog, use low beam headlights (high beams reflect off fog and reduce visibility) and reduce your speed significantly.",
+        "o1": "Use low beam headlights and reduce speed",
+        "o2": "Use high beam headlights for better visibility",
+        "o3": "Continue driving at normal speed"
+      },
+      "q3": {
+        "text": "You are driving in snow. What should you do?",
+        "explanation": "In snow, reduce your speed and use gentle braking to avoid skidding. Sudden movements can cause loss of control.",
+        "o1": "Reduce speed and use gentle braking",
+        "o2": "Continue driving at normal speed",
+        "o3": "Speed up to get through the snow quickly"
+      },
+      "q4": {
+        "text": "You are driving in strong winds. What should you do?",
+        "explanation": "In strong winds, reduce your speed and hold the steering wheel firmly to maintain control of your vehicle.",
+        "o1": "Reduce speed and hold the steering wheel firmly",
+        "o2": "Continue driving at normal speed",
+        "o3": "Speed up to get through the wind quickly"
+      }
     }
   }
 }

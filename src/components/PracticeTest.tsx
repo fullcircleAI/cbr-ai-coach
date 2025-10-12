@@ -117,7 +117,31 @@ export const PracticeTest: React.FC = () => {
         'hazard-perception': 'hazardPerception',
         'priority-rules': 'priorityRules',
         'speed-safety': 'speedLimit',
-        // Add more as we translate them
+        'bicycle-interactions': 'bicycleInteractions',
+        'roundabout-rules': 'roundaboutRules',
+        'tram-interactions': 'tramInteractions',
+        'road-markings': 'roadMarkings',
+        'pedestrian-crossings': 'pedestrianCrossings',
+        'weather-conditions': 'weatherConditions',
+        'alcohol-drugs': 'alcoholDrugs',
+        'motorway-rules': 'motorwayRules',
+        'construction-zones': 'constructionZones',
+        'parking-rules': 'parkingRules',
+        'emergency-procedures': 'emergencyProcedures',
+        'environmental-zones': 'environmentalZones',
+        'vehicle-categories': 'vehicleCategories',
+        'vehicle-documentation': 'vehicleDocumentation',
+        'fatigue-rest': 'fatigueRest',
+        'technology-safety': 'technologySafety',
+        'insight-practice': 'insightPractice',
+        'traffic-rules-signs': 'mandatorySigns',
+        'mandatory-signs-2': 'mandatorySigns2',
+        'prohibitory-signs': 'prohibitorySigns',
+        'prohibitory-signs-2': 'prohibitorySigns2',
+        'warning-signs': 'warningSigns',
+        'road-information': 'roadInformation',
+        'sign-identification': 'signIdentification',
+        'expanded-priority-rules': 'expandedPriorityRules'
       };
       
       const translationKey = testTranslationKeys[testId || ''];
