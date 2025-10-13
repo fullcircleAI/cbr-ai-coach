@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Navigation } from './Navigation';
 import { lightHaptic, impactHaptic } from '../utils/haptics';
 import './MockExam.css';
@@ -26,6 +27,7 @@ interface MockExamConfig {
 export const MockExam: React.FC = () => {
   const { examId } = useParams<{ examId: string }>();
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
 
   // Mock exam configurations - ONLY pass mark differs
   const examConfigs: Record<string, MockExamConfig> = {
@@ -93,6 +95,7 @@ export const MockExam: React.FC = () => {
 
   // Create formatted exam - 50 questions: 25 Traffic Rules, 15 Hazard Perception, 10 Insight
   const createFormattedExam = (_difficulty: 'beginner' | 'intermediate' | 'advanced'): Question[] => {
+    // Get all questions from TypeScript files
     const trafficRulesQuestions = [
       ...questionData.trafficLightsSignalsQuestions,
       ...questionData.priorityRulesQuestions,
@@ -126,10 +129,74 @@ export const MockExam: React.FC = () => {
     const hazardPerceptionList = [...questionData.hazardPerceptionQuestions];
     const trafficInsightList = [...questionData.insightPracticeQuestions];
 
+    // Apply translations if not English
+    const translateQuestions = (questions: Question[], testKey: string): Question[] => {
+      if (i18n.language === 'en') return questions;
+      
+      return questions.map((q, index) => {
+        const qKey = `q${index + 1}`;
+        const baseKey = `questions.${testKey}.${qKey}`;
+        
+        // Check if translation exists
+        const hasTranslation = i18n.exists(`${baseKey}.text`);
+        
+        if (hasTranslation) {
+          return {
+            ...q,
+            text: t(`${baseKey}.text`),
+            options: q.options.map((opt, optIndex) => ({
+              ...opt,
+              text: t(`${baseKey}.o${optIndex + 1}`)
+            })),
+            explanation: t(`${baseKey}.explanation`)
+          };
+        }
+        return q; // Fall back to English
+      });
+    };
+
+    // Map test categories to translation keys
+    const testTranslationKeys: Record<string, string> = {
+      'trafficLights': 'trafficLights',
+      'priorityRules': 'priorityRules',
+      'speedLimit': 'speedLimit',
+      'roadMarkings': 'roadMarkings',
+      'expandedPriorityRules': 'expandedPriorityRules',
+      'motorwayRules': 'motorwayRules',
+      'parkingRules': 'parkingRules',
+      'environmentalZones': 'environmentalZones',
+      'technologySafety': 'technologySafety',
+      'alcoholDrugs': 'alcoholDrugs',
+      'fatigueRest': 'fatigueRest',
+      'emergencyProcedures': 'emergencyProcedures',
+      'bicycleInteractions': 'bicycleInteractions',
+      'roundaboutRules': 'roundaboutRules',
+      'tramInteractions': 'tramInteractions',
+      'pedestrianCrossings': 'pedestrianCrossings',
+      'constructionZones': 'constructionZones',
+      'weatherConditions': 'weatherConditions',
+      'vehicleCategories': 'vehicleCategories',
+      'vehicleDocumentation': 'vehicleDocumentation',
+      'mandatorySigns': 'mandatorySigns',
+      'warningSigns': 'warningSigns',
+      'prohibitorySigns': 'prohibitorySigns',
+      'prohibitorySigns2': 'prohibitorySigns2',
+      'roadInformation': 'roadInformation',
+      'signIdentification': 'signIdentification',
+      'mandatorySigns2': 'mandatorySigns2',
+      'hazardPerception': 'hazardPerception',
+      'insightPractice': 'insightPractice'
+    };
+
+    // Apply translations to each category
+    const translatedTrafficRules = translateQuestions(trafficRulesQuestions, 'trafficLights'); // Use first test key as fallback
+    const translatedHazardPerception = translateQuestions(hazardPerceptionList, 'hazardPerception');
+    const translatedTrafficInsight = translateQuestions(trafficInsightList, 'insightPractice');
+
     // Shuffle each category
-    const shuffledTrafficRules = [...trafficRulesQuestions].sort(() => Math.random() - 0.5);
-    const shuffledHazardPerception = [...hazardPerceptionList].sort(() => Math.random() - 0.5);
-    const shuffledTrafficInsight = [...trafficInsightList].sort(() => Math.random() - 0.5);
+    const shuffledTrafficRules = [...translatedTrafficRules].sort(() => Math.random() - 0.5);
+    const shuffledHazardPerception = [...translatedHazardPerception].sort(() => Math.random() - 0.5);
+    const shuffledTrafficInsight = [...translatedTrafficInsight].sort(() => Math.random() - 0.5);
 
     // Select questions: 25 + 15 + 10 = 50
     const selectedTrafficRules = shuffledTrafficRules.slice(0, 25);
