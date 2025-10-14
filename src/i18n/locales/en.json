@@ -35,6 +35,21 @@
   "quiz": {
     "title": "Mock Exam"
   },
+  "aiTutor": {
+    "title": "AI Tutor",
+    "welcome": "Hi! I'm your AI driving theory tutor. Ask me anything about Dutch driving rules, practice tests, or how to improve your scores!",
+    "error": "Sorry, I'm having trouble right now. Please try again in a moment.",
+    "actionItems": "Action Items:",
+    "nextSteps": "Next Steps:",
+    "inputPlaceholder": "Ask me anything about driving theory...",
+    "quickQuestions": {
+      "title": "Try asking:",
+      "whyWrong": "Why did I get this wrong?",
+      "explainRule": "Explain this rule",
+      "howImprove": "How can I improve?",
+      "whenReady": "When am I ready for the exam?"
+    }
+  },
   "questions": {
     "alcoholDrugs": {
       "q1": {

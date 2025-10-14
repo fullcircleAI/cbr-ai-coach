@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Navigation } from './Navigation';
 import { PullToRefresh } from './PullToRefresh';
+import AITutor from './AITutor';
 import { aiCoach } from '../services/aiCoach';
 import type { AIInsight } from '../services/aiCoach';
 import './AICoachDashboard.css';
@@ -31,6 +32,7 @@ export const AICoachDashboard: React.FC = () => {
   });
 
   const [aiInsights, setAiInsights] = useState<AIInsight[]>([]);
+  const [showAITutor, setShowAITutor] = useState(false);
 
   useEffect(() => {
     // Load REAL data from AI Coach
@@ -158,9 +160,30 @@ export const AICoachDashboard: React.FC = () => {
             </div>
           </div>
 
+          {/* AI Tutor Button */}
+          <div className="ai-tutor-section">
+            <button 
+              className="ai-tutor-btn"
+              onClick={() => setShowAITutor(true)}
+            >
+              <span className="ai-tutor-icon">🤖</span>
+              <span className="ai-tutor-text">Ask AI Tutor</span>
+              <span className="ai-tutor-subtitle">Get instant help</span>
+            </button>
+          </div>
+
           </div>
         </PullToRefresh>
       </main>
+
+      {/* AI Tutor Modal */}
+      {showAITutor && (
+        <AITutor
+          userProgress={userProgress}
+          currentTest="dashboard"
+          onClose={() => setShowAITutor(false)}
+        />
+      )}
     </div>
   );
 };
