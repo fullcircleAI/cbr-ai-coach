@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { aiService, AITutorResponse } from '../services/aiService';
+import { freeAIService, AITutorResponse } from '../services/freeAIService';
 import './AITutor.css';
 
 interface AITutorProps {
@@ -73,7 +73,7 @@ const AITutor: React.FC<AITutorProps> = ({ userProgress, currentTest, onClose })
         recentMessages: messages.slice(-3)
       };
 
-      const aiResponse: AITutorResponse = await aiService.getTutorResponse(
+      const aiResponse: AITutorResponse = await freeAIService.getTutorResponse(
         userMessage.message,
         context
       );
