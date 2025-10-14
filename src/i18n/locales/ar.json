@@ -1,111 +1,2265 @@
 {
   "navigation": {
-    "dashboard": "لوحة القيادة",
-    "practice": "ممارسة",
-    "mockExam": "امتحان تجريبي",
-    "settings": "الإعدادات"
+    "dashboard": "Dashboard",
+    "practice": "Practice",
+    "mockExam": "Mock Exam",
+    "settings": "Settings"
   },
   "dashboard": {
-    "title": "لوحة القيادة",
-    "averageScore": "متوسط النتيجة",
-    "studyTime": "وقت الدراسة",
-    "timeRemaining": "ساعات حتى هدف 24 ساعة",
-    "yourProgress": "تقدمك",
-    "startPractice": "ابدأ الممارسة"
+    "title": "Dashboard",
+    "averageScore": "Practice Average",
+    "studyTime": "Study Time",
+    "timeRemaining": "Hours to 24h Goal",
+    "yourProgress": "Your Progress",
+    "startPractice": "Start Practice"
   },
   "practice": {
-    "title": "ممارسة",
-    "recommendedForYou": "موصى به لك",
-    "startTest": "ابدأ",
-    "question": "سؤال",
-    "of": "من",
-    "nextQuestion": "السؤال التالي",
-    "finishTest": "إنهاء الاختبار",
-    "explanation": "شرح"
+    "title": "Practice",
+    "recommendedForYou": "Recommended for You",
+    "startTest": "Start",
+    "question": "Question",
+    "of": "of",
+    "nextQuestion": "Next Question",
+    "finishTest": "Finish Test",
+    "explanation": "Explanation"
   },
   "settings": {
-    "title": "الإعدادات",
-    "account": "الحساب",
-    "language": "اللغة",
-    "privacy": "سياسة الخصوصية",
-    "terms": "شروط الخدمة",
-    "faq": "الأسئلة الشائعة",
-    "support": "الدعم"
+    "title": "Settings",
+    "account": "Account",
+    "language": "Language",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "faq": "FAQ",
+    "support": "Support"
   },
   "quiz": {
-    "title": "امتحان تجريبي"
+    "title": "Mock Exam"
   },
   "questions": {
-    "trafficLights": {
+    "alcoholDrugs": {
       "q1": {
-        "text": "You are approaching traffic lights that have just changed to amber (yellow). What is the general rule you should follow?",
-        "o1": "Accelerate to pass through before it turns red.",
-        "o2": "Stop before the stop line, unless you are so close that to stop safely would cause an accident.",
-        "o3": "Continue at the same speed as it means the lights are about to turn green.",
-        "explanation": "Amber means stop unless you've already crossed the stop line or are so close that stopping suddenly might cause a collision."
+        "text": "ما هو الحد الأقصى blood alcohol concentration (BAC) allowed for drivers في هولندا?",
+        "explanation": "الحد الأقصى blood alcohol concentration (BAC) allowed for drivers في هولندا is 0.05%. This is lower than كثير آخر countries إلى improve road safety.",
+        "o1": "0.02%",
+        "o2": "0.05%",
+        "o3": "0.08%"
       },
       "q2": {
-        "text": "What does a green filter arrow (e.g., for turning left) at traffic lights indicate when the main light is red?",
-        "o1": "You may turn left if the way is clear, but give way to pedestrians crossing.",
-        "o2": "You must wait for the main green light before turning left.",
-        "o3": "You have priority over all other traffic and pedestrians when turning left.",
-        "explanation": "A green filter arrow allows you to proceed in the direction of the arrow, even if the main light is red, provided you give way to any pedestrians or other road users who have priority."
+        "text": "ما هو الحد الأقصى BAC for drivers with أقل than 5 years من experience?",
+        "explanation": "Drivers with أقل than 5 years من experience have a stricter BAC limit من 0.02%, which is essentially zero tolerance.",
+        "o1": "0.02%",
+        "o2": "0.05%",
+        "o3": "0.08%"
       },
       "q3": {
-        "text": "If traffic lights are out of order (not working at all), how should you treat the junction?",
-        "o1": "Treat it as if you have priority over all traffic.",
-        "o2": "Proceed with extreme caution and treat the junction as an unmarked crossroads or give way, depending on road markings or signs.",
-        "o3": "Wait for a police officer to direct traffic before proceeding.",
-        "explanation": "When traffic lights are out of order, revert to standard priority rules as if the junction is unmarked, or follow any existing give way/stop signs. Always proceed with caution."
+        "text": "ما هو the penalty for قيادة with a BAC between 0.05% and 0.08%?",
+        "explanation": "قيادة with a BAC between 0.05% and 0.08% results في a fine من €240 and possible license suspension.",
+        "o1": "تحذير only",
+        "o2": "Fine من €140",
+        "o3": "Fine من €240"
       },
       "q4": {
-        "text": "What does a flashing amber beacon mounted above a pedestrian crossing (Pelican or Puffin crossing) signify when pedestrians are crossing?",
-        "o1": "You must stop and wait until the beacon stops flashing.",
-        "o2": "You may proceed if the way is clear, giving way to pedestrians still on the crossing.",
-        "o3": "The crossing is out of order; proceed normally.",
-        "explanation": "A flashing amber beacon at a pedestrian crossing means you must give way to pedestrians on the crossing, but you may proceed if the crossing is clear."
+        "text": "ما هو the penalty for قيادة with a BAC فوق 0.08%?",
+        "explanation": "قيادة with a BAC فوق 0.08% is a criminal offense that can result في imprisonment, heavy fines, and إجباري license suspension.",
+        "o1": "Fine من €240",
+        "o2": "Fine من €340",
+        "o3": "Criminal offense with possible imprisonment"
       },
       "q5": {
-        "text": "A police officer is directing traffic at a junction and signals you to stop, but the traffic light for you is green. What must you do?",
-        "o1": "Obey the green traffic light and proceed.",
-        "o2": "Point to the green light to inform the officer and then proceed.",
-        "o3": "Obey the police officer's signal and stop.",
-        "explanation": "Signals given by a police officer directing traffic override all other traffic signals and signs. You must obey the officer."
+        "text": "How long should you wait بعد drinking alcohol قبل قيادة?",
+        "explanation": "The safest approach is إلى wait في الأقل 24 ساعات بعد drinking alcohol قبل قيادة. Your judgment من when you feel sober is not reliable.",
+        "o1": "1 hour per drink",
+        "o2": "2 ساعات per drink",
+        "o3": "في الأقل 24 ساعات"
       },
       "q6": {
-        "text": "At a level crossing, twin flashing red lights have started to flash. What is your immediate action?",
-        "o1": "Stop immediately, even if you are already on the crossing.",
-        "o2": "Stop before the barrier or stop line and wait until the lights stop flashing and any barrier is fully raised.",
-        "o3": "Cross quickly if you cannot see or hear a train approaching.",
-        "explanation": "Twin flashing red lights at a level crossing mean a train is approaching. You must stop before the stop line or barrier and wait."
+        "text": "What drugs are غير قانوني إلى drive تحت the influence من في هولندا?",
+        "explanation": "It is غير قانوني إلى drive تحت the influence من any drug that affects your قيادة ability, including cannabis, prescription medications, and فوق-the-counter drugs.",
+        "o1": "Only hard drugs like cocaine and heroin",
+        "o2": "Only prescription medications",
+        "o3": "كل drugs that affect قيادة ability"
       },
       "q7": {
-        "text": "Some traffic lights have a white light signal for trams or buses. What does a steady white horizontal bar mean for these vehicles?",
-        "o1": "Proceed with caution.",
-        "o2": "Prepare to stop.",
-        "o3": "Stop.",
-        "explanation": "For trams or buses, a steady white horizontal bar at a traffic light signal typically means Stop."
+        "text": "ماذا يجب you do if أنت taking medication that may affect your قيادة?",
+        "explanation": "If أنت taking medication that may affect your قيادة, يجب عليك check with your doctor or pharmacist حوالي whether it is آمن إلى drive.",
+        "o1": "Drive as normal",
+        "o2": "Drive only خلال the day",
+        "o3": "Check with your doctor or pharmacist"
       },
       "q8": {
-        "text": "You see a signal light showing a red bicycle symbol. What does this mean for cyclists?",
-        "o1": "Cyclists must dismount and walk.",
-        "o2": "Cyclists must stop and wait for a green bicycle signal.",
-        "o3": "Cyclists can proceed if no other traffic is present.",
-        "explanation": "A red bicycle symbol at traffic lights means cyclists must stop and wait for the green signal specific to them or a general green light."
+        "text": "What are the signs من drug-impaired قيادة?",
+        "explanation": "Signs من drug-impaired قيادة include erratic قيادة behavior, slow reaction times, poor judgment, and difficulty maintaining lane position.",
+        "o1": "Only erratic قيادة behavior",
+        "o2": "Only slow reaction times",
+        "o3": "Erratic قيادة, slow reactions, and poor judgment"
       },
       "q9": {
-        "text": "What is an intelligent or adaptive traffic light system designed to do?",
-        "o1": "Change lights at fixed intervals regardless of traffic.",
-        "o2": "Prioritize buses and emergency vehicles by giving them immediate green lights.",
-        "o3": "Adjust light timings based on real-time traffic flow detected by sensors.",
-        "explanation": "Adaptive traffic light systems use sensors to detect traffic volume and adjust signal timings to optimize flow and reduce delays."
+        "text": "ما هو the penalty for refusing a breathalyzer test?",
+        "explanation": "Refusing a breathalyzer test carries the نفس penalty as قيادة تحت the influence, as it is considered an admission من guilt.",
+        "o1": "لا penalty",
+        "o2": "Small fine",
+        "o3": "نفس penalty as قيادة تحت the influence"
       },
       "q10": {
-        "text": "If a traffic light shows red and amber together, what should you prepare to do?",
-        "o1": "Stop, as the lights are about to turn red.",
+        "text": "How long does alcohol stay في your system?",
+        "explanation": "Alcohol can stay في your system for 24-48 ساعات, depending على factors like body weight, metabolism, and amount consumed.",
+        "o1": "1-2 ساعات",
+        "o2": "4-6 ساعات",
+        "o3": "24-48 ساعات"
+      },
+      "q11": {
+        "text": "ماذا يجب you do if you suspect آخر سائق is تحت the influence?",
+        "explanation": "If you suspect آخر سائق is تحت the influence, call the شرطة طوارئ number (112) and provide the مركبة description and location.",
+        "o1": "Confront them directly",
+        "o2": "Call the شرطة طوارئ number",
+        "o3": "Follow them إلى their destination"
+      },
+      "q12": {
+        "text": "ما هو the الأفضل way إلى prevent drunk قيادة?",
+        "explanation": "The الأفضل ways إلى prevent drunk قيادة are إلى designate a sober سائق, take a taxi or عام transport, or stay overnight. أبداً drive بعد drinking.",
+        "o1": "Designate a sober سائق",
+        "o2": "Take a taxi or عام transport",
+        "o3": "كل من the فوق"
+      }
+    },
+    "bicycleInteractions": {
+      "q1": {
+        "text": "You approach an intersection with a bicycle crossing. A راكب دراجة is waiting إلى cross. ماذا يجب you do?",
+        "explanation": "في bicycle crossings, motorists must توقف and أفسح الطريق إلى cyclists who are waiting إلى cross or already crossing.",
+        "o1": "توقف and أفسح الطريق إلى the راكب دراجة",
+        "o2": "Continue قيادة, cyclists must wait",
+        "o3": "Honk إلى warn the راكب دراجة"
+      },
+      "q2": {
+        "text": "You want إلى انعطف يميناً في an intersection. A راكب دراجة is approaching من the opposite اتجاه, also turning يمين. Who has أولوية?",
+        "explanation": "Cyclists have أولوية when turning يمين في intersections. Motorists must أفسح الطريق إلى cyclists في this situation.",
+        "o1": "The راكب دراجة has أولوية",
+        "o2": "You have أولوية as a motorist",
+        "o3": "Whoever arrives أول has أولوية"
+      },
+      "q3": {
+        "text": "أنت قيادة على a road with a bicycle lane. A راكب دراجة is riding في the bicycle lane. ما هو الحد الأدنى مسافة يجب عليك maintain when تجاوز?",
+        "explanation": "When تجاوز cyclists, يجب عليك maintain a minimum مسافة من 1.5 أمتار إلى ensure their safety.",
+        "o1": "1 meter",
+        "o2": "1.5 أمتار",
+        "o3": "2 أمتار"
+      },
+      "q4": {
+        "text": "أنت قيادة في a 30 km/h zone. A راكب دراجة is riding ahead من you في 20 km/h. ماذا يجب you do?",
+        "explanation": "في 30 km/h zones, يجب عليك follow cyclists في a آمن مسافة rather than تجاوز, as the سرعة difference is minimal.",
+        "o1": "تجاوز فوراً when آمن",
+        "o2": "Follow behind في a آمن مسافة",
+        "o3": "Honk إلى make the راكب دراجة move faster"
+      },
+      "q5": {
+        "text": "أنت وقوف your car. You see a bicycle lane التالي إلى the وقوف space. ماذا يجب you do?",
+        "explanation": "دائماً check for approaching cyclists قبل opening your car door when وقوف التالي إلى a bicycle lane إلى prevent accidents.",
+        "o1": "وقوف normally, cyclists can اذهب حول",
+        "o2": "Check for cyclists قبل opening your door",
+        "o3": "وقوف closer إلى the bicycle lane إلى save space"
+      },
+      "q6": {
+        "text": "أنت قيادة على a road without a bicycle lane. A راكب دراجة is riding على the يمين side من the road. ماذا يجب you do?",
+        "explanation": "When هناك is لا bicycle lane, cyclists have the يمين إلى use the road. Maintain a آمن مسافة and تجاوز only when it is آمن إلى do so.",
+        "o1": "Drive as قريب as possible إلى the راكب دراجة",
+        "o2": "Maintain a آمن مسافة and تجاوز when possible",
+        "o3": "Honk إلى make the راكب دراجة move إلى the side"
+      },
+      "q7": {
+        "text": "أنت approaching a دوار. A راكب دراجة is already في the دوار. ماذا يجب you do?",
+        "explanation": "في roundabouts, يجب عليك أفسح الطريق إلى traffic already في the دوار, including cyclists.",
+        "o1": "Enter the دوار, cyclists must أفسح الطريق",
+        "o2": "Wait for the راكب دراجة إلى exit the دوار",
+        "o3": "Enter and تجاوز the راكب دراجة فوراً"
+      },
+      "q8": {
+        "text": "أنت قيادة على a narrow road. A راكب دراجة is approaching من the opposite اتجاه. ماذا يجب you do?",
+        "explanation": "على narrow roads, إبطاء and give cyclists extra space when passing إلى ensure their safety.",
+        "o1": "Continue قيادة, the راكب دراجة must move aside",
+        "o2": "إبطاء and give the راكب دراجة extra space",
+        "o3": "توقف completely and let the راكب دراجة pass"
+      },
+      "q9": {
+        "text": "أنت قيادة في night. You see a راكب دراجة ahead without proper lighting. ماذا يجب you do?",
+        "explanation": "When encountering a راكب دراجة without proper lighting في night, إبطاء and pass with extra caution إلى ensure safety.",
+        "o1": "Flash your المصابيح الأمامية إلى warn the راكب دراجة",
+        "o2": "إبطاء and pass with extra caution",
+        "o3": "Honk إلى alert the راكب دراجة"
+      },
+      "q10": {
+        "text": "أنت قيادة في a residential area. Children are riding bicycles على the street. ماذا يجب you do?",
+        "explanation": "في residential areas with children cycling, reduce your سرعة and be extra vigilant as children may not دائماً follow traffic rules.",
+        "o1": "Drive normally, children should be careful",
+        "o2": "Reduce سرعة and be extra vigilant",
+        "o3": "Honk إلى warn the children"
+      },
+      "q11": {
+        "text": "أنت قيادة على a road with a shared bicycle and مشاة path. A راكب دراجة is using the path. ماذا يجب you do?",
+        "explanation": "When قيادة قريب shared bicycle and مشاة paths, be aware that cyclists may need إلى enter the road and be prepared إلى أفسح الطريق.",
+        "o1": "Ignore the راكب دراجة, they are على a separate path",
+        "o2": "Be aware that the راكب دراجة may enter the road",
+        "o3": "Honk إلى warn the راكب دراجة إلى stay على the path"
+      },
+      "q12": {
+        "text": "أنت قيادة على a road with a bicycle lane. The bicycle lane is blocked by roadworks. ماذا يجب you do?",
+        "explanation": "When a bicycle lane is blocked, cyclists may need إلى use the main road. Be extra careful and give them space.",
+        "o1": "Continue قيادة normally",
+        "o2": "Be extra careful as cyclists may use the main road",
+        "o3": "Honk إلى warn cyclists حوالي the roadworks"
+      },
+      "q13": {
+        "text": "أنت قيادة على a road with a bicycle lane. A راكب دراجة is riding خارج the bicycle lane. ماذا يجب you do?",
+        "explanation": "Cyclists are not دائماً مطلوب إلى use bicycle lanes. Respect their choice and maintain a آمن مسافة when passing.",
+        "o1": "Honk إلى make the راكب دراجة use the bicycle lane",
+        "o2": "Respect the راكب دراجة\\",
+        "o3": "Drive as قريب as possible إلى force them into the lane"
+      },
+      "q14": {
+        "text": "أنت قيادة على a road with a bicycle lane. A راكب دراجة is riding في the bicycle lane but swerving slightly. ماذا يجب you do?",
+        "explanation": "When a راكب دراجة is swerving, they may be avoiding obstacles or have difficulty maintaining balance. Give extra space and pass with caution.",
+        "o1": "Honk إلى warn the راكب دراجة",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as قريب as possible إلى keep them في line"
+      },
+      "q15": {
+        "text": "أنت قيادة على a road with a bicycle lane. A راكب دراجة is riding في the bicycle lane but appears إلى be looking في their phone. ماذا يجب you do?",
+        "explanation": "When a راكب دراجة appears distracted, give extra space and pass with caution. Honking may startle them and cause an حادث.",
+        "o1": "Honk إلى alert the راكب دراجة",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as قريب as possible إلى get their attention"
+      },
+      "q16": {
+        "text": "أنت قيادة على a road with a bicycle lane. A راكب دراجة is riding في the bicycle lane but appears إلى be intoxicated. ماذا يجب you do?",
+        "explanation": "When a راكب دراجة appears intoxicated, give extra space and pass with extreme caution. Their behavior may be unpredictable.",
+        "o1": "Honk إلى alert the راكب دراجة",
+        "o2": "Give extra space and pass with extreme caution",
+        "o3": "Drive as قريب as possible إلى keep them في line"
+      },
+      "q17": {
+        "text": "أنت قيادة على a road with a bicycle lane. A راكب دراجة is riding في the bicycle lane but appears إلى be having mechanical problems. ماذا يجب you do?",
+        "explanation": "When a راكب دراجة appears إلى have mechanical problems, give extra space and pass with caution as they may need إلى توقف suddenly.",
+        "o1": "Honk إلى alert the راكب دراجة",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as قريب as possible إلى keep them moving"
+      },
+      "q18": {
+        "text": "أنت قيادة على a road with a bicycle lane. A راكب دراجة is riding في the bicycle lane but appears إلى be lost or confused. ماذا يجب you do?",
+        "explanation": "When a راكب دراجة appears lost or confused, give extra space and pass with caution as they may make unexpected movements.",
+        "o1": "Honk إلى alert the راكب دراجة",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as قريب as possible إلى guide them"
+      },
+      "q19": {
+        "text": "أنت قيادة على a road with a bicycle lane. A راكب دراجة is riding في the bicycle lane but appears إلى be في distress. ماذا يجب you do?",
+        "explanation": "When a راكب دراجة appears إلى be في distress, توقف and offer help if it is آمن إلى do so. Otherwise, give extra space and pass with caution.",
+        "o1": "Honk إلى alert the راكب دراجة",
+        "o2": "Give extra space and pass with caution",
+        "o3": "توقف and offer help if آمن إلى do so"
+      },
+      "q20": {
+        "text": "أنت قيادة على a road with a bicycle lane. A راكب دراجة is riding في the bicycle lane but appears إلى be racing. ماذا يجب you do?",
+        "explanation": "When a راكب دراجة appears إلى be racing, give extra space and pass with caution as their behavior may be unpredictable.",
+        "o1": "Honk إلى alert the راكب دراجة",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as قريب as possible إلى keep them في line"
+      }
+    },
+    "constructionZones": {
+      "q1": {
+        "text": "أنت قيادة and see a بناء zone ahead. ماذا يجب you do?",
+        "explanation": "في بناء zones, يجب عليك reduce your سرعة and be extra careful due إلى potential hazards and workers.",
+        "o1": "Reduce سرعة and be extra careful",
+        "o2": "Continue قيادة في normal سرعة",
+        "o3": "سرعة أعلى إلى get through بسرعة"
+      },
+      "q2": {
+        "text": "أنت قيادة في a بناء zone and see workers على the road. ماذا يجب you do?",
+        "explanation": "When workers are present في بناء zones, give them extra space and drive ببطء إلى ensure their safety.",
+        "o1": "Give extra space إلى workers and drive ببطء",
+        "o2": "Continue قيادة normally",
+        "o3": "Honk إلى warn the workers"
+      },
+      "q3": {
+        "text": "أنت قيادة في a بناء zone and see a temporary حد السرعة sign. ماذا يجب you do?",
+        "explanation": "Temporary حد السرعة signs في بناء zones must be followed. They are قانونياً enforceable and designed for safety.",
+        "o1": "Follow the temporary حد السرعة",
+        "o2": "Continue قيادة في the normal حد السرعة",
+        "o3": "Ignore the temporary حد السرعة"
+      },
+      "q4": {
+        "text": "أنت قيادة في a بناء zone and see a lane closure. ماذا يجب you do?",
+        "explanation": "When a lane is مغلق في a بناء zone, merge into the مفتوح lane when it is آمن إلى do so.",
+        "o1": "Merge into the مفتوح lane when آمن",
+        "o2": "Continue قيادة في the مغلق lane",
+        "o3": "توقف and wait for the lane إلى reopen"
+      },
+      "q5": {
+        "text": "أنت قيادة في a بناء zone and see a flag person directing traffic. ماذا يجب you do?",
+        "explanation": "Flag persons في بناء zones have authority إلى direct traffic. يجب عليك follow their directions for safety.",
+        "o1": "Follow the flag person\\",
+        "o2": "Continue قيادة normally",
+        "o3": "Honk إلى get the flag person\\"
+      },
+      "q6": {
+        "text": "أنت قيادة في a بناء zone and see بناء equipment على the road. ماذا يجب you do?",
+        "explanation": "When بناء equipment is على the road, give it extra space and drive ببطء إلى avoid accidents.",
+        "o1": "Give extra space إلى the equipment and drive ببطء",
+        "o2": "Continue قيادة normally",
+        "o3": "سرعة أعلى إلى get past the equipment بسرعة"
+      },
+      "q7": {
+        "text": "أنت قيادة في a بناء zone and see a detour sign. ماذا يجب you do?",
+        "explanation": "Detour signs في بناء zones indicate alternative routes. يجب عليك follow the detour route for safety.",
+        "o1": "Follow the detour route",
+        "o2": "Continue قيادة على the original route",
+        "o3": "Ignore the detour sign"
+      },
+      "q8": {
+        "text": "أنت قيادة في a بناء zone and see a \"Road Work Ahead\" sign. ماذا يجب you do?",
+        "explanation": "When you see a \"Road Work Ahead\" sign, prepare إلى إبطاء and be extra careful as you approach the بناء zone.",
+        "o1": "Prepare إلى إبطاء and be extra careful",
+        "o2": "Continue قيادة في normal سرعة",
+        "o3": "سرعة أعلى إلى get through بسرعة"
+      }
+    },
+    "emergencyProcedures": {
+      "q1": {
+        "text": "ماذا يجب you do if أنت involved في a traffic حادث?",
+        "explanation": "If أنت involved في a traffic حادث, يجب عليك توقف فوراً and check for injuries. Call طوارئ services if needed.",
+        "o1": "Drive away بسرعة",
+        "o2": "توقف فوراً and check for injuries",
+        "o3": "Wait for someone else إلى call the شرطة"
+      },
+      "q2": {
+        "text": "ما هو the طوارئ number في هولندا?",
+        "explanation": "The طوارئ number في هولندا is 112. This number connects you إلى شرطة, fire, and سيارة إسعاف services.",
+        "o1": "911",
+        "o2": "112",
+        "o3": "999"
+      },
+      "q3": {
+        "text": "متى يجب you call the طوارئ number 112?",
+        "explanation": "Call 112 for life-threatening situations and serious accidents where immediate assistance is needed.",
+        "o1": "Only for life-threatening situations",
+        "o2": "For any traffic حادث",
+        "o3": "For life-threatening situations and serious accidents"
+      },
+      "q4": {
+        "text": "ماذا يجب you do if you witness a traffic حادث?",
+        "explanation": "If you witness a traffic حادث, توقف and offer assistance if it is آمن إلى do so. Call طوارئ services if needed.",
+        "o1": "Continue قيادة",
+        "o2": "توقف and offer assistance if آمن إلى do so",
+        "o3": "Call the شرطة فوراً"
+      },
+      "q5": {
+        "text": "ماذا يجب you do if your مركبة breaks أسفل على a طريق سريع?",
+        "explanation": "If your مركبة breaks أسفل على a طريق سريع, get out and stand behind the safety barrier. Use طوارئ phones إلى call for assistance.",
+        "o1": "Stay في your مركبة",
+        "o2": "Get out and stand behind the barrier",
+        "o3": "Walk along the طريق سريع إلى find help"
+      },
+      "q6": {
+        "text": "ماذا يجب you do if you see an طوارئ مركبة with lights and sirens?",
+        "explanation": "If you see an طوارئ مركبة with lights and sirens, move إلى the يمين and إبطاء إلى allow it إلى pass بأمان.",
+        "o1": "Ignore it and continue قيادة",
+        "o2": "Move إلى the يمين and إبطاء",
+        "o3": "سرعة أعلى إلى get out من the way"
+      },
+      "q7": {
+        "text": "ماذا يجب you do if أنت involved في a minor حادث with لا injuries?",
+        "explanation": "في a minor حادث with لا injuries, exchange معلومات with the آخر سائق including names, addresses, and insurance details.",
+        "o1": "Exchange معلومات with the آخر سائق",
+        "o2": "Call the شرطة فوراً",
+        "o3": "Drive away بسرعة"
+      },
+      "q8": {
+        "text": "ماذا يجب you do if you hit a parked car?",
+        "explanation": "If you hit a parked car, leave a note with your contact معلومات and report the incident إلى your insurance company.",
+        "o1": "Leave a note with your contact معلومات",
+        "o2": "Wait for the owner إلى return",
+        "o3": "Call the شرطة فوراً"
+      },
+      "q9": {
+        "text": "ماذا يجب you do if أنت involved في an حادث with a راكب دراجة or مشاة?",
+        "explanation": "If أنت involved في an حادث with a راكب دراجة or مشاة, توقف فوراً and call طوارئ services (112).",
+        "o1": "Drive away بسرعة",
+        "o2": "توقف فوراً and call طوارئ services",
+        "o3": "Wait for someone else إلى help"
+      },
+      "q10": {
+        "text": "ماذا يجب you do if your مركبة catches fire?",
+        "explanation": "If your مركبة catches fire, توقف فوراً and evacuate everyone من the مركبة. Call طوارئ services and move إلى a آمن مسافة.",
+        "o1": "Try إلى put out the fire yourself",
+        "o2": "توقف فوراً and evacuate everyone",
+        "o3": "Continue قيادة إلى find help"
+      },
+      "q11": {
+        "text": "ماذا يجب you do if you witness a hit-and-run حادث?",
+        "explanation": "If you witness a hit-and-run حادث, call the شرطة and provide as كثير details as possible حوالي the fleeing مركبة.",
+        "o1": "Follow the fleeing مركبة",
+        "o2": "Call the شرطة and provide details",
+        "o3": "Ignore it"
+      },
+      "q12": {
+        "text": "ماذا يجب you do if أنت involved في an حادث with an uninsured سائق?",
+        "explanation": "If أنت involved في an حادث with an uninsured سائق, call the شرطة and your insurance company فوراً.",
+        "o1": "Accept cash payment",
+        "o2": "Call the شرطة and your insurance company",
+        "o3": "Drive away بسرعة"
+      }
+    },
+    "environmentalZones": {
+      "q1": {
+        "text": "ما هو a \"milieuzone\" (environmental zone) في هولندا?",
+        "explanation": "A \"milieuzone\" (environmental zone) is a city center area where certain vehicles are restricted من entering إلى improve air quality and reduce pollution.",
+        "o1": "A nature reserve area",
+        "o2": "A city center with restricted مركبة access",
+        "o3": "A وقوف area for electric vehicles",
+        "o4": "A bicycle-only zone"
+      },
+      "q2": {
+        "text": "Which vehicles are typically restricted في environmental zones?",
+        "explanation": "Environmental zones typically restrict diesel vehicles and older cars that do not meet current emission standards إلى improve air quality.",
+        "o1": "كل vehicles",
+        "o2": "Diesel vehicles and older cars",
+        "o3": "Electric vehicles only",
+        "o4": "Motorcycles only"
+      },
+      "q3": {
+        "text": "What sign indicates the entrance إلى an environmental zone?",
+        "explanation": "The entrance إلى an environmental zone is marked with a red circle containing \"MILIEUZONE\" إلى indicate restricted access.",
+        "o1": "A red circle with \"MILIEUZONE\"",
+        "o2": "A blue circle with \"MILIEUZONE\"",
+        "o3": "A green circle with \"MILIEUZONE\"",
+        "o4": "A yellow triangle with \"MILIEUZONE\""
+      },
+      "q4": {
+        "text": "What sign indicates the exit من an environmental zone?",
+        "explanation": "The exit من an environmental zone is marked with a red circle containing \"MILIEUZONE\" with a diagonal line through it.",
+        "o1": "A red circle with \"MILIEUZONE\" and a diagonal line",
+        "o2": "A blue circle with \"MILIEUZONE\" and a diagonal line",
+        "o3": "A green circle with \"MILIEUZONE\" and a diagonal line",
+        "o4": "A yellow triangle with \"MILIEUZONE\" and a diagonal line"
+      },
+      "q5": {
+        "text": "ما هو the penalty for entering an environmental zone with a restricted مركبة?",
+        "explanation": "Entering an environmental zone with a restricted مركبة typically results في a fine من €95.",
+        "o1": "لا penalty",
+        "o2": "A تحذير letter",
+        "o3": "A fine من €95",
+        "o4": "مركبة confiscation"
+      },
+      "q6": {
+        "text": "Which vehicles are عادة exempt من environmental zone restrictions?",
+        "explanation": "طوارئ vehicles and electric vehicles are عادة exempt من environmental zone restrictions as they have low or zero emissions.",
+        "o1": "كل vehicles",
+        "o2": "طوارئ vehicles and electric vehicles",
+        "o3": "Only electric vehicles",
+        "o4": "Only طوارئ vehicles"
+      }
+    },
+    "expandedPriorityRules": {
+      "q1": {
+        "text": "في an intersection with لا traffic signs or signals, who has the يمين من way?",
+        "explanation": "في an intersection with لا traffic signs or signals, traffic من the يمين has the يمين من way. This is known as the \"يمين قبل يسار\" rule.",
+        "o1": "The مركبة على the يسار",
+        "o2": "The مركبة على the يمين",
+        "o3": "The larger مركبة",
+        "o4": "The مركبة going straight"
+      },
+      "q2": {
+        "text": "في a T-junction, who has the يمين من way?",
+        "explanation": "في a T-junction, traffic على the through road has the يمين من way. Traffic turning onto the through road must أفسح الطريق.",
+        "o1": "Traffic على the through road",
+        "o2": "Traffic turning onto the through road",
+        "o3": "The مركبة على the يسار",
+        "o4": "The مركبة على the يمين"
+      },
+      "q3": {
+        "text": "في a دوار, who has the يمين من way?",
+        "explanation": "في a دوار, traffic already على the دوار has the يمين من way. Traffic entering the دوار must أفسح الطريق.",
+        "o1": "Traffic entering the دوار",
+        "o2": "Traffic already على the دوار",
+        "o3": "Traffic turning يسار",
+        "o4": "Traffic turning يمين"
+      },
+      "q4": {
+        "text": "When merging onto a طريق سريع, who has the يمين من way?",
+        "explanation": "When merging onto a طريق سريع, traffic already على the طريق سريع has the يمين من way. Merging traffic must adjust their سرعة and find a gap.",
+        "o1": "Traffic merging onto the طريق سريع",
+        "o2": "Traffic already على the طريق سريع",
+        "o3": "The مركبة with the higher سرعة",
+        "o4": "The مركبة في the يسار lane"
+      },
+      "q5": {
+        "text": "When changing lanes, who has the يمين من way?",
+        "explanation": "When changing lanes, the مركبة already في the lane has the يمين من way. The مركبة changing lanes must أفسح الطريق and find a آمن gap.",
+        "o1": "The مركبة changing lanes",
+        "o2": "The مركبة already في the lane",
+        "o3": "The مركبة with the higher سرعة",
+        "o4": "The مركبة في the يسار lane"
+      },
+      "q6": {
+        "text": "في an intersection with a \"توقف\" sign, who has the يمين من way?",
+        "explanation": "في an intersection with a \"توقف\" sign, the مركبة في the توقف sign must أفسح الطريق إلى كل آخر traffic قبل proceeding.",
+        "o1": "The مركبة في the توقف sign",
+        "o2": "كل آخر traffic",
+        "o3": "The مركبة على the يمين",
+        "o4": "The مركبة going straight"
+      },
+      "q7": {
+        "text": "في an intersection with a \"أفسح الطريق\" sign, who has the يمين من way?",
+        "explanation": "في an intersection with a \"أفسح الطريق\" sign, the مركبة في the أفسح الطريق sign must أفسح الطريق إلى كل آخر traffic قبل proceeding.",
+        "o1": "The مركبة في the أفسح الطريق sign",
+        "o2": "كل آخر traffic",
+        "o3": "The مركبة على the يمين",
+        "o4": "The مركبة going straight"
+      },
+      "q8": {
+        "text": "When a traffic light turns green, who has the يمين من way?",
+        "explanation": "When a traffic light turns green, كل traffic with a green light has the يمين من way, but must still أفسح الطريق إلى pedestrians and طوارئ vehicles.",
+        "o1": "كل traffic with a green light",
+        "o2": "Pedestrians crossing",
+        "o3": "طوارئ vehicles",
+        "o4": "Traffic turning يسار"
+      },
+      "q9": {
+        "text": "When a traffic light turns yellow, ماذا يجب you do?",
+        "explanation": "When a traffic light turns yellow, يجب عليك توقف if it is آمن إلى do so. Only proceed if لا يمكنك توقف بأمان.",
+        "o1": "سرعة أعلى إلى get through",
+        "o2": "توقف if it is آمن إلى do so",
+        "o3": "Ignore the light",
+        "o4": "Honk your horn"
+      },
+      "q10": {
+        "text": "When a traffic light turns red, ماذا يجب you do?",
+        "explanation": "When a traffic light turns red, يجب عليك توقف completely and wait for the light إلى turn green قبل proceeding.",
+        "o1": "توقف completely",
+        "o2": "إبطاء but continue",
+        "o3": "سرعة أعلى إلى get through",
+        "o4": "انعطف يميناً if واضح"
+      },
+      "q11": {
+        "text": "When a traffic light is flashing yellow, ماذا يجب you do?",
+        "explanation": "When a traffic light is flashing yellow, يجب عليك proceed with caution and be prepared إلى توقف if ضروري.",
+        "o1": "توقف completely",
+        "o2": "Proceed with caution",
+        "o3": "سرعة أعلى",
+        "o4": "Turn حول"
+      },
+      "q12": {
+        "text": "When a traffic light is not working, ماذا يجب you do?",
+        "explanation": "When a traffic light is not working, يجب عليك treat it as a توقف sign and أفسح الطريق إلى آخر traffic قبل proceeding.",
+        "o1": "Treat it as a توقف sign",
+        "o2": "Ignore it completely",
+        "o3": "سرعة أعلى إلى get through",
+        "o4": "Turn حول"
+      }
+    },
+    "fatigueRest": {
+      "q1": {
+        "text": "What are the signs من سائق fatigue?",
+        "explanation": "Signs من سائق fatigue include yawning, heavy eyelids, difficulty concentrating, drifting في lane, missing exits, and feeling restless or irritable.",
+        "o1": "Only yawning",
+        "o2": "Only heavy eyelids",
+        "o3": "Yawning, heavy eyelids, difficulty concentrating, and drifting في lane"
+      },
+      "q2": {
+        "text": "How كثيراً should you take breaks على long journeys?",
+        "explanation": "يجب عليك take a break every 2 ساعات على long journeys, even if you don\\",
+        "o1": "Every 2 ساعات",
+        "o2": "Every 4 ساعات",
+        "o3": "Every 6 ساعات"
+      },
+      "q3": {
+        "text": "How long should each break be على a long journey?",
+        "explanation": "Each break should be 15-20 دقائق long. This gives you enough وقت إلى rest, stretch, and refresh yourself قبل continuing your journey.",
+        "o1": "5 دقائق",
+        "o2": "10 دقائق",
+        "o3": "15-20 دقائق"
+      },
+      "q4": {
+        "text": "ماذا يجب you do if you feel tired بينما قيادة?",
+        "explanation": "If you feel tired بينما قيادة, يجب عليك pull فوق في a آمن place and rest. أبداً try إلى continue قيادة when fatigued.",
+        "o1": "Continue قيادة and try إلى stay awake",
+        "o2": "مفتوح the window and turn أعلى the radio",
+        "o3": "Pull فوق في a آمن place and rest"
+      },
+      "q5": {
+        "text": "How much sleep should you get قبل a long journey?",
+        "explanation": "يجب عليك get 7-8 ساعات من sleep قبل a long journey إلى ensure أنت well-rested and alert بينما قيادة.",
+        "o1": "4-5 ساعات",
+        "o2": "6-7 ساعات",
+        "o3": "7-8 ساعات"
+      },
+      "q6": {
+        "text": "ما هو microsleep?",
+        "explanation": "Microsleep is a brief period من unconsciousness lasting 1-30 ثواني. It can occur without تحذير and is extremely خطير بينما قيادة.",
+        "o1": "A very short nap",
+        "o2": "A brief period من unconsciousness lasting 1-30 ثواني",
+        "o3": "A deep sleep"
+      },
+      "q7": {
+        "text": "ماذا يجب you do if you experience microsleep بينما قيادة?",
+        "explanation": "If you experience microsleep بينما قيادة, يجب عليك pull فوق فوراً في a آمن place and rest. This is a serious تحذير sign من fatigue.",
+        "o1": "Continue قيادة بحذر",
+        "o2": "Pull فوق فوراً and rest",
+        "o3": "Take a short nap في the car"
+      },
+      "q8": {
+        "text": "ما هو the الأفضل وقت إلى plan long journeys?",
+        "explanation": "The الأفضل وقت إلى plan long journeys is early morning when أنت fresh and alert. Avoid قيادة خلال your normal sleep ساعات.",
+        "o1": "Early morning when أنت fresh",
+        "o2": "Late afternoon",
+        "o3": "Late evening"
+      },
+      "q9": {
+        "text": "ماذا يجب you avoid قبل a long journey?",
+        "explanation": "قبل a long journey, يجب عليك avoid heavy meals, alcohol, and medications that cause drowsiness, as they can كل contribute إلى fatigue.",
+        "o1": "Heavy meals",
+        "o2": "Alcohol",
+        "o3": "كل من the فوق"
+      },
+      "q10": {
+        "text": "ماذا يجب you do خلال breaks على long journeys?",
+        "explanation": "خلال breaks على long journeys, يجب عليك get out من the car, stretch, walk حول, and get بعض fresh air إلى help stay alert.",
+        "o1": "Stay في the car and rest",
+        "o2": "Get out, stretch, and walk حول",
+        "o3": "Take a long nap"
+      },
+      "q11": {
+        "text": "ما هو the recommended maximum قيادة وقت في اليوم?",
+        "explanation": "The recommended maximum قيادة وقت في اليوم is 8 ساعات, including breaks. This helps prevent fatigue and maintains safety.",
+        "o1": "6 ساعات",
+        "o2": "8 ساعات",
+        "o3": "10 ساعات"
+      },
+      "q12": {
+        "text": "ماذا يجب you do if أنت قيادة and ابدأ إلى feel drowsy?",
+        "explanation": "If you ابدأ إلى feel drowsy بينما قيادة, يجب عليك pull فوق في a آمن place and take a short nap. Coffee and آخر stimulants are not reliable solutions.",
+        "o1": "Continue قيادة إلى your destination",
+        "o2": "Pull فوق and take a short nap",
+        "o3": "Drink coffee and continue"
+      }
+    },
+    "hazardPerception": {
+      "q1": {
+        "text": "Your سرعة is 50 km/h. A child على a scooter suddenly emerges من behind the parked car على the يمين. What do you do?",
+        "explanation": "Immediate braking is ضروري as a child has suddenly appeared في your path, creating a high-risk situation.",
+        "o1": "فرامل",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q2": {
+        "text": "Your سرعة is 30 km/h. A مشاة looking في their phone steps off the pavement من between parked cars. What do you do?",
+        "explanation": "Braking is مطلوب as a مشاة has unexpectedly entered the roadway without looking, posing an immediate collision risk.",
+        "o1": "فرامل",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q3": {
+        "text": "Your سرعة is 80 km/h على a country road. A deer suddenly jumps out من bushes على the side, حوالي 50 أمتار ahead. لا oncoming traffic is مرئي. What do you do?",
+        "explanation": "A deer في 50 أمتار في 80 km/h is an immediate hazard requiring طوارئ braking إلى avoid a collision.",
+        "o1": "فرامل",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q4": {
+        "text": "Your سرعة is 50 km/h approaching a T-junction على your يمين. A car is في the give-way line, partially obscured by a hedge. Its front wheels ابدأ إلى turn slightly as if إلى pull out. What do you do?",
+        "explanation": "Releasing the accelerator allows you إلى assess if the car will fully emerge and prepares you إلى فرامل if ضروري, without overreacting if it waits.",
+        "o1": "فرامل",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q5": {
+        "text": "Your سرعة is 100 km/h في the middle lane من a three-lane طريق سريع. The car ahead من you, without indicating, suddenly swerves into your lane إلى avoid a much slower مركبة في its original lane. What do you do?",
+        "explanation": "A مركبة suddenly swerving into your lane في high سرعة requires immediate braking إلى avoid a collision and maintain a آمن following مسافة.",
+        "o1": "فرامل",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q6": {
+        "text": "Your سرعة is 30 km/h في a residential area. Children are playing football على a grass verge. A ball rolls onto the road just ahead, and a child starts إلى run towards it. What do you do?",
+        "explanation": "A child running بعد a ball into the road is a high-risk situation requiring immediate braking إلى prevent hitting the child.",
+        "o1": "فرامل",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q7": {
+        "text": "Your سرعة is 60 km/h approaching a slight bend إلى the يسار على a two-lane road. An oncoming مركبة appears إلى be drifting slightly towards the centerline as it negotiates the bend. What do you do?",
+        "explanation": "Releasing the accelerator provides أكثر space and وقت إلى react if the oncoming مركبة crosses the centerline. It is a cautious approach إلى a potential hazard.",
+        "o1": "فرامل",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q8": {
+        "text": "Your سرعة is 70 km/h على a main road approaching إشارات المرور حوالي 150 أمتار ahead. They are currently green but suddenly change إلى amber. What do you do?",
+        "explanation": "Releasing the accelerator is the initial action إلى assess if a آمن توقف can be made قبل the توقف line. If too قريب إلى توقف بأمان, you might proceed through amber, but the primary action is إلى prepare إلى توقف.",
+        "o1": "فرامل",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q9": {
+        "text": "Your سرعة is 10 km/h في very slow-moving/queuing traffic. A راكب دراجة نارية is filtering between your lane and the lane إلى your يمين, approaching من behind. The gap is tight. What do you do?",
+        "explanation": "في very slow or stationary traffic, maintain your position and سرعة (or lack thereof). Sudden braking or swerving can be خطير for the filtering راكب دراجة نارية. Allow them إلى pass.",
+        "o1": "فرامل",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q10": {
+        "text": "Your سرعة is 50 km/h قيادة towards a junction where you intend إلى انعطف يميناً. The sun is very low, causing significant glare and making it very صعب إلى see if any vehicles are emerging من the side road. What do you do?",
+        "explanation": "Severe glare significantly reduces visibility. Release the accelerator إلى إبطاء considerably and be prepared إلى فرامل or توقف if needed as لا يمكنك clearly see potential hazards في the junction.",
+        "o1": "فرامل",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      }
+    },
+    "insightPractice": {
+      "q1": {
+        "text": "أنت approaching a T-junction and want إلى انعطف يميناً onto a busy main road. Your view إلى the يسار is blocked by a parked van, and traffic is moving بسرعة.\\n\\nWhat is the safest way إلى proceed?",
+        "explanation": "دائماً wait for a واضح view and a آمن gap قبل joining a busy road, especially when your view is blocked. أبداً assume others will إبطاء for you.",
+        "o1": "Rely على your ability إلى تسريع بسرعة and join the traffic as soon as possible.",
+        "o2": "Wait حتى you have a واضح view and هناك is a آمن gap في both directions, even if it takes longer.",
+        "o3": "Assume drivers من the يمين will إبطاء for you as you enter."
+      },
+      "q2": {
+        "text": "You have just overtaken a lorry على a three-lane طريق سريع and are now في the middle lane. The يمين lane is واضح, and هناك is آخر slower مركبة further ahead في the يسار lane.\\n\\nWhat should you do according إلى proper طريق سريع قيادة discipline?",
+        "explanation": "على motorways, يجب عليك return إلى the يسار-الأكثر lane as soon as it is آمن. Only use آخر lanes for تجاوز.",
+        "o1": "Stay في the middle lane إلى تجاوز the التالي مركبة ahead.",
+        "o2": "Move إلى the يمين lane إلى give yourself أكثر space من آخر traffic.",
+        "o3": "Return إلى the يسار lane as soon as it is آمن, and only move out again when تجاوز."
+      },
+      "q3": {
+        "text": "أنت قيادة along a residential street with parked cars على your يسار. A راكب دراجة is riding ahead من you, قريب إلى the parked cars.\\n\\nWhat is the main hazard يجب عليك anticipate?",
+        "explanation": "دائماً anticipate that a راكب دراجة may swerve if a car door opens. Give cyclists extra space when passing parked cars.",
+        "o1": "The راكب دراجة suddenly speeding أعلى and creating a gap.",
+        "o2": "A car door opening unexpectedly, causing the راكب دراجة إلى swerve into your path.",
+        "o3": "The راكب دراجة signaling إلى انعطف يساراً across your path without much تحذير."
+      },
+      "q4": {
+        "text": "You encounter dense ضباب على a familiar road, and visibility is reduced إلى حوالي 50 أمتار.\\n\\nWhat is the الأفضل action إلى take?",
+        "explanation": "في ضباب, reduce سرعة, use dipped المصابيح الأمامية and ضباب lights if visibility is تحت 50m, and be able إلى توقف within the مسافة يمكنك see.",
+        "o1": "Turn على your full beam المصابيح الأمامية إلى see further into the ضباب.",
+        "o2": "Maintain your normal سرعة but double your following مسافة.",
+        "o3": "Reduce your سرعة significantly, use dipped المصابيح الأمامية (and ضباب lights if needed), and be ready إلى توقف within the مرئي مسافة."
+      },
+      "q5": {
+        "text": "أنت approaching a zebra crossing. A مشاة is standing في the edge, looking في your اتجاه, but has not yet stepped onto the crossing.\\n\\nWhat should you do?",
+        "explanation": "دائماً anticipate that a مشاة may step onto the crossing. إبطاء and be ready إلى توقف.",
+        "o1": "Continue في your current سرعة as they have not stepped onto the crossing.",
+        "o2": "إبطاء and be fully prepared إلى توقف, making eye contact if possible.",
+        "o3": "Sound your horn إلى let them know it is آمن إلى cross بعد you pass."
+      },
+      "q6": {
+        "text": "أنت approaching an unmarked crossroads في a residential area. آخر مركبة is approaching من your يمين, and you will arrive في the junction في the نفس وقت.\\n\\nWho has أولوية في this situation?",
+        "explanation": "في unmarked crossroads في هولندا, أولوية is given إلى traffic من the يمين.",
+        "o1": "You have أولوية if your road appears wider or أكثر major.",
+        "o2": "The مركبة من your يمين has أولوية.",
+        "o3": "The مركبة that arrives في the junction أول has أولوية."
+      },
+      "q7": {
+        "text": "أنت following a slow-moving tractor على a single carriageway road. هناك is a solid white line على your side من the center marking. The road ahead appears واضح for a long مسافة.\\n\\nWhat should you do?",
+        "explanation": "A solid white line means يجب عليك not cross or straddle it إلى تجاوز, regardless من how واضح the road ahead seems.",
+        "o1": "تجاوز بسرعة and بحذر as the road is واضح and the tractor is slow.",
+        "o2": "Do not تجاوز because the solid white line prohibits crossing it for تجاوز.",
+        "o3": "Edge out slightly إلى see if the tractor سائق waves you past, then تجاوز if they do."
+      },
+      "q8": {
+        "text": "أنت قيادة past a وقوف where children are playing football قريب إلى the road. هناك is a waist-high fence separating the وقوف من the pavement and road.\\n\\nWhat is the safest approach?",
+        "explanation": "Children playing قريب a road require extra caution, even with a fence. Be ready for sudden, unpredictable actions.",
+        "o1": "Maintain normal caution; the fence provides adequate safety separation.",
+        "o2": "Reduce سرعة and be extra alert; children or a ball could still come onto the road unexpectedly.",
+        "o3": "لا special caution is needed unless a child is visibly climbing the fence."
+      },
+      "q9": {
+        "text": "على a 100 km/h dual carriageway, you see a queue من stationary or very slow-moving traffic ahead في your lane due إلى congestion.\\n\\nWhat is the الأفضل way إلى warn following traffic and reduce risk?",
+        "explanation": "Early, smooth braking and using hazard lights إلى warn following traffic is safest when approaching a sudden queue.",
+        "o1": "Maintain your سرعة for as long as possible then فرامل hard إلى minimize وقت lost and fit into the queue.",
+        "o2": "Check mirrors, فرامل early and smoothly, and briefly activate your hazard تحذير lights إلى alert following traffic.",
+        "o3": "فوراً look for an opportunity إلى switch إلى the adjacent lane إلى bypass the queue, even if it means cutting في."
+      },
+      "q10": {
+        "text": "أنت due إلى drive early في the morning but have taken an فوق-the-counter cold and flu medication the night قبل. The packaging warns that the medication \"may cause drowsiness.\" You feel slightly tired but otherwise okay.\\n\\nWhat should you do?",
+        "explanation": "أبداً drive if you may be impaired by medication. If في doubt, do not drive.",
+        "o1": "Drive as planned; the main effects من the medication should have worn off overnight.",
+        "o2": "Have a strong coffee قبل قيادة إلى counteract any residual drowsiness.",
+        "o3": "Do not drive. Find آخر way إلى travel or postpone your journey حتى أنت sure أنت not affected."
+      }
+    },
+    "mandatorySigns2": {
+      "q1": {
+        "text": "A blue circular sign shows a white arrow pointing يسار. ماذا يعني this indicate?",
+        "explanation": "This sign indicates a إجباري footpath. Pedestrians must use this path.",
+        "o1": "You may انعطف يساراً if واضح.",
+        "o2": "Compulsory يسار turn ahead.",
+        "o3": "One-way street إلى the يسار.",
+        "o4": "ما هو the primary meaning من a round blue sign with a white مشاة symbol?",
+        "o5": "تحذير: pedestrians crossing.",
+        "o6": "Pedestrians are ممنوع هنا.",
+        "o7": "إجباري footpath for pedestrians."
+      },
+      "q2": {
+        "text": "If you see a round blue sign with a bicycle symbol, what are you مطلوب إلى do as a راكب دراجة?",
+        "explanation": "This indicates a إجباري cycle track. Cyclists must use the designated track.",
+        "o1": "Avoid this area.",
+        "o2": "Use the indicated cycle track.",
+        "o3": "Dismount and walk."
+      },
+      "q3": {
+        "text": "A blue circular sign depicts a white arrow curving إلى the يمين, indicating يجب عليك pass an obstruction على which side?",
+        "explanation": "This blue circular sign indicates a minimum حد السرعة. Maximum سرعة is عادة في a red circle.",
+        "o1": "على the يسار side.",
+        "o2": "على the يمين side.",
+        "o3": "Either side is permitted.",
+        "o4": "Maximum حد السرعة من 50 km/h.",
+        "o5": "Recommended سرعة من 50 km/h.",
+        "o6": "Minimum حد السرعة من 50 km/h."
+      },
+      "q4": {
+        "text": "A circular blue sign shows arrows pointing يسار and يمين حول a central island symbol. What action is mandated?",
+        "explanation": "This sign means traffic may pass the obstruction على either side. Choose the safest and الأكثر appropriate path.",
+        "o1": "انعطف يساراً or يمين only.",
+        "o2": "Proceed straight على.",
+        "o3": "Pass the obstruction على either the يسار or يمين side."
+      },
+      "q5": {
+        "text": "You see a circular blue sign with a horse symbol. ماذا يعني it mean for horse riders?",
+        "explanation": "This indicates a إجباري bridleway. Horse riders must use this designated path.",
+        "o1": "Horses are not allowed.",
+        "o2": "تحذير: horses may be present.",
+        "o3": "إجباري bridleway; horse riders must use this path."
+      },
+      "q6": {
+        "text": "ماذا يعني a blue circular sign with a حافلة symbol indicate?",
+        "explanation": "This sign shows a route or lane إجباري for buses. كثيراً taxis and cyclists can use it too.",
+        "o1": "Route reserved for buses only.",
+        "o2": "حافلة توقف ahead.",
+        "o3": "لا buses allowed على this road."
+      },
+      "q7": {
+        "text": "A blue circular sign shows a white arrow pointing مستقيم and آخر white arrow pointing يمين. ما هو مطلوب?",
+        "explanation": "This إجباري sign means drivers must proceed straight or انعطف يميناً. Choose one من these directions.",
+        "o1": "يجب عليك انعطف يميناً.",
+        "o2": "يجب عليك proceed straight or انعطف يميناً.",
+        "o3": "يجب عليك proceed straight only."
+      }
+    },
+    "mandatorySigns": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a bicycle symbol and diagonal line indicates that bicycles are ممنوع من entering this road or area. Cyclists must find an alternative route.",
+        "o1": "لا entry for bicycles",
+        "o2": "Bicycle route ahead",
+        "o3": "Bicycle وقوف area"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a tractor symbol indicates a compulsory route that must be used by tractors and agricultural vehicles.",
+        "o1": "Compulsory route for tractors",
+        "o2": "Agricultural vehicles route",
+        "o3": "Tractors must use this route"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with arrows indicates a دوار ahead, and traffic must circulate في the اتجاه shown by the arrows (typically anti-clockwise في يمين-hand traffic countries).",
+        "o1": "دوار ahead",
+        "o2": "Compulsory دوار circulation",
+        "o3": "انعطف يساراً or يمين"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a ترام symbol and diagonal line indicates that trams are ممنوع من entering this road or area. Trams must find an alternative route.",
+        "o1": "لا entry for trams",
+        "o2": "ترام route ahead",
+        "o3": "ترام توقف ahead"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a white arrow pointing يمين indicates a compulsory يمين turn. Drivers must انعطف يميناً.",
+        "o1": "Compulsory يمين turn",
+        "o2": "لا يمين turn",
+        "o3": "Road bends يمين"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a مركبة symbol and branching arrows indicates a compulsory route for vehicles. The arrows show that vehicles must use this route and can choose إلى اذهب يسار or يمين.",
+        "o1": "Compulsory route for vehicles",
+        "o2": "Vehicles may choose يسار or يمين",
+        "o3": "لا vehicles allowed"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a white diagonal arrow pointing أسفل-يمين indicates a compulsory diagonal اتجاه. Drivers must follow the اتجاه shown by the arrow.",
+        "o1": "Compulsory اتجاه ahead",
+        "o2": "Compulsory اتجاه يمين",
+        "o3": "Compulsory diagonal اتجاه"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a حافلة symbol indicates a compulsory route for buses. Buses must use this designated route.",
+        "o1": "حافلة توقف ahead",
+        "o2": "لا buses allowed",
+        "o3": "Compulsory route for buses"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with two arrows (one straight, one يمين) indicates that vehicles must proceed مستقيم or انعطف يميناً. Both directions are permitted.",
+        "o1": "Compulsory اتجاه ahead",
+        "o2": "Compulsory اتجاه يمين",
+        "o3": "Proceed straight or انعطف يميناً"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a horse rider symbol indicates a compulsory path for horse riders. Horse riders must use this designated path.",
+        "o1": "Compulsory path for horse riders",
+        "o2": "Horse riders ممنوع",
+        "o3": "Horse crossing ahead"
+      }
+    },
+    "motorwayRules": {
+      "q1": {
+        "text": "ما هو الحد الأدنى حد السرعة على a طريق سريع في هولندا?",
+        "explanation": "الحد الأدنى حد السرعة على a طريق سريع في هولندا is 60 km/h. Vehicles that cannot maintain this سرعة are not allowed على motorways.",
+        "o1": "50 km/h",
+        "o2": "60 km/h",
+        "o3": "70 km/h",
+        "o4": "80 km/h"
+      },
+      "q2": {
+        "text": "Which vehicles are not allowed على motorways?",
+        "explanation": "Mopeds and tractors are not allowed على motorways as they cannot maintain الحد الأدنى حد السرعة and would create a safety hazard.",
+        "o1": "Motorcycles",
+        "o2": "Mopeds and tractors",
+        "o3": "Cars towing trailers",
+        "o4": "كل من the فوق"
+      },
+      "q3": {
+        "text": "ماذا يجب you do if your مركبة breaks أسفل على a طريق سريع?",
+        "explanation": "If your مركبة breaks أسفل على a طريق سريع, يجب عليك get out من your مركبة and stand behind the safety barrier. Call for assistance using the طوارئ phones.",
+        "o1": "Stay في your مركبة",
+        "o2": "Get out and stand behind the barrier",
+        "o3": "Walk along the طريق سريع إلى find help",
+        "o4": "Try إلى repair the مركبة yourself"
+      },
+      "q4": {
+        "text": "ما هو the purpose من the hard shoulder على a طريق سريع?",
+        "explanation": "The hard shoulder is reserved for طوارئ stops and breakdowns only. It should not be used for normal قيادة, تجاوز, or وقوف.",
+        "o1": "For تجاوز slow vehicles",
+        "o2": "For طوارئ stops and breakdowns",
+        "o3": "For وقوف when tired",
+        "o4": "For making phone calls"
+      },
+      "q5": {
+        "text": "ماذا يجب you do when approaching a طريق سريع exit?",
+        "explanation": "When approaching a طريق سريع exit, يجب عليك move إلى the يمين lane early and reduce your سرعة gradually إلى بأمان exit the طريق سريع.",
+        "o1": "سرعة أعلى إلى get through بسرعة",
+        "o2": "Move إلى the يسار lane early",
+        "o3": "Move إلى the يمين lane early",
+        "o4": "Honk your horn إلى signal your intention"
+      },
+      "q6": {
+        "text": "ماذا يجب you do when entering a طريق سريع?",
+        "explanation": "When entering a طريق سريع, يجب عليك تسريع إلى match the سرعة من traffic على the طريق سريع and merge بأمان into a gap.",
+        "o1": "توقف and wait for a large gap",
+        "o2": "تسريع إلى match طريق سريع سرعة",
+        "o3": "إبطاء إلى let آخر vehicles pass",
+        "o4": "Honk your horn إلى signal your intention"
+      },
+      "q7": {
+        "text": "ماذا يعني a variable حد السرعة sign على a طريق سريع mean?",
+        "explanation": "Variable حد السرعة signs على motorways display إجباري سرعة limits that يجب عليك follow. These are used إلى manage traffic flow and improve safety.",
+        "o1": "The حد السرعة is اختياري",
+        "o2": "يجب عليك follow the displayed حد السرعة",
+        "o3": "The حد السرعة only applies إلى trucks",
+        "o4": "The حد السرعة only applies في night"
+      },
+      "q8": {
+        "text": "ماذا يجب you do if you miss your طريق سريع exit?",
+        "explanation": "If you miss your طريق سريع exit, يجب عليك continue إلى the التالي exit and find an alternative route. أبداً رجوع, توقف, or turn حول على a طريق سريع.",
+        "o1": "رجوع back إلى the exit",
+        "o2": "توقف and turn حول",
+        "o3": "Continue إلى the التالي exit",
+        "o4": "Use the hard shoulder إلى turn حول"
+      },
+      "q9": {
+        "text": "ما هو the purpose من lane markings على a طريق سريع?",
+        "explanation": "Lane markings على motorways help organize traffic flow, prevent accidents, and ensure آمن قيادة by clearly defining where vehicles should drive.",
+        "o1": "إلى separate مختلف types من vehicles",
+        "o2": "إلى organize traffic flow and prevent accidents",
+        "o3": "إلى create وقوف spaces",
+        "o4": "إلى mark طوارئ توقف areas"
+      },
+      "q10": {
+        "text": "ماذا يجب you do when تجاوز على a طريق سريع?",
+        "explanation": "When تجاوز على a طريق سريع, يجب عليك use the يسار lane (the lane إلى the يسار من the مركبة أنت تجاوز).",
+        "o1": "Use the hard shoulder",
+        "o2": "Use the يسار lane",
+        "o3": "Use the يمين lane",
+        "o4": "Honk your horn continuously"
+      },
+      "q11": {
+        "text": "ماذا يجب you do when being overtaken على a طريق سريع?",
+        "explanation": "When being overtaken على a طريق سريع, يجب عليك maintain your سرعة and position. Do not سرعة أعلى or change lanes unnecessarily.",
+        "o1": "سرعة أعلى إلى prevent being overtaken",
+        "o2": "Move إلى the يمين lane",
+        "o3": "Maintain your سرعة and position",
+        "o4": "Honk your horn إلى signal your position"
+      },
+      "q12": {
+        "text": "ماذا يجب you do if you see an طوارئ مركبة على a طريق سريع?",
+        "explanation": "If you see an طوارئ مركبة على a طريق سريع, يجب عليك move إلى the يمين lane and إبطاء إلى allow it إلى pass بأمان.",
+        "o1": "Ignore it and continue قيادة",
+        "o2": "Move إلى the يمين and إبطاء",
+        "o3": "سرعة أعلى إلى get out من the way",
+        "o4": "توقف فوراً"
+      }
+    },
+    "parkingRules": {
+      "q1": {
+        "text": "ما هو الحد الأدنى مسافة يجب عليك وقوف من a مشاة crossing?",
+        "explanation": "يجب عليك وقوف في الأقل 5 أمتار من a مشاة crossing إلى ensure pedestrians have a واضح view من approaching traffic.",
+        "o1": "3 أمتار",
+        "o2": "5 أمتار",
+        "o3": "10 أمتار",
+        "o4": "15 أمتار"
+      },
+      "q2": {
+        "text": "ما هو الحد الأدنى مسافة يجب عليك وقوف من a junction?",
+        "explanation": "يجب عليك وقوف في الأقل 5 أمتار من a junction إلى ensure آخر drivers have a واضح view من approaching traffic.",
+        "o1": "3 أمتار",
+        "o2": "5 أمتار",
+        "o3": "10 أمتار",
+        "o4": "15 أمتار"
+      },
+      "q3": {
+        "text": "ما هو الحد الأدنى مسافة يجب عليك وقوف من a حافلة توقف?",
+        "explanation": "يجب عليك وقوف في الأقل 10 أمتار من a حافلة توقف إلى allow buses إلى pull في and out بأمان.",
+        "o1": "5 أمتار",
+        "o2": "10 أمتار",
+        "o3": "15 أمتار",
+        "o4": "20 أمتار"
+      },
+      "q4": {
+        "text": "ما هو الحد الأدنى مسافة يجب عليك وقوف من a fire hydrant?",
+        "explanation": "يجب عليك وقوف في الأقل 5 أمتار من a fire hydrant إلى ensure طوارئ services can access it when needed.",
+        "o1": "3 أمتار",
+        "o2": "5 أمتار",
+        "o3": "10 أمتار",
+        "o4": "15 أمتار"
+      },
+      "q5": {
+        "text": "ما هو الحد الأدنى مسافة يجب عليك وقوف من a railway crossing?",
+        "explanation": "يجب عليك وقوف في الأقل 20 أمتار من a railway crossing إلى ensure trains have a واضح view and can توقف بأمان if needed.",
+        "o1": "10 أمتار",
+        "o2": "15 أمتار",
+        "o3": "20 أمتار",
+        "o4": "25 أمتار"
+      },
+      "q6": {
+        "text": "ماذا يعني a solid yellow line along the edge من the road indicate?",
+        "explanation": "A solid yellow line along the edge من the road indicates that وقوف is not allowed في any وقت.",
+        "o1": "لا وقوف allowed",
+        "o2": "لا توقف allowed",
+        "o3": "وقوف allowed for 30 دقائق",
+        "o4": "وقوف allowed for residents only"
+      },
+      "q7": {
+        "text": "ماذا يعني a broken yellow line along the edge من the road indicate?",
+        "explanation": "A broken yellow line along the edge من the road indicates that توقف is not allowed, which means لا يمكنك توقف or وقوف your مركبة هناك.",
+        "o1": "لا وقوف allowed",
+        "o2": "لا توقف allowed",
+        "o3": "وقوف allowed for 30 دقائق",
+        "o4": "وقوف allowed for residents only"
+      },
+      "q8": {
+        "text": "ماذا يعني a blue line along the edge من the road indicate?",
+        "explanation": "A blue line indicates وقوف reserved for disabled persons. يجب عليك have a صالح disabled وقوف permit إلى وقوف هنا.",
+        "o1": "لا وقوف allowed",
+        "o2": "وقوف for disabled persons only",
+        "o3": "وقوف for residents only",
+        "o4": "وقوف with a permit only"
+      },
+      "q9": {
+        "text": "ماذا يعني a white \"P\" sign with a car symbol indicate?",
+        "explanation": "A white \"P\" sign with a car symbol indicates that وقوف is permitted. Look for additional معلومات على any conditions or restrictions.",
+        "o1": "لا وقوف allowed",
+        "o2": "وقوف permitted",
+        "o3": "وقوف for residents only",
+        "o4": "وقوف with a permit only"
+      },
+      "q10": {
+        "text": "ماذا يعني a \"لا وقوف\" sign with a red circle and crossed-out \"P\" indicate?",
+        "explanation": "A \"لا وقوف\" sign with a red circle and crossed-out \"P\" indicates that وقوف is not allowed في any وقت.",
+        "o1": "لا وقوف allowed",
+        "o2": "لا توقف allowed",
+        "o3": "وقوف allowed for 30 دقائق",
+        "o4": "وقوف allowed for residents only"
+      },
+      "q11": {
+        "text": "ماذا يعني a \"لا توقف\" sign with a red circle and crossed-out \"S\" indicate?",
+        "explanation": "A \"لا توقف\" sign with a red circle and crossed-out \"S\" indicates that توقف is not allowed, which means لا يمكنك توقف or وقوف your مركبة هناك.",
+        "o1": "لا وقوف allowed",
+        "o2": "لا توقف allowed",
+        "o3": "وقوف allowed for 30 دقائق",
+        "o4": "وقوف allowed for residents only"
+      },
+      "q12": {
+        "text": "ماذا يعني a \"Resident وقوف\" sign indicate?",
+        "explanation": "A \"Resident وقوف\" sign indicates that وقوف is reserved for residents من the area. يجب عليك have a صالح resident وقوف permit إلى وقوف هنا.",
+        "o1": "لا وقوف allowed",
+        "o2": "وقوف for disabled persons only",
+        "o3": "وقوف for residents only",
+        "o4": "وقوف with a permit only"
+      }
+    },
+    "pedestrianCrossings": {
+      "q1": {
+        "text": "أنت قيادة and see a مشاة waiting في a zebra crossing. ماذا يجب you do?",
+        "explanation": "في zebra crossings, يجب عليك توقف and أفسح الطريق إلى pedestrians who are waiting إلى cross or already crossing.",
+        "o1": "توقف and أفسح الطريق إلى the مشاة",
+        "o2": "Continue قيادة, pedestrians must wait",
+        "o3": "Honk إلى warn the مشاة"
+      },
+      "q2": {
+        "text": "أنت قيادة and see a مشاة crossing في a traffic light. The light is green for you. ماذا يجب you do?",
+        "explanation": "Even when the light is green for you, يجب عليك توقف and أفسح الطريق إلى pedestrians who are already crossing or حوالي إلى cross.",
+        "o1": "توقف and أفسح الطريق إلى the مشاة",
+        "o2": "Continue قيادة, the light is green",
+        "o3": "Honk إلى warn the مشاة"
+      },
+      "q3": {
+        "text": "أنت قيادة and see a مشاة crossing في a school crossing. ماذا يجب you do?",
+        "explanation": "في school crossings, يجب عليك توقف and أفسح الطريق إلى pedestrians, especially children, who are crossing or waiting إلى cross.",
+        "o1": "توقف and أفسح الطريق إلى the مشاة",
+        "o2": "Continue قيادة, school crossings are not إجباري",
+        "o3": "Honk إلى warn the مشاة"
+      },
+      "q4": {
+        "text": "أنت قيادة and see a مشاة crossing في a مشاة crossing with a traffic light. The light is red for pedestrians. ماذا يجب you do?",
+        "explanation": "Even when the light is red for pedestrians, يجب عليك توقف and أفسح الطريق إلى pedestrians who are already crossing or حوالي إلى cross.",
+        "o1": "توقف and أفسح الطريق إلى the مشاة",
+        "o2": "Continue قيادة, the light is red for pedestrians",
+        "o3": "Honk إلى warn the مشاة"
+      },
+      "q5": {
+        "text": "أنت قيادة and see a مشاة crossing في a مشاة crossing with a traffic light. The light is green for pedestrians. ماذا يجب you do?",
+        "explanation": "When the light is green for pedestrians, يجب عليك توقف and أفسح الطريق إلى pedestrians who are crossing or waiting إلى cross.",
+        "o1": "توقف and أفسح الطريق إلى the مشاة",
+        "o2": "Continue قيادة, the light is green for pedestrians",
+        "o3": "Honk إلى warn the مشاة"
+      }
+    },
+    "priorityRules": {
+      "q1": {
+        "text": "Based على the image, who has the يمين من way?",
+        "explanation": "Trams generally have أولوية فوق آخر vehicles, especially when they are على tracks.",
+        "o1": "1",
+        "o2": "2",
+        "o3": "لا شيء"
+      },
+      "q2": {
+        "text": "Who must أفسح الطريق في this junction according إلى the signs?",
+        "explanation": "Vehicles على a minor road, كثيراً indicated by a أفسح الطريق or توقف sign, must أفسح الطريق إلى traffic على the أولوية road.",
+        "o1": "1",
+        "o2": "2",
+        "o3": "Both must توقف and proceed alternately"
+      },
+      "q3": {
+        "text": "في an unmarked crossroads, which مركبة has أولوية?",
+        "explanation": "في an unmarked crossroads, the \"أولوية إلى the يمين\" rule applies. Vehicles approaching من the يمين have أولوية.",
+        "o1": "The مركبة approaching من the يمين",
+        "o2": "The larger مركبة",
+        "o3": "The مركبة turning يسار"
+      },
+      "q4": {
+        "text": "ماذا يعني a \"أفسح الطريق\" sign (inverted triangle) mean?",
+        "explanation": "A \"أفسح الطريق\" sign means يجب عليك إبطاء and be prepared إلى توقف if ضروري إلى أفسح الطريق إلى traffic على the أولوية road.",
+        "o1": "يجب عليك توقف completely قبل proceeding",
+        "o2": "يجب عليك إبطاء and أفسح الطريق إلى traffic على the أولوية road",
+        "o3": "You have أولوية فوق كل آخر traffic"
+      },
+      "q5": {
+        "text": "في a T-junction, which مركبة typically has أولوية?",
+        "explanation": "في a T-junction, vehicles على the through road (the top من the T) typically have أولوية فوق vehicles turning into the junction.",
+        "o1": "The مركبة على the through road",
+        "o2": "The مركبة turning into the junction",
+        "o3": "The مركبة approaching من the يسار"
+      },
+      "q6": {
+        "text": "ما هو the أولوية rule for طوارئ vehicles with flashing lights and sirens?",
+        "explanation": "طوارئ vehicles with flashing lights and sirens have أولوية فوق كل آخر traffic. يجب عليك أفسح الطريق and allow them إلى pass بأمان.",
+        "o1": "They must follow normal traffic rules",
+        "o2": "They have أولوية فوق كل آخر traffic and يجب عليك أفسح الطريق",
+        "o3": "They only have أولوية في إشارات المرور"
+      },
+      "q7": {
+        "text": "في a دوار, who has أولوية?",
+        "explanation": "في a دوار, traffic already على the دوار has أولوية فوق traffic waiting إلى enter. يجب عليك أفسح الطريق إلى traffic على your يمين.",
+        "o1": "Traffic entering the دوار",
+        "o2": "Traffic already على the دوار",
+        "o3": "The larger مركبة"
+      },
+      "q8": {
+        "text": "ماذا يعني a \"توقف\" sign (octagonal red sign) require you إلى do?",
+        "explanation": "A \"توقف\" sign requires you إلى توقف completely في the توقف line and أفسح الطريق إلى كل traffic على the أولوية road قبل proceeding.",
+        "o1": "إبطاء and proceed if the way is واضح",
+        "o2": "توقف completely and أفسح الطريق إلى كل traffic",
+        "o3": "توقف only if آخر vehicles are present"
+      }
+    },
+    "prohibitorySigns2": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with blue inner circle and diagonal line prohibits entry for كل vehicles, including cars, motorcycles, bicycles, and pedestrians.",
+        "o1": "لا entry for كل vehicles",
+        "o2": "لا entry for motor vehicles",
+        "o3": "لا entry for cars"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with horizontal bar prohibits entry for كل vehicles, including cars, motorcycles, bicycles, and pedestrians.",
+        "o1": "لا entry for كل vehicles",
+        "o2": "لا entry for motor vehicles",
+        "o3": "لا entry for cars"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with two vehicles facing each آخر prohibits entry for كل vehicles.",
+        "o1": "لا entry for vehicles",
+        "o2": "لا entry for motor vehicles",
+        "o3": "لا entry for cars"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign prohibits vehicles exceeding 3.1 أمتار في height من using this road or area.",
+        "o1": "لا entry for vehicles exceeding 3.1m في height",
+        "o2": "Height limit 3.1m",
+        "o3": "Low bridge ahead"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a white U-turn arrow indicates that U-turns are ممنوع في this location.",
+        "o1": "لا U-turn",
+        "o2": "U-turn permitted",
+        "o3": "Turn حول ahead"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a car silhouette prohibits entry for motor vehicles.",
+        "o1": "لا entry for motor vehicles",
+        "o2": "لا entry for cars",
+        "o3": "Motor مركبة route"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with \"50\" indicates a حد السرعة من 50 km/h.",
+        "o1": "حد السرعة 50 km/h",
+        "o2": "Maximum سرعة 50 km/h",
+        "o3": "حد السرعة ends"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a lorry symbol prohibits entry for lorries and heavy goods vehicles.",
+        "o1": "لا entry for lorries",
+        "o2": "Lorry route",
+        "o3": "Lorry وقوف area"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with diagonal bar prohibits entry for كل motor vehicles (cars, motorcycles, lorries, etc.).",
+        "o1": "لا entry for motor vehicles",
+        "o2": "Motor مركبة route",
+        "o3": "Motor مركبة وقوف area"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign prohibits mopeds من using this road or area.",
+        "o1": "لا entry for mopeds",
+        "o2": "Moped route",
+        "o3": "Moped وقوف area"
+      }
+    },
+    "prohibitorySigns": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates the end من a previously imposed 50 km/h حد السرعة. National or آخر posted سرعة limits now apply.",
+        "o1": "Maximum سرعة 50 km/h",
+        "o2": "حد السرعة ends",
+        "o3": "Minimum سرعة 50 km/h"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign prohibits vehicles with an actual weight exceeding 5,4 tonnes من proceeding.",
+        "o1": "Vehicles weighing heavier than indicated forbidden",
+        "o2": "لا entry for lorries",
+        "o3": "Axle weight limit 5,4t"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates that tractors and آخر specified agricultural vehicles are ممنوع من this road.",
+        "o1": "Agricultural vehicles route",
+        "o2": "لا entry for slow vehicles",
+        "o3": "Tractors ممنوع"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign means لا entry for bicycles. Cyclists must find an alternative route.",
+        "o1": "Cyclists not permitted",
+        "o2": "Cycle route ahead",
+        "o3": "Shared path for pedestrians and cyclists"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates that توقف and وقوف are forbidden along this section من road.",
+        "o1": "لا وقوف zone",
+        "o2": "توقف and وقوف forbidden",
+        "o3": "Clearway, لا توقف على carriageway"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign marks the end من a zone where a specific حد السرعة (e.g., 30 km/h) was في force.",
+        "o1": "حد السرعة 30 km/h applies",
+        "o2": "End من كل restrictions في zone",
+        "o3": "End من the zone with حد السرعة"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates the beginning من a zone where a specific حد السرعة (في this case, 30 km/h) applies.",
+        "o1": "Begin من a zone with حد السرعة",
+        "o2": "Residential area, walking سرعة",
+        "o3": "Recommended سرعة 30 km/h"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates the end من a previously imposed تجاوز prohibition. Standard تجاوز rules now apply.",
+        "o1": "تجاوز permitted",
+        "o2": "End من the تجاوز prohibition",
+        "o3": "لا تجاوز by lorries"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign prohibits entry for cyclists, mopeds, and tractors.",
+        "o1": "لا entry for any vehicles",
+        "o2": "Cyclists, mopeds and tractors ممنوع",
+        "o3": "Route for agricultural vehicles and cycles only"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates that motorcycles (motorbikes) are ممنوع من using this road or area.",
+        "o1": "Motorcycles must use this lane",
+        "o2": "Motorbikes - Motorcycles ممنوع",
+        "o3": "Motorcycle وقوف area"
+      }
+    },
+    "roadInformation": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates the beginning من a طريق سريع, which has specific rules and restrictions.",
+        "o1": "طريق سريع",
+        "o2": "Expressway",
+        "o3": "Highway"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue square sign with white \"P\" indicates a وقوف area where vehicles are allowed إلى وقوف.",
+        "o1": "وقوف",
+        "o2": "وقوف area",
+        "o3": "وقوف permitted"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue rectangular sign with red diagonal line warns drivers من a playground area where children may be playing. Drivers should reduce سرعة and be extra cautious.",
+        "o1": "Playground",
+        "o2": "Children في play",
+        "o3": "Play area"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue square sign with red arrow أسفل and white arrow أعلى indicates that you have أولوية فوق oncoming traffic في narrow sections.",
+        "o1": "أولوية فوق oncoming traffic",
+        "o2": "يمين من way فوق oncoming traffic",
+        "o3": "أولوية for oncoming traffic"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This white diamond sign with yellow square and three black lines indicates a أولوية road where you have يمين من way فوق آخر traffic.",
+        "o1": "أولوية road",
+        "o2": "Main road",
+        "o3": "أولوية route"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue rectangular sign with white text indicates a destination or place name, helping drivers navigate إلى their intended location.",
+        "o1": "Destination",
+        "o2": "Place name",
+        "o3": "اتجاه sign"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue square sign with three arrows indicates that lanes are merging من the يسار, requiring drivers إلى be cautious and allow merging traffic.",
+        "o1": "Lanes merging من the يسار",
+        "o2": "Lane reduction",
+        "o3": "Merge lanes"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue rectangular sign with white arrow indicates a compulsory اتجاه that traffic must follow.",
+        "o1": "Compulsory اتجاه",
+        "o2": "انعطف يميناً",
+        "o3": "اتجاه arrow"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue rectangular sign with red circle and \"2m\" indicates a height restriction من 2 أمتار maximum.",
+        "o1": "Height restriction",
+        "o2": "Maximum height 2m",
+        "o3": "Height limit"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue square sign with white car and red diagonal line indicates the end من a zone where motor vehicles were ممنوع.",
+        "o1": "End من لا entry for motor vehicles",
+        "o2": "End من motor مركبة prohibition",
+        "o3": "Motor vehicles allowed"
+      }
+    },
+    "roadMarkings": {
+      "q1": {
+        "text": "ماذا يعني a solid white line في the center من the road indicate?",
+        "explanation": "A solid white line في the center من the road indicates that تجاوز is not allowed. يجب عليك stay في your lane.",
+        "o1": "يمكنك تجاوز if آمن",
+        "o2": "لا تجاوز allowed",
+        "o3": "تجاوز allowed only for motorcycles",
+        "o4": "تجاوز allowed only خلال ضوء النهار"
+      },
+      "q2": {
+        "text": "ماذا يعني a broken white line في the center من the road indicate?",
+        "explanation": "A broken white line indicates that تجاوز is allowed if it is آمن إلى do so and هناك is sufficient visibility.",
+        "o1": "لا تجاوز allowed",
+        "o2": "تجاوز allowed if آمن",
+        "o3": "تجاوز allowed only for طوارئ vehicles",
+        "o4": "تجاوز allowed only على the يسار"
+      },
+      "q3": {
+        "text": "ماذا يعني a yellow line along the edge من the road indicate?",
+        "explanation": "A yellow line along the edge من the road indicates that وقوف is not allowed في any وقت.",
+        "o1": "لا وقوف allowed",
+        "o2": "وقوف allowed for 30 دقائق",
+        "o3": "وقوف allowed for residents only",
+        "o4": "وقوف allowed خلال certain ساعات"
+      },
+      "q4": {
+        "text": "ماذا يعني a blue line along the edge من the road indicate?",
+        "explanation": "A blue line indicates وقوف reserved for disabled persons. يجب عليك have a صالح disabled وقوف permit إلى وقوف هنا.",
+        "o1": "لا وقوف allowed",
+        "o2": "وقوف for disabled persons only",
+        "o3": "وقوف for residents only",
+        "o4": "وقوف with a permit only"
+      },
+      "q5": {
+        "text": "ماذا يعني a zigzag line على the road indicate?",
+        "explanation": "Zigzag lines indicate a مشاة crossing. يجب عليك not وقوف or تجاوز في this area.",
+        "o1": "A مشاة crossing",
+        "o2": "A حافلة توقف",
+        "o3": "A school zone",
+        "o4": "A بناء zone"
+      },
+      "q6": {
+        "text": "ماذا يعني a white arrow pointing مستقيم على the road indicate?",
+        "explanation": "A white arrow pointing مستقيم indicates that يجب عليك proceed في that اتجاه.",
+        "o1": "يجب عليك انعطف يساراً",
+        "o2": "يجب عليك انعطف يميناً",
+        "o3": "يجب عليك اذهب مستقيم",
+        "o4": "يمكنك choose any اتجاه"
+      },
+      "q7": {
+        "text": "ماذا يعني a white bicycle symbol على the road indicate?",
+        "explanation": "A white bicycle symbol indicates a bicycle lane. Motor vehicles should not drive في this lane.",
+        "o1": "A bicycle lane",
+        "o2": "A bicycle crossing",
+        "o3": "A bicycle وقوف area",
+        "o4": "A bicycle repair shop"
+      },
+      "q8": {
+        "text": "ماذا يعني a white \"توقف\" word painted على the road indicate?",
+        "explanation": "A white \"توقف\" word painted على the road reinforces the requirement إلى توقف completely في the توقف line or قبل entering the intersection.",
+        "o1": "يجب عليك إبطاء",
+        "o2": "يجب عليك توقف completely",
+        "o3": "يجب عليك أفسح الطريق إلى pedestrians",
+        "o4": "يجب عليك honk your horn"
+      },
+      "q9": {
+        "text": "ماذا يعني a white diamond symbol على the road indicate?",
+        "explanation": "A white diamond symbol indicates a أولوية road. Traffic على this road has the يمين من way فوق traffic entering من side roads.",
+        "o1": "A أولوية road",
+        "o2": "A school zone",
+        "o3": "A بناء zone",
+        "o4": "A وقوف zone"
+      },
+      "q10": {
+        "text": "ماذا يعني a white \"أفسح الطريق\" text painted على the road indicate?",
+        "explanation": "A white \"أفسح الطريق\" text reinforces the requirement إلى أفسح الطريق إلى آخر traffic قبل proceeding.",
+        "o1": "يجب عليك توقف completely",
+        "o2": "يجب عليك أفسح الطريق إلى آخر traffic",
+        "o3": "يجب عليك honk your horn",
+        "o4": "يجب عليك إبطاء only"
+      },
+      "q11": {
+        "text": "ماذا يعني a white \"حافلة\" text painted على the road indicate?",
+        "explanation": "A white \"حافلة\" text indicates a حافلة lane. Only buses and authorized vehicles may use this lane.",
+        "o1": "A حافلة lane",
+        "o2": "A حافلة توقف",
+        "o3": "A حافلة وقوف area",
+        "o4": "A حافلة terminal"
+      },
+      "q12": {
+        "text": "ماذا يعني a white \"TAXI\" text painted على the road indicate?",
+        "explanation": "A white \"TAXI\" text indicates a taxi lane. Only taxis and authorized vehicles may use this lane.",
+        "o1": "A taxi lane",
+        "o2": "A taxi stand",
+        "o3": "A taxi وقوف area",
+        "o4": "A taxi office"
+      }
+    },
+    "roundaboutRules": {
+      "q1": {
+        "text": "أنت approaching a دوار. ماذا يجب you do قبل entering?",
+        "explanation": "قبل entering a دوار, يجب عليك أفسح الطريق إلى traffic already في the دوار, including cyclists and pedestrians.",
+        "o1": "أفسح الطريق إلى traffic already في the دوار",
+        "o2": "Enter فوراً if لا cars are مرئي",
+        "o3": "توقف completely قبل entering"
+      },
+      "q2": {
+        "text": "أنت في a دوار and want إلى exit. ماذا يجب you do?",
+        "explanation": "When exiting a دوار, يجب عليك signal يمين إلى indicate your intention إلى leave the دوار.",
+        "o1": "Signal يمين قبل exiting",
+        "o2": "Signal يسار قبل exiting",
+        "o3": "لا need إلى signal when exiting"
+      },
+      "q3": {
+        "text": "أنت approaching a دوار and want إلى انعطف يساراً. Which lane should you use?",
+        "explanation": "When turning يسار في a دوار, use the يسار lane إلى enter and stay في the يسار lane بينما في the دوار.",
+        "o1": "يسار lane",
+        "o2": "يمين lane",
+        "o3": "Either lane is acceptable"
+      },
+      "q4": {
+        "text": "أنت approaching a دوار and want إلى اذهب مستقيم. Which lane should you use?",
+        "explanation": "When going مستقيم في a دوار, يمكنك use either lane unless road markings indicate otherwise.",
+        "o1": "يسار lane",
+        "o2": "يمين lane",
+        "o3": "Either lane is acceptable"
+      },
+      "q5": {
+        "text": "أنت approaching a دوار and want إلى انعطف يميناً. Which lane should you use?",
+        "explanation": "When turning يمين في a دوار, use the يمين lane إلى enter and stay في the يمين lane بينما في the دوار.",
+        "o1": "يسار lane",
+        "o2": "يمين lane",
+        "o3": "Either lane is acceptable"
+      },
+      "q6": {
+        "text": "أنت في a دوار and want إلى change lanes. ماذا يجب you do?",
+        "explanation": "يمكنك change lanes في a دوار, but يجب عليك signal your intention and only change when it is آمن إلى do so.",
+        "o1": "Signal and change lanes when آمن",
+        "o2": "Change lanes فوراً",
+        "o3": "أبداً change lanes في a دوار"
+      },
+      "q7": {
+        "text": "أنت approaching a دوار and see a راكب دراجة already في the دوار. ماذا يجب you do?",
+        "explanation": "Cyclists في a دوار have the نفس rights as آخر vehicles. يجب عليك أفسح الطريق إلى them قبل entering.",
+        "o1": "أفسح الطريق إلى the راكب دراجة",
+        "o2": "Enter the دوار, cyclists must أفسح الطريق",
+        "o3": "Honk إلى warn the راكب دراجة"
+      },
+      "q8": {
+        "text": "أنت في a دوار and see a مشاة waiting إلى cross في an exit. ماذا يجب you do?",
+        "explanation": "When exiting a دوار, يجب عليك أفسح الطريق إلى pedestrians who are waiting إلى cross or already crossing.",
+        "o1": "أفسح الطريق إلى the مشاة",
+        "o2": "Continue قيادة, pedestrians must wait",
+        "o3": "Honk إلى warn the مشاة"
+      },
+      "q9": {
+        "text": "أنت approaching a دوار and see an طوارئ مركبة with flashing lights. ماذا يجب you do?",
+        "explanation": "طوارئ vehicles with flashing lights have أولوية. أفسح الطريق إلى them قبل entering the دوار.",
+        "o1": "أفسح الطريق إلى the طوارئ مركبة",
+        "o2": "Enter the دوار normally",
+        "o3": "توقف completely قبل the دوار"
+      },
+      "q10": {
+        "text": "أنت في a دوار and want إلى make a U-turn. ماذا يجب you do?",
+        "explanation": "إلى make a U-turn في a دوار, signal يسار and continue حول the دوار إلى exit في the نفس road you entered من.",
+        "o1": "Signal يمين and exit في the التالي exit",
+        "o2": "Signal يسار and continue حول",
+        "o3": "U-turns are not allowed في roundabouts"
+      },
+      "q11": {
+        "text": "أنت approaching a دوار and see a large شاحنة already في the دوار. ماذا يجب you do?",
+        "explanation": "Large trucks في a دوار have the نفس rights as آخر vehicles. يجب عليك أفسح الطريق إلى them قبل entering.",
+        "o1": "أفسح الطريق إلى the شاحنة",
+        "o2": "Enter the دوار, trucks must أفسح الطريق",
+        "o3": "Honk إلى warn the شاحنة سائق"
+      },
+      "q12": {
+        "text": "أنت في a دوار and see a car trying إلى enter من your يمين. ماذا يجب you do?",
+        "explanation": "Once أنت في a دوار, you have أولوية فوق vehicles trying إلى enter. The entering مركبة must أفسح الطريق إلى you.",
+        "o1": "أفسح الطريق إلى the entering car",
+        "o2": "Continue قيادة, you have أولوية",
+        "o3": "Honk إلى warn the entering car"
+      },
+      "q13": {
+        "text": "أنت approaching a دوار and see a حافلة already في the دوار. ماذا يجب you do?",
+        "explanation": "Buses في a دوار have the نفس rights as آخر vehicles. يجب عليك أفسح الطريق إلى them قبل entering.",
+        "o1": "أفسح الطريق إلى the حافلة",
+        "o2": "Enter the دوار, buses must أفسح الطريق",
+        "o3": "Honk إلى warn the حافلة سائق"
+      },
+      "q14": {
+        "text": "أنت في a دوار and want إلى exit but see a راكب دراجة في the exit lane. ماذا يجب you do?",
+        "explanation": "When exiting a دوار, يجب عليك أفسح الطريق إلى cyclists who are already في the exit lane.",
+        "o1": "أفسح الطريق إلى the راكب دراجة",
+        "o2": "Exit normally, cyclists must أفسح الطريق",
+        "o3": "Honk إلى warn the راكب دراجة"
+      },
+      "q15": {
+        "text": "أنت approaching a دوار and see a motorcycle already في the دوار. ماذا يجب you do?",
+        "explanation": "Motorcycles في a دوار have the نفس rights as آخر vehicles. يجب عليك أفسح الطريق إلى them قبل entering.",
+        "o1": "أفسح الطريق إلى the motorcycle",
+        "o2": "Enter the دوار, motorcycles must أفسح الطريق",
+        "o3": "Honk إلى warn the راكب دراجة نارية"
+      }
+    },
+    "signIdentification": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a تحذير sign, indicated by its triangular shape and red border.",
+        "o1": "تحذير sign",
+        "o2": "Prohibitory sign",
+        "o3": "إجباري sign"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a تحذير sign (St. Andrew\\",
+        "o1": "Prohibitory sign",
+        "o2": "تحذير sign",
+        "o3": "إجباري sign"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a إجباري sign, indicated by its circular shape and blue background.",
+        "o1": "إجباري sign",
+        "o2": "تحذير sign",
+        "o3": "Prohibitory sign"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This is an معلومات sign, indicated by its rectangular shape and blue background.",
+        "o1": "معلومات sign",
+        "o2": "تحذير sign",
+        "o3": "Prohibitory sign"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a أولوية sign, indicated by its diamond shape and yellow background.",
+        "o1": "أولوية sign",
+        "o2": "تحذير sign",
+        "o3": "Prohibitory sign"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a اتجاه sign, indicated by its rectangular shape and green background.",
+        "o1": "اتجاه sign",
+        "o2": "تحذير sign",
+        "o3": "Prohibitory sign"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a service sign, indicated by its rectangular shape and blue background.",
+        "o1": "Service sign",
+        "o2": "تحذير sign",
+        "o3": "Prohibitory sign"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This is an additional sign, indicated by its rectangular shape and white background.",
+        "o1": "Additional sign",
+        "o2": "تحذير sign",
+        "o3": "Prohibitory sign"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a temporary sign, indicated by its yellow background and كثيراً used for road works.",
+        "o1": "Temporary sign",
+        "o2": "تحذير sign",
+        "o3": "Prohibitory sign"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a regulatory sign, indicated by its circular shape and red border or blue background.",
+        "o1": "Regulatory sign",
+        "o2": "تحذير sign",
+        "o3": "معلومات sign"
+      }
+    },
+    "speedLimit": {
+      "q1": {
+        "text": "ما هو الحد الأقصى حد السرعة for cars على a طريق سريع في هولندا خلال جيد طقس conditions?",
+        "explanation": "الحد الأقصى حد السرعة for cars على Dutch motorways is 100 km/h خلال جيد طقس conditions. This was reduced من 130 km/h إلى 100 km/h في 2020 and remains في 100 km/h.",
+        "o1": "100 km/h",
+        "o2": "120 km/h",
+        "o3": "130 km/h",
+        "o4": "140 km/h"
+      },
+      "q2": {
+        "text": "ما هو the حد السرعة for cars في built-أعلى areas (within city limits) في هولندا?",
+        "explanation": "The standard حد السرعة في built-أعلى areas في هولندا is 50 km/h, unless otherwise indicated by traffic signs.",
+        "o1": "30 km/h",
+        "o2": "50 km/h",
+        "o3": "70 km/h",
+        "o4": "80 km/h"
+      },
+      "q3": {
+        "text": "ما هو the حد السرعة for cars على rural roads خارج built-أعلى areas?",
+        "explanation": "على rural roads خارج built-أعلى areas, the حد السرعة for cars is 80 km/h, unless a مختلف limit is indicated by traffic signs.",
+        "o1": "60 km/h",
+        "o2": "70 km/h",
+        "o3": "80 km/h",
+        "o4": "100 km/h"
+      },
+      "q4": {
+        "text": "ما هو the حد السرعة for cars على a طريق سريع خلال سيء طقس conditions (مطر, ثلج, ضباب)?",
+        "explanation": "خلال سيء طقس conditions, the حد السرعة على motorways is reduced إلى 100 km/h for safety reasons.",
+        "o1": "80 km/h",
+        "o2": "100 km/h",
+        "o3": "120 km/h",
+        "o4": "130 km/h"
+      },
+      "q5": {
+        "text": "ما هو the حد السرعة for cars في a 30 km/h zone?",
+        "explanation": "في a 30 km/h zone, الحد الأقصى حد السرعة is 30 km/h. These zones are typically found في residential areas, قريب schools, or في areas with high مشاة activity.",
+        "o1": "20 km/h",
+        "o2": "30 km/h",
+        "o3": "40 km/h",
+        "o4": "50 km/h"
+      },
+      "q6": {
+        "text": "ما هو the حد السرعة for cars على a طريق سريع في night (between 19:00 and 06:00)?",
+        "explanation": "في night (between 19:00 and 06:00), the حد السرعة على motorways is 100 km/h إلى reduce noise pollution and improve safety.",
+        "o1": "100 km/h",
+        "o2": "120 km/h",
+        "o3": "130 km/h",
+        "o4": "140 km/h"
+      },
+      "q7": {
+        "text": "ما هو the حد السرعة for cars على a dual carriageway (autoweg) خارج built-أعلى areas?",
+        "explanation": "على dual carriageways (autoweg) خارج built-أعلى areas, the حد السرعة for cars is 100 km/h.",
+        "o1": "80 km/h",
+        "o2": "100 km/h",
+        "o3": "120 km/h",
+        "o4": "130 km/h"
+      },
+      "q8": {
+        "text": "ما هو the حد السرعة for cars when towing a trailer على a طريق سريع?",
+        "explanation": "When towing a trailer على a طريق سريع, the حد السرعة is 90 km/h for safety reasons.",
+        "o1": "80 km/h",
+        "o2": "90 km/h",
+        "o3": "100 km/h",
+        "o4": "120 km/h"
+      },
+      "q9": {
+        "text": "ما هو the حد السرعة for cars في a roadworks zone على a طريق سريع?",
+        "explanation": "في roadworks zones على motorways, the حد السرعة is typically reduced إلى 70 km/h إلى ensure the safety من workers and drivers.",
+        "o1": "50 km/h",
+        "o2": "70 km/h",
+        "o3": "80 km/h",
+        "o4": "100 km/h"
+      },
+      "q10": {
+        "text": "ما هو the حد السرعة for cars في a residential area with سرعة bumps?",
+        "explanation": "في residential areas with سرعة bumps, the حد السرعة is typically 30 km/h إلى ensure مشاة safety.",
+        "o1": "20 km/h",
+        "o2": "30 km/h",
+        "o3": "50 km/h",
+        "o4": "70 km/h"
+      },
+      "q11": {
+        "text": "ما هو the حد السرعة for cars على a طريق سريع when هناك is a variable حد السرعة sign showing 80 km/h?",
+        "explanation": "When a variable حد السرعة sign shows 80 km/h, يجب عليك follow that limit, which overrides the normal طريق سريع حد السرعة.",
+        "o1": "80 km/h",
+        "o2": "100 km/h",
+        "o3": "130 km/h",
+        "o4": "The normal طريق سريع limit"
+      },
+      "q12": {
+        "text": "ما هو the حد السرعة for cars في a special zone marked with a \"Zone 30\" sign?",
+        "explanation": "A \"Zone 30\" sign indicates that the حد السرعة is 30 km/h throughout the entire zone, not just في the entrance.",
+        "o1": "20 km/h",
+        "o2": "30 km/h",
+        "o3": "50 km/h",
+        "o4": "70 km/h"
+      }
+    },
+    "technologySafety": {
+      "q1": {
+        "text": "ماذا يعني ABS (Anti-lock Braking System) do?",
+        "explanation": "ABS (Anti-lock Braking System) prevents the wheels من locking خلال hard braking, allowing the سائق إلى maintain steering control and reduce توقف مسافة.",
+        "o1": "Prevents the wheels من locking خلال braking",
+        "o2": "Automatically applies the brakes",
+        "o3": "Increases braking مسافة",
+        "o4": "Reduces fuel consumption"
+      },
+      "q2": {
+        "text": "ماذا يعني ESP (Electronic Stability Program) do?",
+        "explanation": "ESP (Electronic Stability Program) helps maintain مركبة stability خلال cornering by automatically applying brakes إلى individual wheels when it detects loss من control.",
+        "o1": "Controls the engine سرعة",
+        "o2": "Helps maintain مركبة stability خلال cornering",
+        "o3": "Controls the air conditioning",
+        "o4": "Manages the fuel injection"
+      },
+      "q3": {
+        "text": "ما هو a rear-view camera used for?",
+        "explanation": "A rear-view camera helps with reversing and وقوف by providing a واضح view من the area behind the مركبة, reducing blind spots.",
+        "o1": "إلى watch movies بينما قيادة",
+        "o2": "إلى help with reversing and وقوف",
+        "o3": "إلى monitor traffic behind",
+        "o4": "إلى take photos بينما قيادة"
+      },
+      "q4": {
+        "text": "ماذا يعني Adaptive Cruise Control (ACC) do?",
+        "explanation": "Adaptive Cruise Control (ACC) maintains a set سرعة بينما automatically adjusting إلى maintain a آمن مسافة من the مركبة ahead.",
+        "o1": "Automatically steers the مركبة",
+        "o2": "Maintains a آمن مسافة من the مركبة ahead",
+        "o3": "Automatically parks the مركبة",
+        "o4": "Controls the radio volume"
+      },
+      "q5": {
+        "text": "ماذا يعني Lane Departure تحذير (LDW) do?",
+        "explanation": "Lane Departure تحذير (LDW) warns the سائق when the مركبة drifts out من the lane without using the turn signal.",
+        "o1": "Automatically steers the مركبة back into the lane",
+        "o2": "Warns the سائق when the مركبة drifts out من the lane",
+        "o3": "Changes lanes automatically",
+        "o4": "Controls the turn signals"
+      },
+      "q6": {
+        "text": "ماذا يعني Blind Spot Monitoring (BSM) do?",
+        "explanation": "Blind Spot Monitoring (BSM) warns the سائق من vehicles في the blind spot when changing lanes.",
+        "o1": "Automatically changes lanes",
+        "o2": "Warns من vehicles في the blind spot",
+        "o3": "Controls the mirrors",
+        "o4": "Adjusts the seat position"
+      },
+      "q7": {
+        "text": "ماذا يعني Autonomous طوارئ Braking (AEB) do?",
+        "explanation": "Autonomous طوارئ Braking (AEB) automatically applies the brakes إلى prevent or reduce the severity من a collision when it detects an imminent crash.",
+        "o1": "Automatically applies brakes إلى prevent collisions",
+        "o2": "Controls the steering wheel",
+        "o3": "Manages the fuel system",
+        "o4": "Adjusts the suspension"
+      },
+      "q8": {
+        "text": "ماذا يعني Tire Pressure Monitoring System (TPMS) do?",
+        "explanation": "Tire Pressure Monitoring System (TPMS) warns the سائق when tire pressure is too low, which can affect safety and fuel efficiency.",
+        "o1": "Automatically inflates the tires",
+        "o2": "Warns من low tire pressure",
+        "o3": "Changes the tires automatically",
+        "o4": "Controls the suspension"
+      }
+    },
+    "trafficLights": {
+      "q1": {
+        "text": "أنت approaching إشارات المرور that have just changed إلى amber (yellow). ما هو the general rule يجب عليك follow?",
+        "explanation": "Amber means توقف unless you\\",
+        "o1": "تسريع إلى pass through قبل it turns red.",
+        "o2": "توقف قبل the توقف line, unless أنت so قريب that إلى توقف بأمان would cause an حادث.",
+        "o3": "Continue في the نفس سرعة as it means the lights are حوالي إلى turn green."
+      },
+      "q2": {
+        "text": "ماذا يعني a green filter arrow (e.g., for turning يسار) في إشارات المرور indicate when the main light is red?",
+        "explanation": "A green filter arrow allows you إلى proceed في the اتجاه من the arrow, even if the main light is red, provided you أفسح الطريق إلى any pedestrians or آخر road users who have أولوية.",
+        "o1": "You may انعطف يساراً if the way is واضح, but أفسح الطريق إلى pedestrians crossing.",
+        "o2": "يجب عليك wait for the main green light قبل turning يسار.",
+        "o3": "You have أولوية فوق كل آخر traffic and pedestrians when turning يسار."
+      },
+      "q3": {
+        "text": "If إشارات المرور are out من order (not working في كل), كيف يجب you treat the junction?",
+        "explanation": "When إشارات المرور are out من order, revert إلى standard أولوية rules as if the junction is unmarked, or follow any existing أفسح الطريق/توقف signs. دائماً proceed with caution.",
+        "o1": "Treat it as if you have أولوية فوق كل traffic.",
+        "o2": "Proceed with extreme caution and treat the junction as an unmarked crossroads or أفسح الطريق, depending على road markings or signs.",
+        "o3": "Wait for a شرطة officer إلى direct traffic قبل proceeding."
+      },
+      "q4": {
+        "text": "ماذا يعني a flashing amber beacon mounted فوق a مشاة crossing (Pelican or Puffin crossing) signify when pedestrians are crossing?",
+        "explanation": "A flashing amber beacon في a مشاة crossing means يجب عليك أفسح الطريق إلى pedestrians على the crossing, but you may proceed if the crossing is واضح.",
+        "o1": "يجب عليك توقف and wait حتى the beacon stops flashing.",
+        "o2": "You may proceed if the way is واضح, giving way إلى pedestrians still على the crossing.",
+        "o3": "The crossing is out من order; proceed normally."
+      },
+      "q5": {
+        "text": "A شرطة officer is directing traffic في a junction and signals you إلى توقف, but the traffic light for you is green. What must you do?",
+        "explanation": "Signals given by a شرطة officer directing traffic override كل آخر traffic signals and signs. يجب عليك obey the officer.",
+        "o1": "Obey the green traffic light and proceed.",
+        "o2": "Point إلى the green light إلى inform the officer and then proceed.",
+        "o3": "Obey the شرطة officer\\"
+      },
+      "q6": {
+        "text": "في a level crossing, twin flashing red lights have started إلى flash. ما هو your immediate action?",
+        "explanation": "Twin flashing red lights في a level crossing mean a train is approaching. يجب عليك توقف قبل the توقف line or barrier and wait.",
+        "o1": "توقف فوراً, even if أنت already على the crossing.",
+        "o2": "توقف قبل the barrier or توقف line and wait حتى the lights توقف flashing and any barrier is fully raised.",
+        "o3": "Cross بسرعة if لا يمكنك see or hear a train approaching."
+      },
+      "q7": {
+        "text": "بعض إشارات المرور have a white light signal for trams or buses. ماذا يعني a steady white horizontal bar mean for these vehicles?",
+        "explanation": "For trams or buses, a steady white horizontal bar في a traffic light signal typically means \"توقف\".",
+        "o1": "Proceed with caution.",
+        "o2": "Prepare إلى توقف.",
+        "o3": "توقف."
+      },
+      "q8": {
+        "text": "You see a signal light showing a red bicycle symbol. ماذا يعني this mean for cyclists?",
+        "explanation": "A red bicycle symbol في إشارات المرور means cyclists must توقف and wait for the green signal specific إلى them or a general green light.",
+        "o1": "Cyclists must dismount and walk.",
+        "o2": "Cyclists must توقف and wait for a green bicycle signal.",
+        "o3": "Cyclists can proceed if لا آخر traffic is present."
+      },
+      "q9": {
+        "text": "ما هو an \"intelligent\" or \"adaptive\" traffic light system designed إلى do?",
+        "explanation": "Adaptive traffic light systems use sensors إلى detect traffic volume and adjust signal timings إلى optimize flow and reduce delays.",
+        "o1": "Change lights في fixed intervals regardless من traffic.",
+        "o2": "Prioritize buses and طوارئ vehicles by giving them immediate green lights.",
+        "o3": "Adjust light timings based على real-وقت traffic flow detected by sensors."
+      },
+      "q10": {
+        "text": "If a traffic light shows red and amber together, ماذا يجب you prepare إلى do?",
+        "explanation": "Red and amber lights showing together indicate that the lights are حوالي إلى change إلى green. يجب عليك prepare إلى proceed when it turns green.",
+        "o1": "توقف, as the lights are حوالي إلى turn red.",
         "o2": "Proceed with caution, as the lights are faulty.",
-        "o3": "Prepare to go; the lights will shortly change to green.",
-        "explanation": "Red and amber lights showing together indicate that the lights are about to change to green. You should prepare to proceed when it turns green."
+        "o3": "Prepare إلى اذهب; the lights will shortly change إلى green."
+      }
+    },
+    "tramInteractions": {
+      "q1": {
+        "text": "أنت قيادة and see a ترام approaching من behind. ماذا يجب you do?",
+        "explanation": "Trams have أولوية فوق آخر vehicles. يجب عليك أفسح الطريق إلى trams and allow them إلى pass بأمان.",
+        "o1": "أفسح الطريق إلى the ترام",
+        "o2": "Continue قيادة normally",
+        "o3": "سرعة أعلى إلى avoid the ترام"
+      },
+      "q2": {
+        "text": "أنت قيادة and see a ترام stopped في a ترام توقف. ماذا يجب you do?",
+        "explanation": "When a ترام is stopped في a ترام توقف, يجب عليك توقف and wait for passengers إلى بأمان board or alight قبل proceeding.",
+        "o1": "توقف and wait for passengers إلى board/alight",
+        "o2": "Continue قيادة past the ترام",
+        "o3": "Honk إلى warn passengers"
+      },
+      "q3": {
+        "text": "أنت قيادة and see a ترام crossing your path. ماذا يجب you do?",
+        "explanation": "Trams have أولوية في intersections and crossings. يجب عليك أفسح الطريق إلى trams and wait for them إلى pass.",
+        "o1": "أفسح الطريق إلى the ترام",
+        "o2": "Continue قيادة, trams must أفسح الطريق",
+        "o3": "سرعة أعلى إلى cross قبل the ترام"
+      },
+      "q4": {
+        "text": "أنت قيادة على a road with ترام tracks. ماذا يجب you do?",
+        "explanation": "When قيادة على roads with ترام tracks, drive بحذر and be constantly aware من trams that may be approaching.",
+        "o1": "Drive بحذر and be aware من trams",
+        "o2": "Drive normally, trams will avoid you",
+        "o3": "Avoid قيادة على roads with ترام tracks"
+      },
+      "q5": {
+        "text": "أنت قيادة and see a ترام with flashing lights. ماذا يجب you do?",
+        "explanation": "Trams with flashing lights have أولوية and may be making an طوارئ توقف. أفسح الطريق إلى them فوراً.",
+        "o1": "أفسح الطريق إلى the ترام فوراً",
+        "o2": "Continue قيادة normally",
+        "o3": "Honk إلى warn the ترام سائق"
+      },
+      "q6": {
+        "text": "أنت قيادة and see a ترام approaching من the opposite اتجاه. ماذا يجب you do?",
+        "explanation": "When a ترام is approaching من the opposite اتجاه, give it extra space and be prepared إلى توقف if ضروري.",
+        "o1": "Drive normally, trams have their own lane",
+        "o2": "Give extra space إلى the ترام",
+        "o3": "توقف completely and let the ترام pass"
+      },
+      "q7": {
+        "text": "أنت قيادة and see a ترام making a turn. ماذا يجب you do?",
+        "explanation": "Trams have أولوية when making turns. يجب عليك أفسح الطريق إلى trams and wait for them إلى complete their turn.",
+        "o1": "أفسح الطريق إلى the ترام",
+        "o2": "Continue قيادة, trams must أفسح الطريق",
+        "o3": "سرعة أعلى إلى avoid the ترام"
+      },
+      "q8": {
+        "text": "أنت قيادة and see a ترام في a ترام توقف with passengers boarding. ماذا يجب you do?",
+        "explanation": "When a ترام is في a توقف with passengers boarding, يجب عليك توقف and wait for the ترام إلى depart قبل proceeding.",
+        "o1": "توقف and wait for the ترام إلى depart",
+        "o2": "Continue قيادة past the ترام",
+        "o3": "Honk إلى warn passengers"
+      },
+      "q9": {
+        "text": "أنت قيادة and see a ترام with its doors مفتوح. ماذا يجب you do?",
+        "explanation": "When a ترام has its doors مفتوح, it means passengers are boarding or alighting. يجب عليك توقف and wait for the doors إلى قريب.",
+        "o1": "توقف and wait for the doors إلى قريب",
+        "o2": "Continue قيادة past the ترام",
+        "o3": "Honk إلى warn the ترام سائق"
+      },
+      "q10": {
+        "text": "أنت قيادة and see a ترام with a red light. ماذا يجب you do?",
+        "explanation": "Trams with red lights have أولوية and may be making an طوارئ توقف. يجب عليك أفسح الطريق إلى them فوراً.",
+        "o1": "أفسح الطريق إلى the ترام",
+        "o2": "Continue قيادة normally",
+        "o3": "Honk إلى warn the ترام سائق"
+      }
+    },
+    "vehicleCategories": {
+      "q1": {
+        "text": "ما هو the حد السرعة for motorcycles على motorways في هولندا?",
+        "explanation": "Motorcycles have the نفس حد السرعة as cars على motorways في هولندا, which is 130 km/h خلال جيد طقس conditions.",
+        "o1": "100 km/h",
+        "o2": "120 km/h",
+        "o3": "130 km/h",
+        "o4": "140 km/h"
+      },
+      "q2": {
+        "text": "ما هو the حد السرعة for trucks على motorways في هولندا?",
+        "explanation": "Trucks have a حد السرعة من 80 km/h على motorways في هولندا, regardless من the طقس conditions.",
+        "o1": "80 km/h",
+        "o2": "90 km/h",
+        "o3": "100 km/h",
+        "o4": "110 km/h"
+      },
+      "q3": {
+        "text": "ما هو the حد السرعة for buses على motorways في هولندا?",
+        "explanation": "Buses have a حد السرعة من 80 km/h على motorways في هولندا, the نفس as trucks.",
+        "o1": "80 km/h",
+        "o2": "90 km/h",
+        "o3": "100 km/h",
+        "o4": "110 km/h"
+      },
+      "q4": {
+        "text": "ما هو the حد السرعة for mopeds على roads في هولندا?",
+        "explanation": "Mopeds have a حد السرعة من 45 km/h على roads في هولندا, unless otherwise indicated by traffic signs.",
+        "o1": "25 km/h",
+        "o2": "30 km/h",
+        "o3": "45 km/h",
+        "o4": "50 km/h"
+      },
+      "q5": {
+        "text": "ما هو the حد السرعة for tractors على roads في هولندا?",
+        "explanation": "Tractors have a حد السرعة من 25 km/h على roads في هولندا, unless they have special permission for higher speeds.",
+        "o1": "15 km/h",
+        "o2": "25 km/h",
+        "o3": "30 km/h",
+        "o4": "40 km/h"
+      },
+      "q6": {
+        "text": "Which lane should motorcycles use على a three-lane طريق سريع?",
+        "explanation": "Motorcycles can use any lane على a طريق سريع, just like cars. They should follow the نفس lane discipline rules.",
+        "o1": "The يمين lane only",
+        "o2": "The يسار lane only",
+        "o3": "Any lane they choose",
+        "o4": "The middle lane only"
+      },
+      "q7": {
+        "text": "Which lane should trucks use على a three-lane طريق سريع?",
+        "explanation": "Trucks should use the middle and يمين lanes على a three-lane طريق سريع. They are not allowed إلى use the يسار lane for تجاوز.",
+        "o1": "The يمين lane only",
+        "o2": "The يسار lane only",
+        "o3": "Any lane they choose",
+        "o4": "The middle and يمين lanes"
+      },
+      "q8": {
+        "text": "ما هو the حد السرعة for cars towing trailers على motorways?",
+        "explanation": "Cars towing trailers have a حد السرعة من 90 km/h على motorways في هولندا.",
+        "o1": "80 km/h",
+        "o2": "90 km/h",
+        "o3": "100 km/h",
+        "o4": "110 km/h"
+      }
+    },
+    "vehicleDocumentation": {
+      "q1": {
+        "text": "What documents must you carry when قيادة في هولندا?",
+        "explanation": "يجب عليك carry your قيادة license, مركبة registration document (kentekenbewijs), insurance certificate, and MOT certificate (APK) when قيادة.",
+        "o1": "Only قيادة license",
+        "o2": "قيادة license and مركبة registration document",
+        "o3": "قيادة license, مركبة registration, insurance certificate, and MOT certificate"
+      },
+      "q2": {
+        "text": "ما هو the APK (Algemene Periodieke Keuring)?",
+        "explanation": "APK (Algemene Periodieke Keuring) is the annual مركبة safety and emissions test that كل vehicles must pass إلى be roadworthy.",
+        "o1": "Annual مركبة insurance check",
+        "o2": "Annual مركبة safety and emissions test",
+        "o3": "Annual قيادة license renewal"
+      },
+      "q3": {
+        "text": "How كثيراً must a new car have an APK test?",
+        "explanation": "A new car must have its أول APK test بعد 3 years, then every year thereafter.",
+        "o1": "Every year",
+        "o2": "Every 2 years",
+        "o3": "Every 3 years"
+      },
+      "q4": {
+        "text": "What happens if you drive without صالح insurance?",
+        "explanation": "قيادة without صالح insurance results في a heavy fine and possible مركبة confiscation. It is a serious offense.",
+        "o1": "تحذير only",
+        "o2": "Fine من €140",
+        "o3": "Heavy fine and possible مركبة confiscation"
+      },
+      "q5": {
+        "text": "ما هو الحد الأدنى insurance coverage مطلوب في هولندا?",
+        "explanation": "الحد الأدنى insurance coverage مطلوب في هولندا is third-party liability insurance (WA-verzekering).",
+        "o1": "Third-party liability only",
+        "o2": "Third-party liability and theft",
+        "o3": "Comprehensive coverage"
+      },
+      "q6": {
+        "text": "ماذا يجب you do if you lose your قيادة license?",
+        "explanation": "If you lose your قيادة license, يجب عليك report it إلى the شرطة and apply for a replacement في your local municipality.",
+        "o1": "Continue قيادة normally",
+        "o2": "Report it إلى the شرطة and apply for a replacement",
+        "o3": "Wait حتى you find it"
+      },
+      "q7": {
+        "text": "ما هو the penalty for قيادة without a صالح قيادة license?",
+        "explanation": "قيادة without a صالح قيادة license is a serious offense that can result في a heavy fine and possible imprisonment.",
+        "o1": "تحذير only",
+        "o2": "Fine من €140",
+        "o3": "Heavy fine and possible imprisonment"
+      },
+      "q8": {
+        "text": "ماذا يجب you do if your مركبة registration document is stolen?",
+        "explanation": "If your مركبة registration document is stolen, يجب عليك report it إلى the شرطة and apply for a replacement في the RDW.",
+        "o1": "Continue قيادة normally",
+        "o2": "Report it إلى the شرطة and apply for a replacement",
+        "o3": "Wait حتى you find it"
+      },
+      "q9": {
+        "text": "ما هو the RDW (Rijksdienst voor het Wegverkeer)?",
+        "explanation": "The RDW (Rijksdienst voor het Wegverkeer) is the Dutch مركبة registration and licensing authority responsible for مركبة documentation.",
+        "o1": "Dutch قيادة school association",
+        "o2": "Dutch مركبة registration and licensing authority",
+        "o3": "Dutch insurance company"
+      },
+      "q10": {
+        "text": "ماذا يجب you do if you buy a used car?",
+        "explanation": "When you buy a used car, يجب عليك transfer ownership within 14 days في the RDW or a post office.",
+        "o1": "Transfer ownership فوراً",
+        "o2": "Transfer ownership within 14 days",
+        "o3": "Transfer ownership within 30 days"
+      },
+      "q11": {
+        "text": "What happens if you fail إلى transfer مركبة ownership على وقت?",
+        "explanation": "Failing إلى transfer مركبة ownership within 14 days results في a fine من €340.",
+        "o1": "لا penalty",
+        "o2": "Small fine",
+        "o3": "Fine من €340"
+      },
+      "q12": {
+        "text": "ماذا يجب you do if you move إلى a مختلف address?",
+        "explanation": "When you move إلى a مختلف address, يجب عليك update both your قيادة license and مركبة registration addresses في your local municipality.",
+        "o1": "Update your قيادة license address",
+        "o2": "Update your مركبة registration address",
+        "o3": "Update both قيادة license and مركبة registration addresses"
+      }
+    },
+    "warningSigns": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns drivers من potential traffic jams ahead.",
+        "o1": "تحذير for traffic jams",
+        "o2": "لا تجاوز",
+        "o3": "End من طريق سريع"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates a railroad crossing ahead that is equipped with barriers.",
+        "o1": "مشاة crossing",
+        "o2": "لا entry for trains",
+        "o3": "Railroad crossing ahead with barriers"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign (St. Andrew\\",
+        "o1": "Tramway crossing",
+        "o2": "Rail crossing ahead with 1 railway",
+        "o3": "Multiple railway tracks"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns that the road ahead carries two-way traffic, كثيراً encountered when leaving a one-way system.",
+        "o1": "Two-way traffic ahead",
+        "o2": "One-way street",
+        "o3": "تجاوز permitted"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns من a double curve ahead, the أول إلى the يسار, followed by a curve إلى the يمين.",
+        "o1": "Sharp يمين turn",
+        "o2": "Winding road for 1km",
+        "o3": "Double curve ahead, إلى the يسار then إلى the يمين"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns drivers إلى be aware من bicycles and cyclists في the area or crossing the road.",
+        "o1": "تحذير for bikes and cyclists",
+        "o2": "لا cycling allowed",
+        "o3": "Cycle path ahead"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns drivers من roadworks ahead, indicating potential obstructions or changes في road layout.",
+        "o1": "سرعة bumps ahead",
+        "o2": "Uneven road surface",
+        "o3": "Roadworks ahead تحذير"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns من strong crosswinds في the area, which can affect مركبة stability.",
+        "o1": "Danger من falling leaves",
+        "o2": "Heavy crosswinds في area تحذير",
+        "o3": "Airport nearby"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns من a double curve ahead, the أول إلى the يمين, followed by a curve إلى the يسار.",
+        "o1": "لا U-turns allowed",
+        "o2": "Slippery road surface",
+        "o3": "Road bends يمين then يسار"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns من loose chippings or stones على the road surface, which can reduce grip or be thrown أعلى by vehicles.",
+        "o1": "Loose chippings and stones على the road تحذير",
+        "o2": "Risk من falling rocks",
+        "o3": "Uneven road surface"
+      }
+    },
+    "weatherConditions": {
+      "q1": {
+        "text": "أنت قيادة في heavy مطر. ماذا يجب you do?",
+        "explanation": "في heavy مطر, reduce your سرعة and increase your following مسافة إلى account for reduced visibility and longer توقف distances.",
+        "o1": "Reduce سرعة and increase following مسافة",
+        "o2": "Continue قيادة في normal سرعة",
+        "o3": "سرعة أعلى إلى get through the مطر بسرعة"
+      },
+      "q2": {
+        "text": "أنت قيادة في ضباب. ماذا يجب you do?",
+        "explanation": "في ضباب, use low beam المصابيح الأمامية (high beams reflect off ضباب and reduce visibility) and reduce your سرعة significantly.",
+        "o1": "Use low beam المصابيح الأمامية and reduce سرعة",
+        "o2": "Use high beam المصابيح الأمامية for أفضل visibility",
+        "o3": "Continue قيادة في normal سرعة"
+      },
+      "q3": {
+        "text": "أنت قيادة في ثلج. ماذا يجب you do?",
+        "explanation": "في ثلج, reduce your سرعة and use gentle braking إلى avoid skidding. Sudden movements can cause loss من control.",
+        "o1": "Reduce سرعة and use gentle braking",
+        "o2": "Continue قيادة في normal سرعة",
+        "o3": "سرعة أعلى إلى get through the ثلج بسرعة"
+      },
+      "q4": {
+        "text": "أنت قيادة في strong winds. ماذا يجب you do?",
+        "explanation": "في strong winds, reduce your سرعة and hold the steering wheel firmly إلى maintain control من your مركبة.",
+        "o1": "Reduce سرعة and hold the steering wheel firmly",
+        "o2": "Continue قيادة في normal سرعة",
+        "o3": "سرعة أعلى إلى get through the wind بسرعة"
       }
     }
   }

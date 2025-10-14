@@ -1,111 +1,2265 @@
 {
   "navigation": {
     "dashboard": "Dashboard",
-    "practice": "Oefenen",
-    "mockExam": "Proefexamen",
-    "settings": "Instellingen"
+    "practice": "Practice",
+    "mockExam": "Mock Exam",
+    "settings": "Settings"
   },
   "dashboard": {
     "title": "Dashboard",
-    "averageScore": "Gemiddelde Score",
-    "studyTime": "Studietijd",
-    "timeRemaining": "Uren tot 24u Doel",
-    "yourProgress": "Je Voortgang",
-    "startPractice": "Start Oefenen"
+    "averageScore": "Practice Average",
+    "studyTime": "Study Time",
+    "timeRemaining": "Hours to 24h Goal",
+    "yourProgress": "Your Progress",
+    "startPractice": "Start Practice"
   },
   "practice": {
-    "title": "Oefenen",
-    "recommendedForYou": "Aanbevolen voor Jou",
+    "title": "Practice",
+    "recommendedForYou": "Recommended for You",
     "startTest": "Start",
-    "question": "Vraag",
-    "of": "van",
-    "nextQuestion": "Volgende Vraag",
-    "finishTest": "Test Afronden",
-    "explanation": "Uitleg"
+    "question": "Question",
+    "of": "of",
+    "nextQuestion": "Next Question",
+    "finishTest": "Finish Test",
+    "explanation": "Explanation"
   },
   "settings": {
-    "title": "Instellingen",
+    "title": "Settings",
     "account": "Account",
-    "language": "Taal",
-    "privacy": "Privacybeleid",
-    "terms": "Servicevoorwaarden",
-    "faq": "Veelgestelde Vragen",
-    "support": "Ondersteuning"
+    "language": "Language",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "faq": "FAQ",
+    "support": "Support"
   },
   "quiz": {
-    "title": "Proefexamen"
+    "title": "Mock Exam"
   },
   "questions": {
-    "trafficLights": {
+    "alcoholDrugs": {
       "q1": {
-        "text": "You are approaching traffic lights that have just changed to amber (yellow). What is the general rule you should follow?",
-        "o1": "Accelerate to pass through before it turns red.",
-        "o2": "Stop before the stop line, unless you are so close that to stop safely would cause an accident.",
-        "o3": "Continue at the same speed as it means the lights are about to turn green.",
-        "explanation": "Amber means stop unless you've already crossed the stop line or are so close that stopping suddenly might cause a collision."
+        "text": "Wat is Het maximum blood alcohol concentration (BAC) allowed for drivers in Nederland?",
+        "explanation": "Het maximum blood alcohol concentration (BAC) allowed for drivers in Nederland is 0.05%. This is lower than veel andere countries naar improve road safety.",
+        "o1": "0.02%",
+        "o2": "0.05%",
+        "o3": "0.08%"
       },
       "q2": {
-        "text": "What does a green filter arrow (e.g., for turning left) at traffic lights indicate when the main light is red?",
-        "o1": "You may turn left if the way is clear, but give way to pedestrians crossing.",
-        "o2": "You must wait for the main green light before turning left.",
-        "o3": "You have priority over all other traffic and pedestrians when turning left.",
-        "explanation": "A green filter arrow allows you to proceed in the direction of the arrow, even if the main light is red, provided you give way to any pedestrians or other road users who have priority."
+        "text": "Wat is Het maximum BAC for drivers with minder than 5 years van experience?",
+        "explanation": "Drivers with minder than 5 years van experience have a stricter BAC limit van 0.02%, which is essentially zero tolerance.",
+        "o1": "0.02%",
+        "o2": "0.05%",
+        "o3": "0.08%"
       },
       "q3": {
-        "text": "If traffic lights are out of order (not working at all), how should you treat the junction?",
-        "o1": "Treat it as if you have priority over all traffic.",
-        "o2": "Proceed with extreme caution and treat the junction as an unmarked crossroads or give way, depending on road markings or signs.",
-        "o3": "Wait for a police officer to direct traffic before proceeding.",
-        "explanation": "When traffic lights are out of order, revert to standard priority rules as if the junction is unmarked, or follow any existing give way/stop signs. Always proceed with caution."
+        "text": "Wat is the penalty for rijden with a BAC between 0.05% and 0.08%?",
+        "explanation": "rijden with a BAC between 0.05% and 0.08% results in a fine van €240 and possible license suspension.",
+        "o1": "waarschuwing only",
+        "o2": "Fine van €140",
+        "o3": "Fine van €240"
       },
       "q4": {
-        "text": "What does a flashing amber beacon mounted above a pedestrian crossing (Pelican or Puffin crossing) signify when pedestrians are crossing?",
-        "o1": "You must stop and wait until the beacon stops flashing.",
-        "o2": "You may proceed if the way is clear, giving way to pedestrians still on the crossing.",
-        "o3": "The crossing is out of order; proceed normally.",
-        "explanation": "A flashing amber beacon at a pedestrian crossing means you must give way to pedestrians on the crossing, but you may proceed if the crossing is clear."
+        "text": "Wat is the penalty for rijden with a BAC boven 0.08%?",
+        "explanation": "rijden with a BAC boven 0.08% is a criminal offense that can result in imprisonment, heavy fines, and verplicht license suspension.",
+        "o1": "Fine van €240",
+        "o2": "Fine van €340",
+        "o3": "Criminal offense with possible imprisonment"
       },
       "q5": {
-        "text": "A police officer is directing traffic at a junction and signals you to stop, but the traffic light for you is green. What must you do?",
-        "o1": "Obey the green traffic light and proceed.",
-        "o2": "Point to the green light to inform the officer and then proceed.",
-        "o3": "Obey the police officer's signal and stop.",
-        "explanation": "Signals given by a police officer directing traffic override all other traffic signals and signs. You must obey the officer."
+        "text": "How long should you wait na drinking alcohol voor rijden?",
+        "explanation": "The safest approach is naar wait op minste 24 uren na drinking alcohol voor rijden. Your judgment van when you feel sober is not reliable.",
+        "o1": "1 hour per drink",
+        "o2": "2 uren per drink",
+        "o3": "op minste 24 uren"
       },
       "q6": {
-        "text": "At a level crossing, twin flashing red lights have started to flash. What is your immediate action?",
-        "o1": "Stop immediately, even if you are already on the crossing.",
-        "o2": "Stop before the barrier or stop line and wait until the lights stop flashing and any barrier is fully raised.",
-        "o3": "Cross quickly if you cannot see or hear a train approaching.",
-        "explanation": "Twin flashing red lights at a level crossing mean a train is approaching. You must stop before the stop line or barrier and wait."
+        "text": "What drugs are onwettig naar drive onder the influence van in Nederland?",
+        "explanation": "It is onwettig naar drive onder the influence van any drug that affects your rijden ability, including cannabis, prescription medications, and over-the-counter drugs.",
+        "o1": "Only hard drugs like cocaine and heroin",
+        "o2": "Only prescription medications",
+        "o3": "alle drugs that affect rijden ability"
       },
       "q7": {
-        "text": "Some traffic lights have a white light signal for trams or buses. What does a steady white horizontal bar mean for these vehicles?",
-        "o1": "Proceed with caution.",
-        "o2": "Prepare to stop.",
-        "o3": "Stop.",
-        "explanation": "For trams or buses, a steady white horizontal bar at a traffic light signal typically means Stop."
+        "text": "Wat moet you do if Je bent taking medication that may affect your rijden?",
+        "explanation": "If Je bent taking medication that may affect your rijden, Je moet check with your doctor or pharmacist ongeveer whether it is veilig naar drive.",
+        "o1": "Drive as normal",
+        "o2": "Drive only tijdens the day",
+        "o3": "Check with your doctor or pharmacist"
       },
       "q8": {
-        "text": "You see a signal light showing a red bicycle symbol. What does this mean for cyclists?",
-        "o1": "Cyclists must dismount and walk.",
-        "o2": "Cyclists must stop and wait for a green bicycle signal.",
-        "o3": "Cyclists can proceed if no other traffic is present.",
-        "explanation": "A red bicycle symbol at traffic lights means cyclists must stop and wait for the green signal specific to them or a general green light."
+        "text": "What are the signs van drug-impaired rijden?",
+        "explanation": "Signs van drug-impaired rijden include erratic rijden behavior, slow reaction times, poor judgment, and difficulty maintaining lane position.",
+        "o1": "Only erratic rijden behavior",
+        "o2": "Only slow reaction times",
+        "o3": "Erratic rijden, slow reactions, and poor judgment"
       },
       "q9": {
-        "text": "What is an intelligent or adaptive traffic light system designed to do?",
-        "o1": "Change lights at fixed intervals regardless of traffic.",
-        "o2": "Prioritize buses and emergency vehicles by giving them immediate green lights.",
-        "o3": "Adjust light timings based on real-time traffic flow detected by sensors.",
-        "explanation": "Adaptive traffic light systems use sensors to detect traffic volume and adjust signal timings to optimize flow and reduce delays."
+        "text": "Wat is the penalty for refusing a breathalyzer test?",
+        "explanation": "Refusing a breathalyzer test carries the zelfde penalty as rijden onder the influence, as it is considered an admission van guilt.",
+        "o1": "nee penalty",
+        "o2": "Small fine",
+        "o3": "zelfde penalty as rijden onder the influence"
       },
       "q10": {
-        "text": "If a traffic light shows red and amber together, what should you prepare to do?",
-        "o1": "Stop, as the lights are about to turn red.",
+        "text": "How long does alcohol stay in your system?",
+        "explanation": "Alcohol can stay in your system for 24-48 uren, depending op factors like body weight, metabolism, and amount consumed.",
+        "o1": "1-2 uren",
+        "o2": "4-6 uren",
+        "o3": "24-48 uren"
+      },
+      "q11": {
+        "text": "Wat moet you do if you suspect een andere bestuurder is onder the influence?",
+        "explanation": "If you suspect een andere bestuurder is onder the influence, call the politie noodgeval number (112) and provide the voertuig description and location.",
+        "o1": "Confront them directly",
+        "o2": "Call the politie noodgeval number",
+        "o3": "Follow them naar their destination"
+      },
+      "q12": {
+        "text": "Wat is the beste way naar prevent drunk rijden?",
+        "explanation": "The beste ways naar prevent drunk rijden are naar designate a sober bestuurder, take a taxi or openbaar transport, or stay overnight. nooit drive na drinking.",
+        "o1": "Designate a sober bestuurder",
+        "o2": "Take a taxi or openbaar transport",
+        "o3": "alle van the boven"
+      }
+    },
+    "bicycleInteractions": {
+      "q1": {
+        "text": "You approach an intersection with a bicycle crossing. A fietser is waiting naar cross. Wat moet you do?",
+        "explanation": "op bicycle crossings, motorists must stoppen and voorrang verlenen naar cyclists who are waiting naar cross or already crossing.",
+        "o1": "stoppen and voorrang verlenen naar the fietser",
+        "o2": "Continue rijden, cyclists must wait",
+        "o3": "Honk naar warn the fietser"
+      },
+      "q2": {
+        "text": "You want naar rechtsaf slaan op an intersection. A fietser is approaching van the opposite richting, also turning rechts. Who has voorrang?",
+        "explanation": "Cyclists have voorrang when turning rechts op intersections. Motorists must voorrang verlenen naar cyclists in this situation.",
+        "o1": "The fietser has voorrang",
+        "o2": "You have voorrang as a motorist",
+        "o3": "Whoever arrives eerste has voorrang"
+      },
+      "q3": {
+        "text": "Je bent rijden op a road with a bicycle lane. A fietser is riding in the bicycle lane. Wat is Het minimum afstand Je moet maintain when inhalen?",
+        "explanation": "When inhalen cyclists, Je moet maintain a minimum afstand van 1.5 meters naar ensure their safety.",
+        "o1": "1 meter",
+        "o2": "1.5 meters",
+        "o3": "2 meters"
+      },
+      "q4": {
+        "text": "Je bent rijden in a 30 km/h zone. A fietser is riding ahead van you op 20 km/h. Wat moet you do?",
+        "explanation": "in 30 km/h zones, Je moet follow cyclists op a veilig afstand rather than inhalen, as the snelheid difference is minimal.",
+        "o1": "inhalen onmiddellijk when veilig",
+        "o2": "Follow behind op a veilig afstand",
+        "o3": "Honk naar make the fietser move faster"
+      },
+      "q5": {
+        "text": "Je bent parkeren your car. You see a bicycle lane volgende naar the parkeren space. Wat moet you do?",
+        "explanation": "altijd check for approaching cyclists voor opening your car door when parkeren volgende naar a bicycle lane naar prevent accidents.",
+        "o1": "parkeren normally, cyclists can gaan rond",
+        "o2": "Check for cyclists voor opening your door",
+        "o3": "parkeren closer naar the bicycle lane naar save space"
+      },
+      "q6": {
+        "text": "Je bent rijden op a road without a bicycle lane. A fietser is riding op the rechts side van the road. Wat moet you do?",
+        "explanation": "When daar is nee bicycle lane, cyclists have the rechts naar use the road. Maintain a veilig afstand and inhalen only when it is veilig naar do so.",
+        "o1": "Drive as dichtbij as possible naar the fietser",
+        "o2": "Maintain a veilig afstand and inhalen when possible",
+        "o3": "Honk naar make the fietser move naar the side"
+      },
+      "q7": {
+        "text": "Je bent approaching a rotonde. A fietser is already in the rotonde. Wat moet you do?",
+        "explanation": "op roundabouts, Je moet voorrang verlenen naar traffic already in the rotonde, including cyclists.",
+        "o1": "Enter the rotonde, cyclists must voorrang verlenen",
+        "o2": "Wait for the fietser naar exit the rotonde",
+        "o3": "Enter and inhalen the fietser onmiddellijk"
+      },
+      "q8": {
+        "text": "Je bent rijden op a narrow road. A fietser is approaching van the opposite richting. Wat moet you do?",
+        "explanation": "op narrow roads, vertragen and give cyclists extra space when passing naar ensure their safety.",
+        "o1": "Continue rijden, the fietser must move aside",
+        "o2": "vertragen and give the fietser extra space",
+        "o3": "stoppen completely and let the fietser pass"
+      },
+      "q9": {
+        "text": "Je bent rijden op night. You see a fietser ahead without proper lighting. Wat moet you do?",
+        "explanation": "When encountering a fietser without proper lighting op night, vertragen and pass with extra caution naar ensure safety.",
+        "o1": "Flash your koplampen naar warn the fietser",
+        "o2": "vertragen and pass with extra caution",
+        "o3": "Honk naar alert the fietser"
+      },
+      "q10": {
+        "text": "Je bent rijden in a residential area. Children are riding bicycles op the street. Wat moet you do?",
+        "explanation": "in residential areas with children cycling, reduce your snelheid and be extra vigilant as children may not altijd follow traffic rules.",
+        "o1": "Drive normally, children should be careful",
+        "o2": "Reduce snelheid and be extra vigilant",
+        "o3": "Honk naar warn the children"
+      },
+      "q11": {
+        "text": "Je bent rijden op a road with a shared bicycle and voetganger path. A fietser is using the path. Wat moet you do?",
+        "explanation": "When rijden dichtbij shared bicycle and voetganger paths, be aware that cyclists may need naar enter the road and be prepared naar voorrang verlenen.",
+        "o1": "Ignore the fietser, they are op a separate path",
+        "o2": "Be aware that the fietser may enter the road",
+        "o3": "Honk naar warn the fietser naar stay op the path"
+      },
+      "q12": {
+        "text": "Je bent rijden op a road with a bicycle lane. The bicycle lane is blocked by roadworks. Wat moet you do?",
+        "explanation": "When a bicycle lane is blocked, cyclists may need naar use the main road. Be extra careful and give them space.",
+        "o1": "Continue rijden normally",
+        "o2": "Be extra careful as cyclists may use the main road",
+        "o3": "Honk naar warn cyclists ongeveer the roadworks"
+      },
+      "q13": {
+        "text": "Je bent rijden op a road with a bicycle lane. A fietser is riding buiten the bicycle lane. Wat moet you do?",
+        "explanation": "Cyclists are not altijd vereist naar use bicycle lanes. Respect their choice and maintain a veilig afstand when passing.",
+        "o1": "Honk naar make the fietser use the bicycle lane",
+        "o2": "Respect the fietser\\",
+        "o3": "Drive as dichtbij as possible naar force them into the lane"
+      },
+      "q14": {
+        "text": "Je bent rijden op a road with a bicycle lane. A fietser is riding in the bicycle lane but swerving slightly. Wat moet you do?",
+        "explanation": "When a fietser is swerving, they may be avoiding obstacles or have difficulty maintaining balance. Give extra space and pass with caution.",
+        "o1": "Honk naar warn the fietser",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as dichtbij as possible naar keep them in line"
+      },
+      "q15": {
+        "text": "Je bent rijden op a road with a bicycle lane. A fietser is riding in the bicycle lane but appears naar be looking op their phone. Wat moet you do?",
+        "explanation": "When a fietser appears distracted, give extra space and pass with caution. Honking may startle them and cause an ongeluk.",
+        "o1": "Honk naar alert the fietser",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as dichtbij as possible naar get their attention"
+      },
+      "q16": {
+        "text": "Je bent rijden op a road with a bicycle lane. A fietser is riding in the bicycle lane but appears naar be intoxicated. Wat moet you do?",
+        "explanation": "When a fietser appears intoxicated, give extra space and pass with extreme caution. Their behavior may be unpredictable.",
+        "o1": "Honk naar alert the fietser",
+        "o2": "Give extra space and pass with extreme caution",
+        "o3": "Drive as dichtbij as possible naar keep them in line"
+      },
+      "q17": {
+        "text": "Je bent rijden op a road with a bicycle lane. A fietser is riding in the bicycle lane but appears naar be having mechanical problems. Wat moet you do?",
+        "explanation": "When a fietser appears naar have mechanical problems, give extra space and pass with caution as they may need naar stoppen suddenly.",
+        "o1": "Honk naar alert the fietser",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as dichtbij as possible naar keep them moving"
+      },
+      "q18": {
+        "text": "Je bent rijden op a road with a bicycle lane. A fietser is riding in the bicycle lane but appears naar be lost or confused. Wat moet you do?",
+        "explanation": "When a fietser appears lost or confused, give extra space and pass with caution as they may make unexpected movements.",
+        "o1": "Honk naar alert the fietser",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as dichtbij as possible naar guide them"
+      },
+      "q19": {
+        "text": "Je bent rijden op a road with a bicycle lane. A fietser is riding in the bicycle lane but appears naar be in distress. Wat moet you do?",
+        "explanation": "When a fietser appears naar be in distress, stoppen and offer help if it is veilig naar do so. Otherwise, give extra space and pass with caution.",
+        "o1": "Honk naar alert the fietser",
+        "o2": "Give extra space and pass with caution",
+        "o3": "stoppen and offer help if veilig naar do so"
+      },
+      "q20": {
+        "text": "Je bent rijden op a road with a bicycle lane. A fietser is riding in the bicycle lane but appears naar be racing. Wat moet you do?",
+        "explanation": "When a fietser appears naar be racing, give extra space and pass with caution as their behavior may be unpredictable.",
+        "o1": "Honk naar alert the fietser",
+        "o2": "Give extra space and pass with caution",
+        "o3": "Drive as dichtbij as possible naar keep them in line"
+      }
+    },
+    "constructionZones": {
+      "q1": {
+        "text": "Je bent rijden and see a bouw zone ahead. Wat moet you do?",
+        "explanation": "in bouw zones, Je moet reduce your snelheid and be extra careful due naar potential hazards and workers.",
+        "o1": "Reduce snelheid and be extra careful",
+        "o2": "Continue rijden op normal snelheid",
+        "o3": "snelheid omhoog naar get through snel"
+      },
+      "q2": {
+        "text": "Je bent rijden in a bouw zone and see workers op the road. Wat moet you do?",
+        "explanation": "When workers are present in bouw zones, give them extra space and drive langzaam naar ensure their safety.",
+        "o1": "Give extra space naar workers and drive langzaam",
+        "o2": "Continue rijden normally",
+        "o3": "Honk naar warn the workers"
+      },
+      "q3": {
+        "text": "Je bent rijden in a bouw zone and see a temporary snelheidslimiet sign. Wat moet you do?",
+        "explanation": "Temporary snelheidslimiet signs in bouw zones must be followed. They are wettelijk enforceable and designed for safety.",
+        "o1": "Follow the temporary snelheidslimiet",
+        "o2": "Continue rijden op the normal snelheidslimiet",
+        "o3": "Ignore the temporary snelheidslimiet"
+      },
+      "q4": {
+        "text": "Je bent rijden in a bouw zone and see a lane closure. Wat moet you do?",
+        "explanation": "When a lane is gesloten in a bouw zone, merge into the open lane when it is veilig naar do so.",
+        "o1": "Merge into the open lane when veilig",
+        "o2": "Continue rijden in the gesloten lane",
+        "o3": "stoppen and wait for the lane naar reopen"
+      },
+      "q5": {
+        "text": "Je bent rijden in a bouw zone and see a flag person directing traffic. Wat moet you do?",
+        "explanation": "Flag persons in bouw zones have authority naar direct traffic. Je moet follow their directions for safety.",
+        "o1": "Follow the flag person\\",
+        "o2": "Continue rijden normally",
+        "o3": "Honk naar get the flag person\\"
+      },
+      "q6": {
+        "text": "Je bent rijden in a bouw zone and see bouw equipment op the road. Wat moet you do?",
+        "explanation": "When bouw equipment is op the road, give it extra space and drive langzaam naar avoid accidents.",
+        "o1": "Give extra space naar the equipment and drive langzaam",
+        "o2": "Continue rijden normally",
+        "o3": "snelheid omhoog naar get past the equipment snel"
+      },
+      "q7": {
+        "text": "Je bent rijden in a bouw zone and see a detour sign. Wat moet you do?",
+        "explanation": "Detour signs in bouw zones indicate alternative routes. Je moet follow the detour route for safety.",
+        "o1": "Follow the detour route",
+        "o2": "Continue rijden op the original route",
+        "o3": "Ignore the detour sign"
+      },
+      "q8": {
+        "text": "Je bent rijden in a bouw zone and see a \"Road Work Ahead\" sign. Wat moet you do?",
+        "explanation": "When you see a \"Road Work Ahead\" sign, prepare naar vertragen and be extra careful as you approach the bouw zone.",
+        "o1": "Prepare naar vertragen and be extra careful",
+        "o2": "Continue rijden op normal snelheid",
+        "o3": "snelheid omhoog naar get through snel"
+      }
+    },
+    "emergencyProcedures": {
+      "q1": {
+        "text": "Wat moet you do if Je bent involved in a traffic ongeluk?",
+        "explanation": "If Je bent involved in a traffic ongeluk, Je moet stoppen onmiddellijk and check for injuries. Call noodgeval services if needed.",
+        "o1": "Drive away snel",
+        "o2": "stoppen onmiddellijk and check for injuries",
+        "o3": "Wait for someone else naar call the politie"
+      },
+      "q2": {
+        "text": "Wat is the noodgeval number in Nederland?",
+        "explanation": "The noodgeval number in Nederland is 112. This number connects you naar politie, fire, and ambulance services.",
+        "o1": "911",
+        "o2": "112",
+        "o3": "999"
+      },
+      "q3": {
+        "text": "Wanneer moet you call the noodgeval number 112?",
+        "explanation": "Call 112 for life-threatening situations and serious accidents where immediate assistance is needed.",
+        "o1": "Only for life-threatening situations",
+        "o2": "For any traffic ongeluk",
+        "o3": "For life-threatening situations and serious accidents"
+      },
+      "q4": {
+        "text": "Wat moet you do if you witness a traffic ongeluk?",
+        "explanation": "If you witness a traffic ongeluk, stoppen and offer assistance if it is veilig naar do so. Call noodgeval services if needed.",
+        "o1": "Continue rijden",
+        "o2": "stoppen and offer assistance if veilig naar do so",
+        "o3": "Call the politie onmiddellijk"
+      },
+      "q5": {
+        "text": "Wat moet you do if your voertuig breaks omlaag op a snelweg?",
+        "explanation": "If your voertuig breaks omlaag op a snelweg, get out and stand behind the safety barrier. Use noodgeval phones naar call for assistance.",
+        "o1": "Stay in your voertuig",
+        "o2": "Get out and stand behind the barrier",
+        "o3": "Walk along the snelweg naar find help"
+      },
+      "q6": {
+        "text": "Wat moet you do if you see an noodgeval voertuig with lights and sirens?",
+        "explanation": "If you see an noodgeval voertuig with lights and sirens, move naar the rechts and vertragen naar allow it naar pass veilig.",
+        "o1": "Ignore it and continue rijden",
+        "o2": "Move naar the rechts and vertragen",
+        "o3": "snelheid omhoog naar get out van the way"
+      },
+      "q7": {
+        "text": "Wat moet you do if Je bent involved in a minor ongeluk with nee injuries?",
+        "explanation": "in a minor ongeluk with nee injuries, exchange informatie with the andere bestuurder including names, addresses, and insurance details.",
+        "o1": "Exchange informatie with the andere bestuurder",
+        "o2": "Call the politie onmiddellijk",
+        "o3": "Drive away snel"
+      },
+      "q8": {
+        "text": "Wat moet you do if you hit a parked car?",
+        "explanation": "If you hit a parked car, leave a note with your contact informatie and report the incident naar your insurance company.",
+        "o1": "Leave a note with your contact informatie",
+        "o2": "Wait for the owner naar return",
+        "o3": "Call the politie onmiddellijk"
+      },
+      "q9": {
+        "text": "Wat moet you do if Je bent involved in an ongeluk with a fietser or voetganger?",
+        "explanation": "If Je bent involved in an ongeluk with a fietser or voetganger, stoppen onmiddellijk and call noodgeval services (112).",
+        "o1": "Drive away snel",
+        "o2": "stoppen onmiddellijk and call noodgeval services",
+        "o3": "Wait for someone else naar help"
+      },
+      "q10": {
+        "text": "Wat moet you do if your voertuig catches fire?",
+        "explanation": "If your voertuig catches fire, stoppen onmiddellijk and evacuate everyone van the voertuig. Call noodgeval services and move naar a veilig afstand.",
+        "o1": "Try naar put out the fire yourself",
+        "o2": "stoppen onmiddellijk and evacuate everyone",
+        "o3": "Continue rijden naar find help"
+      },
+      "q11": {
+        "text": "Wat moet you do if you witness a hit-and-run ongeluk?",
+        "explanation": "If you witness a hit-and-run ongeluk, call the politie and provide as veel details as possible ongeveer the fleeing voertuig.",
+        "o1": "Follow the fleeing voertuig",
+        "o2": "Call the politie and provide details",
+        "o3": "Ignore it"
+      },
+      "q12": {
+        "text": "Wat moet you do if Je bent involved in an ongeluk with an uninsured bestuurder?",
+        "explanation": "If Je bent involved in an ongeluk with an uninsured bestuurder, call the politie and your insurance company onmiddellijk.",
+        "o1": "Accept cash payment",
+        "o2": "Call the politie and your insurance company",
+        "o3": "Drive away snel"
+      }
+    },
+    "environmentalZones": {
+      "q1": {
+        "text": "Wat is a \"milieuzone\" (environmental zone) in Nederland?",
+        "explanation": "A \"milieuzone\" (environmental zone) is a city center area where certain vehicles are restricted van entering naar improve air quality and reduce pollution.",
+        "o1": "A nature reserve area",
+        "o2": "A city center with restricted voertuig access",
+        "o3": "A parkeren area for electric vehicles",
+        "o4": "A bicycle-only zone"
+      },
+      "q2": {
+        "text": "Which vehicles are typically restricted in environmental zones?",
+        "explanation": "Environmental zones typically restrict diesel vehicles and older cars that do not meet current emission standards naar improve air quality.",
+        "o1": "alle vehicles",
+        "o2": "Diesel vehicles and older cars",
+        "o3": "Electric vehicles only",
+        "o4": "Motorcycles only"
+      },
+      "q3": {
+        "text": "What sign indicates the entrance naar an environmental zone?",
+        "explanation": "The entrance naar an environmental zone is marked with a red circle containing \"MILIEUZONE\" naar indicate restricted access.",
+        "o1": "A red circle with \"MILIEUZONE\"",
+        "o2": "A blue circle with \"MILIEUZONE\"",
+        "o3": "A green circle with \"MILIEUZONE\"",
+        "o4": "A yellow triangle with \"MILIEUZONE\""
+      },
+      "q4": {
+        "text": "What sign indicates the exit van an environmental zone?",
+        "explanation": "The exit van an environmental zone is marked with a red circle containing \"MILIEUZONE\" with a diagonal line through it.",
+        "o1": "A red circle with \"MILIEUZONE\" and a diagonal line",
+        "o2": "A blue circle with \"MILIEUZONE\" and a diagonal line",
+        "o3": "A green circle with \"MILIEUZONE\" and a diagonal line",
+        "o4": "A yellow triangle with \"MILIEUZONE\" and a diagonal line"
+      },
+      "q5": {
+        "text": "Wat is the penalty for entering an environmental zone with a restricted voertuig?",
+        "explanation": "Entering an environmental zone with a restricted voertuig typically results in a fine van €95.",
+        "o1": "nee penalty",
+        "o2": "A waarschuwing letter",
+        "o3": "A fine van €95",
+        "o4": "voertuig confiscation"
+      },
+      "q6": {
+        "text": "Which vehicles are meestal exempt van environmental zone restrictions?",
+        "explanation": "noodgeval vehicles and electric vehicles are meestal exempt van environmental zone restrictions as they have low or zero emissions.",
+        "o1": "alle vehicles",
+        "o2": "noodgeval vehicles and electric vehicles",
+        "o3": "Only electric vehicles",
+        "o4": "Only noodgeval vehicles"
+      }
+    },
+    "expandedPriorityRules": {
+      "q1": {
+        "text": "op an intersection with nee traffic signs or signals, who has the rechts van way?",
+        "explanation": "op an intersection with nee traffic signs or signals, traffic van the rechts has the rechts van way. This is known as the \"rechts voor links\" rule.",
+        "o1": "The voertuig op the links",
+        "o2": "The voertuig op the rechts",
+        "o3": "The larger voertuig",
+        "o4": "The voertuig going straight"
+      },
+      "q2": {
+        "text": "op a T-junction, who has the rechts van way?",
+        "explanation": "op a T-junction, traffic op the through road has the rechts van way. Traffic turning onto the through road must voorrang verlenen.",
+        "o1": "Traffic op the through road",
+        "o2": "Traffic turning onto the through road",
+        "o3": "The voertuig op the links",
+        "o4": "The voertuig op the rechts"
+      },
+      "q3": {
+        "text": "op a rotonde, who has the rechts van way?",
+        "explanation": "op a rotonde, traffic already op the rotonde has the rechts van way. Traffic entering the rotonde must voorrang verlenen.",
+        "o1": "Traffic entering the rotonde",
+        "o2": "Traffic already op the rotonde",
+        "o3": "Traffic turning links",
+        "o4": "Traffic turning rechts"
+      },
+      "q4": {
+        "text": "When merging onto a snelweg, who has the rechts van way?",
+        "explanation": "When merging onto a snelweg, traffic already op the snelweg has the rechts van way. Merging traffic must adjust their snelheid and find a gap.",
+        "o1": "Traffic merging onto the snelweg",
+        "o2": "Traffic already op the snelweg",
+        "o3": "The voertuig with the higher snelheid",
+        "o4": "The voertuig in the links lane"
+      },
+      "q5": {
+        "text": "When changing lanes, who has the rechts van way?",
+        "explanation": "When changing lanes, the voertuig already in the lane has the rechts van way. The voertuig changing lanes must voorrang verlenen and find a veilig gap.",
+        "o1": "The voertuig changing lanes",
+        "o2": "The voertuig already in the lane",
+        "o3": "The voertuig with the higher snelheid",
+        "o4": "The voertuig in the links lane"
+      },
+      "q6": {
+        "text": "op an intersection with a \"stoppen\" sign, who has the rechts van way?",
+        "explanation": "op an intersection with a \"stoppen\" sign, the voertuig op the stoppen sign must voorrang verlenen naar alle andere traffic voor proceeding.",
+        "o1": "The voertuig op the stoppen sign",
+        "o2": "alle andere traffic",
+        "o3": "The voertuig op the rechts",
+        "o4": "The voertuig going straight"
+      },
+      "q7": {
+        "text": "op an intersection with a \"voorrang verlenen\" sign, who has the rechts van way?",
+        "explanation": "op an intersection with a \"voorrang verlenen\" sign, the voertuig op the voorrang verlenen sign must voorrang verlenen naar alle andere traffic voor proceeding.",
+        "o1": "The voertuig op the voorrang verlenen sign",
+        "o2": "alle andere traffic",
+        "o3": "The voertuig op the rechts",
+        "o4": "The voertuig going straight"
+      },
+      "q8": {
+        "text": "When a traffic light turns green, who has the rechts van way?",
+        "explanation": "When a traffic light turns green, alle traffic with a green light has the rechts van way, but must still voorrang verlenen naar pedestrians and noodgeval vehicles.",
+        "o1": "alle traffic with a green light",
+        "o2": "Pedestrians crossing",
+        "o3": "noodgeval vehicles",
+        "o4": "Traffic turning links"
+      },
+      "q9": {
+        "text": "When a traffic light turns yellow, Wat moet you do?",
+        "explanation": "When a traffic light turns yellow, Je moet stoppen if it is veilig naar do so. Only proceed if Je kunt niet stoppen veilig.",
+        "o1": "snelheid omhoog naar get through",
+        "o2": "stoppen if it is veilig naar do so",
+        "o3": "Ignore the light",
+        "o4": "Honk your horn"
+      },
+      "q10": {
+        "text": "When a traffic light turns red, Wat moet you do?",
+        "explanation": "When a traffic light turns red, Je moet stoppen completely and wait for the light naar turn green voor proceeding.",
+        "o1": "stoppen completely",
+        "o2": "vertragen but continue",
+        "o3": "snelheid omhoog naar get through",
+        "o4": "rechtsaf slaan if duidelijk"
+      },
+      "q11": {
+        "text": "When a traffic light is flashing yellow, Wat moet you do?",
+        "explanation": "When a traffic light is flashing yellow, Je moet proceed with caution and be prepared naar stoppen if noodzakelijk.",
+        "o1": "stoppen completely",
+        "o2": "Proceed with caution",
+        "o3": "snelheid omhoog",
+        "o4": "Turn rond"
+      },
+      "q12": {
+        "text": "When a traffic light is not working, Wat moet you do?",
+        "explanation": "When a traffic light is not working, Je moet treat it as a stoppen sign and voorrang verlenen naar andere traffic voor proceeding.",
+        "o1": "Treat it as a stoppen sign",
+        "o2": "Ignore it completely",
+        "o3": "snelheid omhoog naar get through",
+        "o4": "Turn rond"
+      }
+    },
+    "fatigueRest": {
+      "q1": {
+        "text": "What are the signs van bestuurder fatigue?",
+        "explanation": "Signs van bestuurder fatigue include yawning, heavy eyelids, difficulty concentrating, drifting in lane, missing exits, and feeling restless or irritable.",
+        "o1": "Only yawning",
+        "o2": "Only heavy eyelids",
+        "o3": "Yawning, heavy eyelids, difficulty concentrating, and drifting in lane"
+      },
+      "q2": {
+        "text": "How vaak should you take breaks op long journeys?",
+        "explanation": "Je moet take a break every 2 uren op long journeys, even if you don\\",
+        "o1": "Every 2 uren",
+        "o2": "Every 4 uren",
+        "o3": "Every 6 uren"
+      },
+      "q3": {
+        "text": "How long should each break be op a long journey?",
+        "explanation": "Each break should be 15-20 minuten long. This gives you enough tijd naar rest, stretch, and refresh yourself voor continuing your journey.",
+        "o1": "5 minuten",
+        "o2": "10 minuten",
+        "o3": "15-20 minuten"
+      },
+      "q4": {
+        "text": "Wat moet you do if you feel tired terwijl rijden?",
+        "explanation": "If you feel tired terwijl rijden, Je moet pull over in a veilig place and rest. nooit try naar continue rijden when fatigued.",
+        "o1": "Continue rijden and try naar stay awake",
+        "o2": "open the window and turn omhoog the radio",
+        "o3": "Pull over in a veilig place and rest"
+      },
+      "q5": {
+        "text": "How much sleep should you get voor a long journey?",
+        "explanation": "Je moet get 7-8 uren van sleep voor a long journey naar ensure Je bent well-rested and alert terwijl rijden.",
+        "o1": "4-5 uren",
+        "o2": "6-7 uren",
+        "o3": "7-8 uren"
+      },
+      "q6": {
+        "text": "Wat is microsleep?",
+        "explanation": "Microsleep is a brief period van unconsciousness lasting 1-30 seconden. It can occur without waarschuwing and is extremely gevaarlijk terwijl rijden.",
+        "o1": "A very short nap",
+        "o2": "A brief period van unconsciousness lasting 1-30 seconden",
+        "o3": "A deep sleep"
+      },
+      "q7": {
+        "text": "Wat moet you do if you experience microsleep terwijl rijden?",
+        "explanation": "If you experience microsleep terwijl rijden, Je moet pull over onmiddellijk in a veilig place and rest. This is a serious waarschuwing sign van fatigue.",
+        "o1": "Continue rijden voorzichtig",
+        "o2": "Pull over onmiddellijk and rest",
+        "o3": "Take a short nap in the car"
+      },
+      "q8": {
+        "text": "Wat is the beste tijd naar plan long journeys?",
+        "explanation": "The beste tijd naar plan long journeys is early morning when Je bent fresh and alert. Avoid rijden tijdens your normal sleep uren.",
+        "o1": "Early morning when Je bent fresh",
+        "o2": "Late afternoon",
+        "o3": "Late evening"
+      },
+      "q9": {
+        "text": "Wat moet you avoid voor a long journey?",
+        "explanation": "voor a long journey, Je moet avoid heavy meals, alcohol, and medications that cause drowsiness, as they can alle contribute naar fatigue.",
+        "o1": "Heavy meals",
+        "o2": "Alcohol",
+        "o3": "alle van the boven"
+      },
+      "q10": {
+        "text": "Wat moet you do tijdens breaks op long journeys?",
+        "explanation": "tijdens breaks op long journeys, Je moet get out van the car, stretch, walk rond, and get sommige fresh air naar help stay alert.",
+        "o1": "Stay in the car and rest",
+        "o2": "Get out, stretch, and walk rond",
+        "o3": "Take a long nap"
+      },
+      "q11": {
+        "text": "Wat is the recommended maximum rijden tijd per dag?",
+        "explanation": "The recommended maximum rijden tijd per dag is 8 uren, including breaks. This helps prevent fatigue and maintains safety.",
+        "o1": "6 uren",
+        "o2": "8 uren",
+        "o3": "10 uren"
+      },
+      "q12": {
+        "text": "Wat moet you do if Je bent rijden and Start naar feel drowsy?",
+        "explanation": "If you Start naar feel drowsy terwijl rijden, Je moet pull over in a veilig place and take a short nap. Coffee and andere stimulants are not reliable solutions.",
+        "o1": "Continue rijden naar your destination",
+        "o2": "Pull over and take a short nap",
+        "o3": "Drink coffee and continue"
+      }
+    },
+    "hazardPerception": {
+      "q1": {
+        "text": "Your snelheid is 50 km/h. A child op a scooter suddenly emerges van behind the parked car op the rechts. What do you do?",
+        "explanation": "Immediate braking is noodzakelijk as a child has suddenly appeared in your path, creating a high-risk situation.",
+        "o1": "rem",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q2": {
+        "text": "Your snelheid is 30 km/h. A voetganger looking op their phone steps off the pavement van between parked cars. What do you do?",
+        "explanation": "Braking is vereist as a voetganger has unexpectedly entered the roadway without looking, posing an immediate collision risk.",
+        "o1": "rem",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q3": {
+        "text": "Your snelheid is 80 km/h op a country road. A deer suddenly jumps out van bushes op the side, ongeveer 50 meters ahead. nee oncoming traffic is zichtbaar. What do you do?",
+        "explanation": "A deer op 50 meters op 80 km/h is an immediate hazard requiring noodgeval braking naar avoid a collision.",
+        "o1": "rem",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q4": {
+        "text": "Your snelheid is 50 km/h approaching a T-junction op your rechts. A car is op the give-way line, partially obscured by a hedge. Its front wheels Start naar turn slightly as if naar pull out. What do you do?",
+        "explanation": "Releasing the accelerator allows you naar assess if the car will fully emerge and prepares you naar rem if noodzakelijk, without overreacting if it waits.",
+        "o1": "rem",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q5": {
+        "text": "Your snelheid is 100 km/h in the middle lane van a three-lane snelweg. The car ahead van you, without indicating, suddenly swerves into your lane naar avoid a much slower voertuig in its original lane. What do you do?",
+        "explanation": "A voertuig suddenly swerving into your lane op high snelheid requires immediate braking naar avoid a collision and maintain a veilig following afstand.",
+        "o1": "rem",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q6": {
+        "text": "Your snelheid is 30 km/h in a residential area. Children are playing football op a grass verge. A ball rolls onto the road just ahead, and a child starts naar run towards it. What do you do?",
+        "explanation": "A child running na a ball into the road is a high-risk situation requiring immediate braking naar prevent hitting the child.",
+        "o1": "rem",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q7": {
+        "text": "Your snelheid is 60 km/h approaching a slight bend naar the links op a two-lane road. An oncoming voertuig appears naar be drifting slightly towards the centerline as it negotiates the bend. What do you do?",
+        "explanation": "Releasing the accelerator provides meer space and tijd naar react if the oncoming voertuig crosses the centerline. It is a cautious approach naar a potential hazard.",
+        "o1": "rem",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q8": {
+        "text": "Your snelheid is 70 km/h op a main road approaching verkeerslichten ongeveer 150 meters ahead. They are currently green but suddenly change naar amber. What do you do?",
+        "explanation": "Releasing the accelerator is the initial action naar assess if a veilig stoppen can be made voor the stoppen line. If too dichtbij naar stoppen veilig, you might proceed through amber, but the primary action is naar prepare naar stoppen.",
+        "o1": "rem",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q9": {
+        "text": "Your snelheid is 10 km/h in very slow-moving/queuing traffic. A motorrijder is filtering between your lane and the lane naar your rechts, approaching van behind. The gap is tight. What do you do?",
+        "explanation": "in very slow or stationary traffic, maintain your position and snelheid (or lack thereof). Sudden braking or swerving can be gevaarlijk for the filtering motorrijder. Allow them naar pass.",
+        "o1": "rem",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      },
+      "q10": {
+        "text": "Your snelheid is 50 km/h rijden towards a junction where you intend naar rechtsaf slaan. The sun is very low, causing significant glare and making it very moeilijk naar see if any vehicles are emerging van the side road. What do you do?",
+        "explanation": "Severe glare significantly reduces visibility. Release the accelerator naar vertragen considerably and be prepared naar rem or stoppen if needed as Je kunt niet clearly see potential hazards op the junction.",
+        "o1": "rem",
+        "o2": "Release Accelerator",
+        "o3": "Do Nothing"
+      }
+    },
+    "insightPractice": {
+      "q1": {
+        "text": "Je bent approaching a T-junction and want naar rechtsaf slaan onto a busy main road. Your view naar the links is blocked by a parked van, and traffic is moving snel.\\n\\nWhat is the safest way naar proceed?",
+        "explanation": "altijd wait for a duidelijk view and a veilig gap voor joining a busy road, especially when your view is blocked. nooit assume others will vertragen for you.",
+        "o1": "Rely op your ability naar versnellen snel and join the traffic as soon as possible.",
+        "o2": "Wait tot you have a duidelijk view and daar is a veilig gap in both directions, even if it takes longer.",
+        "o3": "Assume drivers van the rechts will vertragen for you as you enter."
+      },
+      "q2": {
+        "text": "You have just overtaken a lorry op a three-lane snelweg and are now in the middle lane. The rechts lane is duidelijk, and daar is een andere slower voertuig further ahead in the links lane.\\n\\nWhat should you do according naar proper snelweg rijden discipline?",
+        "explanation": "op motorways, Je moet return naar the links-meeste lane as soon as it is veilig. Only use andere lanes for inhalen.",
+        "o1": "Stay in the middle lane naar inhalen the volgende voertuig ahead.",
+        "o2": "Move naar the rechts lane naar give yourself meer space van andere traffic.",
+        "o3": "Return naar the links lane as soon as it is veilig, and only move out again when inhalen."
+      },
+      "q3": {
+        "text": "Je bent rijden along a residential street with parked cars op your links. A fietser is riding ahead van you, dichtbij naar the parked cars.\\n\\nWhat is the main hazard Je moet anticipate?",
+        "explanation": "altijd anticipate that a fietser may swerve if a car door opens. Give cyclists extra space when passing parked cars.",
+        "o1": "The fietser suddenly speeding omhoog and creating a gap.",
+        "o2": "A car door opening unexpectedly, causing the fietser naar swerve into your path.",
+        "o3": "The fietser signaling naar linksaf slaan across your path without much waarschuwing."
+      },
+      "q4": {
+        "text": "You encounter dense mist op a familiar road, and visibility is reduced naar ongeveer 50 meters.\\n\\nWhat is the beste action naar take?",
+        "explanation": "in mist, reduce snelheid, use dipped koplampen and mist lights if visibility is onder 50m, and be able naar stoppen within the afstand Je kunt see.",
+        "o1": "Turn op your full beam koplampen naar see further into the mist.",
+        "o2": "Maintain your normal snelheid but double your following afstand.",
+        "o3": "Reduce your snelheid significantly, use dipped koplampen (and mist lights if needed), and be ready naar stoppen within the zichtbaar afstand."
+      },
+      "q5": {
+        "text": "Je bent approaching a zebra crossing. A voetganger is standing op the edge, looking in your richting, but has not yet stepped onto the crossing.\\n\\nWhat should you do?",
+        "explanation": "altijd anticipate that a voetganger may step onto the crossing. vertragen and be ready naar stoppen.",
+        "o1": "Continue op your current snelheid as they have not stepped onto the crossing.",
+        "o2": "vertragen and be fully prepared naar stoppen, making eye contact if possible.",
+        "o3": "Sound your horn naar let them know it is veilig naar cross na you pass."
+      },
+      "q6": {
+        "text": "Je bent approaching an unmarked crossroads in a residential area. een andere voertuig is approaching van your rechts, and you will arrive op the junction op the zelfde tijd.\\n\\nWho has voorrang in this situation?",
+        "explanation": "op unmarked crossroads in Nederland, voorrang is given naar traffic van the rechts.",
+        "o1": "You have voorrang if your road appears wider or meer major.",
+        "o2": "The voertuig van your rechts has voorrang.",
+        "o3": "The voertuig that arrives op the junction eerste has voorrang."
+      },
+      "q7": {
+        "text": "Je bent following a slow-moving tractor op a single carriageway road. daar is a solid white line op your side van the center marking. The road ahead appears duidelijk for a long afstand.\\n\\nWhat should you do?",
+        "explanation": "A solid white line means Je moet not cross or straddle it naar inhalen, regardless van how duidelijk the road ahead seems.",
+        "o1": "inhalen snel and voorzichtig as the road is duidelijk and the tractor is slow.",
+        "o2": "Do not inhalen because the solid white line prohibits crossing it for inhalen.",
+        "o3": "Edge out slightly naar see if the tractor bestuurder waves you past, then inhalen if they do."
+      },
+      "q8": {
+        "text": "Je bent rijden past a parkeren where children are playing football dichtbij naar the road. daar is a waist-high fence separating the parkeren van the pavement and road.\\n\\nWhat is the safest approach?",
+        "explanation": "Children playing dichtbij a road require extra caution, even with a fence. Be ready for sudden, unpredictable actions.",
+        "o1": "Maintain normal caution; the fence provides adequate safety separation.",
+        "o2": "Reduce snelheid and be extra alert; children or a ball could still come onto the road unexpectedly.",
+        "o3": "nee special caution is needed unless a child is visibly climbing the fence."
+      },
+      "q9": {
+        "text": "op a 100 km/h dual carriageway, you see a queue van stationary or very slow-moving traffic ahead in your lane due naar congestion.\\n\\nWhat is the beste way naar warn following traffic and reduce risk?",
+        "explanation": "Early, smooth braking and using hazard lights naar warn following traffic is safest when approaching a sudden queue.",
+        "o1": "Maintain your snelheid for as long as possible then rem hard naar minimize tijd lost and fit into the queue.",
+        "o2": "Check mirrors, rem early and smoothly, and briefly activate your hazard waarschuwing lights naar alert following traffic.",
+        "o3": "onmiddellijk look for an opportunity naar switch naar the adjacent lane naar bypass the queue, even if it means cutting in."
+      },
+      "q10": {
+        "text": "Je bent due naar drive early in the morning but have taken an over-the-counter cold and flu medication the night voor. The packaging warns that the medication \"may cause drowsiness.\" You feel slightly tired but otherwise okay.\\n\\nWhat should you do?",
+        "explanation": "nooit drive if you may be impaired by medication. If in doubt, do not drive.",
+        "o1": "Drive as planned; the main effects van the medication should have worn off overnight.",
+        "o2": "Have a strong coffee voor rijden naar counteract any residual drowsiness.",
+        "o3": "Do not drive. Find een andere way naar travel or postpone your journey tot Je bent sure Je bent not affected."
+      }
+    },
+    "mandatorySigns2": {
+      "q1": {
+        "text": "A blue circular sign shows a white arrow pointing links. Wat betekent this indicate?",
+        "explanation": "This sign indicates a verplicht footpath. Pedestrians must use this path.",
+        "o1": "You may linksaf slaan if duidelijk.",
+        "o2": "Compulsory links turn ahead.",
+        "o3": "One-way street naar the links.",
+        "o4": "Wat is the primary meaning van a round blue sign with a white voetganger symbol?",
+        "o5": "waarschuwing: pedestrians crossing.",
+        "o6": "Pedestrians are verboden hier.",
+        "o7": "verplicht footpath for pedestrians."
+      },
+      "q2": {
+        "text": "If you see a round blue sign with a bicycle symbol, what are you vereist naar do as a fietser?",
+        "explanation": "This indicates a verplicht cycle track. Cyclists must use the designated track.",
+        "o1": "Avoid this area.",
+        "o2": "Use the indicated cycle track.",
+        "o3": "Dismount and walk."
+      },
+      "q3": {
+        "text": "A blue circular sign depicts a white arrow curving naar the rechts, indicating Je moet pass an obstruction op which side?",
+        "explanation": "This blue circular sign indicates a minimum snelheidslimiet. Maximum snelheid is meestal in a red circle.",
+        "o1": "op the links side.",
+        "o2": "op the rechts side.",
+        "o3": "Either side is permitted.",
+        "o4": "Maximum snelheidslimiet van 50 km/h.",
+        "o5": "Recommended snelheid van 50 km/h.",
+        "o6": "Minimum snelheidslimiet van 50 km/h."
+      },
+      "q4": {
+        "text": "A circular blue sign shows arrows pointing links and rechts rond a central island symbol. What action is mandated?",
+        "explanation": "This sign means traffic may pass the obstruction op either side. Choose the safest and meeste appropriate path.",
+        "o1": "linksaf slaan or rechts only.",
+        "o2": "Proceed straight op.",
+        "o3": "Pass the obstruction op either the links or rechts side."
+      },
+      "q5": {
+        "text": "You see a circular blue sign with a horse symbol. Wat betekent it mean for horse riders?",
+        "explanation": "This indicates a verplicht bridleway. Horse riders must use this designated path.",
+        "o1": "Horses are not allowed.",
+        "o2": "waarschuwing: horses may be present.",
+        "o3": "verplicht bridleway; horse riders must use this path."
+      },
+      "q6": {
+        "text": "Wat betekent a blue circular sign with a bus symbol indicate?",
+        "explanation": "This sign shows a route or lane verplicht for buses. vaak taxis and cyclists can use it too.",
+        "o1": "Route reserved for buses only.",
+        "o2": "bus stoppen ahead.",
+        "o3": "nee buses allowed op this road."
+      },
+      "q7": {
+        "text": "A blue circular sign shows a white arrow pointing rechtdoor and een andere white arrow pointing rechts. Wat is vereist?",
+        "explanation": "This verplicht sign means drivers must proceed straight or rechtsaf slaan. Choose one van these directions.",
+        "o1": "Je moet rechtsaf slaan.",
+        "o2": "Je moet proceed straight or rechtsaf slaan.",
+        "o3": "Je moet proceed straight only."
+      }
+    },
+    "mandatorySigns": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a bicycle symbol and diagonal line indicates that bicycles are verboden van entering this road or area. Cyclists must find an alternative route.",
+        "o1": "nee entry for bicycles",
+        "o2": "Bicycle route ahead",
+        "o3": "Bicycle parkeren area"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a tractor symbol indicates a compulsory route that must be used by tractors and agricultural vehicles.",
+        "o1": "Compulsory route for tractors",
+        "o2": "Agricultural vehicles route",
+        "o3": "Tractors must use this route"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with arrows indicates a rotonde ahead, and traffic must circulate in the richting shown by the arrows (typically anti-clockwise in rechts-hand traffic countries).",
+        "o1": "rotonde ahead",
+        "o2": "Compulsory rotonde circulation",
+        "o3": "linksaf slaan or rechts"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a tram symbol and diagonal line indicates that trams are verboden van entering this road or area. Trams must find an alternative route.",
+        "o1": "nee entry for trams",
+        "o2": "tram route ahead",
+        "o3": "tram stoppen ahead"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a white arrow pointing rechts indicates a compulsory rechts turn. Drivers must rechtsaf slaan.",
+        "o1": "Compulsory rechts turn",
+        "o2": "nee rechts turn",
+        "o3": "Road bends rechts"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a voertuig symbol and branching arrows indicates a compulsory route for vehicles. The arrows show that vehicles must use this route and can choose naar gaan links or rechts.",
+        "o1": "Compulsory route for vehicles",
+        "o2": "Vehicles may choose links or rechts",
+        "o3": "nee vehicles allowed"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a white diagonal arrow pointing omlaag-rechts indicates a compulsory diagonal richting. Drivers must follow the richting shown by the arrow.",
+        "o1": "Compulsory richting ahead",
+        "o2": "Compulsory richting rechts",
+        "o3": "Compulsory diagonal richting"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a bus symbol indicates a compulsory route for buses. Buses must use this designated route.",
+        "o1": "bus stoppen ahead",
+        "o2": "nee buses allowed",
+        "o3": "Compulsory route for buses"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with two arrows (one straight, one rechts) indicates that vehicles must proceed rechtdoor or rechtsaf slaan. Both directions are permitted.",
+        "o1": "Compulsory richting ahead",
+        "o2": "Compulsory richting rechts",
+        "o3": "Proceed straight or rechtsaf slaan"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue circular sign with a horse rider symbol indicates a compulsory path for horse riders. Horse riders must use this designated path.",
+        "o1": "Compulsory path for horse riders",
+        "o2": "Horse riders verboden",
+        "o3": "Horse crossing ahead"
+      }
+    },
+    "motorwayRules": {
+      "q1": {
+        "text": "Wat is Het minimum snelheidslimiet op a snelweg in Nederland?",
+        "explanation": "Het minimum snelheidslimiet op a snelweg in Nederland is 60 km/h. Vehicles that cannot maintain this snelheid are not allowed op motorways.",
+        "o1": "50 km/h",
+        "o2": "60 km/h",
+        "o3": "70 km/h",
+        "o4": "80 km/h"
+      },
+      "q2": {
+        "text": "Which vehicles are not allowed op motorways?",
+        "explanation": "Mopeds and tractors are not allowed op motorways as they cannot maintain Het minimum snelheidslimiet and would create a safety hazard.",
+        "o1": "Motorcycles",
+        "o2": "Mopeds and tractors",
+        "o3": "Cars towing trailers",
+        "o4": "alle van the boven"
+      },
+      "q3": {
+        "text": "Wat moet you do if your voertuig breaks omlaag op a snelweg?",
+        "explanation": "If your voertuig breaks omlaag op a snelweg, Je moet get out van your voertuig and stand behind the safety barrier. Call for assistance using the noodgeval phones.",
+        "o1": "Stay in your voertuig",
+        "o2": "Get out and stand behind the barrier",
+        "o3": "Walk along the snelweg naar find help",
+        "o4": "Try naar repair the voertuig yourself"
+      },
+      "q4": {
+        "text": "Wat is the purpose van the hard shoulder op a snelweg?",
+        "explanation": "The hard shoulder is reserved for noodgeval stops and breakdowns only. It should not be used for normal rijden, inhalen, or parkeren.",
+        "o1": "For inhalen slow vehicles",
+        "o2": "For noodgeval stops and breakdowns",
+        "o3": "For parkeren when tired",
+        "o4": "For making phone calls"
+      },
+      "q5": {
+        "text": "Wat moet you do when approaching a snelweg exit?",
+        "explanation": "When approaching a snelweg exit, Je moet move naar the rechts lane early and reduce your snelheid gradually naar veilig exit the snelweg.",
+        "o1": "snelheid omhoog naar get through snel",
+        "o2": "Move naar the links lane early",
+        "o3": "Move naar the rechts lane early",
+        "o4": "Honk your horn naar signal your intention"
+      },
+      "q6": {
+        "text": "Wat moet you do when entering a snelweg?",
+        "explanation": "When entering a snelweg, Je moet versnellen naar match the snelheid van traffic op the snelweg and merge veilig into a gap.",
+        "o1": "stoppen and wait for a large gap",
+        "o2": "versnellen naar match snelweg snelheid",
+        "o3": "vertragen naar let andere vehicles pass",
+        "o4": "Honk your horn naar signal your intention"
+      },
+      "q7": {
+        "text": "Wat betekent a variable snelheidslimiet sign op a snelweg mean?",
+        "explanation": "Variable snelheidslimiet signs op motorways display verplicht snelheid limits that Je moet follow. These are used naar manage traffic flow and improve safety.",
+        "o1": "The snelheidslimiet is optioneel",
+        "o2": "Je moet follow the displayed snelheidslimiet",
+        "o3": "The snelheidslimiet only applies naar trucks",
+        "o4": "The snelheidslimiet only applies op night"
+      },
+      "q8": {
+        "text": "Wat moet you do if you miss your snelweg exit?",
+        "explanation": "If you miss your snelweg exit, Je moet continue naar the volgende exit and find an alternative route. nooit achteruit, stoppen, or turn rond op a snelweg.",
+        "o1": "achteruit back naar the exit",
+        "o2": "stoppen and turn rond",
+        "o3": "Continue naar the volgende exit",
+        "o4": "Use the hard shoulder naar turn rond"
+      },
+      "q9": {
+        "text": "Wat is the purpose van lane markings op a snelweg?",
+        "explanation": "Lane markings op motorways help organize traffic flow, prevent accidents, and ensure veilig rijden by clearly defining where vehicles should drive.",
+        "o1": "naar separate verschillend types van vehicles",
+        "o2": "naar organize traffic flow and prevent accidents",
+        "o3": "naar create parkeren spaces",
+        "o4": "naar mark noodgeval stoppen areas"
+      },
+      "q10": {
+        "text": "Wat moet you do when inhalen op a snelweg?",
+        "explanation": "When inhalen op a snelweg, Je moet use the links lane (the lane naar the links van the voertuig Je bent inhalen).",
+        "o1": "Use the hard shoulder",
+        "o2": "Use the links lane",
+        "o3": "Use the rechts lane",
+        "o4": "Honk your horn continuously"
+      },
+      "q11": {
+        "text": "Wat moet you do when being overtaken op a snelweg?",
+        "explanation": "When being overtaken op a snelweg, Je moet maintain your snelheid and position. Do not snelheid omhoog or change lanes unnecessarily.",
+        "o1": "snelheid omhoog naar prevent being overtaken",
+        "o2": "Move naar the rechts lane",
+        "o3": "Maintain your snelheid and position",
+        "o4": "Honk your horn naar signal your position"
+      },
+      "q12": {
+        "text": "Wat moet you do if you see an noodgeval voertuig op a snelweg?",
+        "explanation": "If you see an noodgeval voertuig op a snelweg, Je moet move naar the rechts lane and vertragen naar allow it naar pass veilig.",
+        "o1": "Ignore it and continue rijden",
+        "o2": "Move naar the rechts and vertragen",
+        "o3": "snelheid omhoog naar get out van the way",
+        "o4": "stoppen onmiddellijk"
+      }
+    },
+    "parkingRules": {
+      "q1": {
+        "text": "Wat is Het minimum afstand Je moet parkeren van a voetganger crossing?",
+        "explanation": "Je moet parkeren op minste 5 meters van a voetganger crossing naar ensure pedestrians have a duidelijk view van approaching traffic.",
+        "o1": "3 meters",
+        "o2": "5 meters",
+        "o3": "10 meters",
+        "o4": "15 meters"
+      },
+      "q2": {
+        "text": "Wat is Het minimum afstand Je moet parkeren van a junction?",
+        "explanation": "Je moet parkeren op minste 5 meters van a junction naar ensure andere drivers have a duidelijk view van approaching traffic.",
+        "o1": "3 meters",
+        "o2": "5 meters",
+        "o3": "10 meters",
+        "o4": "15 meters"
+      },
+      "q3": {
+        "text": "Wat is Het minimum afstand Je moet parkeren van a bus stoppen?",
+        "explanation": "Je moet parkeren op minste 10 meters van a bus stoppen naar allow buses naar pull in and out veilig.",
+        "o1": "5 meters",
+        "o2": "10 meters",
+        "o3": "15 meters",
+        "o4": "20 meters"
+      },
+      "q4": {
+        "text": "Wat is Het minimum afstand Je moet parkeren van a fire hydrant?",
+        "explanation": "Je moet parkeren op minste 5 meters van a fire hydrant naar ensure noodgeval services can access it when needed.",
+        "o1": "3 meters",
+        "o2": "5 meters",
+        "o3": "10 meters",
+        "o4": "15 meters"
+      },
+      "q5": {
+        "text": "Wat is Het minimum afstand Je moet parkeren van a railway crossing?",
+        "explanation": "Je moet parkeren op minste 20 meters van a railway crossing naar ensure trains have a duidelijk view and can stoppen veilig if needed.",
+        "o1": "10 meters",
+        "o2": "15 meters",
+        "o3": "20 meters",
+        "o4": "25 meters"
+      },
+      "q6": {
+        "text": "Wat betekent a solid yellow line along the edge van the road indicate?",
+        "explanation": "A solid yellow line along the edge van the road indicates that parkeren is not allowed op any tijd.",
+        "o1": "nee parkeren allowed",
+        "o2": "nee stoppen allowed",
+        "o3": "parkeren allowed for 30 minuten",
+        "o4": "parkeren allowed for residents only"
+      },
+      "q7": {
+        "text": "Wat betekent a broken yellow line along the edge van the road indicate?",
+        "explanation": "A broken yellow line along the edge van the road indicates that stoppen is not allowed, which means Je kunt niet stoppen or parkeren your voertuig daar.",
+        "o1": "nee parkeren allowed",
+        "o2": "nee stoppen allowed",
+        "o3": "parkeren allowed for 30 minuten",
+        "o4": "parkeren allowed for residents only"
+      },
+      "q8": {
+        "text": "Wat betekent a blue line along the edge van the road indicate?",
+        "explanation": "A blue line indicates parkeren reserved for disabled persons. Je moet have a geldig disabled parkeren permit naar parkeren hier.",
+        "o1": "nee parkeren allowed",
+        "o2": "parkeren for disabled persons only",
+        "o3": "parkeren for residents only",
+        "o4": "parkeren with a permit only"
+      },
+      "q9": {
+        "text": "Wat betekent a white \"P\" sign with a car symbol indicate?",
+        "explanation": "A white \"P\" sign with a car symbol indicates that parkeren is permitted. Look for additional informatie op any conditions or restrictions.",
+        "o1": "nee parkeren allowed",
+        "o2": "parkeren permitted",
+        "o3": "parkeren for residents only",
+        "o4": "parkeren with a permit only"
+      },
+      "q10": {
+        "text": "Wat betekent a \"nee parkeren\" sign with a red circle and crossed-out \"P\" indicate?",
+        "explanation": "A \"nee parkeren\" sign with a red circle and crossed-out \"P\" indicates that parkeren is not allowed op any tijd.",
+        "o1": "nee parkeren allowed",
+        "o2": "nee stoppen allowed",
+        "o3": "parkeren allowed for 30 minuten",
+        "o4": "parkeren allowed for residents only"
+      },
+      "q11": {
+        "text": "Wat betekent a \"nee stoppen\" sign with a red circle and crossed-out \"S\" indicate?",
+        "explanation": "A \"nee stoppen\" sign with a red circle and crossed-out \"S\" indicates that stoppen is not allowed, which means Je kunt niet stoppen or parkeren your voertuig daar.",
+        "o1": "nee parkeren allowed",
+        "o2": "nee stoppen allowed",
+        "o3": "parkeren allowed for 30 minuten",
+        "o4": "parkeren allowed for residents only"
+      },
+      "q12": {
+        "text": "Wat betekent a \"Resident parkeren\" sign indicate?",
+        "explanation": "A \"Resident parkeren\" sign indicates that parkeren is reserved for residents van the area. Je moet have a geldig resident parkeren permit naar parkeren hier.",
+        "o1": "nee parkeren allowed",
+        "o2": "parkeren for disabled persons only",
+        "o3": "parkeren for residents only",
+        "o4": "parkeren with a permit only"
+      }
+    },
+    "pedestrianCrossings": {
+      "q1": {
+        "text": "Je bent rijden and see a voetganger waiting op a zebra crossing. Wat moet you do?",
+        "explanation": "op zebra crossings, Je moet stoppen and voorrang verlenen naar pedestrians who are waiting naar cross or already crossing.",
+        "o1": "stoppen and voorrang verlenen naar the voetganger",
+        "o2": "Continue rijden, pedestrians must wait",
+        "o3": "Honk naar warn the voetganger"
+      },
+      "q2": {
+        "text": "Je bent rijden and see a voetganger crossing op a traffic light. The light is green for you. Wat moet you do?",
+        "explanation": "Even when the light is green for you, Je moet stoppen and voorrang verlenen naar pedestrians who are already crossing or ongeveer naar cross.",
+        "o1": "stoppen and voorrang verlenen naar the voetganger",
+        "o2": "Continue rijden, the light is green",
+        "o3": "Honk naar warn the voetganger"
+      },
+      "q3": {
+        "text": "Je bent rijden and see a voetganger crossing op a school crossing. Wat moet you do?",
+        "explanation": "op school crossings, Je moet stoppen and voorrang verlenen naar pedestrians, especially children, who are crossing or waiting naar cross.",
+        "o1": "stoppen and voorrang verlenen naar the voetganger",
+        "o2": "Continue rijden, school crossings are not verplicht",
+        "o3": "Honk naar warn the voetganger"
+      },
+      "q4": {
+        "text": "Je bent rijden and see a voetganger crossing op a voetganger crossing with a traffic light. The light is red for pedestrians. Wat moet you do?",
+        "explanation": "Even when the light is red for pedestrians, Je moet stoppen and voorrang verlenen naar pedestrians who are already crossing or ongeveer naar cross.",
+        "o1": "stoppen and voorrang verlenen naar the voetganger",
+        "o2": "Continue rijden, the light is red for pedestrians",
+        "o3": "Honk naar warn the voetganger"
+      },
+      "q5": {
+        "text": "Je bent rijden and see a voetganger crossing op a voetganger crossing with a traffic light. The light is green for pedestrians. Wat moet you do?",
+        "explanation": "When the light is green for pedestrians, Je moet stoppen and voorrang verlenen naar pedestrians who are crossing or waiting naar cross.",
+        "o1": "stoppen and voorrang verlenen naar the voetganger",
+        "o2": "Continue rijden, the light is green for pedestrians",
+        "o3": "Honk naar warn the voetganger"
+      }
+    },
+    "priorityRules": {
+      "q1": {
+        "text": "Based op the image, who has the rechts van way?",
+        "explanation": "Trams generally have voorrang over andere vehicles, especially when they are op tracks.",
+        "o1": "1",
+        "o2": "2",
+        "o3": "geen"
+      },
+      "q2": {
+        "text": "Who must voorrang verlenen op this junction according naar the signs?",
+        "explanation": "Vehicles op a minor road, vaak indicated by a voorrang verlenen or stoppen sign, must voorrang verlenen naar traffic op the voorrang road.",
+        "o1": "1",
+        "o2": "2",
+        "o3": "Both must stoppen and proceed alternately"
+      },
+      "q3": {
+        "text": "op an unmarked crossroads, which voertuig has voorrang?",
+        "explanation": "op an unmarked crossroads, the \"voorrang naar the rechts\" rule applies. Vehicles approaching van the rechts have voorrang.",
+        "o1": "The voertuig approaching van the rechts",
+        "o2": "The larger voertuig",
+        "o3": "The voertuig turning links"
+      },
+      "q4": {
+        "text": "Wat betekent a \"voorrang verlenen\" sign (inverted triangle) mean?",
+        "explanation": "A \"voorrang verlenen\" sign means Je moet vertragen and be prepared naar stoppen if noodzakelijk naar voorrang verlenen naar traffic op the voorrang road.",
+        "o1": "Je moet stoppen completely voor proceeding",
+        "o2": "Je moet vertragen and voorrang verlenen naar traffic op the voorrang road",
+        "o3": "You have voorrang over alle andere traffic"
+      },
+      "q5": {
+        "text": "op a T-junction, which voertuig typically has voorrang?",
+        "explanation": "op a T-junction, vehicles op the through road (the top van the T) typically have voorrang over vehicles turning into the junction.",
+        "o1": "The voertuig op the through road",
+        "o2": "The voertuig turning into the junction",
+        "o3": "The voertuig approaching van the links"
+      },
+      "q6": {
+        "text": "Wat is the voorrang rule for noodgeval vehicles with flashing lights and sirens?",
+        "explanation": "noodgeval vehicles with flashing lights and sirens have voorrang over alle andere traffic. Je moet voorrang verlenen and allow them naar pass veilig.",
+        "o1": "They must follow normal traffic rules",
+        "o2": "They have voorrang over alle andere traffic and Je moet voorrang verlenen",
+        "o3": "They only have voorrang op verkeerslichten"
+      },
+      "q7": {
+        "text": "op a rotonde, who has voorrang?",
+        "explanation": "op a rotonde, traffic already op the rotonde has voorrang over traffic waiting naar enter. Je moet voorrang verlenen naar traffic op your rechts.",
+        "o1": "Traffic entering the rotonde",
+        "o2": "Traffic already op the rotonde",
+        "o3": "The larger voertuig"
+      },
+      "q8": {
+        "text": "Wat betekent a \"stoppen\" sign (octagonal red sign) require you naar do?",
+        "explanation": "A \"stoppen\" sign requires you naar stoppen completely op the stoppen line and voorrang verlenen naar alle traffic op the voorrang road voor proceeding.",
+        "o1": "vertragen and proceed if the way is duidelijk",
+        "o2": "stoppen completely and voorrang verlenen naar alle traffic",
+        "o3": "stoppen only if andere vehicles are present"
+      }
+    },
+    "prohibitorySigns2": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with blue inner circle and diagonal line prohibits entry for alle vehicles, including cars, motorcycles, bicycles, and pedestrians.",
+        "o1": "nee entry for alle vehicles",
+        "o2": "nee entry for motor vehicles",
+        "o3": "nee entry for cars"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with horizontal bar prohibits entry for alle vehicles, including cars, motorcycles, bicycles, and pedestrians.",
+        "o1": "nee entry for alle vehicles",
+        "o2": "nee entry for motor vehicles",
+        "o3": "nee entry for cars"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with two vehicles facing each andere prohibits entry for alle vehicles.",
+        "o1": "nee entry for vehicles",
+        "o2": "nee entry for motor vehicles",
+        "o3": "nee entry for cars"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign prohibits vehicles exceeding 3.1 meters in height van using this road or area.",
+        "o1": "nee entry for vehicles exceeding 3.1m in height",
+        "o2": "Height limit 3.1m",
+        "o3": "Low bridge ahead"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a white U-turn arrow indicates that U-turns are verboden op this location.",
+        "o1": "nee U-turn",
+        "o2": "U-turn permitted",
+        "o3": "Turn rond ahead"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a car silhouette prohibits entry for motor vehicles.",
+        "o1": "nee entry for motor vehicles",
+        "o2": "nee entry for cars",
+        "o3": "Motor voertuig route"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with \"50\" indicates a snelheidslimiet van 50 km/h.",
+        "o1": "snelheidslimiet 50 km/h",
+        "o2": "Maximum snelheid 50 km/h",
+        "o3": "snelheidslimiet ends"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with a lorry symbol prohibits entry for lorries and heavy goods vehicles.",
+        "o1": "nee entry for lorries",
+        "o2": "Lorry route",
+        "o3": "Lorry parkeren area"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This red circular sign with diagonal bar prohibits entry for alle motor vehicles (cars, motorcycles, lorries, etc.).",
+        "o1": "nee entry for motor vehicles",
+        "o2": "Motor voertuig route",
+        "o3": "Motor voertuig parkeren area"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign prohibits mopeds van using this road or area.",
+        "o1": "nee entry for mopeds",
+        "o2": "Moped route",
+        "o3": "Moped parkeren area"
+      }
+    },
+    "prohibitorySigns": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates the end van a previously imposed 50 km/h snelheidslimiet. National or andere posted snelheid limits now apply.",
+        "o1": "Maximum snelheid 50 km/h",
+        "o2": "snelheidslimiet ends",
+        "o3": "Minimum snelheid 50 km/h"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign prohibits vehicles with an actual weight exceeding 5,4 tonnes van proceeding.",
+        "o1": "Vehicles weighing heavier than indicated forbidden",
+        "o2": "nee entry for lorries",
+        "o3": "Axle weight limit 5,4t"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates that tractors and andere specified agricultural vehicles are verboden van this road.",
+        "o1": "Agricultural vehicles route",
+        "o2": "nee entry for slow vehicles",
+        "o3": "Tractors verboden"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign means nee entry for bicycles. Cyclists must find an alternative route.",
+        "o1": "Cyclists not permitted",
+        "o2": "Cycle route ahead",
+        "o3": "Shared path for pedestrians and cyclists"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates that stoppen and parkeren are forbidden along this section van road.",
+        "o1": "nee parkeren zone",
+        "o2": "stoppen and parkeren forbidden",
+        "o3": "Clearway, nee stoppen op carriageway"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign marks the end van a zone where a specific snelheidslimiet (e.g., 30 km/h) was in force.",
+        "o1": "snelheidslimiet 30 km/h applies",
+        "o2": "End van alle restrictions in zone",
+        "o3": "End van the zone with snelheidslimiet"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates the beginning van a zone where a specific snelheidslimiet (in this case, 30 km/h) applies.",
+        "o1": "Begin van a zone with snelheidslimiet",
+        "o2": "Residential area, walking snelheid",
+        "o3": "Recommended snelheid 30 km/h"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates the end van a previously imposed inhalen prohibition. Standard inhalen rules now apply.",
+        "o1": "inhalen permitted",
+        "o2": "End van the inhalen prohibition",
+        "o3": "nee inhalen by lorries"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign prohibits entry for cyclists, mopeds, and tractors.",
+        "o1": "nee entry for any vehicles",
+        "o2": "Cyclists, mopeds and tractors verboden",
+        "o3": "Route for agricultural vehicles and cycles only"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates that motorcycles (motorbikes) are verboden van using this road or area.",
+        "o1": "Motorcycles must use this lane",
+        "o2": "Motorbikes - Motorcycles verboden",
+        "o3": "Motorcycle parkeren area"
+      }
+    },
+    "roadInformation": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates the beginning van a snelweg, which has specific rules and restrictions.",
+        "o1": "snelweg",
+        "o2": "Expressway",
+        "o3": "Highway"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue square sign with white \"P\" indicates a parkeren area where vehicles are allowed naar parkeren.",
+        "o1": "parkeren",
+        "o2": "parkeren area",
+        "o3": "parkeren permitted"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue rectangular sign with red diagonal line warns drivers van a playground area where children may be playing. Drivers should reduce snelheid and be extra cautious.",
+        "o1": "Playground",
+        "o2": "Children op play",
+        "o3": "Play area"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue square sign with red arrow omlaag and white arrow omhoog indicates that you have voorrang over oncoming traffic in narrow sections.",
+        "o1": "voorrang over oncoming traffic",
+        "o2": "rechts van way over oncoming traffic",
+        "o3": "voorrang for oncoming traffic"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This white diamond sign with yellow square and three black lines indicates a voorrang road where you have rechts van way over andere traffic.",
+        "o1": "voorrang road",
+        "o2": "Main road",
+        "o3": "voorrang route"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue rectangular sign with white text indicates a destination or place name, helping drivers navigate naar their intended location.",
+        "o1": "Destination",
+        "o2": "Place name",
+        "o3": "richting sign"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue square sign with three arrows indicates that lanes are merging van the links, requiring drivers naar be cautious and allow merging traffic.",
+        "o1": "Lanes merging van the links",
+        "o2": "Lane reduction",
+        "o3": "Merge lanes"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue rectangular sign with white arrow indicates a compulsory richting that traffic must follow.",
+        "o1": "Compulsory richting",
+        "o2": "rechtsaf slaan",
+        "o3": "richting arrow"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue rectangular sign with red circle and \"2m\" indicates a height restriction van 2 meters maximum.",
+        "o1": "Height restriction",
+        "o2": "Maximum height 2m",
+        "o3": "Height limit"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This blue square sign with white car and red diagonal line indicates the end van a zone where motor vehicles were verboden.",
+        "o1": "End van nee entry for motor vehicles",
+        "o2": "End van motor voertuig prohibition",
+        "o3": "Motor vehicles allowed"
+      }
+    },
+    "roadMarkings": {
+      "q1": {
+        "text": "Wat betekent a solid white line in the center van the road indicate?",
+        "explanation": "A solid white line in the center van the road indicates that inhalen is not allowed. Je moet stay in your lane.",
+        "o1": "Je kunt inhalen if veilig",
+        "o2": "nee inhalen allowed",
+        "o3": "inhalen allowed only for motorcycles",
+        "o4": "inhalen allowed only tijdens daglicht"
+      },
+      "q2": {
+        "text": "Wat betekent a broken white line in the center van the road indicate?",
+        "explanation": "A broken white line indicates that inhalen is allowed if it is veilig naar do so and daar is sufficient visibility.",
+        "o1": "nee inhalen allowed",
+        "o2": "inhalen allowed if veilig",
+        "o3": "inhalen allowed only for noodgeval vehicles",
+        "o4": "inhalen allowed only op the links"
+      },
+      "q3": {
+        "text": "Wat betekent a yellow line along the edge van the road indicate?",
+        "explanation": "A yellow line along the edge van the road indicates that parkeren is not allowed op any tijd.",
+        "o1": "nee parkeren allowed",
+        "o2": "parkeren allowed for 30 minuten",
+        "o3": "parkeren allowed for residents only",
+        "o4": "parkeren allowed tijdens certain uren"
+      },
+      "q4": {
+        "text": "Wat betekent a blue line along the edge van the road indicate?",
+        "explanation": "A blue line indicates parkeren reserved for disabled persons. Je moet have a geldig disabled parkeren permit naar parkeren hier.",
+        "o1": "nee parkeren allowed",
+        "o2": "parkeren for disabled persons only",
+        "o3": "parkeren for residents only",
+        "o4": "parkeren with a permit only"
+      },
+      "q5": {
+        "text": "Wat betekent a zigzag line op the road indicate?",
+        "explanation": "Zigzag lines indicate a voetganger crossing. Je moet not parkeren or inhalen in this area.",
+        "o1": "A voetganger crossing",
+        "o2": "A bus stoppen",
+        "o3": "A school zone",
+        "o4": "A bouw zone"
+      },
+      "q6": {
+        "text": "Wat betekent a white arrow pointing rechtdoor op the road indicate?",
+        "explanation": "A white arrow pointing rechtdoor indicates that Je moet proceed in that richting.",
+        "o1": "Je moet linksaf slaan",
+        "o2": "Je moet rechtsaf slaan",
+        "o3": "Je moet gaan rechtdoor",
+        "o4": "Je kunt choose any richting"
+      },
+      "q7": {
+        "text": "Wat betekent a white bicycle symbol op the road indicate?",
+        "explanation": "A white bicycle symbol indicates a bicycle lane. Motor vehicles should not drive in this lane.",
+        "o1": "A bicycle lane",
+        "o2": "A bicycle crossing",
+        "o3": "A bicycle parkeren area",
+        "o4": "A bicycle repair shop"
+      },
+      "q8": {
+        "text": "Wat betekent a white \"stoppen\" word painted op the road indicate?",
+        "explanation": "A white \"stoppen\" word painted op the road reinforces the requirement naar stoppen completely op the stoppen line or voor entering the intersection.",
+        "o1": "Je moet vertragen",
+        "o2": "Je moet stoppen completely",
+        "o3": "Je moet voorrang verlenen naar pedestrians",
+        "o4": "Je moet honk your horn"
+      },
+      "q9": {
+        "text": "Wat betekent a white diamond symbol op the road indicate?",
+        "explanation": "A white diamond symbol indicates a voorrang road. Traffic op this road has the rechts van way over traffic entering van side roads.",
+        "o1": "A voorrang road",
+        "o2": "A school zone",
+        "o3": "A bouw zone",
+        "o4": "A parkeren zone"
+      },
+      "q10": {
+        "text": "Wat betekent a white \"voorrang verlenen\" text painted op the road indicate?",
+        "explanation": "A white \"voorrang verlenen\" text reinforces the requirement naar voorrang verlenen naar andere traffic voor proceeding.",
+        "o1": "Je moet stoppen completely",
+        "o2": "Je moet voorrang verlenen naar andere traffic",
+        "o3": "Je moet honk your horn",
+        "o4": "Je moet vertragen only"
+      },
+      "q11": {
+        "text": "Wat betekent a white \"bus\" text painted op the road indicate?",
+        "explanation": "A white \"bus\" text indicates a bus lane. Only buses and authorized vehicles may use this lane.",
+        "o1": "A bus lane",
+        "o2": "A bus stoppen",
+        "o3": "A bus parkeren area",
+        "o4": "A bus terminal"
+      },
+      "q12": {
+        "text": "Wat betekent a white \"TAXI\" text painted op the road indicate?",
+        "explanation": "A white \"TAXI\" text indicates a taxi lane. Only taxis and authorized vehicles may use this lane.",
+        "o1": "A taxi lane",
+        "o2": "A taxi stand",
+        "o3": "A taxi parkeren area",
+        "o4": "A taxi office"
+      }
+    },
+    "roundaboutRules": {
+      "q1": {
+        "text": "Je bent approaching a rotonde. Wat moet you do voor entering?",
+        "explanation": "voor entering a rotonde, Je moet voorrang verlenen naar traffic already in the rotonde, including cyclists and pedestrians.",
+        "o1": "voorrang verlenen naar traffic already in the rotonde",
+        "o2": "Enter onmiddellijk if nee cars are zichtbaar",
+        "o3": "stoppen completely voor entering"
+      },
+      "q2": {
+        "text": "Je bent in a rotonde and want naar exit. Wat moet you do?",
+        "explanation": "When exiting a rotonde, Je moet signal rechts naar indicate your intention naar leave the rotonde.",
+        "o1": "Signal rechts voor exiting",
+        "o2": "Signal links voor exiting",
+        "o3": "nee need naar signal when exiting"
+      },
+      "q3": {
+        "text": "Je bent approaching a rotonde and want naar linksaf slaan. Which lane should you use?",
+        "explanation": "When turning links op a rotonde, use the links lane naar enter and stay in the links lane terwijl in the rotonde.",
+        "o1": "links lane",
+        "o2": "rechts lane",
+        "o3": "Either lane is acceptable"
+      },
+      "q4": {
+        "text": "Je bent approaching a rotonde and want naar gaan rechtdoor. Which lane should you use?",
+        "explanation": "When going rechtdoor op a rotonde, Je kunt use either lane unless road markings indicate otherwise.",
+        "o1": "links lane",
+        "o2": "rechts lane",
+        "o3": "Either lane is acceptable"
+      },
+      "q5": {
+        "text": "Je bent approaching a rotonde and want naar rechtsaf slaan. Which lane should you use?",
+        "explanation": "When turning rechts op a rotonde, use the rechts lane naar enter and stay in the rechts lane terwijl in the rotonde.",
+        "o1": "links lane",
+        "o2": "rechts lane",
+        "o3": "Either lane is acceptable"
+      },
+      "q6": {
+        "text": "Je bent in a rotonde and want naar change lanes. Wat moet you do?",
+        "explanation": "Je kunt change lanes in a rotonde, but Je moet signal your intention and only change when it is veilig naar do so.",
+        "o1": "Signal and change lanes when veilig",
+        "o2": "Change lanes onmiddellijk",
+        "o3": "nooit change lanes in a rotonde"
+      },
+      "q7": {
+        "text": "Je bent approaching a rotonde and see a fietser already in the rotonde. Wat moet you do?",
+        "explanation": "Cyclists in a rotonde have the zelfde rights as andere vehicles. Je moet voorrang verlenen naar them voor entering.",
+        "o1": "voorrang verlenen naar the fietser",
+        "o2": "Enter the rotonde, cyclists must voorrang verlenen",
+        "o3": "Honk naar warn the fietser"
+      },
+      "q8": {
+        "text": "Je bent in a rotonde and see a voetganger waiting naar cross op an exit. Wat moet you do?",
+        "explanation": "When exiting a rotonde, Je moet voorrang verlenen naar pedestrians who are waiting naar cross or already crossing.",
+        "o1": "voorrang verlenen naar the voetganger",
+        "o2": "Continue rijden, pedestrians must wait",
+        "o3": "Honk naar warn the voetganger"
+      },
+      "q9": {
+        "text": "Je bent approaching a rotonde and see an noodgeval voertuig with flashing lights. Wat moet you do?",
+        "explanation": "noodgeval vehicles with flashing lights have voorrang. voorrang verlenen naar them voor entering the rotonde.",
+        "o1": "voorrang verlenen naar the noodgeval voertuig",
+        "o2": "Enter the rotonde normally",
+        "o3": "stoppen completely voor the rotonde"
+      },
+      "q10": {
+        "text": "Je bent in a rotonde and want naar make a U-turn. Wat moet you do?",
+        "explanation": "naar make a U-turn in a rotonde, signal links and continue rond the rotonde naar exit op the zelfde road you entered van.",
+        "o1": "Signal rechts and exit op the volgende exit",
+        "o2": "Signal links and continue rond",
+        "o3": "U-turns are not allowed in roundabouts"
+      },
+      "q11": {
+        "text": "Je bent approaching a rotonde and see a large vrachtwagen already in the rotonde. Wat moet you do?",
+        "explanation": "Large trucks in a rotonde have the zelfde rights as andere vehicles. Je moet voorrang verlenen naar them voor entering.",
+        "o1": "voorrang verlenen naar the vrachtwagen",
+        "o2": "Enter the rotonde, trucks must voorrang verlenen",
+        "o3": "Honk naar warn the vrachtwagen bestuurder"
+      },
+      "q12": {
+        "text": "Je bent in a rotonde and see a car trying naar enter van your rechts. Wat moet you do?",
+        "explanation": "Once Je bent in a rotonde, you have voorrang over vehicles trying naar enter. The entering voertuig must voorrang verlenen naar you.",
+        "o1": "voorrang verlenen naar the entering car",
+        "o2": "Continue rijden, you have voorrang",
+        "o3": "Honk naar warn the entering car"
+      },
+      "q13": {
+        "text": "Je bent approaching a rotonde and see a bus already in the rotonde. Wat moet you do?",
+        "explanation": "Buses in a rotonde have the zelfde rights as andere vehicles. Je moet voorrang verlenen naar them voor entering.",
+        "o1": "voorrang verlenen naar the bus",
+        "o2": "Enter the rotonde, buses must voorrang verlenen",
+        "o3": "Honk naar warn the bus bestuurder"
+      },
+      "q14": {
+        "text": "Je bent in a rotonde and want naar exit but see a fietser in the exit lane. Wat moet you do?",
+        "explanation": "When exiting a rotonde, Je moet voorrang verlenen naar cyclists who are already in the exit lane.",
+        "o1": "voorrang verlenen naar the fietser",
+        "o2": "Exit normally, cyclists must voorrang verlenen",
+        "o3": "Honk naar warn the fietser"
+      },
+      "q15": {
+        "text": "Je bent approaching a rotonde and see a motorcycle already in the rotonde. Wat moet you do?",
+        "explanation": "Motorcycles in a rotonde have the zelfde rights as andere vehicles. Je moet voorrang verlenen naar them voor entering.",
+        "o1": "voorrang verlenen naar the motorcycle",
+        "o2": "Enter the rotonde, motorcycles must voorrang verlenen",
+        "o3": "Honk naar warn the motorrijder"
+      }
+    },
+    "signIdentification": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a waarschuwing sign, indicated by its triangular shape and red border.",
+        "o1": "waarschuwing sign",
+        "o2": "Prohibitory sign",
+        "o3": "verplicht sign"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a waarschuwing sign (St. Andrew\\",
+        "o1": "Prohibitory sign",
+        "o2": "waarschuwing sign",
+        "o3": "verplicht sign"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a verplicht sign, indicated by its circular shape and blue background.",
+        "o1": "verplicht sign",
+        "o2": "waarschuwing sign",
+        "o3": "Prohibitory sign"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This is an informatie sign, indicated by its rectangular shape and blue background.",
+        "o1": "informatie sign",
+        "o2": "waarschuwing sign",
+        "o3": "Prohibitory sign"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a voorrang sign, indicated by its diamond shape and yellow background.",
+        "o1": "voorrang sign",
+        "o2": "waarschuwing sign",
+        "o3": "Prohibitory sign"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a richting sign, indicated by its rectangular shape and green background.",
+        "o1": "richting sign",
+        "o2": "waarschuwing sign",
+        "o3": "Prohibitory sign"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a service sign, indicated by its rectangular shape and blue background.",
+        "o1": "Service sign",
+        "o2": "waarschuwing sign",
+        "o3": "Prohibitory sign"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This is an additional sign, indicated by its rectangular shape and white background.",
+        "o1": "Additional sign",
+        "o2": "waarschuwing sign",
+        "o3": "Prohibitory sign"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a temporary sign, indicated by its yellow background and vaak used for road works.",
+        "o1": "Temporary sign",
+        "o2": "waarschuwing sign",
+        "o3": "Prohibitory sign"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This is a regulatory sign, indicated by its circular shape and red border or blue background.",
+        "o1": "Regulatory sign",
+        "o2": "waarschuwing sign",
+        "o3": "informatie sign"
+      }
+    },
+    "speedLimit": {
+      "q1": {
+        "text": "Wat is Het maximum snelheidslimiet for cars op a snelweg in Nederland tijdens goed weer conditions?",
+        "explanation": "Het maximum snelheidslimiet for cars op Dutch motorways is 100 km/h tijdens goed weer conditions. This was reduced van 130 km/h naar 100 km/h in 2020 and remains op 100 km/h.",
+        "o1": "100 km/h",
+        "o2": "120 km/h",
+        "o3": "130 km/h",
+        "o4": "140 km/h"
+      },
+      "q2": {
+        "text": "Wat is the snelheidslimiet for cars in built-omhoog areas (within city limits) in Nederland?",
+        "explanation": "The standard snelheidslimiet in built-omhoog areas in Nederland is 50 km/h, unless otherwise indicated by traffic signs.",
+        "o1": "30 km/h",
+        "o2": "50 km/h",
+        "o3": "70 km/h",
+        "o4": "80 km/h"
+      },
+      "q3": {
+        "text": "Wat is the snelheidslimiet for cars op rural roads buiten built-omhoog areas?",
+        "explanation": "op rural roads buiten built-omhoog areas, the snelheidslimiet for cars is 80 km/h, unless a verschillend limit is indicated by traffic signs.",
+        "o1": "60 km/h",
+        "o2": "70 km/h",
+        "o3": "80 km/h",
+        "o4": "100 km/h"
+      },
+      "q4": {
+        "text": "Wat is the snelheidslimiet for cars op a snelweg tijdens slecht weer conditions (regen, sneeuw, mist)?",
+        "explanation": "tijdens slecht weer conditions, the snelheidslimiet op motorways is reduced naar 100 km/h for safety reasons.",
+        "o1": "80 km/h",
+        "o2": "100 km/h",
+        "o3": "120 km/h",
+        "o4": "130 km/h"
+      },
+      "q5": {
+        "text": "Wat is the snelheidslimiet for cars in a 30 km/h zone?",
+        "explanation": "in a 30 km/h zone, Het maximum snelheidslimiet is 30 km/h. These zones are typically found in residential areas, dichtbij schools, or in areas with high voetganger activity.",
+        "o1": "20 km/h",
+        "o2": "30 km/h",
+        "o3": "40 km/h",
+        "o4": "50 km/h"
+      },
+      "q6": {
+        "text": "Wat is the snelheidslimiet for cars op a snelweg op night (between 19:00 and 06:00)?",
+        "explanation": "op night (between 19:00 and 06:00), the snelheidslimiet op motorways is 100 km/h naar reduce noise pollution and improve safety.",
+        "o1": "100 km/h",
+        "o2": "120 km/h",
+        "o3": "130 km/h",
+        "o4": "140 km/h"
+      },
+      "q7": {
+        "text": "Wat is the snelheidslimiet for cars op a dual carriageway (autoweg) buiten built-omhoog areas?",
+        "explanation": "op dual carriageways (autoweg) buiten built-omhoog areas, the snelheidslimiet for cars is 100 km/h.",
+        "o1": "80 km/h",
+        "o2": "100 km/h",
+        "o3": "120 km/h",
+        "o4": "130 km/h"
+      },
+      "q8": {
+        "text": "Wat is the snelheidslimiet for cars when towing a trailer op a snelweg?",
+        "explanation": "When towing a trailer op a snelweg, the snelheidslimiet is 90 km/h for safety reasons.",
+        "o1": "80 km/h",
+        "o2": "90 km/h",
+        "o3": "100 km/h",
+        "o4": "120 km/h"
+      },
+      "q9": {
+        "text": "Wat is the snelheidslimiet for cars in a roadworks zone op a snelweg?",
+        "explanation": "in roadworks zones op motorways, the snelheidslimiet is typically reduced naar 70 km/h naar ensure the safety van workers and drivers.",
+        "o1": "50 km/h",
+        "o2": "70 km/h",
+        "o3": "80 km/h",
+        "o4": "100 km/h"
+      },
+      "q10": {
+        "text": "Wat is the snelheidslimiet for cars in a residential area with snelheid bumps?",
+        "explanation": "in residential areas with snelheid bumps, the snelheidslimiet is typically 30 km/h naar ensure voetganger safety.",
+        "o1": "20 km/h",
+        "o2": "30 km/h",
+        "o3": "50 km/h",
+        "o4": "70 km/h"
+      },
+      "q11": {
+        "text": "Wat is the snelheidslimiet for cars op a snelweg when daar is a variable snelheidslimiet sign showing 80 km/h?",
+        "explanation": "When a variable snelheidslimiet sign shows 80 km/h, Je moet follow that limit, which overrides the normal snelweg snelheidslimiet.",
+        "o1": "80 km/h",
+        "o2": "100 km/h",
+        "o3": "130 km/h",
+        "o4": "The normal snelweg limit"
+      },
+      "q12": {
+        "text": "Wat is the snelheidslimiet for cars in a special zone marked with a \"Zone 30\" sign?",
+        "explanation": "A \"Zone 30\" sign indicates that the snelheidslimiet is 30 km/h throughout the entire zone, not just op the entrance.",
+        "o1": "20 km/h",
+        "o2": "30 km/h",
+        "o3": "50 km/h",
+        "o4": "70 km/h"
+      }
+    },
+    "technologySafety": {
+      "q1": {
+        "text": "Wat betekent ABS (Anti-lock Braking System) do?",
+        "explanation": "ABS (Anti-lock Braking System) prevents the wheels van locking tijdens hard braking, allowing the bestuurder naar maintain steering control and reduce stoppen afstand.",
+        "o1": "Prevents the wheels van locking tijdens braking",
+        "o2": "Automatically applies the brakes",
+        "o3": "Increases braking afstand",
+        "o4": "Reduces fuel consumption"
+      },
+      "q2": {
+        "text": "Wat betekent ESP (Electronic Stability Program) do?",
+        "explanation": "ESP (Electronic Stability Program) helps maintain voertuig stability tijdens cornering by automatically applying brakes naar individual wheels when it detects loss van control.",
+        "o1": "Controls the engine snelheid",
+        "o2": "Helps maintain voertuig stability tijdens cornering",
+        "o3": "Controls the air conditioning",
+        "o4": "Manages the fuel injection"
+      },
+      "q3": {
+        "text": "Wat is a rear-view camera used for?",
+        "explanation": "A rear-view camera helps with reversing and parkeren by providing a duidelijk view van the area behind the voertuig, reducing blind spots.",
+        "o1": "naar watch movies terwijl rijden",
+        "o2": "naar help with reversing and parkeren",
+        "o3": "naar monitor traffic behind",
+        "o4": "naar take photos terwijl rijden"
+      },
+      "q4": {
+        "text": "Wat betekent Adaptive Cruise Control (ACC) do?",
+        "explanation": "Adaptive Cruise Control (ACC) maintains a set snelheid terwijl automatically adjusting naar maintain a veilig afstand van the voertuig ahead.",
+        "o1": "Automatically steers the voertuig",
+        "o2": "Maintains a veilig afstand van the voertuig ahead",
+        "o3": "Automatically parks the voertuig",
+        "o4": "Controls the radio volume"
+      },
+      "q5": {
+        "text": "Wat betekent Lane Departure waarschuwing (LDW) do?",
+        "explanation": "Lane Departure waarschuwing (LDW) warns the bestuurder when the voertuig drifts out van the lane without using the turn signal.",
+        "o1": "Automatically steers the voertuig back into the lane",
+        "o2": "Warns the bestuurder when the voertuig drifts out van the lane",
+        "o3": "Changes lanes automatically",
+        "o4": "Controls the turn signals"
+      },
+      "q6": {
+        "text": "Wat betekent Blind Spot Monitoring (BSM) do?",
+        "explanation": "Blind Spot Monitoring (BSM) warns the bestuurder van vehicles in the blind spot when changing lanes.",
+        "o1": "Automatically changes lanes",
+        "o2": "Warns van vehicles in the blind spot",
+        "o3": "Controls the mirrors",
+        "o4": "Adjusts the seat position"
+      },
+      "q7": {
+        "text": "Wat betekent Autonomous noodgeval Braking (AEB) do?",
+        "explanation": "Autonomous noodgeval Braking (AEB) automatically applies the brakes naar prevent or reduce the severity van a collision when it detects an imminent crash.",
+        "o1": "Automatically applies brakes naar prevent collisions",
+        "o2": "Controls the steering wheel",
+        "o3": "Manages the fuel system",
+        "o4": "Adjusts the suspension"
+      },
+      "q8": {
+        "text": "Wat betekent Tire Pressure Monitoring System (TPMS) do?",
+        "explanation": "Tire Pressure Monitoring System (TPMS) warns the bestuurder when tire pressure is too low, which can affect safety and fuel efficiency.",
+        "o1": "Automatically inflates the tires",
+        "o2": "Warns van low tire pressure",
+        "o3": "Changes the tires automatically",
+        "o4": "Controls the suspension"
+      }
+    },
+    "trafficLights": {
+      "q1": {
+        "text": "Je bent approaching verkeerslichten that have just changed naar amber (yellow). Wat is the general rule Je moet follow?",
+        "explanation": "Amber means stoppen unless you\\",
+        "o1": "versnellen naar pass through voor it turns red.",
+        "o2": "stoppen voor the stoppen line, unless Je bent so dichtbij that naar stoppen veilig would cause an ongeluk.",
+        "o3": "Continue op the zelfde snelheid as it means the lights are ongeveer naar turn green."
+      },
+      "q2": {
+        "text": "Wat betekent a green filter arrow (e.g., for turning links) op verkeerslichten indicate when the main light is red?",
+        "explanation": "A green filter arrow allows you naar proceed in the richting van the arrow, even if the main light is red, provided you voorrang verlenen naar any pedestrians or andere road users who have voorrang.",
+        "o1": "You may linksaf slaan if the way is duidelijk, but voorrang verlenen naar pedestrians crossing.",
+        "o2": "Je moet wait for the main green light voor turning links.",
+        "o3": "You have voorrang over alle andere traffic and pedestrians when turning links."
+      },
+      "q3": {
+        "text": "If verkeerslichten are out van order (not working op alle), Hoe moet you treat the junction?",
+        "explanation": "When verkeerslichten are out van order, revert naar standard voorrang rules as if the junction is unmarked, or follow any existing voorrang verlenen/stoppen signs. altijd proceed with caution.",
+        "o1": "Treat it as if you have voorrang over alle traffic.",
+        "o2": "Proceed with extreme caution and treat the junction as an unmarked crossroads or voorrang verlenen, depending op road markings or signs.",
+        "o3": "Wait for a politie officer naar direct traffic voor proceeding."
+      },
+      "q4": {
+        "text": "Wat betekent a flashing amber beacon mounted boven a voetganger crossing (Pelican or Puffin crossing) signify when pedestrians are crossing?",
+        "explanation": "A flashing amber beacon op a voetganger crossing means Je moet voorrang verlenen naar pedestrians op the crossing, but you may proceed if the crossing is duidelijk.",
+        "o1": "Je moet stoppen and wait tot the beacon stops flashing.",
+        "o2": "You may proceed if the way is duidelijk, giving way naar pedestrians still op the crossing.",
+        "o3": "The crossing is out van order; proceed normally."
+      },
+      "q5": {
+        "text": "A politie officer is directing traffic op a junction and signals you naar stoppen, but the traffic light for you is green. What must you do?",
+        "explanation": "Signals given by a politie officer directing traffic override alle andere traffic signals and signs. Je moet obey the officer.",
+        "o1": "Obey the green traffic light and proceed.",
+        "o2": "Point naar the green light naar inform the officer and then proceed.",
+        "o3": "Obey the politie officer\\"
+      },
+      "q6": {
+        "text": "op a level crossing, twin flashing red lights have started naar flash. Wat is your immediate action?",
+        "explanation": "Twin flashing red lights op a level crossing mean a train is approaching. Je moet stoppen voor the stoppen line or barrier and wait.",
+        "o1": "stoppen onmiddellijk, even if Je bent already op the crossing.",
+        "o2": "stoppen voor the barrier or stoppen line and wait tot the lights stoppen flashing and any barrier is fully raised.",
+        "o3": "Cross snel if Je kunt niet see or hear a train approaching."
+      },
+      "q7": {
+        "text": "sommige verkeerslichten have a white light signal for trams or buses. Wat betekent a steady white horizontal bar mean for these vehicles?",
+        "explanation": "For trams or buses, a steady white horizontal bar op a traffic light signal typically means \"stoppen\".",
+        "o1": "Proceed with caution.",
+        "o2": "Prepare naar stoppen.",
+        "o3": "stoppen."
+      },
+      "q8": {
+        "text": "You see a signal light showing a red bicycle symbol. Wat betekent this mean for cyclists?",
+        "explanation": "A red bicycle symbol op verkeerslichten means cyclists must stoppen and wait for the green signal specific naar them or a general green light.",
+        "o1": "Cyclists must dismount and walk.",
+        "o2": "Cyclists must stoppen and wait for a green bicycle signal.",
+        "o3": "Cyclists can proceed if nee andere traffic is present."
+      },
+      "q9": {
+        "text": "Wat is an \"intelligent\" or \"adaptive\" traffic light system designed naar do?",
+        "explanation": "Adaptive traffic light systems use sensors naar detect traffic volume and adjust signal timings naar optimize flow and reduce delays.",
+        "o1": "Change lights op fixed intervals regardless van traffic.",
+        "o2": "Prioritize buses and noodgeval vehicles by giving them immediate green lights.",
+        "o3": "Adjust light timings based op real-tijd traffic flow detected by sensors."
+      },
+      "q10": {
+        "text": "If a traffic light shows red and amber together, Wat moet you prepare naar do?",
+        "explanation": "Red and amber lights showing together indicate that the lights are ongeveer naar change naar green. Je moet prepare naar proceed when it turns green.",
+        "o1": "stoppen, as the lights are ongeveer naar turn red.",
         "o2": "Proceed with caution, as the lights are faulty.",
-        "o3": "Prepare to go; the lights will shortly change to green.",
-        "explanation": "Red and amber lights showing together indicate that the lights are about to change to green. You should prepare to proceed when it turns green."
+        "o3": "Prepare naar gaan; the lights will shortly change naar green."
+      }
+    },
+    "tramInteractions": {
+      "q1": {
+        "text": "Je bent rijden and see a tram approaching van behind. Wat moet you do?",
+        "explanation": "Trams have voorrang over andere vehicles. Je moet voorrang verlenen naar trams and allow them naar pass veilig.",
+        "o1": "voorrang verlenen naar the tram",
+        "o2": "Continue rijden normally",
+        "o3": "snelheid omhoog naar avoid the tram"
+      },
+      "q2": {
+        "text": "Je bent rijden and see a tram stopped op a tram stoppen. Wat moet you do?",
+        "explanation": "When a tram is stopped op a tram stoppen, Je moet stoppen and wait for passengers naar veilig board or alight voor proceeding.",
+        "o1": "stoppen and wait for passengers naar board/alight",
+        "o2": "Continue rijden past the tram",
+        "o3": "Honk naar warn passengers"
+      },
+      "q3": {
+        "text": "Je bent rijden and see a tram crossing your path. Wat moet you do?",
+        "explanation": "Trams have voorrang op intersections and crossings. Je moet voorrang verlenen naar trams and wait for them naar pass.",
+        "o1": "voorrang verlenen naar the tram",
+        "o2": "Continue rijden, trams must voorrang verlenen",
+        "o3": "snelheid omhoog naar cross voor the tram"
+      },
+      "q4": {
+        "text": "Je bent rijden op a road with tram tracks. Wat moet you do?",
+        "explanation": "When rijden op roads with tram tracks, drive voorzichtig and be constantly aware van trams that may be approaching.",
+        "o1": "Drive voorzichtig and be aware van trams",
+        "o2": "Drive normally, trams will avoid you",
+        "o3": "Avoid rijden op roads with tram tracks"
+      },
+      "q5": {
+        "text": "Je bent rijden and see a tram with flashing lights. Wat moet you do?",
+        "explanation": "Trams with flashing lights have voorrang and may be making an noodgeval stoppen. voorrang verlenen naar them onmiddellijk.",
+        "o1": "voorrang verlenen naar the tram onmiddellijk",
+        "o2": "Continue rijden normally",
+        "o3": "Honk naar warn the tram bestuurder"
+      },
+      "q6": {
+        "text": "Je bent rijden and see a tram approaching van the opposite richting. Wat moet you do?",
+        "explanation": "When a tram is approaching van the opposite richting, give it extra space and be prepared naar stoppen if noodzakelijk.",
+        "o1": "Drive normally, trams have their own lane",
+        "o2": "Give extra space naar the tram",
+        "o3": "stoppen completely and let the tram pass"
+      },
+      "q7": {
+        "text": "Je bent rijden and see a tram making a turn. Wat moet you do?",
+        "explanation": "Trams have voorrang when making turns. Je moet voorrang verlenen naar trams and wait for them naar complete their turn.",
+        "o1": "voorrang verlenen naar the tram",
+        "o2": "Continue rijden, trams must voorrang verlenen",
+        "o3": "snelheid omhoog naar avoid the tram"
+      },
+      "q8": {
+        "text": "Je bent rijden and see a tram op a tram stoppen with passengers boarding. Wat moet you do?",
+        "explanation": "When a tram is op a stoppen with passengers boarding, Je moet stoppen and wait for the tram naar depart voor proceeding.",
+        "o1": "stoppen and wait for the tram naar depart",
+        "o2": "Continue rijden past the tram",
+        "o3": "Honk naar warn passengers"
+      },
+      "q9": {
+        "text": "Je bent rijden and see a tram with its doors open. Wat moet you do?",
+        "explanation": "When a tram has its doors open, it means passengers are boarding or alighting. Je moet stoppen and wait for the doors naar dichtbij.",
+        "o1": "stoppen and wait for the doors naar dichtbij",
+        "o2": "Continue rijden past the tram",
+        "o3": "Honk naar warn the tram bestuurder"
+      },
+      "q10": {
+        "text": "Je bent rijden and see a tram with a red light. Wat moet you do?",
+        "explanation": "Trams with red lights have voorrang and may be making an noodgeval stoppen. Je moet voorrang verlenen naar them onmiddellijk.",
+        "o1": "voorrang verlenen naar the tram",
+        "o2": "Continue rijden normally",
+        "o3": "Honk naar warn the tram bestuurder"
+      }
+    },
+    "vehicleCategories": {
+      "q1": {
+        "text": "Wat is the snelheidslimiet for motorcycles op motorways in Nederland?",
+        "explanation": "Motorcycles have the zelfde snelheidslimiet as cars op motorways in Nederland, which is 130 km/h tijdens goed weer conditions.",
+        "o1": "100 km/h",
+        "o2": "120 km/h",
+        "o3": "130 km/h",
+        "o4": "140 km/h"
+      },
+      "q2": {
+        "text": "Wat is the snelheidslimiet for trucks op motorways in Nederland?",
+        "explanation": "Trucks have a snelheidslimiet van 80 km/h op motorways in Nederland, regardless van the weer conditions.",
+        "o1": "80 km/h",
+        "o2": "90 km/h",
+        "o3": "100 km/h",
+        "o4": "110 km/h"
+      },
+      "q3": {
+        "text": "Wat is the snelheidslimiet for buses op motorways in Nederland?",
+        "explanation": "Buses have a snelheidslimiet van 80 km/h op motorways in Nederland, the zelfde as trucks.",
+        "o1": "80 km/h",
+        "o2": "90 km/h",
+        "o3": "100 km/h",
+        "o4": "110 km/h"
+      },
+      "q4": {
+        "text": "Wat is the snelheidslimiet for mopeds op roads in Nederland?",
+        "explanation": "Mopeds have a snelheidslimiet van 45 km/h op roads in Nederland, unless otherwise indicated by traffic signs.",
+        "o1": "25 km/h",
+        "o2": "30 km/h",
+        "o3": "45 km/h",
+        "o4": "50 km/h"
+      },
+      "q5": {
+        "text": "Wat is the snelheidslimiet for tractors op roads in Nederland?",
+        "explanation": "Tractors have a snelheidslimiet van 25 km/h op roads in Nederland, unless they have special permission for higher speeds.",
+        "o1": "15 km/h",
+        "o2": "25 km/h",
+        "o3": "30 km/h",
+        "o4": "40 km/h"
+      },
+      "q6": {
+        "text": "Which lane should motorcycles use op a three-lane snelweg?",
+        "explanation": "Motorcycles can use any lane op a snelweg, just like cars. They should follow the zelfde lane discipline rules.",
+        "o1": "The rechts lane only",
+        "o2": "The links lane only",
+        "o3": "Any lane they choose",
+        "o4": "The middle lane only"
+      },
+      "q7": {
+        "text": "Which lane should trucks use op a three-lane snelweg?",
+        "explanation": "Trucks should use the middle and rechts lanes op a three-lane snelweg. They are not allowed naar use the links lane for inhalen.",
+        "o1": "The rechts lane only",
+        "o2": "The links lane only",
+        "o3": "Any lane they choose",
+        "o4": "The middle and rechts lanes"
+      },
+      "q8": {
+        "text": "Wat is the snelheidslimiet for cars towing trailers op motorways?",
+        "explanation": "Cars towing trailers have a snelheidslimiet van 90 km/h op motorways in Nederland.",
+        "o1": "80 km/h",
+        "o2": "90 km/h",
+        "o3": "100 km/h",
+        "o4": "110 km/h"
+      }
+    },
+    "vehicleDocumentation": {
+      "q1": {
+        "text": "What documents must you carry when rijden in Nederland?",
+        "explanation": "Je moet carry your rijden license, voertuig registration document (kentekenbewijs), insurance certificate, and MOT certificate (APK) when rijden.",
+        "o1": "Only rijden license",
+        "o2": "rijden license and voertuig registration document",
+        "o3": "rijden license, voertuig registration, insurance certificate, and MOT certificate"
+      },
+      "q2": {
+        "text": "Wat is the APK (Algemene Periodieke Keuring)?",
+        "explanation": "APK (Algemene Periodieke Keuring) is the annual voertuig safety and emissions test that alle vehicles must pass naar be roadworthy.",
+        "o1": "Annual voertuig insurance check",
+        "o2": "Annual voertuig safety and emissions test",
+        "o3": "Annual rijden license renewal"
+      },
+      "q3": {
+        "text": "How vaak must a new car have an APK test?",
+        "explanation": "A new car must have its eerste APK test na 3 years, then every year thereafter.",
+        "o1": "Every year",
+        "o2": "Every 2 years",
+        "o3": "Every 3 years"
+      },
+      "q4": {
+        "text": "What happens if you drive without geldig insurance?",
+        "explanation": "rijden without geldig insurance results in a heavy fine and possible voertuig confiscation. It is a serious offense.",
+        "o1": "waarschuwing only",
+        "o2": "Fine van €140",
+        "o3": "Heavy fine and possible voertuig confiscation"
+      },
+      "q5": {
+        "text": "Wat is Het minimum insurance coverage vereist in Nederland?",
+        "explanation": "Het minimum insurance coverage vereist in Nederland is third-party liability insurance (WA-verzekering).",
+        "o1": "Third-party liability only",
+        "o2": "Third-party liability and theft",
+        "o3": "Comprehensive coverage"
+      },
+      "q6": {
+        "text": "Wat moet you do if you lose your rijden license?",
+        "explanation": "If you lose your rijden license, Je moet report it naar the politie and apply for a replacement op your local municipality.",
+        "o1": "Continue rijden normally",
+        "o2": "Report it naar the politie and apply for a replacement",
+        "o3": "Wait tot you find it"
+      },
+      "q7": {
+        "text": "Wat is the penalty for rijden without a geldig rijden license?",
+        "explanation": "rijden without a geldig rijden license is a serious offense that can result in a heavy fine and possible imprisonment.",
+        "o1": "waarschuwing only",
+        "o2": "Fine van €140",
+        "o3": "Heavy fine and possible imprisonment"
+      },
+      "q8": {
+        "text": "Wat moet you do if your voertuig registration document is stolen?",
+        "explanation": "If your voertuig registration document is stolen, Je moet report it naar the politie and apply for a replacement op the RDW.",
+        "o1": "Continue rijden normally",
+        "o2": "Report it naar the politie and apply for a replacement",
+        "o3": "Wait tot you find it"
+      },
+      "q9": {
+        "text": "Wat is the RDW (Rijksdienst voor het Wegverkeer)?",
+        "explanation": "The RDW (Rijksdienst voor het Wegverkeer) is the Dutch voertuig registration and licensing authority responsible for voertuig documentation.",
+        "o1": "Dutch rijden school association",
+        "o2": "Dutch voertuig registration and licensing authority",
+        "o3": "Dutch insurance company"
+      },
+      "q10": {
+        "text": "Wat moet you do if you buy a used car?",
+        "explanation": "When you buy a used car, Je moet transfer ownership within 14 days op the RDW or a post office.",
+        "o1": "Transfer ownership onmiddellijk",
+        "o2": "Transfer ownership within 14 days",
+        "o3": "Transfer ownership within 30 days"
+      },
+      "q11": {
+        "text": "What happens if you fail naar transfer voertuig ownership op tijd?",
+        "explanation": "Failing naar transfer voertuig ownership within 14 days results in a fine van €340.",
+        "o1": "nee penalty",
+        "o2": "Small fine",
+        "o3": "Fine van €340"
+      },
+      "q12": {
+        "text": "Wat moet you do if you move naar a verschillend address?",
+        "explanation": "When you move naar a verschillend address, Je moet update both your rijden license and voertuig registration addresses op your local municipality.",
+        "o1": "Update your rijden license address",
+        "o2": "Update your voertuig registration address",
+        "o3": "Update both rijden license and voertuig registration addresses"
+      }
+    },
+    "warningSigns": {
+      "q1": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns drivers van potential traffic jams ahead.",
+        "o1": "waarschuwing for traffic jams",
+        "o2": "nee inhalen",
+        "o3": "End van snelweg"
+      },
+      "q2": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign indicates a railroad crossing ahead that is equipped with barriers.",
+        "o1": "voetganger crossing",
+        "o2": "nee entry for trains",
+        "o3": "Railroad crossing ahead with barriers"
+      },
+      "q3": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign (St. Andrew\\",
+        "o1": "Tramway crossing",
+        "o2": "Rail crossing ahead with 1 railway",
+        "o3": "Multiple railway tracks"
+      },
+      "q4": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns that the road ahead carries two-way traffic, vaak encountered when leaving a one-way system.",
+        "o1": "Two-way traffic ahead",
+        "o2": "One-way street",
+        "o3": "inhalen permitted"
+      },
+      "q5": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns van a double curve ahead, the eerste naar the links, followed by a curve naar the rechts.",
+        "o1": "Sharp rechts turn",
+        "o2": "Winding road for 1km",
+        "o3": "Double curve ahead, naar the links then naar the rechts"
+      },
+      "q6": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns drivers naar be aware van bicycles and cyclists in the area or crossing the road.",
+        "o1": "waarschuwing for bikes and cyclists",
+        "o2": "nee cycling allowed",
+        "o3": "Cycle path ahead"
+      },
+      "q7": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns drivers van roadworks ahead, indicating potential obstructions or changes in road layout.",
+        "o1": "snelheid bumps ahead",
+        "o2": "Uneven road surface",
+        "o3": "Roadworks ahead waarschuwing"
+      },
+      "q8": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns van strong crosswinds in the area, which can affect voertuig stability.",
+        "o1": "Danger van falling leaves",
+        "o2": "Heavy crosswinds in area waarschuwing",
+        "o3": "Airport nearby"
+      },
+      "q9": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns van a double curve ahead, the eerste naar the rechts, followed by a curve naar the links.",
+        "o1": "nee U-turns allowed",
+        "o2": "Slippery road surface",
+        "o3": "Road bends rechts then links"
+      },
+      "q10": {
+        "text": "Identify the road sign:",
+        "explanation": "This sign warns van loose chippings or stones op the road surface, which can reduce grip or be thrown omhoog by vehicles.",
+        "o1": "Loose chippings and stones op the road waarschuwing",
+        "o2": "Risk van falling rocks",
+        "o3": "Uneven road surface"
+      }
+    },
+    "weatherConditions": {
+      "q1": {
+        "text": "Je bent rijden in heavy regen. Wat moet you do?",
+        "explanation": "in heavy regen, reduce your snelheid and increase your following afstand naar account for reduced visibility and longer stoppen distances.",
+        "o1": "Reduce snelheid and increase following afstand",
+        "o2": "Continue rijden op normal snelheid",
+        "o3": "snelheid omhoog naar get through the regen snel"
+      },
+      "q2": {
+        "text": "Je bent rijden in mist. Wat moet you do?",
+        "explanation": "in mist, use low beam koplampen (high beams reflect off mist and reduce visibility) and reduce your snelheid significantly.",
+        "o1": "Use low beam koplampen and reduce snelheid",
+        "o2": "Use high beam koplampen for beter visibility",
+        "o3": "Continue rijden op normal snelheid"
+      },
+      "q3": {
+        "text": "Je bent rijden in sneeuw. Wat moet you do?",
+        "explanation": "in sneeuw, reduce your snelheid and use gentle braking naar avoid skidding. Sudden movements can cause loss van control.",
+        "o1": "Reduce snelheid and use gentle braking",
+        "o2": "Continue rijden op normal snelheid",
+        "o3": "snelheid omhoog naar get through the sneeuw snel"
+      },
+      "q4": {
+        "text": "Je bent rijden in strong winds. Wat moet you do?",
+        "explanation": "in strong winds, reduce your snelheid and hold the steering wheel firmly naar maintain control van your voertuig.",
+        "o1": "Reduce snelheid and hold the steering wheel firmly",
+        "o2": "Continue rijden op normal snelheid",
+        "o3": "snelheid omhoog naar get through the wind snel"
       }
     }
   }

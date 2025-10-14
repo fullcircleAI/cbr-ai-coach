@@ -1,31 +1,31 @@
-# AI Learning Coach for CBR
+# Theory Coach for CBR
 
-An intelligent AI-powered learning companion for Dutch driving theory test preparation.
+A comprehensive practice test app for Dutch driving theory test preparation with 297 questions and multilingual support.
 
-## 🧠 AI Features
+## 🎯 Smart Features
 
-### 1. AI Mistake Analysis
-- Identifies specific mistake patterns
-- Explains why you're struggling with topics
-- Provides targeted solutions for improvement
+### 1. Progress Analysis
+- Tracks your performance across different topics
+- Identifies areas that need more practice
+- Provides targeted recommendations for improvement
 
-### 2. AI Study Recommendations  
-- Personalized study plans based on your learning style
+### 2. Smart Study Recommendations  
+- Personalized study plans based on your performance
 - Priority-based topic recommendations
 - Optimized learning methods for maximum efficiency
 
-### 3. AI Learning Progress
+### 3. Learning Progress
 - Tracks your learning journey with detailed analytics
-- Shows learning velocity and improvement rates
-- Provides AI-powered insights and achievements
+- Shows improvement rates and study time
+- Provides insights and achievements
 
 ## 🚀 Key Benefits
 
-- **Personalized Learning**: AI adapts to your learning style
-- **Mistake Analysis**: Understand exactly why you're struggling
-- **Smart Recommendations**: Get AI-powered study plans
+- **Personalized Learning**: Adapts to your learning style
+- **Progress Analysis**: Understand exactly why you're struggling
+- **Smart Recommendations**: Get personalized study plans
 - **Progress Tracking**: See your learning journey with insights
-- **No Guarantees**: Focus on learning, not exam promises
+- **Realistic Goals**: Focus on learning, not unrealistic promises
 
 ## 🎯 Target Users
 
