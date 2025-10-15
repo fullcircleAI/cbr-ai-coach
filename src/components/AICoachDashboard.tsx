@@ -160,7 +160,7 @@ export const AICoachDashboard: React.FC = () => {
             </div>
           </div>
 
-          {/* Floating AI Tutor Button - WhatsApp Style */}
+          {/* Floating AI Tutor Button - WhatsApp Style - FORCE DEPLOY */}
           <div className="floating-ai-tutor">
             <button 
               className="floating-ai-btn"
