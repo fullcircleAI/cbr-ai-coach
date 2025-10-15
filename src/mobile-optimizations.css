@@ -1,0 +1,397 @@
+/* 📱 iOS & Android Mobile Optimizations */
+
+/* Global Mobile Optimizations */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  /* Prevent horizontal scroll */
+  max-width: 100vw;
+  overflow-x: hidden;
+  
+  /* iOS Safari optimizations */
+  -webkit-text-size-adjust: 100%;
+  -webkit-touch-callout: none;
+  -webkit-overflow-scrolling: touch;
+  
+  /* Prevent pull-to-refresh */
+  overscroll-behavior-y: contain;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  
+  /* Enhanced iOS/Android optimizations */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  overflow-x: hidden;
+  
+  /* iOS Safari specific */
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Android specific */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+  /* Prevent pull-to-refresh on mobile */
+  overscroll-behavior-y: contain;
+  
+  /* iOS safe area support */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* iOS Safe Area Support */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(env(safe-area-inset-left), 0px);
+    padding-right: max(env(safe-area-inset-right), 0px);
+    padding-top: max(env(safe-area-inset-top), 0px);
+    padding-bottom: max(env(safe-area-inset-bottom), 0px);
+  }
+}
+
+/* Touch Target Optimizations */
+button, a, input, select, textarea, [role="button"] {
+  /* Minimum touch target size (iOS/Android guidelines) */
+  min-height: 44px;
+  min-width: 44px;
+  
+  /* Touch feedback */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  touch-action: manipulation;
+  
+  /* Prevent text selection on touch */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Input Field Optimizations */
+input, textarea, select {
+  /* Prevent zoom on iOS when focusing */
+  font-size: 16px;
+  
+  /* Better touch targets */
+  min-height: 44px;
+  padding: 12px 16px;
+  
+  /* Remove default styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* Better focus states */
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* iOS Input Fixes */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  /* Prevent zoom on focus */
+  font-size: 16px !important;
+  
+  /* Remove iOS styling */
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 8px;
+}
+
+/* Button Optimizations */
+button {
+  /* Better touch targets */
+  min-height: 44px;
+  min-width: 44px;
+  padding: 12px 20px;
+  
+  /* Touch feedback */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  touch-action: manipulation;
+  
+  /* Remove default styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* Better focus states */
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  
+  /* Smooth transitions */
+  transition: all 0.2s ease;
+}
+
+/* iOS Button Fixes */
+button {
+  /* Remove iOS button styling */
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 8px;
+  
+  /* Better touch feedback */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile-First Responsive Breakpoints */
+
+/* Small Mobile (iPhone SE, etc.) */
+@media (max-width: 375px) {
+  body {
+    font-size: 14px;
+  }
+  
+  button, input, select, textarea {
+    min-height: 48px;
+    font-size: 16px;
+  }
+  
+  /* Larger touch targets for small screens */
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+
+/* Standard Mobile (iPhone 12, etc.) */
+@media (min-width: 376px) and (max-width: 414px) {
+  body {
+    font-size: 15px;
+  }
+  
+  button, input, select, textarea {
+    min-height: 44px;
+    font-size: 16px;
+  }
+}
+
+/* Large Mobile (iPhone 12 Pro Max, etc.) */
+@media (min-width: 415px) and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  button, input, select, textarea {
+    min-height: 44px;
+    font-size: 16px;
+  }
+}
+
+/* iPad Portrait */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  body {
+    font-size: 18px;
+  }
+  
+  button, input, select, textarea {
+    min-height: 48px;
+    font-size: 18px;
+    padding: 16px 24px;
+  }
+  
+  /* Larger touch targets for iPad */
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+
+/* iPad Landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  body {
+    font-size: 16px;
+  }
+  
+  button, input, select, textarea {
+    min-height: 48px;
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+}
+
+/* iPad Pro */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  body {
+    font-size: 19px;
+  }
+  
+  button, input, select, textarea {
+    min-height: 52px;
+    font-size: 19px;
+    padding: 18px 28px;
+  }
+  
+  /* Even larger touch targets for iPad Pro */
+  .touch-target {
+    min-height: 52px;
+    min-width: 52px;
+  }
+}
+
+/* iOS Specific Optimizations */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari specific styles */
+  body {
+    -webkit-overflow-scrolling: touch;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Fix iOS input zoom */
+  input, textarea, select {
+    font-size: 16px !important;
+    transform: translateZ(0);
+  }
+  
+  /* Fix iOS button styling */
+  button {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+  }
+  
+  /* Fix iOS scroll bounce */
+  .scroll-container {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+}
+
+/* Android Specific Optimizations */
+@supports not (-webkit-touch-callout: none) {
+  /* Android Chrome specific styles */
+  body {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  /* Better Android touch feedback */
+  button, a, [role="button"] {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #0a1a3a 0%, #001122 100%);
+    color: #ffffff;
+  }
+  
+  input, textarea, select {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-color: #444;
+  }
+  
+  button {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  button, input, select, textarea {
+    border: 2px solid;
+  }
+  
+  button:focus, input:focus, select:focus, textarea:focus {
+    outline: 3px solid;
+    outline-offset: 2px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus Management for Accessibility */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 2px solid #007AFF;
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Utility Classes */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.ios-safe-area {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Performance Optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}

@@ -4,31 +4,49 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     
-    <!-- Viewport for mobile optimization -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <!-- Enhanced Viewport for iOS/Android optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, shrink-to-fit=no" />
     
-    <!-- Theme colors -->
+    <!-- Theme colors for iOS/Android -->
     <meta name="theme-color" content="#002868" />
     <meta name="msapplication-TileColor" content="#002868" />
+    <meta name="msapplication-navbutton-color" content="#002868" />
     
     <!-- App description -->
     <meta name="description" content="Master Dutch Driving Theory with comprehensive practice tests. 297 questions, mock exams, and multilingual support (EN/NL/AR)." />
     <meta name="keywords" content="CBR, driving theory, Dutch driving exam, practice test, mock exam, multilingual" />
     
-    <!-- iOS-specific meta tags -->
+    <!-- iOS-specific optimizations -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Theory Coach" />
+    <meta name="apple-touch-fullscreen" content="yes" />
     
     <!-- iOS splash screens and icons -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/logo192.png" />
     
-    <!-- Prevent iOS from auto-detecting phone numbers -->
-    <meta name="format-detection" content="telephone=no" />
+    <!-- Prevent iOS from auto-detecting phone numbers and emails -->
+    <meta name="format-detection" content="telephone=no, email=no, address=no" />
     
-    <!-- Android/Chrome -->
+    <!-- Android/Chrome optimizations -->
     <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Theory Coach" />
+    
+    <!-- Android status bar -->
+    <meta name="theme-color" content="#002868" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#002868" media="(prefers-color-scheme: dark)" />
+    
+    <!-- Prevent zoom on input focus (iOS) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, shrink-to-fit=no" />
     
     <!-- Manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />

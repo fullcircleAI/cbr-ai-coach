@@ -1,10 +1,11 @@
-// Service Worker Registration for PWA
-// This enables offline functionality and app-like behavior
+// 📱 Service Worker Registration for Mobile Optimization
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
   window.location.hostname === '[::1]' ||
-  window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+  window.location.hostname.match(
+    /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+  )
 );
 
 type Config = {
@@ -13,19 +14,19 @@ type Config = {
 };
 
 export function register(config?: Config) {
-  if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
-    const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
+  if ('serviceWorker' in navigator) {
+    const publicUrl = new URL(process.env.PUBLIC_URL || '', window.location.href);
     if (publicUrl.origin !== window.location.origin) {
       return;
     }
 
     window.addEventListener('load', () => {
-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+      const swUrl = `${process.env.PUBLIC_URL}/sw.js`;
 
       if (isLocalhost) {
         checkValidServiceWorker(swUrl, config);
         navigator.serviceWorker.ready.then(() => {
-          console.log('Service worker is ready for offline use.');
+          console.log('📱 Service Worker: Ready in localhost');
         });
       } else {
         registerValidSW(swUrl, config);
@@ -38,6 +39,8 @@ function registerValidSW(swUrl: string, config?: Config) {
   navigator.serviceWorker
     .register(swUrl)
     .then((registration) => {
+      console.log('📱 Service Worker: Registered successfully');
+      
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
         if (installingWorker == null) {
@@ -46,12 +49,12 @@ function registerValidSW(swUrl: string, config?: Config) {
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
-              console.log('New content available; please refresh.');
+              console.log('📱 Service Worker: New content available');
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
               }
             } else {
-              console.log('Content cached for offline use.');
+              console.log('📱 Service Worker: Content cached for offline use');
               if (config && config.onSuccess) {
                 config.onSuccess(registration);
               }
@@ -61,7 +64,7 @@ function registerValidSW(swUrl: string, config?: Config) {
       };
     })
     .catch((error) => {
-      console.error('Service worker registration failed:', error);
+      console.error('📱 Service Worker: Registration failed', error);
     });
 }
 
@@ -85,7 +88,7 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
       }
     })
     .catch(() => {
-      console.log('No internet connection. App is running in offline mode.');
+      console.log('📱 Service Worker: No internet connection found');
     });
 }
 
@@ -96,8 +99,125 @@ export function unregister() {
         registration.unregister();
       })
       .catch((error) => {
-        console.error(error.message);
+        console.error('📱 Service Worker: Unregistration failed', error);
       });
   }
 }
 
+// Install prompt for PWA
+let deferredPrompt: any;
+
+export function registerInstallPrompt() {
+  window.addEventListener('beforeinstallprompt', (e) => {
+    console.log('📱 PWA: Install prompt triggered');
+    e.preventDefault();
+    deferredPrompt = e;
+    
+    // Show install button
+    const installButton = document.getElementById('install-button');
+    if (installButton) {
+      installButton.style.display = 'block';
+      installButton.addEventListener('click', () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then((choiceResult: any) => {
+            if (choiceResult.outcome === 'accepted') {
+              console.log('📱 PWA: User accepted install');
+            } else {
+              console.log('📱 PWA: User dismissed install');
+            }
+            deferredPrompt = null;
+          });
+        }
+      });
+    }
+  });
+
+  window.addEventListener('appinstalled', () => {
+    console.log('📱 PWA: App installed successfully');
+    deferredPrompt = null;
+  });
+}
+
+// Offline detection
+export function registerOfflineDetection() {
+  const updateOnlineStatus = () => {
+    const isOnline = navigator.onLine;
+    const statusElement = document.getElementById('offline-status');
+    
+    if (statusElement) {
+      if (isOnline) {
+        statusElement.style.display = 'none';
+        statusElement.textContent = '';
+      } else {
+        statusElement.style.display = 'block';
+        statusElement.textContent = '📱 You are offline. Some features may be limited.';
+      }
+    }
+  };
+
+  window.addEventListener('online', updateOnlineStatus);
+  window.addEventListener('offline', updateOnlineStatus);
+  updateOnlineStatus();
+}
+
+// Haptic feedback for mobile
+export function triggerHapticFeedback(type: 'light' | 'medium' | 'heavy' = 'light') {
+  if ('vibrate' in navigator) {
+    const patterns = {
+      light: [10],
+      medium: [20],
+      heavy: [30]
+    };
+    
+    navigator.vibrate(patterns[type]);
+  }
+}
+
+// Touch feedback for buttons
+export function addTouchFeedback(element: HTMLElement) {
+  element.addEventListener('touchstart', () => {
+    element.style.transform = 'scale(0.95)';
+    triggerHapticFeedback('light');
+  });
+  
+  element.addEventListener('touchend', () => {
+    element.style.transform = 'scale(1)';
+  });
+  
+  element.addEventListener('touchcancel', () => {
+    element.style.transform = 'scale(1)';
+  });
+}
+
+// Pull-to-refresh detection
+export function registerPullToRefresh(callback: () => void) {
+  let startY = 0;
+  let currentY = 0;
+  let isPulling = false;
+  
+  document.addEventListener('touchstart', (e) => {
+    if (window.scrollY === 0) {
+      startY = e.touches[0].clientY;
+      isPulling = true;
+    }
+  });
+  
+  document.addEventListener('touchmove', (e) => {
+    if (isPulling) {
+      currentY = e.touches[0].clientY;
+      const pullDistance = currentY - startY;
+      
+      if (pullDistance > 100) {
+        // Trigger pull-to-refresh
+        callback();
+        isPulling = false;
+        triggerHapticFeedback('medium');
+      }
+    }
+  });
+  
+  document.addEventListener('touchend', () => {
+    isPulling = false;
+  });
+}
