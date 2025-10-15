@@ -342,3 +342,108 @@ body .tests-page,
     font-weight: 600;
   }
 }
+
+/* Floating AI Tutor Button - Tests Page Specific */
+.tests-page-ai-tutor {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  pointer-events: none; /* Allows clicks to pass through the container */
+}
+
+.tests-page-ai-tutor .floating-ai-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #002868, #1e40af);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 40, 104, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: auto; /* Re-enables clicks for the button itself */
+  position: relative;
+  overflow: hidden;
+}
+
+.tests-page-ai-tutor .floating-ai-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 40, 104, 0.4);
+}
+
+.tests-page-ai-tutor .floating-ai-btn:active {
+  transform: scale(0.95);
+}
+
+.tests-page-ai-tutor .floating-mascot {
+  font-size: 24px;
+  line-height: 1;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* Pulse animation for attention */
+.tests-page-ai-tutor .floating-ai-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #002868, #1e40af);
+  opacity: 0;
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+/* Mobile optimizations - iOS/Android specs */
+@media (max-width: 768px) {
+  .tests-page-ai-tutor {
+    bottom: 80px; /* Above mobile footer */
+    right: 16px;
+  }
+  
+  .tests-page-ai-tutor .floating-ai-btn {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .tests-page-ai-tutor .floating-mascot {
+    font-size: 24px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .tests-page-ai-tutor {
+    bottom: 70px; /* Adjust for smaller footer */
+    right: 12px;
+  }
+  
+  .tests-page-ai-tutor .floating-ai-btn {
+    width: 52px;
+    height: 52px;
+  }
+  
+  .tests-page-ai-tutor .floating-mascot {
+    font-size: 22px;
+  }
+}

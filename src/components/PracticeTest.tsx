@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Navigation } from './Navigation';
+import AITutor from './AITutor';
 import * as questionData from '../question_data';
 import { lightHaptic, successHaptic, errorHaptic } from '../utils/haptics';
 import { aiCoach } from '../services/aiCoach';
@@ -31,6 +32,7 @@ export const PracticeTest: React.FC = () => {
   const [score, setScore] = useState(0);
   const [testComplete, setTestComplete] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [showAITutor, setShowAITutor] = useState(false);
 
   // Hide mobile footer during practice tests
   useEffect(() => {
@@ -489,8 +491,36 @@ export const PracticeTest: React.FC = () => {
               </button>
             </div>
           )}
+
+          {/* Floating AI Tutor Button - Mobile Optimized */}
+          <div className="floating-ai-tutor practice-test-ai-tutor">
+            <button 
+              className="floating-ai-btn"
+              onClick={() => setShowAITutor(true)}
+              title="Ask AI Tutor"
+            >
+              <span className="floating-mascot">😊</span>
+            </button>
+          </div>
         </div>
       </main>
+
+      {/* AI Tutor Modal */}
+      {showAITutor && (
+        <AITutor
+          userProgress={{
+            averageScore: aiCoach.getPracticeAverage(),
+            totalQuestions: questions.length,
+            correctAnswers: score,
+            studyTime: aiCoach.getStudyTime(),
+            weakAreas: [],
+            strongAreas: []
+          }}
+          currentTest={`practice-${testId}`}
+          currentQuestion={currentQuestion}
+          onClose={() => setShowAITutor(false)}
+        />
+      )}
     </div>
   );
 };
