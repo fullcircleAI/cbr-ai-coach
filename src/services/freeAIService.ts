@@ -120,14 +120,52 @@ Provide a helpful explanation with tips.`;
     }
   }
 
-  // AI Tutor conversation
+  // AI Tutor conversation - CBR/Driving Theory Focus Only
   async getTutorResponse(userMessage: string, context: any): Promise<AITutorResponse> {
     try {
-      const prompt = `You are a friendly driving theory tutor. User asks: "${userMessage}". Context: ${JSON.stringify(context)}. Respond helpfully.`;
+      // Check if question is driving-related
+      const drivingKeywords = [
+        'traffic', 'road', 'sign', 'rule', 'speed', 'parking', 'priority', 'roundabout',
+        'cbr', 'driving', 'theory', 'exam', 'test', 'practice', 'study', 'learn',
+        'vehicle', 'car', 'bicycle', 'pedestrian', 'crossing', 'light', 'signal',
+        'motorway', 'highway', 'lane', 'overtake', 'merge', 'exit', 'entrance',
+        'safety', 'hazard', 'emergency', 'accident', 'insurance', 'license',
+        'alcohol', 'drug', 'fatigue', 'weather', 'condition', 'document'
+      ];
+      
+      const isDrivingRelated = drivingKeywords.some(keyword => 
+        userMessage.toLowerCase().includes(keyword)
+      );
+      
+      if (!isDrivingRelated) {
+        return {
+          message: "I'm your Dutch driving theory tutor! I can help you with traffic rules, road signs, CBR exam preparation, and study strategies. What driving topic would you like to learn about?",
+          tone: 'supportive',
+          actionItems: ['Ask about traffic rules', 'Get help with road signs', 'Learn about CBR exam'],
+          nextSteps: ['Practice with specific topics', 'Take a practice test']
+        };
+      }
+      
+      const prompt = `You are a Dutch driving theory expert and CBR exam tutor. ONLY answer questions about:
+- Traffic rules and regulations
+- Road signs and markings
+- Vehicle knowledge and safety
+- CBR exam preparation
+- Study strategies for driving theory
+- Priority rules and right of way
+- Speed limits and parking rules
+- Roundabouts and intersections
+- Hazard perception and safety
+
+User asks: "${userMessage}"
+Context: ${JSON.stringify(context)}
+
+Provide a helpful, accurate response focused on Dutch driving theory. Keep it concise (under 150 words) and encouraging.`;
+      
       const aiResponse = await this.callHuggingFace(prompt);
       
       return {
-        message: aiResponse || 'Keep up the great work! Practice makes perfect.',
+        message: aiResponse || 'Keep practicing! You\'re making great progress with your driving theory studies.',
         tone: 'encouraging',
         actionItems: ['Complete today\'s practice test', 'Review yesterday\'s mistakes'],
         nextSteps: ['Focus on weak areas', 'Take a mock exam']
@@ -208,10 +246,10 @@ Provide a helpful explanation with tips.`;
 
   private getFallbackTutorResponse(): AITutorResponse {
     return {
-      message: 'Keep up the great work! Practice makes perfect.',
+      message: 'Keep practicing your driving theory! Focus on traffic rules, road signs, and CBR exam preparation. You\'re making great progress!',
       tone: 'encouraging',
-      actionItems: ['Complete today\'s practice test', 'Review yesterday\'s mistakes'],
-      nextSteps: ['Focus on weak areas', 'Take a mock exam']
+      actionItems: ['Complete today\'s practice test', 'Review traffic rules', 'Study road signs'],
+      nextSteps: ['Focus on weak areas', 'Take a mock exam', 'Practice priority rules']
     };
   }
 }
