@@ -160,15 +160,14 @@ export const AICoachDashboard: React.FC = () => {
             </div>
           </div>
 
-          {/* AI Tutor Button - FORCE DEPLOYMENT */}
-          <div className="ai-tutor-section">
+          {/* Floating AI Tutor Button - WhatsApp Style */}
+          <div className="floating-ai-tutor">
             <button 
-              className="ai-tutor-btn"
+              className="floating-ai-btn"
               onClick={() => setShowAITutor(true)}
+              title="Ask AI Tutor"
             >
-              <span className="ai-tutor-icon">🤖</span>
-              <span className="ai-tutor-text">Ask AI Tutor</span>
-              <span className="ai-tutor-subtitle">Get instant help</span>
+              <span className="floating-mascot">😊</span>
             </button>
           </div>
 
