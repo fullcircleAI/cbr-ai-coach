@@ -160,7 +160,7 @@ export const AICoachDashboard: React.FC = () => {
             </div>
           </div>
 
-          {/* AI Tutor Button */}
+          {/* AI Tutor Button - FORCE DEPLOYMENT */}
           <div className="ai-tutor-section">
             <button 
               className="ai-tutor-btn"
