@@ -95,12 +95,18 @@
   font-weight: 400;
 }
 
-/* Submit button */
+/* Three main buttons layout */
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+/* Button styles */
 .auth-button {
   width: 100%;
   padding: 0.8rem;
-  background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%);
-  color: white;
   border: none;
   border-radius: 8px;
   font-size: 0.95rem;
@@ -109,12 +115,43 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  margin-top: auto;
+}
+
+.auth-button.primary {
+  background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%);
+  color: white;
+}
+
+.auth-button.secondary {
+  background: white;
+  color: #1A3E7A;
+  border: 2px solid #1A3E7A;
+}
+
+.auth-button.guest {
+  background: #f3f4f6;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
 }
 
 .auth-button:hover:not(:disabled) {
   transform: translateY(-2px);
+}
+
+.auth-button.primary:hover:not(:disabled) {
   box-shadow: 0 8px 20px rgba(26, 62, 122, 0.3);
+}
+
+.auth-button.secondary:hover:not(:disabled) {
+  background: #1A3E7A;
+  color: white;
+  box-shadow: 0 8px 20px rgba(26, 62, 122, 0.2);
+}
+
+.auth-button.guest:hover:not(:disabled) {
+  background: #e5e7eb;
+  color: #374151;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .auth-button:active:not(:disabled) {
@@ -172,74 +209,66 @@
   color: #002868;
 }
 
-/* Guest Mode - Prominent option */
-.guest-mode-section {
-  text-align: center;
-  margin-bottom: 0.6rem;
-  padding: 0.6rem;
-  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-  border-radius: 8px;
-  border: 2px solid #d1d5db;
-  flex-shrink: 0;
+
+/* Social Media Buttons */
+.social-buttons {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
 }
 
-.guest-button {
-  width: 100%;
-  padding: 0.7rem;
-  background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.social-button {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.3rem;
-  margin-bottom: 0.3rem;
+  gap: 0.4rem;
+  padding: 0.7rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  color: #374151;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.guest-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(26, 62, 122, 0.3);
+.social-button:hover {
+  border-color: #d1d5db;
+  background: #f9fafb;
+  transform: translateY(-1px);
 }
 
-.guest-button:active {
-  transform: translateY(0);
+.social-icon {
+  width: 16px;
+  height: 16px;
 }
 
-.guest-icon {
-  font-size: 1.2rem;
-}
-
-.guest-description {
-  color: #6b7280;
-  font-size: 0.7rem;
-  margin: 0;
-  line-height: 1.2;
-}
-
-/* Skip option */
-.auth-skip {
+/* Divider */
+.divider {
+  position: relative;
   text-align: center;
-  margin-bottom: 0.3rem;
-  flex-shrink: 0;
+  margin: 0.8rem 0;
 }
 
-.skip-button {
-  background: none;
-  border: none;
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.divider-text {
+  background: white;
+  padding: 0 0.8rem;
   color: #6b7280;
   font-size: 0.75rem;
-  cursor: pointer;
-  text-decoration: underline;
-  transition: color 0.3s ease;
-}
-
-.skip-button:hover {
-  color: #374151;
+  position: relative;
+  z-index: 1;
 }
 
 /* Animations */
