@@ -83,6 +83,12 @@ export const MockExamSelection: React.FC = () => {
             <div className="header-content">
               <div className="header-text">
                 <h1>{t('quiz.title')}</h1>
+                <div className="mock-exam-requirement-note">
+                  <div className="requirement-icon">📋</div>
+                  <div className="requirement-text">
+                    <strong>Requirement:</strong> Score 70% or higher on practice tests to access mock exams
+                  </div>
+                </div>
               </div>
             </div>
           </div>
