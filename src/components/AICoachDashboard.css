@@ -330,9 +330,9 @@
   transition: width 0.6s ease;
 }
 
-/* Hide ALL progress bars (not needed, takes up space) */
+/* Show progress bars for Exam Readiness */
 .summary-stat .progress-bar-bg {
-  display: none;
+  display: block;
 }
 
 /* Exam Readiness Styles */
