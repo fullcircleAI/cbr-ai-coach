@@ -19,7 +19,9 @@
     "noAccount": "Nog geen account?",
     "haveAccount": "Al een account?",
     "continueWithoutAccount": "Doorgaan zonder account",
-    "orContinueWith": "Of doorgaan met"
+    "orContinueWith": "Of doorgaan met",
+    "guestMode": "Doorgaan als Gast",
+    "guestModeDescription": "Begin direct met leren zonder account aan te maken"
   },
   "dashboard": {
     "title": "Dashboard",

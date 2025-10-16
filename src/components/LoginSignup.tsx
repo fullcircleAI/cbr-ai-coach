@@ -45,6 +45,12 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
     onComplete();
   };
 
+  const handleGuestMode = () => {
+    // Guest mode - no authentication needed
+    localStorage.setItem('userAuthenticated', 'guest');
+    onComplete();
+  };
+
   return (
     <div className="login-signup-container">
       <div className="login-signup-content">
@@ -140,6 +146,21 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
           >
             {isLogin ? t('auth.signUp') : t('auth.signIn')}
           </button>
+        </div>
+
+        {/* Guest Mode - Prominent option */}
+        <div className="guest-mode-section">
+          <button 
+            type="button"
+            className="guest-button"
+            onClick={handleGuestMode}
+          >
+            <span className="guest-icon">👤</span>
+            {t('auth.guestMode')}
+          </button>
+          <p className="guest-description">
+            {t('auth.guestModeDescription')}
+          </p>
         </div>
 
         {/* Skip option (like Duolingo) */}

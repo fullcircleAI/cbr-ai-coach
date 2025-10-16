@@ -60,14 +60,14 @@ function AppContent() {
     setShowLogin(false);
   };
 
-  // LANGUAGE SELECTION FIRST - User must choose language before seeing app
-  if (!currentLanguage) {
-    return <LanguageSelection />;
-  }
-
-  // Then show splash screen (if first visit)
+  // SPLASH SCREEN FIRST (like Duolingo)
   if (showSplash) {
     return <SplashScreen onFinish={handleSplashFinish} />;
+  }
+
+  // Then language selection (if no language chosen)
+  if (!currentLanguage) {
+    return <LanguageSelection />;
   }
 
   // Then show login/signup (if not authenticated)

@@ -19,7 +19,9 @@
     "noAccount": "Don't have an account?",
     "haveAccount": "Already have an account?",
     "continueWithoutAccount": "Continue without account",
-    "orContinueWith": "Or continue with"
+    "orContinueWith": "Or continue with",
+    "guestMode": "Continue as Guest",
+    "guestModeDescription": "Start learning immediately without creating an account"
   },
   "dashboard": {
     "title": "Dashboard",

@@ -19,7 +19,9 @@
     "noAccount": "ليس لديك حساب؟",
     "haveAccount": "لديك حساب بالفعل؟",
     "continueWithoutAccount": "المتابعة بدون حساب",
-    "orContinueWith": "أو المتابعة مع"
+    "orContinueWith": "أو المتابعة مع",
+    "guestMode": "المتابعة كضيف",
+    "guestModeDescription": "ابدأ التعلم فوراً دون إنشاء حساب"
   },
   "dashboard": {
     "title": "Dashboard",
