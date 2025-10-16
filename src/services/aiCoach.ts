@@ -368,6 +368,62 @@ class AICoachService {
     const hours = totalQuestions / 40; // 1.5 min per Q = 40 Q per hour
     return parseFloat(hours.toFixed(1));
   }
+
+  // Mock Exam Unlock System
+  canUnlockMockExams(): boolean {
+    const completedTests = this.getTestHistory();
+    const averageScore = this.getPracticeAverage();
+    const studyTime = this.getStudyTime();
+    
+    // Check if minimum number of tests completed
+    if (completedTests.length < 15) return false;
+    
+    // Check if average score meets requirement
+    if (averageScore < 75) return false;
+    
+    // Check if any individual test is below 70%
+    const hasLowScore = completedTests.some(test => test.percentage < 70);
+    if (hasLowScore) return false;
+    
+    // Check if minimum study time met
+    if (studyTime < 3) return false;
+    
+    return true;
+  }
+
+  // Get unlock progress for dashboard
+  getUnlockProgress(): {
+    completedTests: number;
+    requiredTests: number;
+    averageScore: number;
+    requiredAverage: number;
+    minTestScore: number;
+    requiredMinScore: number;
+    studyTime: number;
+    requiredStudyTime: number;
+    canUnlock: boolean;
+  } {
+    const completedTests = this.getTestHistory();
+    const averageScore = this.getPracticeAverage();
+    const studyTime = this.getStudyTime();
+    
+    // Find minimum test score
+    const minTestScore = completedTests.length > 0 
+      ? Math.min(...completedTests.map(test => test.percentage))
+      : 0;
+    
+    return {
+      completedTests: completedTests.length,
+      requiredTests: 15,
+      averageScore: Math.round(averageScore),
+      requiredAverage: 75,
+      minTestScore: Math.round(minTestScore),
+      requiredMinScore: 70,
+      studyTime: Math.round(studyTime * 10) / 10,
+      requiredStudyTime: 3,
+      canUnlock: this.canUnlockMockExams()
+    };
+  }
 }
 
 export const aiCoach = new AICoachService();

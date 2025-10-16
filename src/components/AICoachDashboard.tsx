@@ -33,6 +33,7 @@ export const AICoachDashboard: React.FC = () => {
 
   const [aiInsights, setAiInsights] = useState<AIInsight[]>([]);
   const [showAITutor, setShowAITutor] = useState(false);
+  const [unlockProgress, setUnlockProgress] = useState(aiCoach.getUnlockProgress());
 
   useEffect(() => {
     // Load REAL data from AI Coach (including mock exams)
@@ -49,6 +50,7 @@ export const AICoachDashboard: React.FC = () => {
 
     setUserProgress(realData);
     setAiInsights(realInsights);
+    setUnlockProgress(aiCoach.getUnlockProgress());
   }, []);
 
   const handleRefresh = async () => {
@@ -168,6 +170,66 @@ export const AICoachDashboard: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Mock Exam Unlock Progress */}
+          {!unlockProgress.canUnlock && (
+            <div className="unlock-progress-section">
+              <div className="section-header">
+                <h3>🔒 Mock Exams Locked</h3>
+                <p>Complete practice tests to unlock mock exams</p>
+              </div>
+              <div className="unlock-progress-grid">
+                <div className="unlock-progress-item">
+                  <div className="progress-icon">📚</div>
+                  <div className="progress-content">
+                    <div className="progress-label">Tests Completed</div>
+                    <div className="progress-value">
+                      {unlockProgress.completedTests}/{unlockProgress.requiredTests}
+                    </div>
+                    <div className={`progress-status ${unlockProgress.completedTests >= unlockProgress.requiredTests ? 'met' : 'pending'}`}>
+                      {unlockProgress.completedTests >= unlockProgress.requiredTests ? '✅' : '⏳'}
+                    </div>
+                  </div>
+                </div>
+                <div className="unlock-progress-item">
+                  <div className="progress-icon">📊</div>
+                  <div className="progress-content">
+                    <div className="progress-label">Average Score</div>
+                    <div className="progress-value">
+                      {unlockProgress.averageScore}% / {unlockProgress.requiredAverage}%
+                    </div>
+                    <div className={`progress-status ${unlockProgress.averageScore >= unlockProgress.requiredAverage ? 'met' : 'pending'}`}>
+                      {unlockProgress.averageScore >= unlockProgress.requiredAverage ? '✅' : '⏳'}
+                    </div>
+                  </div>
+                </div>
+                <div className="unlock-progress-item">
+                  <div className="progress-icon">🎯</div>
+                  <div className="progress-content">
+                    <div className="progress-label">Lowest Test</div>
+                    <div className="progress-value">
+                      {unlockProgress.minTestScore}% / {unlockProgress.requiredMinScore}%
+                    </div>
+                    <div className={`progress-status ${unlockProgress.minTestScore >= unlockProgress.requiredMinScore ? 'met' : 'pending'}`}>
+                      {unlockProgress.minTestScore >= unlockProgress.requiredMinScore ? '✅' : '⏳'}
+                    </div>
+                  </div>
+                </div>
+                <div className="unlock-progress-item">
+                  <div className="progress-icon">⏰</div>
+                  <div className="progress-content">
+                    <div className="progress-label">Study Time</div>
+                    <div className="progress-value">
+                      {unlockProgress.studyTime}h / {unlockProgress.requiredStudyTime}h
+                    </div>
+                    <div className={`progress-status ${unlockProgress.studyTime >= unlockProgress.requiredStudyTime ? 'met' : 'pending'}`}>
+                      {unlockProgress.studyTime >= unlockProgress.requiredStudyTime ? '✅' : '⏳'}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* AI Insights Summary */}
           <div className="ai-insights-summary">

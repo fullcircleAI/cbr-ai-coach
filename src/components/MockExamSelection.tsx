@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Navigation } from './Navigation';
+import { aiCoach } from '../services/aiCoach';
 import './MockExamSelection.css';
 
 export const MockExamSelection: React.FC = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [recentScores, setRecentScores] = useState<Record<string, any>>({});
+  const [unlockProgress, setUnlockProgress] = useState(aiCoach.getUnlockProgress());
+  const [showUnlockCelebration, setShowUnlockCelebration] = useState(false);
 
   const mockExams = [
     {
@@ -49,10 +52,25 @@ export const MockExamSelection: React.FC = () => {
       }
     });
     setRecentScores(scores);
+    
+    // Update unlock progress
+    const newUnlockProgress = aiCoach.getUnlockProgress();
+    setUnlockProgress(newUnlockProgress);
+    
+    // Show celebration if just unlocked
+    if (newUnlockProgress.canUnlock && !unlockProgress.canUnlock) {
+      setShowUnlockCelebration(true);
+      setTimeout(() => setShowUnlockCelebration(false), 5000); // Hide after 5 seconds
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleExamClick = (examId: string) => {
+    // Check if mock exams are unlocked
+    if (!unlockProgress.canUnlock) {
+      // Show unlock requirements instead of navigating
+      return;
+    }
     navigate(`/mock-exam/${examId}`);
   };
 
@@ -70,20 +88,53 @@ export const MockExamSelection: React.FC = () => {
           </div>
 
           <div className="tests-content">
+            {/* Unlock Progress Banner */}
+            {!unlockProgress.canUnlock && (
+              <div className="unlock-progress-banner">
+                <div className="unlock-icon">🔒</div>
+                <div className="unlock-content">
+                  <h3>Mock Exams Locked</h3>
+                  <p>Complete practice tests to unlock mock exams</p>
+                  <div className="unlock-requirements">
+                    <div className={`requirement ${unlockProgress.completedTests >= unlockProgress.requiredTests ? 'met' : 'pending'}`}>
+                      <span className="requirement-icon">{unlockProgress.completedTests >= unlockProgress.requiredTests ? '✅' : '⏳'}</span>
+                      <span>{unlockProgress.completedTests}/{unlockProgress.requiredTests} tests completed</span>
+                    </div>
+                    <div className={`requirement ${unlockProgress.averageScore >= unlockProgress.requiredAverage ? 'met' : 'pending'}`}>
+                      <span className="requirement-icon">{unlockProgress.averageScore >= unlockProgress.requiredAverage ? '✅' : '⏳'}</span>
+                      <span>{unlockProgress.averageScore}% average (need {unlockProgress.requiredAverage}%)</span>
+                    </div>
+                    <div className={`requirement ${unlockProgress.minTestScore >= unlockProgress.requiredMinScore ? 'met' : 'pending'}`}>
+                      <span className="requirement-icon">{unlockProgress.minTestScore >= unlockProgress.requiredMinScore ? '✅' : '⏳'}</span>
+                      <span>Lowest test: {unlockProgress.minTestScore}% (need {unlockProgress.requiredMinScore}%)</span>
+                    </div>
+                    <div className={`requirement ${unlockProgress.studyTime >= unlockProgress.requiredStudyTime ? 'met' : 'pending'}`}>
+                      <span className="requirement-icon">{unlockProgress.studyTime >= unlockProgress.requiredStudyTime ? '✅' : '⏳'}</span>
+                      <span>{unlockProgress.studyTime}h study time (need {unlockProgress.requiredStudyTime}h)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             <div className="tests-grid">
               {mockExams.map((exam) => {
                 const recentScore = recentScores[exam.id];
+                const isLocked = !unlockProgress.canUnlock;
                 
                 return (
                   <div
                     key={exam.id}
-                    className="test-card"
+                    className={`test-card ${isLocked ? 'locked' : 'unlocked'}`}
                     onClick={() => handleExamClick(exam.id)}
                   >
                     <div className="test-content">
-                      <h3 className="test-name">{exam.name}</h3>
+                      <div className="test-header">
+                        <h3 className="test-name">{exam.name}</h3>
+                        {isLocked && <div className="lock-icon">🔒</div>}
+                      </div>
                       
-                      {recentScore && (
+                      {recentScore && !isLocked && (
                         <div className={`recent-score ${recentScore.passed ? 'passed' : 'failed'}`}>
                           Recent: {recentScore.score}/{exam.questions} ({recentScore.percentage}%)
                         </div>
@@ -96,6 +147,12 @@ export const MockExamSelection: React.FC = () => {
                         <span>•</span>
                         <span>{exam.passRate}% to pass</span>
                       </div>
+                      
+                      {isLocked && (
+                        <div className="locked-message">
+                          Complete practice tests to unlock
+                        </div>
+                      )}
                     </div>
                   </div>
                 );
@@ -104,6 +161,29 @@ export const MockExamSelection: React.FC = () => {
           </div>
         </div>
       </main>
+
+      {/* Unlock Celebration Modal */}
+      {showUnlockCelebration && (
+        <div className="unlock-celebration-overlay">
+          <div className="unlock-celebration-modal">
+            <div className="celebration-icon">🎉</div>
+            <h2>Mock Exams Unlocked!</h2>
+            <p>Congratulations! You've completed enough practice tests with good scores to unlock mock exams.</p>
+            <div className="celebration-achievements">
+              <div className="achievement">✅ {unlockProgress.completedTests} tests completed</div>
+              <div className="achievement">✅ {unlockProgress.averageScore}% average score</div>
+              <div className="achievement">✅ All tests above 70%</div>
+              <div className="achievement">✅ {unlockProgress.studyTime}h study time</div>
+            </div>
+            <button 
+              className="celebration-close-btn"
+              onClick={() => setShowUnlockCelebration(false)}
+            >
+              Start Mock Exams
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
