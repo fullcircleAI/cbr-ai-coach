@@ -262,6 +262,54 @@
   display: none;
 }
 
+/* Exam Readiness Styles */
+.readiness-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-top: 0.1rem;
+  font-size: 0.5rem;
+  font-weight: 600;
+}
+
+.status-emoji {
+  font-size: 0.6rem;
+}
+
+.status-text {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.readiness-message {
+  font-size: 0.45rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 0.1rem;
+  line-height: 1.2;
+  padding: 0 0.2rem;
+}
+
+/* Web - larger Exam Readiness display */
+@media (min-width: 1025px) {
+  .readiness-status {
+    font-size: 0.6rem;
+    margin-top: 0.15rem;
+  }
+  
+  .status-emoji {
+    font-size: 0.7rem;
+  }
+  
+  .readiness-message {
+    font-size: 0.55rem;
+    margin-top: 0.15rem;
+    padding: 0 0.3rem;
+  }
+}
+
 /* AI Insights Summary */
 .ai-insights-summary {
   background: white;

@@ -65,6 +65,38 @@ export const AICoachDashboard: React.FC = () => {
     return 'green';
   };
 
+  // Calculate Exam Readiness Confidence Level
+  const getExamReadiness = () => {
+    const averageScore = userProgress.averageScore;
+    const studyTime = userProgress.studyTime;
+    const totalQuestions = userProgress.totalQuestions;
+    
+    // Base confidence from average score (0-70 points)
+    let confidence = Math.min(70, averageScore);
+    
+    // Bonus for study time (0-20 points)
+    const studyTimeBonus = Math.min(20, (studyTime / 24) * 20);
+    confidence += studyTimeBonus;
+    
+    // Bonus for practice volume (0-10 points)
+    const practiceBonus = Math.min(10, (totalQuestions / 100) * 10);
+    confidence += practiceBonus;
+    
+    return Math.min(100, Math.max(0, Math.round(confidence)));
+  };
+
+  const getReadinessStatus = (confidence: number) => {
+    if (confidence >= 80) return { status: 'Ready', color: '#10b981', emoji: '🟢' };
+    if (confidence >= 60) return { status: 'On Track', color: '#f59e0b', emoji: '🟡' };
+    return { status: 'Needs Practice', color: '#ef4444', emoji: '🔴' };
+  };
+
+  const getReadinessMessage = (confidence: number) => {
+    if (confidence >= 80) return 'Strong exam readiness indicators';
+    if (confidence >= 60) return 'Good progress toward exam readiness';
+    return 'More practice recommended for exam confidence';
+  };
+
   const formatTime = (hours: number) => {
     const wholeHours = Math.floor(hours);
     const minutes = Math.round((hours - wholeHours) * 60);
@@ -95,14 +127,21 @@ export const AICoachDashboard: React.FC = () => {
           <div className="dashboard-summary">
             <div className="summary-stats">
               <div className="summary-stat">
-                <div className="stat-number">{userProgress.averageScore}%</div>
-                <div className="stat-label">{t('dashboard.averageScore')}</div>
+                <div className="stat-number">{getExamReadiness()}%</div>
+                <div className="stat-label">Exam Readiness</div>
                 <div className="progress-bar-bg">
                   <div className="progress-bar-fill" 
                        style={{ 
-                         width: `${userProgress.averageScore}%`,
-                         backgroundColor: getScoreColor(userProgress.averageScore)
+                         width: `${getExamReadiness()}%`,
+                         backgroundColor: getReadinessStatus(getExamReadiness()).color
                        }}></div>
+                </div>
+                <div className="readiness-status">
+                  <span className="status-emoji">{getReadinessStatus(getExamReadiness()).emoji}</span>
+                  <span className="status-text">{getReadinessStatus(getExamReadiness()).status}</span>
+                </div>
+                <div className="readiness-message">
+                  {getReadinessMessage(getExamReadiness())}
                 </div>
               </div>
               <div className="summary-stat">
