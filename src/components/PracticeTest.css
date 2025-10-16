@@ -1639,7 +1639,7 @@ body.practice-page .practice-test {
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-  pointer-events: none; /* Allows clicks to pass through the container */
+  /* pointer-events: none; - Removed to make AI Tutor button clickable */
 }
 
 .practice-test-ai-tutor .floating-ai-btn {
