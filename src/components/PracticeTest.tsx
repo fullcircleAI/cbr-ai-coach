@@ -517,7 +517,6 @@ export const PracticeTest: React.FC = () => {
             strongAreas: []
           }}
           currentTest={`practice-${testId}`}
-          currentQuestion={currentQuestion}
           onClose={() => setShowAITutor(false)}
         />
       )}

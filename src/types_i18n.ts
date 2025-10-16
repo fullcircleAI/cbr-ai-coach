@@ -85,6 +85,25 @@ export interface LanguageStrings {
     firstWin: string;
   };
   
+  // Progress Tracker
+  progressTracker: {
+    title: string;
+    emptyMessage: string;
+    testsCompleted: string;
+    averageScore: string;
+    dayStreak: string;
+    examReady: string;
+    recentPerformance: string;
+    focusAreas: string;
+    strongAreas: string;
+    noWeakAreas: string;
+    noStrongAreas: string;
+    practiceWeakAreas: string;
+    takeMockExam: string;
+    improving: string;
+    declining: string;
+  };
+  
   // Practice
   practice: {
     title: string;

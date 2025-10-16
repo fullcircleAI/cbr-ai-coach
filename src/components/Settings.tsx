@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Navigation } from './Navigation';
+import { useLanguage } from '../contexts/LanguageContext';
 import './Settings.css';
 
 interface FAQ {
@@ -33,6 +34,7 @@ const faqs: FAQ[] = [
 
 export const Settings: React.FC = () => {
   const { t } = useTranslation();
+  const { t_nested } = useLanguage();
   const [activePage, setActivePage] = useState<'main' | 'account' | 'language' | 'privacy' | 'terms' | 'faq' | 'support'>('main');
   const [isEditing, setIsEditing] = useState(false);
   const [editUsername, setEditUsername] = useState('AI Learner');
@@ -40,6 +42,9 @@ export const Settings: React.FC = () => {
   const [supportMessage, setSupportMessage] = useState('');
   const [isSending, setIsSending] = useState(false);
   const [sendSuccess, setSendSuccess] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState<string>(() => {
+    return localStorage.getItem('preferredLanguage') || 'en';
+  });
 
   useEffect(() => {
     // Load username
@@ -207,10 +212,6 @@ export const Settings: React.FC = () => {
 
   // Language Selection Sub-Page
   const renderLanguagePage = () => {
-    const [selectedLanguage, setSelectedLanguage] = useState<string>(() => {
-      return localStorage.getItem('preferredLanguage') || 'en';
-    });
-
     const handleLanguageSelect = (language: string) => {
       setSelectedLanguage(language);
       localStorage.setItem('preferredLanguage', language);

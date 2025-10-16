@@ -42,7 +42,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       return key; // Return the key if no language is set
     }
     const langStrings = strings[currentLanguage];
-    return langStrings[key as keyof LanguageStrings] || key;
+    const value = langStrings[key as keyof LanguageStrings];
+    return typeof value === 'string' ? value : key;
   };
 
   // Nested translation function

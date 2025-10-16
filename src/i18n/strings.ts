@@ -163,6 +163,7 @@ export const strings: Record<string, LanguageStrings> = {
     },
     quizSelection: {
       title: 'Quiz',
+      subtitle: 'Choose your difficulty level',
       level1: {
         title: 'Beginner Quiz',
         subtitle: '',
@@ -440,6 +441,7 @@ export const strings: Record<string, LanguageStrings> = {
     },
     quizSelection: {
       title: 'Quiz',
+      subtitle: 'Choose your difficulty level',
       level1: {
         title: 'Beginners Quiz',
         subtitle: '',
@@ -717,6 +719,7 @@ export const strings: Record<string, LanguageStrings> = {
     },
     quizSelection: {
       title: 'اختبار',
+      subtitle: 'اختر مستوى الصعوبة',
       level1: {
         title: 'اختبار المبتدئين',
         subtitle: '',
