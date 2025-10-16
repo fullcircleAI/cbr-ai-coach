@@ -5,6 +5,22 @@
     "mockExam": "Mock Exam",
     "settings": "Settings"
   },
+  "auth": {
+    "welcomeBack": "Welcome back!",
+    "welcomeBackSubtitle": "Sign in to continue your learning journey",
+    "getStarted": "Get started!",
+    "getStartedSubtitle": "Create your account to track your progress",
+    "name": "Full name",
+    "email": "Email address",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "continueWithoutAccount": "Continue without account",
+    "orContinueWith": "Or continue with"
+  },
   "dashboard": {
     "title": "Dashboard",
     "averageScore": "Practice Average",

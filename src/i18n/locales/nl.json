@@ -5,6 +5,22 @@
     "mockExam": "Mock Exam",
     "settings": "Settings"
   },
+  "auth": {
+    "welcomeBack": "Welkom terug!",
+    "welcomeBackSubtitle": "Log in om je leerreis voort te zetten",
+    "getStarted": "Laten we beginnen!",
+    "getStartedSubtitle": "Maak je account aan om je voortgang bij te houden",
+    "name": "Volledige naam",
+    "email": "E-mailadres",
+    "password": "Wachtwoord",
+    "confirmPassword": "Bevestig wachtwoord",
+    "signIn": "Inloggen",
+    "signUp": "Registreren",
+    "noAccount": "Nog geen account?",
+    "haveAccount": "Al een account?",
+    "continueWithoutAccount": "Doorgaan zonder account",
+    "orContinueWith": "Of doorgaan met"
+  },
   "dashboard": {
     "title": "Dashboard",
     "averageScore": "Practice Average",

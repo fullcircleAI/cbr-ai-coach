@@ -1,0 +1,388 @@
+/* Login/Signup Component - Duolingo Style */
+
+.login-signup-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #58cc02 0%, #58a700 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.login-signup-content {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header with mascot */
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-mascot {
+  margin-bottom: 1rem;
+}
+
+.mascot-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.auth-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.auth-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Form */
+.auth-form {
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #58cc02;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(88, 204, 2, 0.1);
+}
+
+.auth-input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+/* Submit button */
+.auth-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #58cc02 0%, #58a700 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(88, 204, 2, 0.3);
+}
+
+.auth-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.auth-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.auth-button.loading {
+  color: transparent;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Toggle between login/signup */
+.auth-toggle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-text {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #58cc02;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.toggle-button:hover {
+  color: #58a700;
+}
+
+/* Skip option */
+.auth-skip {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skip-button {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.skip-button:hover {
+  color: #374151;
+}
+
+/* Social login */
+.social-login {
+  margin-top: 1.5rem;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.divider-text {
+  background: white;
+  padding: 0 1rem;
+  color: #6b7280;
+  font-size: 0.85rem;
+  position: relative;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+  color: #374151;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-button:hover {
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .login-signup-container {
+    padding: 0.5rem;
+  }
+
+  .login-signup-content {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .mascot-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .auth-title {
+    font-size: 1.5rem;
+  }
+
+  .auth-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .auth-input {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+  }
+
+  .auth-button {
+    padding: 0.875rem;
+    font-size: 1rem;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+  }
+
+  .social-button {
+    padding: 0.75rem;
+  }
+}
+
+/* iOS/Android specific optimizations */
+@media (max-width: 480px) {
+  .login-signup-content {
+    padding: 1.25rem;
+    margin: 0.5rem;
+  }
+
+  .auth-title {
+    font-size: 1.4rem;
+  }
+
+  .auth-input {
+    padding: 0.75rem;
+  }
+
+  .auth-button {
+    padding: 0.75rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .login-signup-content {
+    background: #1f2937;
+    color: white;
+  }
+
+  .auth-title {
+    color: white;
+  }
+
+  .auth-subtitle {
+    color: #d1d5db;
+  }
+
+  .auth-input {
+    background: #374151;
+    border-color: #4b5563;
+    color: white;
+  }
+
+  .auth-input:focus {
+    background: #4b5563;
+    border-color: #58cc02;
+  }
+
+  .auth-input::placeholder {
+    color: #9ca3af;
+  }
+
+  .toggle-text {
+    color: #d1d5db;
+  }
+
+  .skip-button {
+    color: #9ca3af;
+  }
+
+  .skip-button:hover {
+    color: #d1d5db;
+  }
+
+  .divider-text {
+    background: #1f2937;
+    color: #9ca3af;
+  }
+
+  .divider::before {
+    background: #4b5563;
+  }
+
+  .social-button {
+    background: #374151;
+    border-color: #4b5563;
+    color: #d1d5db;
+  }
+
+  .social-button:hover {
+    border-color: #6b7280;
+  }
+}

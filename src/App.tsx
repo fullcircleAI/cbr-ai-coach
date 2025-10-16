@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SplashScreen } from './components/SplashScreen';
+import { LoginSignup } from './components/LoginSignup';
 import { LanguageSelection } from './components/LanguageSelection';
 import { InstallPrompt } from './components/InstallPrompt';
 import { OfflineIndicator } from './components/OfflineIndicator';
@@ -15,7 +16,7 @@ import { MockExam } from './components/MockExam';
 import { MockExamResults } from './components/MockExamResults';
 import './App.css';
 
-// AppContent component that checks for language selection
+// AppContent component that manages the app flow
 function AppContent() {
   const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
@@ -23,6 +24,11 @@ function AppContent() {
     // Only show splash on first visit (like Duolingo)
     const hasSeenSplash = localStorage.getItem('hasSeenSplash');
     return !hasSeenSplash;
+  });
+  const [showLogin, setShowLogin] = useState(() => {
+    // Show login after splash if not authenticated
+    const isAuthenticated = localStorage.getItem('userAuthenticated');
+    return !isAuthenticated;
   });
 
   useEffect(() => {
@@ -50,6 +56,10 @@ function AppContent() {
     setShowSplash(false);
   };
 
+  const handleLoginComplete = () => {
+    setShowLogin(false);
+  };
+
   // LANGUAGE SELECTION FIRST - User must choose language before seeing app
   if (!currentLanguage) {
     return <LanguageSelection />;
@@ -58,6 +68,11 @@ function AppContent() {
   // Then show splash screen (if first visit)
   if (showSplash) {
     return <SplashScreen onFinish={handleSplashFinish} />;
+  }
+
+  // Then show login/signup (if not authenticated)
+  if (showLogin) {
+    return <LoginSignup onComplete={handleLoginComplete} />;
   }
 
   // Finally show the main app
