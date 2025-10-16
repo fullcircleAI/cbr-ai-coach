@@ -303,11 +303,68 @@ class AICoachService {
     return Math.round(average);
   }
 
+  // Get mock exam results from localStorage
+  getMockExamResults(): TestResult[] {
+    const mockExamResults: TestResult[] = [];
+    
+    // Check for all mock exam results (Exam 1, 2, 3)
+    for (let i = 1; i <= 3; i++) {
+      const result = localStorage.getItem(`mockExamResults_exam${i}`);
+      if (result) {
+        try {
+          const data = JSON.parse(result);
+          mockExamResults.push({
+            testId: `mock-exam-${i}`,
+            testName: `Exam ${i}`,
+            score: data.score,
+            totalQuestions: data.totalQuestions,
+            percentage: data.percentage,
+            date: new Date().toISOString() // Use current date as approximation
+          });
+        } catch (error) {
+          console.error(`Error parsing mock exam ${i} result:`, error);
+        }
+      }
+    }
+    
+    return mockExamResults;
+  }
+
+  // Get combined average (practice tests + mock exams)
+  getCombinedAverage(): number {
+    const practiceHistory = this.getTestHistory();
+    const mockExamResults = this.getMockExamResults();
+    
+    // Combine all results
+    const allResults = [...practiceHistory, ...mockExamResults];
+    
+    if (allResults.length === 0) return 0;
+    
+    const totalScore = allResults.reduce((sum, result) => sum + result.percentage, 0);
+    return Math.round(totalScore / allResults.length);
+  }
+
+  // Get total questions (practice + mock exams)
+  getTotalQuestions(): number {
+    const practiceHistory = this.getTestHistory();
+    const mockExamResults = this.getMockExamResults();
+    
+    const practiceQuestions = practiceHistory.reduce((sum, result) => sum + result.totalQuestions, 0);
+    const mockExamQuestions = mockExamResults.reduce((sum, result) => sum + result.totalQuestions, 0);
+    
+    return practiceQuestions + mockExamQuestions;
+  }
+
   // Get study time (total time spent practicing)
   getStudyTime(): number {
     const history = this.getTestHistory();
+    const mockExamResults = this.getMockExamResults();
+    
     // Estimate: 1.5 minutes per question (realistic average)
-    const totalQuestions = history.reduce((sum, result) => sum + result.totalQuestions, 0);
+    const practiceQuestions = history.reduce((sum, result) => sum + result.totalQuestions, 0);
+    const mockExamQuestions = mockExamResults.reduce((sum, result) => sum + result.totalQuestions, 0);
+    const totalQuestions = practiceQuestions + mockExamQuestions;
+    
     const hours = totalQuestions / 40; // 1.5 min per Q = 40 Q per hour
     return parseFloat(hours.toFixed(1));
   }

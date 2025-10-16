@@ -35,12 +35,12 @@ export const AICoachDashboard: React.FC = () => {
   const [showAITutor, setShowAITutor] = useState(false);
 
   useEffect(() => {
-    // Load REAL data from AI Coach
+    // Load REAL data from AI Coach (including mock exams)
     const realData: UserProgress = {
-      averageScore: aiCoach.getPracticeAverage(),
-      totalQuestions: aiCoach.getTestHistory().reduce((sum, t) => sum + t.totalQuestions, 0),
+      averageScore: aiCoach.getCombinedAverage(), // Now includes practice tests + mock exams
+      totalQuestions: aiCoach.getTotalQuestions(), // Now includes practice + mock exam questions
       correctAnswers: aiCoach.getTestHistory().reduce((sum, t) => sum + t.score, 0),
-      studyTime: aiCoach.getStudyTime(),
+      studyTime: aiCoach.getStudyTime(), // Now includes mock exam time
       weakAreas: [],
       strongAreas: []
     };
@@ -65,20 +65,20 @@ export const AICoachDashboard: React.FC = () => {
     return 'green';
   };
 
-  // Calculate Exam Readiness Confidence Level
+  // Calculate Exam Readiness Confidence Level (Practice Tests + Mock Exams)
   const getExamReadiness = () => {
-    const averageScore = userProgress.averageScore;
-    const studyTime = userProgress.studyTime;
-    const totalQuestions = userProgress.totalQuestions;
+    const averageScore = userProgress.averageScore; // Combined practice + mock exam average
+    const studyTime = userProgress.studyTime; // Combined study time
+    const totalQuestions = userProgress.totalQuestions; // Combined question count
     
-    // Base confidence from average score (0-70 points)
+    // Base confidence from combined average score (0-70 points)
     let confidence = Math.min(70, averageScore);
     
-    // Bonus for study time (0-20 points)
+    // Bonus for study time (0-20 points) - includes practice + mock exam time
     const studyTimeBonus = Math.min(20, (studyTime / 24) * 20);
     confidence += studyTimeBonus;
     
-    // Bonus for practice volume (0-10 points)
+    // Bonus for practice volume (0-10 points) - includes practice + mock exam questions
     const practiceBonus = Math.min(10, (totalQuestions / 100) * 10);
     confidence += practiceBonus;
     
