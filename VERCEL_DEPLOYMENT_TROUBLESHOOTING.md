@@ -9,7 +9,7 @@
 
 ## 🚨 ISSUE IDENTIFIED:
 **You were running the app from the wrong directory!**
-- **Wrong:** `/Users/Other/cbr-ai-app` (old version)
+- **Wrong:** `/Users/Other/cbr-ai-app` (deleted - old version)
 - **Correct:** `/Users/Other/cbr-ai-coach` (new version with all features)
 
 ---

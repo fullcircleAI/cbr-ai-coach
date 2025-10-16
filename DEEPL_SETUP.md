@@ -44,7 +44,7 @@ echo 'DEEPL_API_KEY=your-key-here' >> .env
 ## **Step 3: Run Translation Script** (5 minutes)
 
 ```bash
-cd /Users/Other/cbr-ai-app
+cd /Users/Other/cbr-ai-coach
 node scripts/translateWithDeepL.js
 ```
 

@@ -1,6 +1,6 @@
-# Theory Coach for CBR
+# AI Coach - Theory Master
 
-A comprehensive practice test app for Dutch driving theory test preparation with 297 questions and multilingual support.
+An AI-powered coaching app for Dutch driving theory test preparation with 297 questions, smart recommendations, and multilingual support.
 
 ## 🎯 Smart Features
 
@@ -32,7 +32,7 @@ A comprehensive practice test app for Dutch driving theory test preparation with
 - Dutch driving theory test candidates
 - Learners who want personalized study guidance
 - Users seeking AI-powered learning insights
-- Anyone preparing for CBR theory exam
+- Anyone preparing for Dutch driving theory exam
 
 ## 🛠️ Technology Stack
 
