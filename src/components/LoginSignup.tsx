@@ -158,28 +158,24 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
   return (
     <div className="login-signup-container">
       <div className="login-signup-content">
-        {/* Back Arrow */}
-        <div className="back-button-container">
-          <button 
-            type="button"
-            className="back-button"
-            onClick={() => setShowSignup(false)}
-            aria-label="Go back"
-          >
-            <svg className="back-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M19 12H5M12 19l-7-7 7-7"/>
-            </svg>
-          </button>
-        </div>
 
-        {/* Header without mascot */}
+        {/* Header with back arrow and title */}
         <div className="auth-header">
-          <h1 className="auth-title">
-            {t('auth.getStarted', 'Get Started')}
-          </h1>
-          <p className="auth-subtitle">
-            {t('auth.getStartedSubtitle', 'Create your account')}
-          </p>
+          <div className="title-with-back">
+            <button 
+              type="button"
+              className="back-button-inline"
+              onClick={() => setShowSignup(false)}
+              aria-label="Go back"
+            >
+              <svg className="back-arrow-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </button>
+            <h1 className="auth-title">
+              {t('auth.signUp', 'Sign up')}
+            </h1>
+          </div>
         </div>
 
 
