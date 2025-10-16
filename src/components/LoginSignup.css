@@ -1,73 +1,81 @@
-/* Login/Signup Component - Duolingo Style */
+/* Login/Signup Component - App Theme Style */
 
 .login-signup-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #58cc02 0%, #58a700 100%);
+  background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
   box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', system-ui, sans-serif;
 }
 
 .login-signup-content {
   background: white;
-  border-radius: 24px;
-  padding: 2rem;
+  border-radius: 20px;
+  padding: 1.5rem;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 380px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header with mascot */
 .auth-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
 }
 
 .auth-mascot {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .mascot-image {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   animation: bounce 2s ease-in-out infinite;
 }
 
 .auth-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #1f2937;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.3rem 0;
   line-height: 1.2;
 }
 
 .auth-subtitle {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #6b7280;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 /* Form */
 .auth-form {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .auth-input {
   width: 100%;
-  padding: 1rem;
+  padding: 0.8rem;
   border: 2px solid #e5e7eb;
-  border-radius: 12px;
-  font-size: 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
   font-weight: 500;
   color: #1f2937;
   background: #f9fafb;
@@ -77,9 +85,9 @@
 
 .auth-input:focus {
   outline: none;
-  border-color: #58cc02;
+  border-color: #1A3E7A;
   background: white;
-  box-shadow: 0 0 0 3px rgba(88, 204, 2, 0.1);
+  box-shadow: 0 0 0 3px rgba(26, 62, 122, 0.1);
 }
 
 .auth-input::placeholder {
@@ -90,22 +98,23 @@
 /* Submit button */
 .auth-button {
   width: 100%;
-  padding: 1rem;
-  background: linear-gradient(135deg, #58cc02 0%, #58a700 100%);
+  padding: 0.9rem;
+  background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%);
   color: white;
   border: none;
-  border-radius: 12px;
-  font-size: 1.1rem;
+  border-radius: 10px;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  margin-top: auto;
 }
 
 .auth-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(88, 204, 2, 0.3);
+  box-shadow: 0 8px 20px rgba(26, 62, 122, 0.3);
 }
 
 .auth-button:active:not(:disabled) {
@@ -138,20 +147,21 @@
 /* Toggle between login/signup */
 .auth-toggle {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
 }
 
 .toggle-text {
   color: #6b7280;
-  font-size: 0.95rem;
-  margin: 0 0 0.5rem 0;
+  font-size: 0.85rem;
+  margin: 0 0 0.3rem 0;
 }
 
 .toggle-button {
   background: none;
   border: none;
-  color: #58cc02;
-  font-size: 0.95rem;
+  color: #1A3E7A;
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   text-decoration: underline;
@@ -159,40 +169,41 @@
 }
 
 .toggle-button:hover {
-  color: #58a700;
+  color: #002868;
 }
 
 /* Guest Mode - Prominent option */
 .guest-mode-section {
   text-align: center;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
   background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-  border-radius: 16px;
+  border-radius: 12px;
   border: 2px solid #d1d5db;
+  flex-shrink: 0;
 }
 
 .guest-button {
   width: 100%;
-  padding: 1rem;
-  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #1A3E7A 0%, #002868 100%);
   color: white;
   border: none;
-  border-radius: 12px;
-  font-size: 1.1rem;
+  border-radius: 10px;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
 }
 
 .guest-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 8px 20px rgba(26, 62, 122, 0.3);
 }
 
 .guest-button:active {
@@ -205,22 +216,23 @@
 
 .guest-description {
   color: #6b7280;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 /* Skip option */
 .auth-skip {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
 }
 
 .skip-button {
   background: none;
   border: none;
   color: #6b7280;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   cursor: pointer;
   text-decoration: underline;
   transition: color 0.3s ease;

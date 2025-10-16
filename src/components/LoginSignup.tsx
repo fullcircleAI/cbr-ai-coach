@@ -12,7 +12,6 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    confirmPassword: '',
     name: ''
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -60,10 +59,10 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
             <img src="/images/mascot.png" alt="Mascot" className="mascot-image" />
           </div>
           <h1 className="auth-title">
-            {isLogin ? t('auth.welcomeBack') : t('auth.getStarted')}
+            {isLogin ? t('auth.welcomeBack', 'Welcome Back') : t('auth.getStarted', 'Get Started')}
           </h1>
           <p className="auth-subtitle">
-            {isLogin ? t('auth.welcomeBackSubtitle') : t('auth.getStartedSubtitle')}
+            {isLogin ? t('auth.welcomeBackSubtitle', 'Sign in to continue') : t('auth.getStartedSubtitle', 'Create your account')}
           </p>
         </div>
 
@@ -74,10 +73,9 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
               <input
                 type="text"
                 name="name"
-                placeholder={t('auth.name')}
+                placeholder={t('auth.name', 'Your Name')}
                 value={formData.name}
                 onChange={handleInputChange}
-                required={!isLogin}
                 className="auth-input"
               />
             </div>
@@ -87,7 +85,7 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
             <input
               type="email"
               name="email"
-              placeholder={t('auth.email')}
+              placeholder={t('auth.email', 'Email')}
               value={formData.email}
               onChange={handleInputChange}
               required
@@ -99,7 +97,7 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
             <input
               type="password"
               name="password"
-              placeholder={t('auth.password')}
+              placeholder={t('auth.password', 'Password')}
               value={formData.password}
               onChange={handleInputChange}
               required
@@ -107,19 +105,6 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
             />
           </div>
 
-          {!isLogin && (
-            <div className="input-group">
-              <input
-                type="password"
-                name="confirmPassword"
-                placeholder={t('auth.confirmPassword')}
-                value={formData.confirmPassword}
-                onChange={handleInputChange}
-                required={!isLogin}
-                className="auth-input"
-              />
-            </div>
-          )}
 
           <button 
             type="submit" 
@@ -129,7 +114,7 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
             {isLoading ? (
               <div className="loading-spinner"></div>
             ) : (
-              isLogin ? t('auth.signIn') : t('auth.signUp')
+              isLogin ? t('auth.signIn', 'Sign In') : t('auth.signUp', 'Sign Up')
             )}
           </button>
         </form>
@@ -137,14 +122,14 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
         {/* Toggle between login/signup */}
         <div className="auth-toggle">
           <p className="toggle-text">
-            {isLogin ? t('auth.noAccount') : t('auth.haveAccount')}
+            {isLogin ? t('auth.noAccount', "Don't have an account?") : t('auth.haveAccount', 'Already have an account?')}
           </p>
           <button 
-            type="button"
+            type="button" 
             className="toggle-button"
             onClick={() => setIsLogin(!isLogin)}
           >
-            {isLogin ? t('auth.signUp') : t('auth.signIn')}
+            {isLogin ? t('auth.signUp', 'Sign Up') : t('auth.signIn', 'Sign In')}
           </button>
         </div>
 
@@ -156,10 +141,10 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
             onClick={handleGuestMode}
           >
             <span className="guest-icon">👤</span>
-            {t('auth.guestMode')}
+            {t('auth.guestMode', 'Continue as Guest')}
           </button>
           <p className="guest-description">
-            {t('auth.guestModeDescription')}
+            {t('auth.guestModeDescription', 'Start learning without an account')}
           </p>
         </div>
 
@@ -170,7 +155,7 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
             className="skip-button"
             onClick={handleSkip}
           >
-            {t('auth.continueWithoutAccount')}
+            {t('auth.continueWithoutAccount', 'Skip for now')}
           </button>
         </div>
 
