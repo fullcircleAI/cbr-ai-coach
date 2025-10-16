@@ -181,6 +181,28 @@
   animation: spin 1s linear infinite;
 }
 
+/* Forgot Password */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 0.6rem;
+  flex-shrink: 0;
+}
+
+.forgot-password-link {
+  background: none;
+  border: none;
+  color: #1A3E7A;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover {
+  color: #002868;
+}
+
 /* Toggle between login/signup */
 .auth-toggle {
   text-align: center;

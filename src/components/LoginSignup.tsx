@@ -51,7 +51,7 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
     setIsLogin(false);
   };
 
-  // Bot-it style: Show initial page with 3 buttons
+  // Bot-it style: Show initial page with sign-in form and 3 buttons
   if (!showSignup) {
     return (
       <div className="login-signup-container">
@@ -69,16 +69,58 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
             </p>
           </div>
 
-          {/* Three main buttons */}
-          <div className="auth-buttons">
-            <button 
-              type="button"
-              className="auth-button primary"
-              onClick={() => setIsLogin(true)}
-            >
-              {t('auth.signIn', 'Sign In')}
-            </button>
+          {/* Sign In Form */}
+          <form className="auth-form" onSubmit={handleSubmit}>
+            <div className="input-group">
+              <input
+                type="email"
+                name="email"
+                placeholder={t('auth.email', 'Email')}
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+                className="auth-input"
+              />
+            </div>
 
+            <div className="input-group">
+              <input
+                type="password"
+                name="password"
+                placeholder={t('auth.password', 'Password')}
+                value={formData.password}
+                onChange={handleInputChange}
+                required
+                className="auth-input"
+              />
+            </div>
+
+            {/* Forgot Password Link */}
+            <div className="forgot-password">
+              <button 
+                type="button"
+                className="forgot-password-link"
+                onClick={() => alert('Forgot password functionality coming soon!')}
+              >
+                {t('auth.forgotPassword', 'Forgot Password?')}
+              </button>
+            </div>
+
+            <button 
+              type="submit" 
+              className={`auth-button primary ${isLoading ? 'loading' : ''}`}
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <div className="loading-spinner"></div>
+              ) : (
+                t('auth.signIn', 'Sign In')
+              )}
+            </button>
+          </form>
+
+          {/* Two main buttons */}
+          <div className="auth-buttons">
             <button 
               type="button"
               className="auth-button secondary"
