@@ -160,11 +160,8 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
           </button>
         </div>
 
-        {/* Header with mascot */}
+        {/* Header without mascot */}
         <div className="auth-header">
-          <div className="auth-mascot">
-            <img src="/images/mascot.png" alt="Mascot" className="mascot-image" />
-          </div>
           <h1 className="auth-title">
             {t('auth.getStarted', 'Get Started')}
           </h1>
