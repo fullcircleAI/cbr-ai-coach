@@ -9,12 +9,12 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // Duolingo-style: Quick splash (1.2 seconds total)
+    // iOS/Android standard: 2.5-3 seconds for proper branding
     const timer = setTimeout(() => {
       setFadeOut(true);
-      // Quick fade out
-      setTimeout(onFinish, 400);
-    }, 1200);
+      // Smooth fade out
+      setTimeout(onFinish, 500);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, [onFinish]);
