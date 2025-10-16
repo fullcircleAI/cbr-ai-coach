@@ -13,6 +13,7 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
+    confirmPassword: '',
     name: ''
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -27,6 +28,13 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate password confirmation for signup
+    if (showSignup && formData.password !== formData.confirmPassword) {
+      alert('Passwords do not match. Please try again.');
+      return;
+    }
+    
     setIsLoading(true);
 
     // Simulate API call (like Duolingo)
@@ -35,6 +43,10 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
     // For demo purposes, just proceed to next step
     // In real app, you'd validate credentials here
     localStorage.setItem('userAuthenticated', 'true');
+    if (showSignup) {
+      localStorage.setItem('username', formData.name || 'AI Learner');
+      localStorage.setItem('userEmail', formData.email);
+    }
     setIsLoading(false);
     onComplete();
   };
@@ -202,6 +214,18 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
               name="password"
               placeholder={t('auth.password', 'Password')}
               value={formData.password}
+              onChange={handleInputChange}
+              required
+              className="auth-input"
+            />
+          </div>
+
+          <div className="input-group">
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder={t('auth.confirmPassword', 'Confirm Password')}
+              value={formData.confirmPassword}
               onChange={handleInputChange}
               required
               className="auth-input"
