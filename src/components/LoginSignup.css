@@ -39,22 +39,25 @@
   justify-content: center;
   gap: 0.5rem;
   position: relative;
+  width: 100%;
 }
 
 .back-button-inline {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border: none;
   border-radius: 50%;
-  background: rgba(26, 62, 122, 0.1);
+  background: rgba(26, 62, 122, 0.15);
   color: #1A3E7A;
   cursor: pointer;
   transition: all 0.3s ease;
   position: absolute;
   left: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .back-button-inline:hover {
@@ -67,9 +70,9 @@
 }
 
 .back-arrow-inline {
-  width: 16px;
-  height: 16px;
-  stroke-width: 2.5;
+  width: 18px;
+  height: 18px;
+  stroke-width: 3;
 }
 
 .auth-mascot {
