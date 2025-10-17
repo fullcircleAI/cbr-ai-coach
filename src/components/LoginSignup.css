@@ -19,8 +19,8 @@
   max-width: 320px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   position: relative;
-  overflow: hidden;
-  max-height: 85vh;
+  overflow-y: auto; /* Allow vertical scrolling */
+  max-height: 90vh; /* Allow more height with scrolling */
   display: flex;
   flex-direction: column;
 }
@@ -440,7 +440,8 @@
   .login-signup-content {
     padding: 1rem;
     max-width: 100%;
-    max-height: 90vh;
+    max-height: 95vh; /* More height on mobile */
+    overflow-y: auto; /* Ensure scrolling on mobile */
   }
   
   .auth-title {
@@ -484,7 +485,8 @@
   }
   
   .login-signup-content {
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scroll-behavior: smooth; /* Smooth scrolling */
   }
 }
 
