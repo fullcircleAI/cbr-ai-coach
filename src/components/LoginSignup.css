@@ -317,35 +317,29 @@
 /* Social Media Buttons */
 .social-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.5rem;
   margin-bottom: 0.8rem;
+  justify-content: center;
 }
 
 .social-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
-  border: 2px solid #e5e7eb;
-  border-radius: 12px;
-  background: white;
-  color: #374151;
-  font-size: 0.8rem;
-  font-weight: 600;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  min-height: 48px; /* iOS/Android touch target minimum */
 }
 
 .social-button:hover {
-  border-color: #1A3E7A;
-  background: #f8fafc;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .social-button:active {
@@ -354,42 +348,36 @@
 }
 
 .social-button.facebook {
-  border-color: #1877F2;
   background: #1877F2;
   color: white;
 }
 
 .social-button.facebook:hover {
   background: #166fe5;
-  border-color: #166fe5;
 }
 
 .social-button.google {
-  border-color: #4285F4;
-  background: white;
-  color: #374151;
+  background: #EA4335;
+  color: white;
 }
 
 .social-button.google:hover {
-  border-color: #1a73e8;
-  background: #f8f9fa;
+  background: #d33b2c;
 }
 
 .social-button.apple {
-  border-color: #000000;
   background: #000000;
   color: white;
 }
 
 .social-button.apple:hover {
   background: #333333;
-  border-color: #333333;
 }
 
-.social-icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
+.social-icon-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', system-ui, sans-serif;
 }
 
 /* Divider */
