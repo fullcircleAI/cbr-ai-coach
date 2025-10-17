@@ -131,6 +131,26 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
             </button>
           </form>
 
+          {/* Divider */}
+          <div className="divider">
+            <span className="divider-text">{t('auth.orContinueWith', 'or continue with')}</span>
+          </div>
+
+          {/* Social Media Buttons */}
+          <div className="social-buttons">
+            <button className="social-button facebook" onClick={() => alert('Facebook login coming soon!')}>
+              <span className="social-icon-text">f</span>
+            </button>
+            
+            <button className="social-button google" onClick={() => alert('Google login coming soon!')}>
+              <span className="social-icon-text">G</span>
+            </button>
+            
+            <button className="social-button apple" onClick={() => alert('Apple login coming soon!')}>
+              <span className="social-icon-text">🍎</span>
+            </button>
+          </div>
+
           {/* Two main buttons */}
           <div className="auth-buttons">
             <button 
