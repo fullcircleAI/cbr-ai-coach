@@ -46,22 +46,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border: none;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #1A3E7A;
   border-radius: 50%;
-  background: none;
+  background: white;
   color: #1A3E7A;
   cursor: pointer;
   transition: all 0.3s ease;
   position: absolute;
   left: 0;
   z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .back-button-inline:hover {
-  background: rgba(26, 62, 122, 0.1);
+  background: #1A3E7A;
+  color: white;
   transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(26, 62, 122, 0.3);
 }
 
 .back-button-inline:active {
