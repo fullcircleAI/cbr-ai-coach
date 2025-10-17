@@ -236,7 +236,7 @@ export const LoginSignup: React.FC<LoginSignupProps> = ({ onComplete }) => {
             {isLoading ? (
               <div className="loading-spinner"></div>
             ) : (
-              t('auth.getStarted', 'Get Started')
+              t('auth.signUp', 'Sign up')
             )}
           </button>
         </form>
