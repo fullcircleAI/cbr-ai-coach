@@ -287,7 +287,7 @@ export const TestsPage: React.FC = () => {
                 onClick={() => setShowAITutor(true)}
                 title="Ask AI Tutor"
               >
-                <span className="floating-mascot">😊</span>
+                <img src="/images/mascot.png" alt="AI Tutor" className="floating-mascot" />
               </button>
             </div>
           </div>

@@ -96,7 +96,7 @@ export const AICoachDashboard: React.FC = () => {
   const getReadinessMessage = (confidence: number) => {
     if (confidence >= 80) return 'Strong exam readiness indicators';
     if (confidence >= 60) return 'Good progress toward exam readiness';
-    return 'More practice recommended for exam confidence';
+    return 'Needs practice for exam confidence';
   };
 
   const formatTime = (hours: number) => {
@@ -268,7 +268,7 @@ export const AICoachDashboard: React.FC = () => {
               onClick={() => setShowAITutor(true)}
               title="Ask AI Tutor"
             >
-              <span className="floating-mascot">😊</span>
+              <img src="/images/mascot.png" alt="AI Tutor" className="floating-mascot" />
             </button>
           </div>
 

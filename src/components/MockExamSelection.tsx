@@ -94,34 +94,6 @@ export const MockExamSelection: React.FC = () => {
           </div>
 
           <div className="tests-content">
-            {/* Unlock Progress Banner */}
-            {!unlockProgress.canUnlock && (
-              <div className="unlock-progress-banner">
-                <div className="unlock-icon">🔒</div>
-                <div className="unlock-content">
-                  <h3>Mock Exams Locked</h3>
-                  <p>Complete practice tests to unlock mock exams</p>
-                  <div className="unlock-requirements">
-                    <div className={`requirement ${unlockProgress.completedTests >= unlockProgress.requiredTests ? 'met' : 'pending'}`}>
-                      <span className="requirement-icon">{unlockProgress.completedTests >= unlockProgress.requiredTests ? '✅' : '⏳'}</span>
-                      <span>{unlockProgress.completedTests}/{unlockProgress.requiredTests} tests completed</span>
-                    </div>
-                    <div className={`requirement ${unlockProgress.averageScore >= unlockProgress.requiredAverage ? 'met' : 'pending'}`}>
-                      <span className="requirement-icon">{unlockProgress.averageScore >= unlockProgress.requiredAverage ? '✅' : '⏳'}</span>
-                      <span>{unlockProgress.averageScore}% average (need {unlockProgress.requiredAverage}%)</span>
-                    </div>
-                    <div className={`requirement ${unlockProgress.minTestScore >= unlockProgress.requiredMinScore ? 'met' : 'pending'}`}>
-                      <span className="requirement-icon">{unlockProgress.minTestScore >= unlockProgress.requiredMinScore ? '✅' : '⏳'}</span>
-                      <span>Lowest test: {unlockProgress.minTestScore}% (need {unlockProgress.requiredMinScore}%)</span>
-                    </div>
-                    <div className={`requirement ${unlockProgress.studyTime >= unlockProgress.requiredStudyTime ? 'met' : 'pending'}`}>
-                      <span className="requirement-icon">{unlockProgress.studyTime >= unlockProgress.requiredStudyTime ? '✅' : '⏳'}</span>
-                      <span>{unlockProgress.studyTime}h study time (need {unlockProgress.requiredStudyTime}h)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
 
             <div className="tests-grid">
               {mockExams.map((exam) => {

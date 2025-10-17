@@ -1669,8 +1669,9 @@ body.practice-page .practice-test {
 }
 
 .practice-test-ai-tutor .floating-mascot {
-  font-size: 24px;
-  line-height: 1;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }
 
@@ -1717,7 +1718,9 @@ body.practice-page .practice-test {
   }
   
   .practice-test-ai-tutor .floating-mascot {
-    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
   }
 }
 
@@ -1734,7 +1737,9 @@ body.practice-page .practice-test {
   }
   
   .practice-test-ai-tutor .floating-mascot {
-    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
   }
 }
 

@@ -1,5 +1,26 @@
 /* Mock Exam Selection uses Tests Page styling */
 
+/* Make mock exam dashboard unscrollable */
+.tests-page {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tests-content {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tests-grid {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
 /* Mock Exam Requirement Note */
 .mock-exam-requirement-note {
   display: flex;
