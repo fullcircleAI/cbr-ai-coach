@@ -45,27 +45,25 @@
 .back-button-inline {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border: 2px solid #1A3E7A;
-  border-radius: 50%;
-  background: #1A3E7A;
-  color: white;
+  gap: 0.3rem;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 20px;
+  background: none;
+  color: #1A3E7A;
   cursor: pointer;
   transition: all 0.3s ease;
   position: absolute;
   left: 0;
   z-index: 10;
-  box-shadow: 0 2px 8px rgba(26, 62, 122, 0.3);
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .back-button-inline:hover {
-  background: #002868;
-  border-color: #002868;
-  color: white;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(26, 62, 122, 0.4);
+  background: rgba(26, 62, 122, 0.1);
+  color: #1A3E7A;
+  transform: scale(1.02);
 }
 
 .back-button-inline:active {
@@ -73,9 +71,15 @@
 }
 
 .back-arrow-inline {
-  width: 18px;
-  height: 18px;
-  stroke-width: 3;
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.5;
+}
+
+.back-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: inherit;
 }
 
 .auth-mascot {
