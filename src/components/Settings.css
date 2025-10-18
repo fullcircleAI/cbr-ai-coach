@@ -532,13 +532,16 @@
 @media (max-width: 768px) {
   .settings-container {
     padding: 0.5rem;
-    height: calc(100vh - 100px);
+    height: 100vh;
+    overflow: hidden;
   }
 
   .settings-page {
     height: 100%;
     overflow: hidden;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
   }
 
   /* Header - EXACT same as Practice mobile */
@@ -556,8 +559,10 @@
   }
 
   .settings-main-menu {
-    overflow: hidden;
+    overflow-y: auto;
     gap: 0.65rem;
+    flex: 1;
+    padding-bottom: 1rem;
   }
 
   .settings-main-menu-btn {
