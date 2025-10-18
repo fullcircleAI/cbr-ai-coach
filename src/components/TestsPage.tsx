@@ -283,11 +283,11 @@ export const TestsPage: React.FC = () => {
             {/* Floating AI Tutor Button - Tests Page */}
             <div className="floating-ai-tutor tests-page-ai-tutor">
               <button 
-                className="floating-ai-btn"
+                className="floating-ai-btn-mascot"
                 onClick={() => setShowAITutor(true)}
                 title="Ask AI Tutor"
               >
-                <img src="/images/mascot.png" alt="AI Tutor" className="floating-mascot" />
+                <img src="/images/mascot.png" alt="AI Tutor" className="floating-mascot-full" />
               </button>
             </div>
           </div>

@@ -495,11 +495,11 @@ export const PracticeTest: React.FC = () => {
           {/* Floating AI Tutor Button - Mobile Optimized */}
           <div className="floating-ai-tutor practice-test-ai-tutor">
             <button 
-              className="floating-ai-btn"
+              className="floating-ai-btn-mascot"
               onClick={() => setShowAITutor(true)}
               title="Ask AI Tutor"
             >
-              <img src="/images/mascot.png" alt="AI Tutor" className="floating-mascot" />
+              <img src="/images/mascot.png" alt="AI Tutor" className="floating-mascot-full" />
             </button>
           </div>
         </div>

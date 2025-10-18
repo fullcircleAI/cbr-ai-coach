@@ -261,14 +261,14 @@ export const AICoachDashboard: React.FC = () => {
             </div>
           </div>
 
-          {/* Floating AI Tutor Button - WhatsApp Style - FORCE DEPLOY */}
+          {/* Floating AI Tutor Button - Mascot as Button */}
           <div className="floating-ai-tutor">
             <button 
-              className="floating-ai-btn"
+              className="floating-ai-btn-mascot"
               onClick={() => setShowAITutor(true)}
               title="Ask AI Tutor"
             >
-              <img src="/images/mascot.png" alt="AI Tutor" className="floating-mascot" />
+              <img src="/images/mascot.png" alt="AI Tutor" className="floating-mascot-full" />
             </button>
           </div>
 
