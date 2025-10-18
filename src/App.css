@@ -155,10 +155,16 @@ input, textarea, [contenteditable="true"] {
   }
   
   /* Make Tests and Practice Test pages scrollable on desktop */
-  .main-content.tests-page,
+  .main-content.tests-page:not(.mock-exam-page),
   .main-content.practice-test-page {
     overflow-y: auto !important;
     overflow-x: hidden !important;
+    height: 100vh !important;
+  }
+  
+  /* Mock exam page should not scroll */
+  .main-content.tests-page.mock-exam-page {
+    overflow: hidden !important;
     height: 100vh !important;
   }
   
@@ -190,9 +196,14 @@ input, textarea, [contenteditable="true"] {
   }
   
   /* Make Tests page scrollable - single scroll */
-  .main-content.tests-page {
+  .main-content.tests-page:not(.mock-exam-page) {
     overflow-y: auto !important;
     overflow-x: hidden !important;
+  }
+  
+  /* Mock exam page should not scroll on mobile */
+  .main-content.tests-page.mock-exam-page {
+    overflow: hidden !important;
   }
   
   /* Settings page: overflow hidden at main-content level, scrolling handled by subpage */

@@ -77,8 +77,8 @@ export const MockExamSelection: React.FC = () => {
   return (
     <div className="main-layout">
       <Navigation />
-      <main className="main-content tests-page">
-        <div className="tests-page">
+      <main className="main-content tests-page mock-exam-page">
+        <div className="tests-page mock-exam-page">
           <div className="tests-header">
             <div className="header-content">
               <div className="header-text">

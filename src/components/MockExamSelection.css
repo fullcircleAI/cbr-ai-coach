@@ -1,21 +1,21 @@
 /* Mock Exam Selection uses Tests Page styling */
 
 /* Make mock exam dashboard unscrollable */
-.tests-page {
+.mock-exam-page .tests-page {
   height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-.tests-content {
+.mock-exam-page .tests-content {
   flex: 1;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-.tests-grid {
+.mock-exam-page .tests-grid {
   flex: 1;
   overflow-y: auto;
   padding-bottom: 1rem;
