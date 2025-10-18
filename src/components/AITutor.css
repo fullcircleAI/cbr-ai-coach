@@ -45,6 +45,15 @@
   font-size: 24px;
 }
 
+.ai-tutor-mascot {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px;
+}
+
 .ai-tutor-title h3 {
   margin: 0;
   font-size: 18px;

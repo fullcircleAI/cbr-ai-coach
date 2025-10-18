@@ -6,13 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import './i18n/config';
 import './mobile-optimizations.css';
 import * as serviceWorker from './serviceWorkerRegistration';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <LanguageProvider>
+      <App />
+    </LanguageProvider>
   </React.StrictMode>
 );
 

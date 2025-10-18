@@ -140,7 +140,7 @@ const AITutor: React.FC<AITutorProps> = ({ userProgress, currentTest, onClose })
         {/* Header */}
         <div className="ai-tutor-header">
           <div className="ai-tutor-title">
-            <span className="ai-tutor-icon">🤖</span>
+            <img src="/images/mascot.png" alt="AI Tutor" className="ai-tutor-mascot" />
             <h3>{t('aiTutor.title', 'AI Tutor')}</h3>
           </div>
           <button className="ai-tutor-close" onClick={onClose}>
